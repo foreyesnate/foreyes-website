@@ -27,7 +27,7 @@ export const optometrists: AudienceContent = {
     id: "whats-holding-your-practice-back",
     eyebrow: "The obstacles",
     title: "A few side tasks became a second job.",
-    lede: "These are the five we fix most often for optometrists. Each one is a gap in the process, and each has a fix.",
+    lede: "These are the five we fix most often for optometrists. Our founder, Wade Weisz, OD, spent 25+ years in the owner’s seat, so none of them is new to us.",
     items: [
       {
         title: "You’re not sure the books are right.",
@@ -132,9 +132,9 @@ export const optometrists: AudienceContent = {
         body: "Meet your onboarding specialist, tour your client portal, and complete an intake form covering your accounts, vendors, and software. We connect your financial institutions from there.",
       },
       {
-        meta: "Typically 6 to 8 weeks",
+        meta: "Where it’s needed",
         title: "Cleanup",
-        body: "An account manager works through your historical transactions and codes each one to your Custom Chart of Accounts. For billing, we review old denials and unpaid claims to set a clean foundation.",
+        body: "An account manager works through your historical transactions and codes each one to your Custom Chart of Accounts, typically in 6 to 8 weeks. For billing, we review old denials and unpaid claims to set a clean foundation.",
       },
       {
         meta: "Every month",

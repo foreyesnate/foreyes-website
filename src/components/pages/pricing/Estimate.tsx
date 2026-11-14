@@ -107,7 +107,7 @@ export function EstimateFigure({
   );
 }
 
-/** The itemised breakdown, plus the one-time fee kept visibly apart. */
+/** The itemised monthly breakdown. */
 export function EstimateLines({ estimate }: { estimate: Estimate }) {
   return (
     <div>
@@ -151,19 +151,23 @@ export function EstimateLines({ estimate }: { estimate: Estimate }) {
           </AnimatePresence>
         </ul>
       ) : (
-        <p className="border-b border-white/10 pb-4 text-[0.9375rem] text-white/70">{calculatorCopy.empty}</p>
+        <p className="border-b border-white/10 py-3 text-[0.9375rem] text-white/70">{calculatorCopy.empty}</p>
       )}
-      <div className="flex items-baseline justify-between gap-4 pt-3">
-        <span>
-          <span className="block font-display text-[0.9375rem] font-semibold leading-snug">
-            {implementationCopy.short}
-          </span>
-          <span className="block text-[0.8125rem] leading-snug text-white/65">{implementationCopy.notIncluded}</span>
-        </span>
-        <span className="tabular shrink-0 font-display text-[0.9375rem] font-semibold">
-          {formatMoney(estimate.oneTime)}
-        </span>
-      </div>
+    </div>
+  );
+}
+
+/** The one-time fee, kept visibly apart from the monthly lines. */
+export function ImplementationLine({ estimate, className }: { estimate: Estimate; className?: string }) {
+  return (
+    <div className={cn("flex items-baseline justify-between gap-4", className)}>
+      <span>
+        <span className="block font-display text-[0.9375rem] font-semibold leading-snug">{implementationCopy.short}</span>
+        <span className="block text-[0.8125rem] leading-snug text-white/65">{implementationCopy.notIncluded}</span>
+      </span>
+      <span className="tabular shrink-0 font-display text-[0.9375rem] font-semibold">
+        {formatMoney(estimate.oneTime)}
+      </span>
     </div>
   );
 }
@@ -231,12 +235,15 @@ export function EstimateCard({
         tabIndex={0}
         role="group"
         aria-label="Estimate breakdown"
-        className="relative -mr-3 mt-5 min-h-0 flex-1 overflow-y-auto border-t border-white/10 pr-3 pt-1 [scrollbar-color:rgb(255_255_255/0.3)_transparent] [scrollbar-width:thin]"
+        className="relative -mr-3 mt-5 min-h-0 flex-1 overflow-y-auto border-t border-white/10 pr-3 [mask-image:linear-gradient(to_bottom,black_calc(100%-1rem),transparent)] [scrollbar-color:rgb(255_255_255/0.3)_transparent] [scrollbar-width:thin]"
       >
-        <EstimateLines estimate={estimate} />
+        <div className="pb-3">
+          <EstimateLines estimate={estimate} />
+        </div>
       </div>
+      <ImplementationLine estimate={estimate} className="relative" />
 
-      <div className="relative mt-6">
+      <div className="relative mt-5">
         {step === "build" ? (
           <button type="button" onClick={onGetStarted} className={getStartedClass}>
             {calculatorCopy.getStarted}
@@ -319,6 +326,7 @@ export function MobileEstimateBar({
                     <p className="eyebrow text-teal-200">Your selections</p>
                     <div className="mt-2">
                       <EstimateLines estimate={estimate} />
+                      <ImplementationLine estimate={estimate} className="pt-3" />
                     </div>
                     {estimate.customQuote ? (
                       <p className="mt-4 text-[0.875rem] leading-snug text-white/75">{calculatorCopy.customQuoteBody}</p>

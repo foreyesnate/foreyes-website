@@ -46,7 +46,7 @@ function Avatar({ person, size = 56 }: { person: Testimonial; size?: number }) {
 export function Testimonials({
   items = allTestimonials,
   title = "Proof in Practice",
-  lede = "Optometrists on what it is like to have books they can rely on.",
+  lede = "Practice owners and managers on what changes when the books and the billing are handled.",
   tone = "white",
 }: {
   items?: Testimonial[];

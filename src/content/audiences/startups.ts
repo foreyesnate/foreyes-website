@@ -112,7 +112,7 @@ export const startups: AudienceContent = {
       {
         service: "payroll",
         headline: "Payroll set up on Gusto.",
-        body: "We set up your staff, pay schedules, and deductions before the first pay run. Paychecks, payroll tax filings, and W-2s are handled from there.",
+        body: "We set up your staff, pay schedules, and benefit deductions before the first pay run. Paychecks, payroll tax filings, and W-2s are handled from there.",
         cta: "Set Up Payroll",
       },
       {

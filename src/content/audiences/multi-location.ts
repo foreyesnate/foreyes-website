@@ -141,7 +141,7 @@ export const multiLocation: AudienceContent = {
       },
     ],
     aside:
-      "After onboarding, you don’t need to be involved in the day-to-day accounting of your practices. You review, compare, and decide.",
+      "After onboarding, the day-to-day bookkeeping for your practices is off your plate. You review, compare, and decide.",
   },
   proof: {
     kind: "founder",
@@ -183,7 +183,7 @@ export const multiLocation: AudienceContent = {
       {
         question: "How involved do I need to be?",
         answer:
-          "After onboarding, very little. You no longer need to be involved in the day-to-day accounting of your practices. You review the reports, ask questions, and meet with your account manager when a number needs explaining.",
+          "After onboarding, very little. The day-to-day bookkeeping for your practices is off your plate. You review the reports, ask questions, and meet with your account manager when a number needs explaining.",
       },
       {
         question: "Do you offer consulting for multi-location practices?",

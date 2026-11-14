@@ -78,7 +78,7 @@ function components(nextId: (text: string) => string): Components {
         role="region"
         aria-label="Table"
         tabIndex={0}
-        className="overflow-x-auto rounded-[1.25rem] bg-white shadow-soft ring-1 ring-stone-300 [&_tbody_tr:last-child>td]:border-b-0 [&_td:last-child]:font-semibold [&_td:last-child]:text-navy [&_td]:align-top [&_th]:whitespace-nowrap"
+        className="overflow-x-auto rounded-[1.25rem] bg-white shadow-soft ring-1 ring-stone-300 [&_tbody_tr:last-child>td]:border-b-0 [&_td:last-child]:font-semibold [&_td:last-child]:text-navy [&_td]:align-top [&_th]:align-bottom max-sm:[&_td]:px-3 max-sm:[&_th]:px-3 max-sm:text-[0.9375rem]"
       >
         <table>{children}</table>
       </div>

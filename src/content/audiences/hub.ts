@@ -6,7 +6,7 @@ type RemoteRow = { key: "reports" | "claims" | "bills" | "people"; title: string
 // Copy for the /who-we-serve hub.
 export const hub = {
   meta: {
-    title: "Who We Serve: Optometrists, Startups & Multi-Location Practices",
+    title: "Who We Serve",
     description:
       "ForEyes Books & Billing works only with eyecare practices: independent optometrists, new practices, and multi-location groups. See how we help each one.",
   },
@@ -20,7 +20,7 @@ export const hub = {
   /** The hero graphic: one practice growing through three stages. */
   stages: {
     title: "Where is your practice today?",
-    caption: "The same team stays with you from one stage to the next.",
+    caption: "As your practice grows, the setup grows with it.",
     items: [
       {
         slug: "startups",
@@ -58,7 +58,7 @@ export const hub = {
           "Denials appealed and A/R followed up daily",
         ],
         services: ["bookkeeping", "insurance-billing", "accounts-payable", "payroll", "practice-consulting"],
-        cta: "See How We Help Optometrists",
+        cta: "See How We Help",
       },
       {
         slug: "startups",
@@ -88,7 +88,7 @@ export const hub = {
           "One billing team across all your offices",
         ],
         services: ["bookkeeping", "insurance-billing", "payroll", "accounts-payable", "practice-consulting"],
-        cta: "See the Multi-Location Setup",
+        cta: "Compare Your Locations",
       },
     ] satisfies AudienceHubCard[],
   },

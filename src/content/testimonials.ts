@@ -1,6 +1,7 @@
-// Client quotes carried over verbatim from foreyessolutions.com. They were
-// given to "ForEyes Solutions"; confirm with each client that they may appear
-// under the new name. One spelling was normalised ("For Eyes" to "ForEyes").
+// Client quotes, verbatim. The four bookkeeping quotes were carried over from
+// foreyessolutions.com (given to "ForEyes Solutions"; one spelling was
+// normalised, "For Eyes" to "ForEyes"). The two billing quotes were supplied
+// by ForEyes for the Books & Billing site.
 export type Testimonial = {
   name: string;
   role?: string;
@@ -9,7 +10,7 @@ export type Testimonial = {
   quote: string;
   /** Path under /public, when a headshot is available. */
   photo?: string;
-  topic: "bookkeeping" | "consulting" | "general";
+  topic: "bookkeeping" | "billing" | "general";
 };
 
 export const testimonials: Testimonial[] = [
@@ -20,6 +21,15 @@ export const testimonials: Testimonial[] = [
     quote:
       "Wade and his team do an outstanding job providing accurate, timely, and reliable bookkeeping services. They’re responsive, detail-oriented, and take the time to explain financials in a way that’s easy to understand. Working with them has given me greater peace of mind and confidence in the financial side of my business. I highly recommend Wade and his team to any business owner looking for a trustworthy and professional bookkeeping partner.",
     topic: "bookkeeping",
+  },
+  {
+    name: "Patty Haley",
+    role: "Family Eyecare",
+    highlight:
+      "This is all the RCM team does. They're highly trained, and it will pay off for you.",
+    quote:
+      "I believe 100% that you need to stop trying to handle RCM yourself. This is all the RCM team does. They're highly trained, and it will pay off for you. Laura trained our staff to verify benefits and collect copays and deductibles before patients left, which improved our cash flow and cut our patient billing costs.",
+    topic: "billing",
   },
   {
     name: "Nona Kalfayan, OD",
@@ -37,6 +47,15 @@ export const testimonials: Testimonial[] = [
     topic: "bookkeeping",
   },
   {
+    name: "Kim Crance",
+    role: "Northeastern Washington Eyecare",
+    highlight:
+      "Optometrists are the expert in their field; billing is not their field.",
+    quote:
+      "Optometrists are the expert in their field; billing is not their field. Having someone in your corner that understands that and can help vocalize that to the team and simplify things down. I would highly recommend!",
+    topic: "billing",
+  },
+  {
     name: "Cristine Areola, OD",
     highlight:
       "I am very thankful for their expertise and their attentiveness to the small financial details.",
@@ -45,3 +64,9 @@ export const testimonials: Testimonial[] = [
     topic: "general",
   },
 ];
+
+/** Quotes about Insurance Billing, for the billing page. */
+export const billingTestimonials = testimonials.filter((t) => t.topic === "billing");
+
+/** Quotes about the books (and general ones), for the bookkeeping page. */
+export const bookkeepingTestimonials = testimonials.filter((t) => t.topic !== "billing");
