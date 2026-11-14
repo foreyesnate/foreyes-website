@@ -1,0 +1,38 @@
+<!doctype html>
+<!--
+  Form definitions for Netlify Forms. Netlify reads this file at deploy time to
+  register the forms; visitors never see it. The live forms are React
+  components (src/components/site/LeadForm.tsx) that POST to this path.
+  Field names here must match the names the components send.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <form name="Contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="Contact" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="practice" />
+      <input name="email" />
+      <input name="phone" />
+      <input name="interest" />
+      <textarea name="message"></textarea>
+      <input name="page" />
+    </form>
+    <form name="Pricing Form" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="Pricing Form" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="practice" />
+      <input name="email" />
+      <input name="phone" />
+      <textarea name="message"></textarea>
+      <textarea name="pricing_calculator_details"></textarea>
+      <input name="page" />
+    </form>
+  </body>
+</html>

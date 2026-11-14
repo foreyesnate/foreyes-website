@@ -1,0 +1,341 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   ForEyes Books & Billing — design tokens
+   Brand palette (from the brand sheet):
+     Navy  #415D9E  primary        Teal   #51A0AD  primary
+     Stone #F4F4F8  primary        Yellow #FCBA02  accent
+     Dark Navy #110F2B  type & accent
+   Tints and shades below are derived from those five so nothing
+   off-palette creeps in. Yellow is reserved for the one thing on a
+   screen that should be acted on or noticed first.
+------------------------------------------------------------------- */
+@theme {
+  --color-navy-50: #eef1f8;
+  --color-navy-100: #dce3f2;
+  --color-navy-200: #b9c6e4;
+  --color-navy-300: #8fa3d0;
+  --color-navy-400: #6680ba;
+  --color-navy: #415d9e;
+  --color-navy-600: #354d85;
+  --color-navy-700: #2a3e6b;
+  --color-navy-800: #1f2e50;
+
+  --color-teal-50: #edf6f7;
+  --color-teal-100: #d7ebee;
+  --color-teal-200: #b0d7dd;
+  --color-teal-300: #86c0c9;
+  --color-teal: #51a0ad;
+  /* Teal dark enough to carry small text on stone or white (AA). */
+  --color-teal-700: #2a6a75;
+  --color-teal-800: #1e4f58;
+
+  --color-yellow-50: #fff8e0;
+  --color-yellow-100: #feefb8;
+  --color-yellow-200: #fde085;
+  --color-yellow: #fcba02;
+  --color-yellow-600: #e0a400;
+  --color-yellow-800: #7a5800;
+
+  --color-stone: #f4f4f8;
+  --color-stone-200: #e9e9f1;
+  --color-stone-300: #d8d8e6;
+  --color-stone-400: #b9b9cf;
+
+  --color-ink: #110f2b;
+  --color-ink-800: #1d1b3d;
+  --color-ink-700: #2d2b4e;
+  /* Secondary text: 7:1 on stone, 7.6:1 on white. */
+  --color-ink-500: #55536f;
+  --color-ink-400: #72708c;
+
+  --font-display: var(--font-parkinsans), "Avenir Next", "Segoe UI", sans-serif;
+  --font-sans: var(--font-figtree), "Segoe UI", system-ui, sans-serif;
+
+  --radius-card: 1.75rem;
+  --radius-panel: 2.5rem;
+
+  --shadow-soft: 0 1px 2px rgb(17 15 43 / 0.04), 0 8px 24px -8px rgb(17 15 43 / 0.1);
+  --shadow-lift: 0 2px 4px rgb(17 15 43 / 0.05), 0 24px 48px -16px rgb(17 15 43 / 0.2);
+  --shadow-float: 0 4px 8px rgb(17 15 43 / 0.06), 0 40px 80px -24px rgb(65 93 158 / 0.38);
+
+  --ease-focus: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-settle: cubic-bezier(0.34, 1.4, 0.64, 1);
+
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-float-slow: float 11s ease-in-out infinite;
+  --animate-blink: blink 6.5s ease-in-out infinite;
+  --animate-pulse-ring: pulse-ring 2.6s var(--ease-focus) infinite;
+  --animate-dash: dash 1.6s linear infinite;
+  --animate-sheen: sheen 2.8s var(--ease-focus) infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(0, -10px, 0);
+    }
+  }
+  @keyframes blink {
+    0%,
+    46%,
+    50%,
+    100% {
+      transform: scaleY(1);
+    }
+    48% {
+      transform: scaleY(0.08);
+    }
+  }
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.6);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(2.2);
+      opacity: 0;
+    }
+  }
+  @keyframes dash {
+    to {
+      stroke-dashoffset: -24;
+    }
+  }
+  @keyframes sheen {
+    0% {
+      transform: translateX(-120%);
+    }
+    60%,
+    100% {
+      transform: translateX(220%);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-stone);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    font-feature-settings: "ss01";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 650;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-yellow);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-yellow);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  /* On yellow surfaces the yellow ring disappears; switch to ink. */
+  .on-yellow :focus-visible,
+  .bg-yellow:focus-visible {
+    outline-color: var(--color-ink);
+  }
+}
+
+@layer components {
+  /* Fluid type scale. One place to tune the whole site's rhythm. */
+  .text-display {
+    font-size: clamp(2.625rem, 1.5rem + 4.3vw, 5.125rem);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+  }
+  .text-title {
+    font-size: clamp(2.125rem, 1.45rem + 3vw, 3.75rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+  }
+  .text-heading {
+    font-size: clamp(1.625rem, 1.3rem + 1.4vw, 2.375rem);
+    line-height: 1.1;
+  }
+  .text-subheading {
+    font-size: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+  }
+  .text-lede {
+    font-size: clamp(1.125rem, 1.05rem + 0.4vw, 1.3125rem);
+    line-height: 1.55;
+  }
+
+  .eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* Long-form copy: blog posts and the privacy policy. */
+  .prose-foreyes {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: var(--color-ink-700);
+  }
+  .prose-foreyes > * + * {
+    margin-top: 1.25em;
+  }
+  .prose-foreyes h2 {
+    font-size: clamp(1.625rem, 1.4rem + 1vw, 2.125rem);
+    color: var(--color-ink);
+    margin-top: 2.2em;
+    line-height: 1.12;
+  }
+  .prose-foreyes h3 {
+    font-size: 1.375rem;
+    color: var(--color-ink);
+    margin-top: 1.8em;
+    line-height: 1.2;
+  }
+  .prose-foreyes h4 {
+    font-size: 1.125rem;
+    color: var(--color-ink);
+    margin-top: 1.6em;
+  }
+  .prose-foreyes a {
+    color: var(--color-navy);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: var(--color-yellow);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    transition: text-decoration-thickness 0.2s;
+  }
+  .prose-foreyes a:hover {
+    text-decoration-thickness: 4px;
+  }
+  .prose-foreyes ul,
+  .prose-foreyes ol {
+    padding-left: 1.4em;
+  }
+  .prose-foreyes ul {
+    list-style: none;
+  }
+  .prose-foreyes ul > li {
+    position: relative;
+  }
+  .prose-foreyes ul > li::before {
+    content: "";
+    position: absolute;
+    left: -1.25em;
+    top: 0.62em;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 999px;
+    background: var(--color-teal);
+  }
+  .prose-foreyes ol {
+    list-style: decimal;
+  }
+  .prose-foreyes li + li {
+    margin-top: 0.5em;
+  }
+  .prose-foreyes strong {
+    color: var(--color-ink);
+    font-weight: 650;
+  }
+  .prose-foreyes blockquote {
+    border-left: 4px solid var(--color-yellow);
+    padding: 0.25em 0 0.25em 1.25em;
+    font-family: var(--font-display);
+    font-size: 1.3125rem;
+    line-height: 1.4;
+    color: var(--color-ink);
+  }
+  .prose-foreyes table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+  }
+  .prose-foreyes th,
+  .prose-foreyes td {
+    text-align: left;
+    padding: 0.7em 0.9em;
+    border-bottom: 1px solid var(--color-stone-300);
+  }
+  .prose-foreyes th {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    background: var(--color-stone);
+  }
+}
+
+@layer utilities {
+  /* Dotted "exam chart" texture used behind illustrations. */
+  .bg-dots {
+    background-image: radial-gradient(currentColor 1.2px, transparent 1.2px);
+    background-size: 18px 18px;
+  }
+
+  /* The lens: an almond made of two arcs, lifted from the eye in the logo.
+     Used to crop imagery and as a soft section divider. */
+  .clip-lens {
+    clip-path: ellipse(60% 50% at 50% 50%);
+  }
+
+  .mask-fade-x {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Anyone who asks for less motion gets a still, fully legible page. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
