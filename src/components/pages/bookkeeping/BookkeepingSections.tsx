@@ -1,6 +1,8 @@
+import { Illustration } from "@/components/ui/Art";
 import { Icon } from "@/components/ui/Icon";
 import { Container, Eyebrow, Section } from "@/components/ui/Layout";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { LoopVideo } from "@/components/ui/LoopVideo";
 import { CloseCalendar } from "@/components/graphics/CloseCalendar";
 import { annual, close, portal, problem, process } from "@/content/services/bookkeeping";
 
@@ -64,11 +66,15 @@ export function BooksProblem() {
   return (
     <Section tone="white" aria-labelledby="problem-title" className="overflow-hidden">
       <Container size="wide">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
           <Reveal className="min-w-0">
             <Eyebrow className="mb-5">{problem.eyebrow}</Eyebrow>
             <h2 id="problem-title" className="text-title">
-              {problem.title}
+              {problem.title.map((sentence) => (
+                <span key={sentence} className="block">
+                  {sentence}{" "}
+                </span>
+              ))}
             </h2>
             <div className="text-lede mt-6 grid max-w-2xl gap-4 text-ink-500">
               {problem.body.map((paragraph) => (
@@ -128,63 +134,47 @@ export function BooksCloseVisual() {
   );
 }
 
-// Placeholder rows for the portal picture. Illustration only.
-const reports = [
-  { name: "October P&L", status: "Reviewed", fresh: true },
-  { name: "October balance sheet", status: "Reviewed", fresh: true },
-  { name: "September P&L", status: "Reviewed", fresh: false },
-];
+// Sample rows for the small portal card on the picture. Illustration only.
+const reports = ["October P&L", "Balance sheet"];
 
-function PortalCard() {
+/**
+ * The end of the owner's day, with this month's reviewed reports waiting in
+ * the portal. The card sits in the empty lower-left corner of the drawing.
+ */
+function PortalPicture() {
   return (
-    <figure className="relative overflow-hidden rounded-[2.5rem] bg-teal-100 p-5 sm:p-10">
-      <div aria-hidden="true" className="bg-dots absolute inset-0 text-ink/[0.07] [mask-image:radial-gradient(closest-side,transparent_35%,black)]" />
+    <Illustration
+      name="heading-home"
+      panel="teal"
+      className="mx-auto max-w-[36rem]"
+      sizes="(min-width: 1024px) 31rem, 86vw"
+    >
       <div
         role="img"
-        aria-label="An illustration of the client portal: this month's reviewed profit and loss statement and balance sheet, with a button to schedule a meeting with your account manager."
-        className="relative mx-auto max-w-[30rem]"
+        aria-label="A sample client portal card: the October P&L and balance sheet, both marked reviewed."
+        className="relative mt-5 sm:absolute sm:bottom-8 sm:left-8 sm:mt-0 sm:w-[14.5rem]"
       >
-        <div aria-hidden="true" className="rounded-[1.75rem] bg-white p-5 shadow-float sm:p-6">
-          <div className="flex items-center justify-between gap-3">
-            <p className="font-display text-[0.95rem] font-semibold">Client portal</p>
-            <span className="rounded-full bg-stone px-2.5 py-1 font-display text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-ink-500">
-              Illustration
+        <div aria-hidden="true" className="rounded-[1.5rem] bg-white p-4 shadow-lift">
+          <div className="flex items-center justify-between gap-2">
+            <p className="font-display text-[0.875rem] font-semibold">Client portal</p>
+            <span className="rounded-full bg-stone px-2 py-0.5 font-display text-[0.625rem] font-semibold uppercase tracking-[0.08em] text-ink-500">
+              Sample
             </span>
           </div>
-          <ul className="mt-4 flex flex-col gap-2">
+          <ul className="mt-3 grid gap-1.5">
             {reports.map((report) => (
-              <li key={report.name} className="flex items-center gap-3 rounded-2xl bg-stone px-3.5 py-3">
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-white text-navy shadow-soft">
-                  <Icon name="chart" size={18} />
-                </span>
-                <span className="min-w-0 flex-1 truncate text-[0.9rem] font-medium">{report.name}</span>
-                {report.fresh ? (
-                  <span className="hidden rounded-full bg-yellow px-2 py-0.5 font-display text-[0.6875rem] font-bold text-ink sm:inline">
-                    New
-                  </span>
-                ) : null}
-                <span className="flex items-center gap-1 font-display text-[0.75rem] font-semibold text-teal-700">
-                  <Icon name="check" size={13} strokeWidth={3} />
-                  {report.status}
+              <li key={report} className="flex items-center justify-between gap-2 rounded-xl bg-stone px-3 py-2">
+                <span className="text-[0.8125rem] font-medium">{report}</span>
+                <span className="flex items-center gap-1 font-display text-[0.6875rem] font-semibold text-teal-700">
+                  <Icon name="check" size={12} strokeWidth={3} />
+                  Reviewed
                 </span>
               </li>
             ))}
           </ul>
-          <div className="mt-4 flex items-center gap-3.5 rounded-2xl bg-ink p-3.5 text-white">
-            <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-teal text-ink">
-              <Icon name="users" size={21} />
-            </span>
-            <span className="min-w-0 flex-1">
-              <span className="block text-[0.75rem] text-white/70">Your account manager</span>
-              <span className="block truncate font-display text-[0.95rem] font-semibold">One meeting away</span>
-            </span>
-            <span className="hidden rounded-full bg-white px-3.5 py-2 font-display text-[0.8rem] font-semibold text-ink sm:inline">
-              Schedule a meeting
-            </span>
-          </div>
         </div>
       </div>
-    </figure>
+    </Illustration>
   );
 }
 
@@ -218,7 +208,7 @@ export function BooksPortal() {
             </p>
           </Reveal>
           <Reveal delay={0.12} y={36} blur={false} className="min-w-0">
-            <PortalCard />
+            <PortalPicture />
           </Reveal>
         </div>
       </Container>
@@ -265,22 +255,26 @@ export function BooksAnnualReview() {
               ))}
             </div>
           </Reveal>
-          <Reveal delay={0.12} y={36} className="min-w-0">
-            <div id="tax-ready" className="scroll-mt-32 rounded-[2.5rem] bg-white p-8 text-ink shadow-float sm:p-12">
-              <h3 className="eyebrow flex items-center gap-3 text-teal-700">
-                <span className="grid h-9 w-9 place-items-center rounded-xl bg-teal-100 text-teal-800">
-                  <Icon name="ledger" size={19} />
-                </span>
-                {taxReady.label}
-              </h3>
-              <p className="mt-6 font-display text-[clamp(1.625rem,1.3rem+1.4vw,2.375rem)] font-semibold leading-[1.12] tracking-[-0.025em]">
-                {taxReady.statement.map((sentence) => (
-                  <span key={sentence} className="block">
-                    {sentence}{" "}
+          <Reveal delay={0.12} y={36} blur={false} className="min-w-0">
+            <div id="tax-ready" className="scroll-mt-28">
+              <LoopVideo name="books" ratio="3/2" />
+              {/* Overlaps the clip's lower left; the right margin keeps the pause button clear. */}
+              <div className="relative z-10 mt-4 rounded-[2rem] bg-white p-7 text-ink shadow-float sm:-mt-24 sm:mr-20 sm:rounded-[2.5rem] sm:p-10">
+                <h3 className="eyebrow flex items-center gap-3 text-teal-700">
+                  <span className="grid h-9 w-9 place-items-center rounded-xl bg-teal-100 text-teal-800">
+                    <Icon name="ledger" size={19} />
                   </span>
-                ))}
-              </p>
-              <p className="mt-5 border-t-2 border-stone-200 pt-5 text-ink-500">{taxReady.body}</p>
+                  {taxReady.label}
+                </h3>
+                <p className="mt-6 font-display text-[clamp(1.625rem,1.3rem+1.4vw,2.375rem)] font-semibold leading-[1.12] tracking-[-0.025em]">
+                  {taxReady.statement.map((sentence) => (
+                    <span key={sentence} className="block">
+                      {sentence}{" "}
+                    </span>
+                  ))}
+                </p>
+                <p className="mt-5 border-t-2 border-stone-200 pt-5 text-ink-500">{taxReady.body}</p>
+              </div>
             </div>
           </Reveal>
         </div>
