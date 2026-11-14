@@ -215,8 +215,8 @@ export function BooksChartSplit({ className }: { className?: string }) {
                       />
                     </div>
                     <p className="mt-2 flex justify-between text-[0.75rem] text-white/70">
-                      <span>Cost of goods</span>
-                      <span>{Math.round(keptShare * 100)}¢ of each optical dollar</span>
+                      <span>{100 - Math.round(keptShare * 100)}¢ cost of goods</span>
+                      <span>{Math.round(keptShare * 100)}¢ kept per optical dollar</span>
                     </p>
                   </motion.div>
                 ) : (

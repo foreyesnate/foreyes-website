@@ -23,7 +23,8 @@ export const hero = {
 
 export const problem = {
   eyebrow: "Where the numbers get lost",
-  title: "One bank account. Three kinds of revenue.",
+  // One sentence per line, so the heading breaks between them.
+  title: ["One bank account.", "Three kinds of revenue."],
   body: [
     "Exams, optical sales, and contact lenses all deposit into the same bank account, which makes it hard to see which part of your practice carries its weight.",
     "Most bookkeeping software makes it worse. It lumps income into a few broad lines and costs into a handful of buckets. The P&L becomes something you glance at, not something you use.",
@@ -128,7 +129,7 @@ export const close = {
   ],
   review: {
     title: "A Second Set of Eyes",
-    body: "Your account manager closes the month. Then a quality control manager reviews every report before delivery, so you can rely on what you read.",
+    body: "A dedicated quality control manager reviews every report before delivery, so you can rely on what you read.",
   },
 };
 
@@ -147,7 +148,7 @@ export const portal = {
     },
     {
       title: "Decide",
-      body: "Hire, buy equipment, or open another location with real margins in front of you.",
+      body: "Hire an optician, add an exam lane, or open another location with real margins in front of you.",
     },
   ],
   closer: "Daily bookkeeping tasks leave your desk entirely, so evenings go to family and growth instead of receipts.",
@@ -156,7 +157,7 @@ export const portal = {
 export const process = {
   eyebrow: "How it works",
   title: "A clear path from first call to monthly close.",
-  lede: "Seven steps. You’re needed for the conversations. We do the rest.",
+  lede: "Seven steps. You join the calls, complete one intake form, and connect your accounts. We do the rest.",
   steps: [
     {
       title: "Discovery Call",
@@ -191,10 +192,10 @@ export const process = {
     },
   ] satisfies Step[],
   cleanup: {
-    label: "Historical cleanup",
+    label: "Historical cleanup, typically",
     figure: "6 to 8 weeks",
     title: "Behind on your books? Start there.",
-    body: "Months of uncategorized transactions are a normal place to start. How long cleanup takes depends on the scope of your history. It typically takes 6 to 8 weeks.",
+    body: "Months of uncategorized transactions are a normal place to start. How long cleanup takes depends on the scope of your history.",
   },
 };
 
@@ -209,7 +210,7 @@ export const annual = {
     label: "Tax-ready books",
     // Approved wording, one sentence per line. Check the voice guide before editing.
     statement: ["We don’t prepare tax returns.", "We hand your CPA clean, reviewed books."],
-    body: "Your CPA gets a full year of closed, reconciled months, with the P&L and balance sheet to match. Equipment purchases are already recorded as assets, with the details needed to calculate depreciation.",
+    body: "Your books are closed, reconciled, and reviewed every month, so they’re ready when your CPA asks for them. Exam lane and optical lab equipment is already recorded as assets, with the details needed to calculate depreciation.",
   },
 };
 
@@ -258,7 +259,7 @@ export const faqs: Faq[] = [
 
 export const pricing = {
   title: "See What Bookkeeping Costs for a Practice Like Yours",
-  body: "Bookkeeping starts at $399 a month. Your fee depends on your annual revenue, your number of locations, and how many bank and card accounts you connect. Build an estimate in a few minutes, then book a Discovery Call to confirm it. Every figure shown is an estimate only.",
+  body: "Bookkeeping starts at $399 a month, plus a one-time implementation fee. Your monthly fee depends on your annual revenue, your number of locations, and how many bank and card accounts you connect. Build an estimate in a few minutes, then book a Discovery Call to confirm it. Every figure shown is an estimate only.",
 };
 
 export const cta = {

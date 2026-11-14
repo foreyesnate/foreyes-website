@@ -39,7 +39,7 @@ export function BooksHeroReport({ className }: { className?: string }) {
     <figure className={cn("relative mx-auto w-full max-w-[34rem] lg:mr-0", className)}>
       <div
         role="img"
-        aria-label="A sample monthly profit and loss statement. Revenue is split into exam revenue, optical sales, and contact lenses. Costs are split into optical cost of goods and overhead. The report is marked as reviewed by quality control and delivered to the client portal on business day 8."
+        aria-label="A sample monthly profit and loss statement. Revenue is split into exam revenue, optical sales, and contact lenses. Costs are split into optical cost of goods and overhead. The report is marked as reviewed by quality control and due in the client portal by business day 10."
         className="relative pb-9 pt-5"
       >
         <div aria-hidden="true">
@@ -111,7 +111,7 @@ export function BooksHeroReport({ className }: { className?: string }) {
               </span>
               <span>
                 <span className="block text-[0.75rem] text-white/70">In your portal</span>
-                <span className="block font-display text-[0.95rem] font-semibold leading-tight">Business day 8</span>
+                <span className="block font-display text-[0.95rem] font-semibold leading-tight">By business day 10</span>
               </span>
             </div>
           </motion.div>
