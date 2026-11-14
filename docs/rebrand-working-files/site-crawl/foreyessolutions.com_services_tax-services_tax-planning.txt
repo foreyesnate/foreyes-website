@@ -1,0 +1,335 @@
+TITLE: Tax Planning for Optometry Practices
+META: {'og:image': 'https://foreyessolutions.com//images/open-graph/default.jpg', 'description': 'Reduce tax liabilities and maximize savings with proactive tax planning for optometry practices. Book your discovery call today. ', 'og:title': 'Tax Planning for Optometry Practices', 'og:description': 'Reduce tax liabilities and maximize savings with proactive tax planning for optometry practices. Book your discovery call today. '}
+
+IMAGES:
+- logo | /images/site-logo.svg
+- logo | /images/site-logo.svg
+-  | /images/edges/blue-bottom-inward.svg
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fca6643adbf135d3ceb9dde54b12ff4f1e8f5ac9d-1516x1038.png%3Ffm%3Dwebp&w=3840&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fca6643adbf135d3ceb9dde54b12ff4f1e8f5ac9d-1516x1038.png&w=3840&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F075ad92170921230c8fa4b81e43d6c2993622652-724x620.png%3Ffm%3Dwebp&w=1920&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F075ad92170921230c8fa4b81e43d6c2993622652-724x620.png&w=1920&q=75
+- Edge Decorator | /images/edges/blue-bottom.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/9e1ddd4ab87f6e5ac055b8032ce0cbf50b0c1584-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/e8d6edaa3899f970caaee16840492cd79aada051-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/8875b0bcaab1f595d60c21724d5a3ebd5ffecdea-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/86d1fa61159160209a351b7a4e8b387a08cbaf53-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/e2af8a9a4c2c7cfcb809010e8bf445f549bfeb3d-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/c64c8ece39c0ff4b60815b7603459bb836b70a18-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/c64c8ece39c0ff4b60815b7603459bb836b70a18-30x30.svg
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F99116a1c3dd058b87db934823212c69494f94934-561x561.png&w=1200&q=75
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fddc32067cbba28d073497f9fcc56d5b7b4a20829-393x666.png&w=828&q=75
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/9074f98236fd1699a1eb5cc251645381b7c16ee8-31x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/5d4f96e2b4535482ef193791a2ed6fbca1e8fa38-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/9e1ddd4ab87f6e5ac055b8032ce0cbf50b0c1584-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/c64c8ece39c0ff4b60815b7603459bb836b70a18-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/615bd81a24a2abbd7847c4db174e8d0efb5397fe-30x30.svg
+- icon | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fdc863cffe759c24dcf694e590ff83be4709ff533-570x496.png&w=1200&q=75
+- icon | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fcf961fa2594193920fededec60d9b7ba29cdaa59-393x314.png&w=828&q=75
+-  | /images/testimonial-bg.svg
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F73a2e816a9eb4747d9a31c8eb4bfb51e7490ea75-954x954.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F767aee2ca097ca53f70232dafadb277a170a3515-1063x1063.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fbb5fe74864c9fff63e044d5cb0a1ef8ca32017e3-200x200.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fb712bd2cb1358716213fbab39b09fecab7c02a7e-500x500.webp%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F73a2e816a9eb4747d9a31c8eb4bfb51e7490ea75-954x954.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F767aee2ca097ca53f70232dafadb277a170a3515-1063x1063.jpg%3Ffm%3Dwebp&w=128&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fd545ea303ec936ec339f8e96f914f241f64caaf8-722x750.png%3Ffm%3Dwebp&w=1920&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F986a34b2990b507e54801c564ac128aff6b842cf-1119x1162.png&w=3840&q=75
+- Icon | https://cdn.sanity.io/images/8dgizo1e/production/e08f43fed88399a08e0c2647a921faf419f3beec-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/8111456c6348f13bf8d21f8420d2bfb668affe88-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/1761a6f6a6605f51a44babae86fe683ca227ede4-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/c1b917e5f677fefb1dc6ab5ac36a50b202fa3cec-30x30.svg
+- Edge Decorator | /images/edges/navy-top.svg
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F629dab9592403fbb5b8964f63965987ca27753d3-1504x839.png%3Ffm%3Dwebp&w=3840&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F629dab9592403fbb5b8964f63965987ca27753d3-1504x839.png&w=3840&q=75
+- Edge Decorator | /images/edges/navy-bottom.svg
+-  | /images/edges/footer-top-primary.svg
+-  | /images/edges/footer-bottom.svg
+- logo | /images/site-logo-footer.svg
+
+=====
+Tax Planning for Optometry Practices
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services[LINK→/services/payroll] Payroll
+[LINK→/who-we-serve] Who We Serve[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+[LINK→/pricing-calculator] Pricing Calculator
+[LINK→/about-us] About[LINK→/about-us/our-team] Our Team
+[LINK→/resources] Resources[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+[BUTTON] Get Started
+
+[LINK→tel:844-505-3937] [LINK→/] 
+[IMG alt="logo"]
+
+[BUTTON] 
+
+[BUTTON] 
+
+[LINK→tel:844-505-3937] 844-505-3937
+[BUTTON] 
+
+Book a Call
+Send a Message
+
+Let’s Talk Eyecare
+Have a question or ready to learn how we can help your practice?
+
+[IMG alt=""]
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+# Tax Planning Services for Optometry Practices
+
+Tax planning shouldn’t start a few weeks before filing deadlines. At ForEyes Solutions, we provide proactive tax planning and [LINK→https://foreyessolutions.com/services/tax-services] tax services for independent optometry practices in Nashville, TN, and nationwide. Our strategic approach helps eyecare professionals reduce tax liabilities, improve cash flow, and make smarter financial decisions year-round—not just during tax season.
+[BUTTON] Book a Discovery Call
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+## Strategic. Proactive. Year-Round.
+
+ForEyes Solutions delivers tax planning services specifically designed for optometrists and eyecare practices. By combining industry-specific accounting expertise with proactive financial strategy, we help practice owners identify opportunities to minimize taxes, optimize profitability, and stay compliant at every stage of growth.
+[IMG alt="Edge Decorator"]
+
+## Comprehensive Tax Planning Services
+
+Our tax planning services go beyond annual filing preparation. We help optometry practice owners create a long-term strategy that aligns tax decisions with business goals, profitability, and future growth. From entity structure guidance to retirement planning and equipment depreciation strategies, we help ensure your financial decisions support better tax outcomes.
+
+[IMG alt="icon"]
+
+### Proactive Tax Strategy & Forecasting
+
+We monitor your finances throughout the year to identify opportunities before deadlines arrive. Through tax forecasting, estimated payment planning, and proactive strategy adjustments, we help reduce surprises and keep your practice financially prepared year-round.
+
+[IMG alt=""]
+
+### Entity Structure & Compensation Planning
+
+Choosing the right business structure can significantly impact your tax liability. We help eyecare practice owners evaluate entity structures, owner compensation strategies, salary distributions, and tax-efficient payment methods that align with both compliance requirements and long-term financial goals.
+
+[IMG alt="icon"]
+
+### Equipment Depreciation & Deduction Planning
+
+Optometry practices often invest heavily in diagnostic equipment, technology, and office improvements. We help maximize available deductions through depreciation planning, Section 179 opportunities, and strategic timing of major purchases to improve tax efficiency.
+
+[IMG alt="icon"]
+
+### Retirement & Growth Tax Planning
+
+We help you align retirement contributions, expansion plans, and long-term investments with tax-saving opportunities. Whether you’re opening a second location, hiring additional providers, or planning for retirement, our team creates strategies that support sustainable growth while minimizing unnecessary tax exposure.
+
+## Why ForEyes Solutions for Tax Planning?
+
+You didn’t become an optometrist to spend your evenings researching tax law changes or calculating estimated payments. Our team delivers proactive, industry-focused tax planning that simplifies financial management and gives you confidence in your numbers.
+
+[IMG alt="icon"]
+
+### Eyecare Industry Expertise
+
+We understand the financial structure of optometry practices, including optical sales, insurance reimbursements, equipment investments, and multi-location growth planning.
+
+[IMG alt="icon"]
+
+### Proactive Financial Guidance
+
+Rather than reacting at tax time, we provide year-round planning and ongoing recommendations designed to reduce liabilities before they become problems.
+
+[IMG alt="icon"]
+
+### Integrated Accounting & Tax Support
+
+Because bookkeeping, accounting, and tax planning work together, our integrated approach creates cleaner financials, fewer reporting errors, and better tax-saving opportunities.
+
+## Our Tax Planning Process
+
+[IMG alt="image"]
+
+[IMG alt="image"]
+
+[IMG alt="icon"]
+
+### Discovery Call
+
+We learn about your optometry practice, financial goals, current tax concerns, and operational structure to identify opportunities for improvement.
+1
+
+[IMG alt="icon"]
+
+### Onboarding
+
+Meet your dedicated specialist, complete a streamlined intake process, and gain access to your secure client portal for seamless collaboration.
+2
+
+[IMG alt="icon"]
+
+### Financial Review & Tax Analysis
+
+Our team reviews your bookkeeping, revenue streams, expenses, payroll structure, and historical tax filings to uncover savings opportunities and compliance risks.
+3
+
+[IMG alt="icon"]
+
+### Strategic Tax Planning
+
+We develop a proactive tax strategy tailored to your practice, including deduction planning, compensation structuring, retirement strategies, and estimated tax planning.
+4
+
+[IMG alt="icon"]
+
+### Ongoing Adjustments & Support
+
+As your practice evolves, we continue monitoring your financials and adjusting strategies throughout the year to help maximize savings and support long-term growth.
+5
+[IMG alt="icon"]
+
+[IMG alt="icon"]
+
+[IMG alt=""]
+
+## Proof in Practice
+
+Optometrists describe what dependable books feel like. Keep the Ryan Corte, OD quote first on this page.
+
+[IMG alt=""]
+
+Ryan Corte, OD
+
+Wade and his team do an outstanding job providing accurate, timely, and reliable bookkeeping services. They’re responsive, detail-oriented, and take the time to explain financials in a way that’s easy to understand. Working with them has given me greater peace of mind and confidence in the financial side of my business. I highly recommend Wade and his team to any business owner looking for a trustworthy and professional bookkeeping partner.
+
+[IMG alt=""]
+
+Nona Kalfayan, OD
+
+I've been working with Wade and his team at ForEyes Solutions for the past two years, and the experience has been nothing short of excellent. From onboarding to goal setting and ongoing support, they've made a huge impact on my business by taking bookkeeping and organization off my plate so I can focus on growth. They truly understand the industry and provide value whether you're just starting out or already established and looking to improve your systems. What sets them apart is their communication — fast, reliable, and always helpful. You never feel left in the dark and are always supported.
+If you're looking for bookkeeping or business consulting, I highly recommend ForEyes Solutions. They're professional, knowledgeable, and genuinely committed to your success. They are absolutely the real deal!
+
+[IMG alt=""]
+
+Brandon Luu, OD
+
+Wade and his team have been rock solid. It's been about 2 years, and they've done an excellent job keeping my books in order. They are always available if I have any questions. Recently, Wade has really elevated his business beyond just bookkeeping. I am excited to be along for the ride. Extremely satisfied client and would definitely recommend his services to other practice owners.
+
+[IMG alt=""]
+
+Cristine Areola, OD
+
+For Eyes has been a great resource for my business as a first-time practice owner. I am very thankful for their expertise and their attentiveness to the small financial details. I don't know what I would do without them!
+
+[IMG alt=""]
+
+Ryan Corte, OD
+
+Wade and his team do an outstanding job providing accurate, timely, and reliable bookkeeping services. They’re responsive, detail-oriented, and take the time to explain financials in a way that’s easy to understand. Working with them has given me greater peace of mind and confidence in the financial side of my business. I highly recommend Wade and his team to any business owner looking for a trustworthy and professional bookkeeping partner.
+
+[IMG alt=""]
+
+Nona Kalfayan, OD
+
+I've been working with Wade and his team at ForEyes Solutions for the past two years, and the experience has been nothing short of excellent. From onboarding to goal setting and ongoing support, they've made a huge impact on my business by taking bookkeeping and organization off my plate so I can focus on growth. They truly understand the industry and provide value whether you're just starting out or already established and looking to improve your systems. What sets them apart is their communication — fast, reliable, and always helpful. You never feel left in the dark and are always supported.
+If you're looking for bookkeeping or business consulting, I highly recommend ForEyes Solutions. They're professional, knowledgeable, and genuinely committed to your success. They are absolutely the real deal!
+
+- 
+[BUTTON] 1
+- 
+[BUTTON] 2
+- 
+[BUTTON] 3
+- 
+[BUTTON] 4
+
+## Tax Planning FAQs
+
+### What’s the difference between tax planning and tax preparation?
+
+### What tax deductions are available for optometry practices?
+
+### Do you work with practices outside Tennessee?[LINK→/resources/faq] More FAQs
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+## Transparent Pricing, Tailored to You
+
+Not every optometry practice needs the same level of financial support. That's why we've built a simple, interactive pricing calculator to give you a clear picture of what your services will cost, based on practice size, service level, and add-ons. No hidden fees, no surprise invoices–just custom pricing that matches your workflow.[LINK→/pricing-calculator] Calculate Your Price Now
+
+## More Ways We Can Support Your Practice
+
+[LINK→/services/bookkeeping] 
+
+[IMG alt="Icon"]
+
+### Bookkeeping
+
+[LINK→https://foreyessolutions.com/services/bookkeeping] Full-service bookkeeping with customized financial reporting, timely monthly closes, and organized records that support better decision-making.[LINK→/services/accounting] 
+
+[IMG alt="icon"]
+
+### Accounting
+
+[LINK→https://foreyessolutions.com/services/accounting] Comprehensive accounting services including payroll, accounts payable, financial reporting, and ongoing support that keeps your practice operating efficiently.[LINK→/services/practice-consulting] 
+
+[IMG alt="icon"]
+
+### Practice Consulting
+
+Increase profitability and improve operational performance with [LINK→https://foreyessolutions.com/services/practice-consulting] expert consulting focused on staffing, workflows, systems, and optical business performance.[LINK→/services/billing-services] 
+
+[IMG alt="icon"]
+
+### Billing Services
+
+Our [LINK→https://foreyessolutions.com/services/billing-services] revenue cycle management and coding audit services help maximize collections, improve cash flow, and ensure your practice receives the revenue it has earned.
+
+[IMG alt="Edge Decorator"]
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+## Remote, Nationwide Assistance
+
+Payments and paychecks do not wait on geography. Bill.com and Gusto run in the cloud, so your approvals and pay runs work the same from any state.
+Our remote team keeps both on schedule and answers questions quickly.
+[BUTTON] Connect With Us
+[IMG alt="Edge Decorator"]
+
+## Smart Reads for ODs
+
+Our blog helps you simplify your numbers and grow smarter, one post at a time.
+
+[IMG alt=""]
+
+## See Further. Move Faster. Grow Smarter.
+
+Unlock the clarity and expert, industry-specific support your eyecare practice needs to accelerate growth and focus on what matters most–your patients.
+[BUTTON] Book a Discovery Call
+[IMG alt=""]
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services
+[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services
+[LINK→/who-we-serve] Who We Serve
+[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+
+Get To Know Us
+[LINK→/about-us] About[LINK→/about-us/our-team] Team
+[LINK→/resources] Resources
+[LINK→/pricing-calculator] Pricing Calculator[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+Contact
+[LINK→https://www.google.com/maps/search/2429+Curbow+Dr+Murfreesboro,+TN+37127?entry=gmail&source=g] 
+2429 Curbow Dr 
+Murfreesboro, TN 37127[LINK→tel:844-505-3937] 844-505-3937[LINK→/cdn-cgi/l/email-protection#18707d747477587e776a7d617d6b6b77746d6c7177766b367b7775] [email protected]
+Hours: Mon-Fri at 8AM-5PM CT
+
+© 2026 ForEyes Solutions[LINK→/privacy-policy] Privacy Policy[LINK→https://www.wisedigitalpartners.com/technology/nest] Powered by

@@ -1,0 +1,370 @@
+TITLE: Accounts Receivable Management for Eyecare Practices
+META: {'og:image': 'https://foreyessolutions.com//images/open-graph/default.jpg', 'description': 'Accounts receivable management built for eyecare. ForEyes tracks open claims and patient balances, lowers your days in A/R, and shows what you are owed.', 'og:title': 'Accounts Receivable Management for Eyecare Practices', 'og:description': 'Accounts receivable management built for eyecare. ForEyes tracks open claims and patient balances, lowers your days in A/R, and shows what you are owed.'}
+
+IMAGES:
+- logo | /images/site-logo.svg
+- logo | /images/site-logo.svg
+-  | /images/edges/blue-bottom-inward.svg
+- Optometry practice owner reviewing an accounts receivable aging report | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F4ee0537a8208ac4136d1c50189651ba0dbc55216-1944x1584.jpg%3Ffm%3Dwebp&w=3840&q=75
+- Optometry practice owner reviewing an accounts receivable aging report | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F4ee0537a8208ac4136d1c50189651ba0dbc55216-1944x1584.jpg&w=3840&q=75
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F176b9a5d26f8fa935768df64c2503fe7a51930b8-1800x1691.png%3Ffm%3Dwebp&w=3840&q=75
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F176b9a5d26f8fa935768df64c2503fe7a51930b8-1800x1691.png&w=3840&q=75
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F301cfe46ffc4bc00291a04b984e8f1af3ca10ff9-2292x2347.png%3Ffm%3Dwebp&w=3840&q=75
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F301cfe46ffc4bc00291a04b984e8f1af3ca10ff9-2292x2347.png&w=3840&q=75
+- Edge Decorator | /images/edges/blue-bottom.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/d1d4f7eeaeb8d11a341335b53ebb2c34fedd2374-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/732299c0f084567eccf8ac60d55e997a9815107f-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/11d9b27f9d4590b9149db03c7283aa7f51742c3f-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/611843c52e759ae2d48312e9c4b985ff8363b4f3-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/1b6d1b4ab9e9e7680908f84fee4618e1792e684e-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/c64c8ece39c0ff4b60815b7603459bb836b70a18-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/4b4664fe71057b3aad162ca8b0aec3d08e8fc39f-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/b0ea23d367176a803e3117fc6a041e1146c9e038-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/b0ea23d367176a803e3117fc6a041e1146c9e038-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/732299c0f084567eccf8ac60d55e997a9815107f-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/e2af8a9a4c2c7cfcb809010e8bf445f549bfeb3d-30x30.svg
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F08f0f0c6ea9270a030776662482d474bab7aa226-1572x2216.png&w=3840&q=75
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F08f0f0c6ea9270a030776662482d474bab7aa226-1572x2216.png&w=3840&q=75
+-  | https://cdn.sanity.io/images/8dgizo1e/production/9074f98236fd1699a1eb5cc251645381b7c16ee8-31x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/9e1ddd4ab87f6e5ac055b8032ce0cbf50b0c1584-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/86d1fa61159160209a351b7a4e8b387a08cbaf53-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/d1d4f7eeaeb8d11a341335b53ebb2c34fedd2374-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/c84448f7fa6516d31822efc2285520afd33e9594-30x30.svg
+-  | /images/testimonial-bg.svg
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F73a2e816a9eb4747d9a31c8eb4bfb51e7490ea75-954x954.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F73a2e816a9eb4747d9a31c8eb4bfb51e7490ea75-954x954.jpg%3Ffm%3Dwebp&w=128&q=75
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Ffbdcdf60906cf1c81b4850acff483d8e415009a2-1258x1349.png%3Ffm%3Dwebp&w=3840&q=75
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Ffbdcdf60906cf1c81b4850acff483d8e415009a2-1258x1349.png&w=3840&q=75
+-  | https://cdn.sanity.io/images/8dgizo1e/production/e08f43fed88399a08e0c2647a921faf419f3beec-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/8111456c6348f13bf8d21f8420d2bfb668affe88-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/82a70acf32b7ef55d5b8f96736daa62b93292765-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/c1b917e5f677fefb1dc6ab5ac36a50b202fa3cec-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/1761a6f6a6605f51a44babae86fe683ca227ede4-30x30.svg
+- Edge Decorator | /images/edges/navy-top.svg
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F629dab9592403fbb5b8964f63965987ca27753d3-1504x839.png%3Ffm%3Dwebp&w=3840&q=75
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F629dab9592403fbb5b8964f63965987ca27753d3-1504x839.png&w=3840&q=75
+- Edge Decorator | /images/edges/navy-bottom.svg
+-  | /images/edges/footer-top-primary.svg
+-  | /images/edges/footer-bottom.svg
+- logo | /images/site-logo-footer.svg
+
+=====
+Accounts Receivable Management for Eyecare Practices
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services[LINK→/services/payroll] Payroll
+[LINK→/who-we-serve] Who We Serve[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+[LINK→/pricing-calculator] Pricing Calculator
+[LINK→/about-us] About[LINK→/about-us/our-team] Our Team
+[LINK→/resources] Resources[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+[BUTTON] Get Started
+
+[LINK→tel:844-505-3937] [LINK→/] 
+[IMG alt="logo"]
+
+[BUTTON] 
+
+[BUTTON] 
+
+[LINK→tel:844-505-3937] 844-505-3937
+[BUTTON] 
+
+Book a Call
+Send a Message
+
+Let’s Talk Eyecare
+Have a question or ready to learn how we can help your practice?
+
+[IMG alt=""]
+
+[IMG alt="Optometry practice owner reviewing an accounts receivable aging report"]
+
+[IMG alt="Optometry practice owner reviewing an accounts receivable aging report"]
+
+# Eyecare Accounts Receivable Management
+
+Your practice earned it. Are you collecting all of it?
+
+[IMG alt="image"]
+
+[IMG alt="image"]
+
+You can run a full schedule, fill the optical, and submit every claim, and still end the month unsure how much of that work has actually turned into cash. The gap between care delivered and money collected is where good practices quietly lose ground. Accounts receivable management closes it.
+This is not another stack of reports to file away. It is a disciplined, eyecare-specific system for tracking every dollar your practice is owed: open insurance and vision plan claims, unpaid patient balances, and everything aging in between. We keep your receivables accurate, visible, and moving, so you always know what is coming in and when.
+Made for Practice Owners. Built by One.
+[BUTTON] Book a Discovery Call
+
+[IMG alt="image"]
+
+[IMG alt="image"]
+
+## From Aging Claims to Collected Cash
+
+You went to school to care for eyes, not to decode an explanation of benefits or work an aging bucket between patients. So claims drift past their follow-up window, patient statements go out late, and a packed schedule can quietly mask a collections problem underneath it.
+That is where we come in. ForEyes accounts receivable management gives your practice a living, accurate picture of every dollar owed to you, sorted the way eyecare actually bills. You stay with your patients. We stay on your receivables.
+A quick distinction: our A/R Management lives inside your accounting, where the job is accuracy, visibility, and [LINK→https://foreyessolutions.com/services/bookkeeping] clean books. The hands-on work of submitting and appealing claims is handled by our Billing and Revenue Cycle Management service. The two are built to work hand in hand, and accurate receivables data makes both sharper.
+[IMG alt="Edge Decorator"]
+
+## Our Accounts Receivable Management Services
+
+[IMG alt=""]
+
+### A/R Aging and Monthly Reporting
+
+An aging report only helps if you can read it. We organize every open balance by age, payer, and patient, then deliver a clear monthly report that puts your days in A/R right at the top. You leave every month knowing your numbers, not hunting for them in a spreadsheet. If your aging report keeps climbing, our Smart Reads breakdown of [LINK→https://foreyessolutions.com/blog/why-accounts-receivable-is-growing] why accounts receivable grows and how to bring it back under control walks through the usual culprits.
+
+[IMG alt=""]
+
+### Insurance and Vision Plan Payment Matching
+
+Optical, vision plan, and medical claims each behave differently, and they rarely pay the way you expect. We match incoming payments to the claims they belong to, confirm you were paid what you were owed, and keep your books accurate to the dollar.
+
+[IMG alt=""]
+
+### Patient Balance Tracking
+
+Small patient balances add up fast across a full schedule, and they are the easiest dollars to lose. We keep patient receivables organized and current, so you can see what is outstanding and nothing quietly falls through the cracks.
+
+[IMG alt=""]
+
+### Denials and Underpayment Flags
+
+A denied or short-paid claim is money you already earned sitting just out of reach. We surface denials and underpayments as they appear and route them to [LINK→https://foreyessolutions.com/services/billing-services] Billing and Revenue Cycle Management for follow-up, so problems surface in days instead of at year-end.
+
+[IMG alt=""]
+
+### Days in A/R and Cash Flow Improvement
+
+Profit on paper does not always mean money in the account. We track how quickly your receivables convert to cash, flag the tight stretches before they arrive, and give you a dependable read on the money moving toward your practice. We also name the levers: which aging buckets to work first, where your follow-up cadence is slipping, and which payers consistently take the longest to pay. Those three answers are where most eyecare practices recover cash without adding a single patient to the schedule.
+
+[IMG alt=""]
+
+### Collections Priorities and Follow-Up Support
+
+Not every unpaid balance deserves the same urgency. We rank your open balances by age, size, and likelihood of collection, then tell your team exactly which claims and patient accounts to work this week and in what order. When the work calls for hands-on submission, appeals, or collections calls, it moves to Billing and Revenue Cycle Management with the priority list already built.
+
+[IMG alt=""]
+
+### Month-End Close and Secure Portal Delivery
+
+We close your [LINK→https://foreyessolutions.com/services/bookkeeping] books by the 10th business day of every month and deliver your receivables reports through your secure client portal. Current, dependable, and ready whenever you are.
+
+## What Sets Our A/R Management Apart
+
+[IMG alt=""]
+
+### We Know Where Eyecare Dollars Get Stuck
+
+Founded by Wade Weisz, OD, ForEyes has spent more than 25 years watching how eyecare revenue actually moves: the vision plan that pays late, the medical claim that comes back short, the frames sale that never got posted. We manage your receivables with a practicing owner's instinct for where money hides, not a generalist's checklist.
+
+[IMG alt=""]
+
+### Receivables Read Through an Eyecare Lens
+
+Optical, medical, and vision plan dollars each follow their own rules, and a general accountant lumps them into one line. Our custom chart of accounts keeps them separate on your books, so your aging report reflects how an eyecare practice really earns and shows exactly where your cash is tied up.
+
+[IMG alt=""]
+
+### A Second Set of Eyes on Every Number
+
+Nothing reaches you unchecked. A quality control manager reviews your receivables reporting before it lands in your portal, and the workflow around it, [LINK→https://foreyessolutions.com/services/accounting] Accounts Payable through Bill.com and Payroll through Gusto, runs with the same certified discipline. Backed by Certified Support, accuracy is the standard and not the exception.
+
+[IMG alt=""]
+
+### Less Follow-Up on Your Plate
+
+Chasing balances and decoding remittances is exactly the work that swallows an owner's evenings. We take the tracking, the matching, and the flagging off your desk, so your team can spend its energy on patients at the front desk instead of on the aging report.
+
+## Our Straightforward Process
+
+[IMG alt="image"]
+
+[IMG alt="image"]
+
+[IMG alt=""]
+
+### Discovery Call
+
+A relaxed first Discovery Call about how your practice bills, which payers you lean on, and where cash tends to get held up. No pressure, just a clear read on where your receivables stand right now.
+1
+
+[IMG alt=""]
+
+### Receivables Audit
+
+We pull apart your open A/R, payer mix, and current Chart of Accounts to see exactly what is outstanding, how old it is, and which balances are quietly costing you month after month.
+2
+
+[IMG alt=""]
+
+### Built-for-Eyecare Setup
+
+We structure your receivables inside a custom chart of accounts made for eyecare, so aging, payer, and patient detail tracks cleanly from the very first month forward.
+3
+
+[IMG alt=""]
+
+### Monthly Reporting Rhythm
+
+Books closed by the 10th business day, aging reports waiting in your portal, and denials and short-pays flagged the moment they surface. A cadence steady enough to set your planning to.
+4
+
+[IMG alt=""]
+
+### Ongoing Partnership (Optional)
+
+As your payer mix and patient volume shift, we stay in step, meeting on a regular cadence to review days in A/R, tighten collections, and keep your numbers honest as the practice grows. Owners who want that partnership to reach past receivables can extend it through [LINK→https://foreyessolutions.com/services/practice-consulting] Practice Consulting.
+5
+
+[IMG alt=""]
+
+## Proof in Practice
+
+Hear the stories behind the numbers, straight from the ODs themselves.
+
+Kyle Wilson, OD
+
+Super happy to have ForEyes doing the nitty gritty on my financials. They do it so much better than I used to and it's taken a ton off my plate.
+
+[IMG alt=""]
+
+Ryan Corte, OD
+
+Wade and his team do an outstanding job providing accurate, timely, and reliable bookkeeping services. They’re responsive, detail-oriented, and take the time to explain financials in a way that’s easy to understand. Working with them has given me greater peace of mind and confidence in the financial side of my business. I highly recommend Wade and his team to any business owner looking for a trustworthy and professional bookkeeping partner.
+
+Tri Nguyen, OD
+
+Wade being an optometrist helps me out tremendously because he knows the industry. Wade has become a great asset and friend. He has kept my books up to date and given suggestions that have saved me a lot of money.
+
+Annie Miller, OD
+
+As my practice grows, I don't even know what I would do without you guys. Seriously. How do people make financial decisions like this without being up to date on their books constantly?! I know I don't have time for it or to remember how to do it right.
+
+Stephen McCollough, OD
+
+This time last year I was drowning in financials and had a lot of trouble keeping up with everything. And then my third kiddo was born lol. This year has been a cinch. Thanks to you and your team! Looking forward to continued growth with you guys :)
+
+Kyle Wilson, OD
+
+Super happy to have ForEyes doing the nitty gritty on my financials. They do it so much better than I used to and it's taken a ton off my plate.
+
+[IMG alt=""]
+
+Ryan Corte, OD
+
+Wade and his team do an outstanding job providing accurate, timely, and reliable bookkeeping services. They’re responsive, detail-oriented, and take the time to explain financials in a way that’s easy to understand. Working with them has given me greater peace of mind and confidence in the financial side of my business. I highly recommend Wade and his team to any business owner looking for a trustworthy and professional bookkeeping partner.
+
+- 
+[BUTTON] 1
+- 
+[BUTTON] 2
+- 
+[BUTTON] 3
+- 
+[BUTTON] 4
+- 
+[BUTTON] 5
+
+## Eyecare A/R Management FAQs
+
+### What is accounts receivable in an eyecare practice?
+
+### How is A/R Management different from billing or RCM?
+
+### How is this different from a general bookkeeper?
+
+### How quickly will I see my numbers?
+
+### Do you work with multi-location groups and startups?
+
+### Is your team local or remote?[LINK→/resources/faq] More FAQs
+
+[IMG alt="image"]
+
+[IMG alt="image"]
+
+## Transparent Pricing, Tailored to You
+
+No guesswork and no surprise invoices. Our interactive Pricing Calculator gives you a clear estimate for the Accounts receivable management support your practice needs, and every number it shows is an estimate only. We walk through the specifics together before anything is finalized.[LINK→/pricing-calculator] Pricing Calculator
+
+## More Ways We Can Support Your Practice
+
+[LINK→/services/bookkeeping] 
+
+[IMG alt=""]
+
+### Bookkeeping
+
+Eyecare-specific books closed by the 10th business day, the clean baseline your receivables are measured against.[LINK→/services/accounting] 
+
+[IMG alt=""]
+
+### Accounting
+
+Accounts Payable via Bill.com and Payroll via Gusto, run with certified precision right alongside your A/R.[LINK→/services/tax-services] 
+
+[IMG alt=""]
+
+### Tax Services
+
+Year-round, proactive tax strategy that trims liability and heads off the filing-season rush, backed by Certified Support.
+[LINK→/services/billing-services] 
+
+[IMG alt=""]
+
+### Billing and Revenue Cycle Management
+
+The hands-on claim submission, appeals, and collections that turn the balances we track into cash in the bank.[LINK→/services/practice-consulting] 
+
+[IMG alt=""]
+
+### Financial Consulting
+
+Owner-level strategy that reads your clean receivables picture into decisions on cash flow, margin, and growth.
+
+[IMG alt="Edge Decorator"]
+
+[IMG alt="image"]
+
+[IMG alt="image"]
+
+## Remote, Nationwide Assistance
+
+Home base is Nashville and Franklin, Tennessee, but our reach is national. Through Nationwide Remote Assistance, we support [LINK→https://foreyessolutions.com/who-we-serve/optometrists] eyecare owners in every state with the speed a remote-first team is built for, so where you practice never sets the pace of your reporting. Reach us Monday through Friday, 8:00 AM to 5:00 PM CT, or call 844-505-3937.
+[IMG alt="Edge Decorator"]
+
+## Smart Reads for ODs
+
+Want to go deeper on the numbers? Our [LINK→https://foreyessolutions.com/resources/blog] Smart Reads blog unpacks the questions practice owners actually ask, from what your aging report is really telling you to why days in A/R rise and fall. Start with [LINK→https://foreyessolutions.com/blog/why-accounts-receivable-is-growing] Why Your Accounts Receivable Is Growing and How to Bring It Under Control.
+
+[IMG alt=""]
+
+## Bring Your Receivables Into Focus
+
+Your numbers already know what you are owed. Let us help you collect it. Book a Discovery Call and get a partner who reads eyecare financials for a living and puts that insight to work for your practice.
+[BUTTON] Book a Discovery Call
+[IMG alt=""]
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services
+[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services
+[LINK→/who-we-serve] Who We Serve
+[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+
+Get To Know Us
+[LINK→/about-us] About[LINK→/about-us/our-team] Team
+[LINK→/resources] Resources
+[LINK→/pricing-calculator] Pricing Calculator[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+Contact
+[LINK→https://www.google.com/maps/search/2429+Curbow+Dr+Murfreesboro,+TN+37127?entry=gmail&source=g] 
+2429 Curbow Dr 
+Murfreesboro, TN 37127[LINK→tel:844-505-3937] 844-505-3937[LINK→/cdn-cgi/l/email-protection#640c0108080b24020b16011d0117170b0811100d0b0a174a070b09] [email protected]
+Hours: Mon-Fri at 8AM-5PM CT
+
+© 2026 ForEyes Solutions[LINK→/privacy-policy] Privacy Policy[LINK→https://www.wisedigitalpartners.com/technology/nest] Powered by

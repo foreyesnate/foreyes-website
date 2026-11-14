@@ -1,0 +1,371 @@
+TITLE: Eyecare Financial Consulting | ForEyes Solutions
+META: {'og:image': 'https://foreyessolutions.com//images/open-graph/default.jpg', 'description': 'Eyecare financial strategy from a firm founded by a practicing OD. Read your numbers, protect cash flow, and grow profit. Book a Discovery Call today.', 'og:title': 'Eyecare Financial Consulting | ForEyes Solutions', 'og:description': 'Eyecare financial strategy from a firm founded by a practicing OD. Read your numbers, protect cash flow, and grow profit. Book a Discovery Call today.'}
+
+IMAGES:
+- logo | /images/site-logo.svg
+- logo | /images/site-logo.svg
+-  | /images/edges/blue-bottom-inward.svg
+- Optometry practice owner reviewing financial statements with a ForEyes advisor | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F78a95bfec95fab022a4526627741cfb27b47a3d2-1944x1584.jpg%3Ffm%3Dwebp&w=3840&q=75
+- Optometry practice owner reviewing financial statements with a ForEyes advisor | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F78a95bfec95fab022a4526627741cfb27b47a3d2-1944x1584.jpg&w=3840&q=75
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fd62c1267bbec5315c3b0d42622a16a5635153869-2292x2067.png%3Ffm%3Dwebp&w=3840&q=75
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fd62c1267bbec5315c3b0d42622a16a5635153869-2292x2067.png&w=3840&q=75
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F4c7376c666b413b1980e7cf6296e42dbd499eba7-2384x2240.png%3Ffm%3Dwebp&w=3840&q=75
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F4c7376c666b413b1980e7cf6296e42dbd499eba7-2384x2240.png&w=3840&q=75
+- Edge Decorator | /images/edges/blue-bottom.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/d1d4f7eeaeb8d11a341335b53ebb2c34fedd2374-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/1b6d1b4ab9e9e7680908f84fee4618e1792e684e-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/d04990683ffa1cc98b27312d97e310b1d46bd88b-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/e8d6edaa3899f970caaee16840492cd79aada051-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/8875b0bcaab1f595d60c21724d5a3ebd5ffecdea-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/067eb31b61a20848f126befe3f7663bf9e41bd17-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/6291951701cb5b2c0cd05e52ced27d0a28e2cd66-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/b0ea23d367176a803e3117fc6a041e1146c9e038-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/c64c8ece39c0ff4b60815b7603459bb836b70a18-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/e2af8a9a4c2c7cfcb809010e8bf445f549bfeb3d-30x30.svg
+- Five-step eyecare financial consulting process from Discovery Call to ongoing advisory | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fdb06516feeed51f15cc587aa7c78b96bb68618ef-1200x1692.png&w=3840&q=75
+- Five-step eyecare financial consulting process from Discovery Call to ongoing advisory | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fdb06516feeed51f15cc587aa7c78b96bb68618ef-1200x1692.png&w=3840&q=75
+-  | https://cdn.sanity.io/images/8dgizo1e/production/9074f98236fd1699a1eb5cc251645381b7c16ee8-31x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/9e1ddd4ab87f6e5ac055b8032ce0cbf50b0c1584-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/4cef9f84fc7e09b0429e3d636bf611a39a8c13f1-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/86d1fa61159160209a351b7a4e8b387a08cbaf53-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/c84448f7fa6516d31822efc2285520afd33e9594-30x30.svg
+-  | /images/testimonial-bg.svg
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fb712bd2cb1358716213fbab39b09fecab7c02a7e-500x500.webp%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F73a2e816a9eb4747d9a31c8eb4bfb51e7490ea75-954x954.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F767aee2ca097ca53f70232dafadb277a170a3515-1063x1063.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fbb5fe74864c9fff63e044d5cb0a1ef8ca32017e3-200x200.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fb712bd2cb1358716213fbab39b09fecab7c02a7e-500x500.webp%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F73a2e816a9eb4747d9a31c8eb4bfb51e7490ea75-954x954.jpg%3Ffm%3Dwebp&w=128&q=75
+- ForEyes Solutions pricing calculator for eyecare practice financial services | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Ffbdcdf60906cf1c81b4850acff483d8e415009a2-1258x1349.png%3Ffm%3Dwebp&w=3840&q=75
+- ForEyes Solutions pricing calculator for eyecare practice financial services | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Ffbdcdf60906cf1c81b4850acff483d8e415009a2-1258x1349.png&w=3840&q=75
+-  | https://cdn.sanity.io/images/8dgizo1e/production/e08f43fed88399a08e0c2647a921faf419f3beec-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/8111456c6348f13bf8d21f8420d2bfb668affe88-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/82a70acf32b7ef55d5b8f96736daa62b93292765-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/c1b917e5f677fefb1dc6ab5ac36a50b202fa3cec-30x30.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/1761a6f6a6605f51a44babae86fe683ca227ede4-30x30.svg
+- Edge Decorator | /images/edges/navy-top.svg
+- ForEyes Solutions provides nationwide remote financial consulting to eyecare practices | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F629dab9592403fbb5b8964f63965987ca27753d3-1504x839.png%3Ffm%3Dwebp&w=3840&q=75
+- ForEyes Solutions provides nationwide remote financial consulting to eyecare practices | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F629dab9592403fbb5b8964f63965987ca27753d3-1504x839.png&w=3840&q=75
+- Edge Decorator | /images/edges/navy-bottom.svg
+-  | /images/edges/footer-top-primary.svg
+-  | /images/edges/footer-bottom.svg
+- logo | /images/site-logo-footer.svg
+
+=====
+Eyecare Financial Consulting | ForEyes Solutions
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services[LINK→/services/payroll] Payroll
+[LINK→/who-we-serve] Who We Serve[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+[LINK→/pricing-calculator] Pricing Calculator
+[LINK→/about-us] About[LINK→/about-us/our-team] Our Team
+[LINK→/resources] Resources[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+[BUTTON] Get Started
+
+[LINK→tel:844-505-3937] [LINK→/] 
+[IMG alt="logo"]
+
+[BUTTON] 
+
+[BUTTON] 
+
+[LINK→tel:844-505-3937] 844-505-3937
+[BUTTON] 
+
+Book a Call
+Send a Message
+
+Let’s Talk Eyecare
+Have a question or ready to learn how we can help your practice?
+
+[IMG alt=""]
+
+[IMG alt="Optometry practice owner reviewing financial statements with a ForEyes advisor"]
+
+[IMG alt="Optometry practice owner reviewing financial statements with a ForEyes advisor"]
+
+# Eyecare Financial Consulting
+
+Your practice makes money. Do you know where it goes?
+
+[IMG alt="image"]
+
+[IMG alt="image"]
+
+You can run a full schedule, cap your frames board, and still end the year unsure whether the practice actually got ahead. That gap between activity and clarity is where most owners get stuck. Financial Consulting closes it.
+This is not more [LINK→https://foreyessolutions.com/services/bookkeeping] bookkeeping, and it is not another set of reports to file away. It is a seat at the table with people who read practice financials for a living and who understand eyecare from the inside. We translate your numbers into decisions you can act on: what to charge, what to keep, what to cut, and when to grow.
+Made for Practice Owners. Built by One.
+[BUTTON] Book a Discovery Call
+
+[IMG alt="image"]
+
+[IMG alt="image"]
+
+## From Numbers to a Plan You Can Use
+
+Most ODs were trained to care for patients, not to interpret a Profit and Loss (P&L) statement between exams. So the financials pile up, the questions grow, and big decisions get made on instinct instead of evidence.
+We change that. ForEyes Financial Consulting gives you a partner who sits in the owner's seat with you, reads the story your numbers are telling, and hands you a clear, prioritized path forward. You keep your focus on the chair. We keep the financial strategy in focus.
+Our [LINK→https://foreyessolutions.com/services/practice-consulting] Practice Consulting service looks across the whole practice: operations, staffing, workflow, and financial performance. Financial Consulting goes deeper on the money itself, with dedicated work on cash flow, margins, compensation, valuation, and the forward plan that ties them together.
+[IMG alt="Edge Decorator"]
+
+## What We Handle for Your Practice
+
+[IMG alt=""]
+
+### Financial Statement Interpretation and KPI Reporting
+
+A P&L only helps if you can read it. We sit with you and walk through what each line is really saying, then build a short list of the metrics that actually move your practice: revenue per exam, optical capture rate, cost of goods on the optical side, and provider productivity. You leave every session knowing your numbers, not just owning them.
+
+[IMG alt=""]
+
+### Cash Flow Planning and Forecasting
+
+Profit on paper does not always mean money in the account. We map how cash actually moves through your practice across the year, flag the tight months before they arrive, and build a forecast you can plan against. That means fewer surprises at payroll, smarter timing on big purchases, and a cushion you can count on. When the pressure is coming from slow reimbursements rather than spending, we point you toward [LINK→https://foreyessolutions.com/services/billing-services] faster collections as the fix.
+
+[IMG alt=""]
+
+### Profitability and Margin Analysis
+
+Not all revenue is equal. We break down where your true profit comes from, separating optical margins from medical reimbursements and exam revenue, so you can see which parts of the practice carry the business and which quietly drain it. Then we help you protect the strong lines and fix the weak ones.
+
+[IMG alt=""]
+
+### Owner Compensation and True Take-Home Pay
+
+Many owners cannot say, with confidence, what they actually earn. We clarify the difference between [LINK→https://foreyessolutions.com/services/accounting] W-2 wages and owner draws so your real take-home pay is unmistakable, then help you structure compensation in a way that supports both your household and the health of the practice.
+
+[IMG alt=""]
+
+### EBITDA and Valuation Readiness
+
+Whether you are years from an exit or simply want to build something worth more, EBITDA is the language of practice value. We calculate it accurately for your practice, show you the levers that raise it, and keep your finances in a shape that stands up to a buyer, a partner, or a lender. For groups, that same work supports [LINK→https://foreyessolutions.com/who-we-serve/multi-location-practices] multi-location benchmarking so you can compare sites on equal footing.
+
+[IMG alt=""]
+
+### Budgeting, Growth Planning, and the Forward Roadmap
+
+Guesswork is expensive. We build a working budget around your real numbers and your goals, then turn it into a roadmap: when you can afford the new lane, the second location, the associate hire, or the equipment upgrade. Every major move gets tested against the numbers before you commit. When you are weighing a second location, an associate, or a lane expansion, we model the scenario first so the growth decision is a calculation rather than a leap.
+
+## Why Choose Us for Financial Consulting
+
+[IMG alt=""]
+
+### Built by an Owner, for Owners
+
+ForEyes is founded and led by [LINK→https://foreyessolutions.com/about-us/our-team] Wade Weisz, OD, a practicing optometrist with more than 25 years in the owner's seat. When we talk about optical COGS, insurance mix, or the cost of an empty chair, we are speaking from experience, not from a textbook. Specialists, never generalists.
+
+[IMG alt=""]
+
+### Eyecare Is the Only Thing We Do
+
+Our guidance runs on a [LINK→https://foreyessolutions.com/services/bookkeeping] Custom Chart of Accounts built specifically for eyecare, which means we can see distinctions a general accountant never will. That specificity is what turns raw data into decisions that fit how an optometry, ophthalmology, or optical practice really operates.
+
+[IMG alt=""]
+
+### Strategy, Not Just Statements
+
+Reports tell you what happened. We tell you what to do next. Every engagement ends with a clear, prioritized set of recommendations and the reasoning behind each one, so you are never left staring at a spreadsheet wondering what it means for you.
+
+[IMG alt=""]
+
+### Reclaim Your Time and Your Confidence
+
+You did not become a doctor to spend Sunday nights buried in financials. We carry the analysis so you can carry the practice, walking into every decision with numbers you trust and a partner who has already done the math.
+
+## Our Straightforward Process
+
+[IMG alt="Five-step eyecare financial consulting process from Discovery Call to ongoing advisory"]
+
+[IMG alt="Five-step eyecare financial consulting process from Discovery Call to ongoing advisory"]
+
+[IMG alt=""]
+
+### Discovery Call
+
+We start with a low-pressure conversation about your practice, your numbers, and what keeps you up at night. No commitment, just clarity on where you are and where you want to go.
+1
+
+[IMG alt=""]
+
+### Financial Deep Dive
+
+We review your statements, your Chart of Accounts, and your key metrics to build a true picture of the practice, then identify the handful of issues and opportunities that matter most.
+2
+
+[IMG alt=""]
+
+### Strategy and Recommendations
+
+You receive a clear, prioritized plan: what to address first, what it should produce, and how we will measure it. Everything is written in plain language and tied to your goals.
+3
+
+[IMG alt=""]
+
+### Implementation Support
+
+Plans only pay off when they happen. We stay alongside you as changes roll out, adjusting as your practice responds and keeping the strategy on track.
+4
+
+[IMG alt=""]
+
+### Ongoing Advisory (Optional)
+
+Practices change, and so should the plan. Many owners keep us on as a steady financial partner, meeting on a regular basis to review results, refine the roadmap, and stay ahead of what is next.
+5
+
+[IMG alt=""]
+
+## Proof in Practice
+
+Hear the stories behind the numbers, straight from the ODs themselves.
+
+[IMG alt=""]
+
+Cristine Areola, OD
+
+For Eyes has been a great resource for my business as a first-time practice owner. I am very thankful for their expertise and their attentiveness to the small financial details. I don't know what I would do without them!
+
+[IMG alt=""]
+
+Ryan Corte, OD
+
+Wade and his team do an outstanding job providing accurate, timely, and reliable bookkeeping services. They’re responsive, detail-oriented, and take the time to explain financials in a way that’s easy to understand. Working with them has given me greater peace of mind and confidence in the financial side of my business. I highly recommend Wade and his team to any business owner looking for a trustworthy and professional bookkeeping partner.
+
+[IMG alt=""]
+
+Nona Kalfayan, OD
+
+I've been working with Wade and his team at ForEyes Solutions for the past two years, and the experience has been nothing short of excellent. From onboarding to goal setting and ongoing support, they've made a huge impact on my business by taking bookkeeping and organization off my plate so I can focus on growth. They truly understand the industry and provide value whether you're just starting out or already established and looking to improve your systems. What sets them apart is their communication — fast, reliable, and always helpful. You never feel left in the dark and are always supported.
+If you're looking for bookkeeping or business consulting, I highly recommend ForEyes Solutions. They're professional, knowledgeable, and genuinely committed to your success. They are absolutely the real deal!
+
+[IMG alt=""]
+
+Brandon Luu, OD
+
+Wade and his team have been rock solid. It's been about 2 years, and they've done an excellent job keeping my books in order. They are always available if I have any questions. Recently, Wade has really elevated his business beyond just bookkeeping. I am excited to be along for the ride. Extremely satisfied client and would definitely recommend his services to other practice owners.
+
+[IMG alt=""]
+
+Cristine Areola, OD
+
+For Eyes has been a great resource for my business as a first-time practice owner. I am very thankful for their expertise and their attentiveness to the small financial details. I don't know what I would do without them!
+
+[IMG alt=""]
+
+Ryan Corte, OD
+
+Wade and his team do an outstanding job providing accurate, timely, and reliable bookkeeping services. They’re responsive, detail-oriented, and take the time to explain financials in a way that’s easy to understand. Working with them has given me greater peace of mind and confidence in the financial side of my business. I highly recommend Wade and his team to any business owner looking for a trustworthy and professional bookkeeping partner.
+
+- 
+[BUTTON] 1
+- 
+[BUTTON] 2
+- 
+[BUTTON] 3
+- 
+[BUTTON] 4
+
+## Eyecare Financial Consulting FAQs
+
+### How is Financial Consulting different from bookkeeping?
+
+### Do I need Financial Consulting if I already have an accountant or tax preparer?
+
+### What does a financial deep dive actually include?
+
+### Can this really improve my profitability?
+
+### Do you work with multi-location groups and startups?
+
+### Is your team local or remote?[LINK→/resources/faq] More FAQs
+
+[IMG alt="ForEyes Solutions pricing calculator for eyecare practice financial services"]
+
+[IMG alt="ForEyes Solutions pricing calculator for eyecare practice financial services"]
+
+## Transparent Pricing, Tailored to You
+
+No mystery invoices and no surprises. Use our [LINK→https://foreyessolutions.com/pricing-calculator] interactive Pricing Calculator to see a clear estimate for the support your practice needs. Every figure shown is an estimate only, and we confirm the details with you before anything begins.[LINK→/pricing-calculator] Pricing Calculator
+
+## More Ways We Can Support Your Practice
+
+[LINK→/services/bookkeeping] 
+
+[IMG alt=""]
+
+### Bookkeeping
+
+Accurate, eyecare-specific books closed by the 10th business day of each month, the foundation every strategy is built on.[LINK→/services/accounting] 
+
+[IMG alt=""]
+
+### Accounting
+
+Accounts Payable through Bill.com and Payroll through Gusto, handled with certified precision.[LINK→/services/tax-services] 
+
+[IMG alt=""]
+
+### Tax Services
+
+Proactive, year-round tax strategy that minimizes liability and ends the tax season scramble, backed by Certified Support.
+[LINK→/services/billing-services] 
+
+[IMG alt=""]
+
+### Billing and Revenue Cycle Management
+
+Cleaner claims and faster collections that protect the cash flow your financial plan depends on.[LINK→/services/practice-consulting] 
+
+[IMG alt=""]
+
+### Practice Consulting
+
+Operations, staffing, and workflow guidance that pairs with your financial strategy to move the whole practice forward.
+
+[IMG alt="Edge Decorator"]
+
+[IMG alt="ForEyes Solutions provides nationwide remote financial consulting to eyecare practices"]
+
+[IMG alt="ForEyes Solutions provides nationwide remote financial consulting to eyecare practices"]
+
+## Remote, Nationwide Assistance
+
+ForEyes Solutions is a Nashville, TN firm serving eyecare practice owners across the country through Nationwide Remote Assistance. Our remote-first model is built for speed and efficiency, so distance never slows down the guidance you need. Our team is available Monday through Friday, 8:00 AM to 5:00 PM CT.
+[BUTTON] Connect With Us
+[IMG alt="Edge Decorator"]
+
+## Smart Reads for ODs
+
+Keep sharpening your financial edge. Our [LINK→https://foreyessolutions.com/resources/blog] Smart Reads blog breaks down the concepts that matter most to practice owners, from reading a P&L to understanding EBITDA and owner draws.
+
+[IMG alt=""]
+
+## See Further. Move Faster. Grow Smarter.
+
+Your numbers already know where the opportunity is. Let us help you see it. Book a Discovery Call and get a partner who reads eyecare financials for a living and puts that insight to work for your practice.
+[BUTTON] Book a Discovery Call
+[IMG alt=""]
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services
+[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services
+[LINK→/who-we-serve] Who We Serve
+[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+
+Get To Know Us
+[LINK→/about-us] About[LINK→/about-us/our-team] Team
+[LINK→/resources] Resources
+[LINK→/pricing-calculator] Pricing Calculator[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+Contact
+[LINK→https://www.google.com/maps/search/2429+Curbow+Dr+Murfreesboro,+TN+37127?entry=gmail&source=g] 
+2429 Curbow Dr 
+Murfreesboro, TN 37127[LINK→tel:844-505-3937] 844-505-3937[LINK→/cdn-cgi/l/email-protection#9ff7faf3f3f0dff9f0edfae6faececf0f3eaebf6f0f1ecb1fcf0f2] [email protected]
+Hours: Mon-Fri at 8AM-5PM CT
+
+© 2026 ForEyes Solutions[LINK→/privacy-policy] Privacy Policy[LINK→https://www.wisedigitalpartners.com/technology/nest] Powered by

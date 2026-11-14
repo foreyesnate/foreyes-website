@@ -1,0 +1,369 @@
+TITLE: Bookkeeping Services for Optometrists | For Eyes Solutions
+META: {'og:image': 'https://foreyessolutions.com//images/open-graph/default.jpg', 'description': 'Get expert remote and outsourced bookkeeping from certified professionals for optometrists. Accurate, trusted support nationwide. Contact us today.', 'og:title': 'Bookkeeping Services for Optometrists | For Eyes Solutions', 'og:description': 'Get expert remote and outsourced bookkeeping from certified professionals for optometrists. Accurate, trusted support nationwide. Contact us today.'}
+
+IMAGES:
+- logo | /images/site-logo.svg
+- logo | /images/site-logo.svg
+-  | /images/edges/blue-bottom-inward.svg
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F0e2153386002110abffbd1ae56cd130db6807ea5-1296x1056.png%3Ffm%3Dwebp&w=3840&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F0e2153386002110abffbd1ae56cd130db6807ea5-1296x1056.png&w=3840&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fd177c05e04863a490384b74b3eb5e0943352ccfd-710x598.png%3Ffm%3Dwebp&w=1920&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F189d5c1860a957dc7bc4e42bf97be3121e703f1f-1146x964.png&w=3840&q=75
+- Edge Decorator | /images/edges/blue-bottom.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/2202b6003b8a6d84fb26a9a8767e6a44c76545aa-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/31ff673b64626edde509111c1cad07c24bc5eb8b-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/56f276f6da10d18429e393a96fe31ef916346a71-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/d1d4f7eeaeb8d11a341335b53ebb2c34fedd2374-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/e2af8a9a4c2c7cfcb809010e8bf445f549bfeb3d-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/086bceab3d3e61e0ddf52ef40de210d5e953e735-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/bb0f339e93cb59f722be167e5555052ee7db67e9-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/82a70acf32b7ef55d5b8f96736daa62b93292765-30x30.svg
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F2cf090badc74d5a856a3be113fe6c32d560a26ad-722x722.png&w=1920&q=75
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Ffa16526daa50067b8a8adbcd5009711c3fe9469e-786x2278.png&w=1920&q=75
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/9074f98236fd1699a1eb5cc251645381b7c16ee8-31x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/5d4f96e2b4535482ef193791a2ed6fbca1e8fa38-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/d943642bcbf65ceee3ec811e2f66c148d0057633-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/e768022261202c0e93771a7461589cccd20fce35-31x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/9e1ddd4ab87f6e5ac055b8032ce0cbf50b0c1584-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/b8343d6a60954fe80e959bd6ec041ff8ea366f65-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/1761a6f6a6605f51a44babae86fe683ca227ede4-30x30.svg
+- icon | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F1cd0e9787d33cbe347c99a584e8509f1df973590-722x628.png&w=1920&q=75
+- icon | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F9dbde2487f9af226028eea8bd74fa9cdae856d14-786x628.png&w=1920&q=75
+-  | /images/testimonial-bg.svg
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F73a2e816a9eb4747d9a31c8eb4bfb51e7490ea75-954x954.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F767aee2ca097ca53f70232dafadb277a170a3515-1063x1063.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fbb5fe74864c9fff63e044d5cb0a1ef8ca32017e3-200x200.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fb712bd2cb1358716213fbab39b09fecab7c02a7e-500x500.webp%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F73a2e816a9eb4747d9a31c8eb4bfb51e7490ea75-954x954.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F767aee2ca097ca53f70232dafadb277a170a3515-1063x1063.jpg%3Ffm%3Dwebp&w=128&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Ffbdcdf60906cf1c81b4850acff483d8e415009a2-1258x1349.png%3Ffm%3Dwebp&w=3840&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Ffbdcdf60906cf1c81b4850acff483d8e415009a2-1258x1349.png&w=3840&q=75
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/8111456c6348f13bf8d21f8420d2bfb668affe88-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/82a70acf32b7ef55d5b8f96736daa62b93292765-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/1761a6f6a6605f51a44babae86fe683ca227ede4-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/c1b917e5f677fefb1dc6ab5ac36a50b202fa3cec-30x30.svg
+- Edge Decorator | /images/edges/navy-top.svg
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F629dab9592403fbb5b8964f63965987ca27753d3-1504x839.png%3Ffm%3Dwebp&w=3840&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F629dab9592403fbb5b8964f63965987ca27753d3-1504x839.png&w=3840&q=75
+- Edge Decorator | /images/edges/navy-bottom.svg
+-  | /images/edges/footer-top-primary.svg
+-  | /images/edges/footer-bottom.svg
+- logo | /images/site-logo-footer.svg
+
+=====
+Bookkeeping Services for Optometrists | For Eyes Solutions
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services[LINK→/services/payroll] Payroll
+[LINK→/who-we-serve] Who We Serve[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+[LINK→/pricing-calculator] Pricing Calculator
+[LINK→/about-us] About[LINK→/about-us/our-team] Our Team
+[LINK→/resources] Resources[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+[BUTTON] Get Started
+
+[LINK→tel:844-505-3937] [LINK→/] 
+[IMG alt="logo"]
+
+[BUTTON] 
+
+[BUTTON] 
+
+[LINK→tel:844-505-3937] 844-505-3937
+[BUTTON] 
+
+Book a Call
+Send a Message
+
+Let’s Talk Eyecare
+Have a question or ready to learn how we can help your practice?
+
+[IMG alt=""]
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+# Bookkeeping for 
+Optometrists and 
+Eyecare 
+Professionals
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+## Books That Show What Your Practice Actually Earns
+
+Exams, optical sales, and contact lenses all deposit into the same bank account, which makes it hard to see which part of your practice carries its weight. Our bookkeeping for optometrists in Nashville, TN, and nationwide sorts every dollar into a structure built for eyecare, so your monthly P&L reads like a story you can act on. It comes from Wade Weisz, OD, and his 25-plus years in the owner's seat.
+[BUTTON] Book a Discovery Call
+[IMG alt="Edge Decorator"]
+
+## Full-Service Eyecare Bookkeeping
+
+Good books explain your practice instead of merely recording it. We manage your daily transactions, code them to a structure designed for eyecare, keep your general ledger current, and deliver reviewed reports on a fixed schedule. The same team also supports your [LINK→https://foreyessolutions.com/services/accounting] accounting and [LINK→https://foreyessolutions.com/services/payroll] payroll needs, so nothing is lost between bookkeeping and the work that follows.
+
+[IMG alt="icon"]
+
+### Custom Chart of Accounts
+
+Most bookkeeping software lumps income into a few broad lines and costs into a handful of buckets. Ours separates medical exam revenue from optical sales, and optical cost of goods from overhead, so you can see which services earn their keep. It also calculates Earnings Before Interest, Tax, Depreciation, and Amortization (EBITDA) automatically, the valuation metric buyers and lenders ask about first.
+
+[IMG alt="icon"]
+
+### Accurate Transaction Categorization
+
+Every deposit, vendor payment, and card swipe is coded to the right account the first time, whether it arrives through a bank feed or a manual import. Each month we match every account to its statement, so the balance in your books is the balance in your bank. The IRS expects books that clearly show gross income, deductions, and credits, and [LINK→https://www.irs.gov/businesses/small-businesses-self-employed/what-kind-of-records-should-i-keep] its recordkeeping guidance describes the supporting documents that back them up.
+
+[IMG alt="icon"]
+
+### A Clean General Ledger, Every Month
+
+Your general ledger is the foundation every report sits on, and small slips compound quickly. Each month we review adjustments, accruals, and uncategorized items so the ledger closes clean and stays consistent from one period to the next. Equipment purchases are recorded as assets with the details needed to calculate depreciation under [LINK→https://www.irs.gov/publications/p946] IRS Publication 946, which keeps your tax work accurate later.
+
+[IMG alt="icon"]
+
+### Reviewed Reports by the 10th Business Day
+
+Speed matters only when the numbers are right. Before any P&L or balance sheet reaches your client portal, a dedicated quality control manager reviews it. By the 10th business day each month, you'll have complete, reviewed, and accurate financials for the month prior, far faster than many other Nashville, TN bookkeepers can deliver. Most firms don't close the books until the end of the month.
+
+## Why Us for Optometry Bookkeeping?
+
+Clinical skill brings patients through the door. Financial clarity lets you hire well, invest wisely, and plan an exit on your own terms. Here is what our bookkeeping puts in your hands:
+
+[IMG alt="icon"]
+
+### Hours Back Each Month
+
+Daily bookkeeping tasks leave your desk entirely, so evenings go to family and growth instead of receipts.
+
+[IMG alt="icon"]
+
+### A Second Set of Eyes
+
+A dedicated quality control manager reviews every report before delivery, so you can rely on what you read.
+
+[IMG alt="icon"]
+
+### Review, Ask, Decide
+
+Your job is to review reports and ask questions. Your account manager handles the rest and will meet whenever a number needs explaining.
+
+[IMG alt="icon"]
+
+### A Ledger Built Around Eyecare
+
+From startups to [LINK→https://foreyessolutions.com/who-we-serve/multi-location-practices] multi-location groups, your books mirror how an eyecare practice operates, with exam, optical, and contact lens activity tracked separately so growth plans rest on real margins.
+
+## Process Overview
+
+A clear path from first call to monthly close.
+[IMG alt="image"]
+
+[IMG alt="image"]
+
+[IMG alt="icon"]
+
+### Discovery Call
+
+We learn how your practice earns, spends, and reports today, and where the numbers have stopped making sense.
+1
+
+[IMG alt="icon"]
+
+### Onboarding
+
+Meet your onboarding specialist, tour your client portal, and receive an intake form covering your accounts, vendors, and software.
+2
+
+[IMG alt="icon"]
+
+### Intake Form Review
+
+We walk through your answers together, connect your financial institutions, and agree on what happens next.
+3
+
+[IMG alt="icon"]
+
+### Cleanup
+
+An account manager works through your historical transactions and codes each one to your Custom Chart of Accounts. Depending on the scope of your needs, this step typically takes 6 to 8 weeks.
+4
+
+[IMG alt="icon"]
+
+### Cleanup Review
+
+We walk through the cleaned-up books with you, explain what changed, and set expectations for monthly service.
+5
+
+[IMG alt="icon"]
+
+### Monthly Services
+
+Your books close within the first ten business days, reviewed reports land in your portal, and your account manager is one meeting away.
+6
+
+[IMG alt="icon"]
+
+### Annual Financial Review
+
+Each year ends with a review that confirms your books are tax-ready and still point toward your practice goals.
+7
+[IMG alt="icon"]
+
+[IMG alt="icon"]
+
+[IMG alt=""]
+
+## Proof in Practice
+
+Optometrists describe what dependable books feel like. Keep the Ryan Corte, OD quote first on this page.
+
+[IMG alt=""]
+
+Ryan Corte, OD
+
+Wade and his team do an outstanding job providing accurate, timely, and reliable bookkeeping services. They’re responsive, detail-oriented, and take the time to explain financials in a way that’s easy to understand. Working with them has given me greater peace of mind and confidence in the financial side of my business. I highly recommend Wade and his team to any business owner looking for a trustworthy and professional bookkeeping partner.
+
+[IMG alt=""]
+
+Nona Kalfayan, OD
+
+I've been working with Wade and his team at ForEyes Solutions for the past two years, and the experience has been nothing short of excellent. From onboarding to goal setting and ongoing support, they've made a huge impact on my business by taking bookkeeping and organization off my plate so I can focus on growth. They truly understand the industry and provide value whether you're just starting out or already established and looking to improve your systems. What sets them apart is their communication — fast, reliable, and always helpful. You never feel left in the dark and are always supported.
+If you're looking for bookkeeping or business consulting, I highly recommend ForEyes Solutions. They're professional, knowledgeable, and genuinely committed to your success. They are absolutely the real deal!
+
+[IMG alt=""]
+
+Brandon Luu, OD
+
+Wade and his team have been rock solid. It's been about 2 years, and they've done an excellent job keeping my books in order. They are always available if I have any questions. Recently, Wade has really elevated his business beyond just bookkeeping. I am excited to be along for the ride. Extremely satisfied client and would definitely recommend his services to other practice owners.
+
+[IMG alt=""]
+
+Cristine Areola, OD
+
+For Eyes has been a great resource for my business as a first-time practice owner. I am very thankful for their expertise and their attentiveness to the small financial details. I don't know what I would do without them!
+
+[IMG alt=""]
+
+Ryan Corte, OD
+
+Wade and his team do an outstanding job providing accurate, timely, and reliable bookkeeping services. They’re responsive, detail-oriented, and take the time to explain financials in a way that’s easy to understand. Working with them has given me greater peace of mind and confidence in the financial side of my business. I highly recommend Wade and his team to any business owner looking for a trustworthy and professional bookkeeping partner.
+
+[IMG alt=""]
+
+Nona Kalfayan, OD
+
+I've been working with Wade and his team at ForEyes Solutions for the past two years, and the experience has been nothing short of excellent. From onboarding to goal setting and ongoing support, they've made a huge impact on my business by taking bookkeeping and organization off my plate so I can focus on growth. They truly understand the industry and provide value whether you're just starting out or already established and looking to improve your systems. What sets them apart is their communication — fast, reliable, and always helpful. You never feel left in the dark and are always supported.
+If you're looking for bookkeeping or business consulting, I highly recommend ForEyes Solutions. They're professional, knowledgeable, and genuinely committed to your success. They are absolutely the real deal!
+
+- 
+[BUTTON] 1
+- 
+[BUTTON] 2
+- 
+[BUTTON] 3
+- 
+[BUTTON] 4
+
+## Eyecare Bookkeeping FAQs
+
+### What are my responsibilities?
+
+### How will I get my financial reports?
+
+### How will ForEyes Solutions help me better run my practice?
+
+### What is a custom chart of accounts?
+
+### What does monthly bookkeeping include?
+
+# 
+
+### Do you support multi-location practices?
+[LINK→/resources/faq] More FAQs
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+## See What Bookkeeping Costs for a Practice Like Yours
+
+Bookkeeping fees depend on your transaction volume, your number of locations, and how much cleanup your history needs. Use the [LINK→https://foreyessolutions.com/pricing-calculator] pricing calculator to build an estimate in a few minutes, then book a Discovery Call to confirm it. Every figure shown is an estimate only.[LINK→/pricing-calculator] Pricing Calculator
+
+## More Ways We Can Support Your Practice
+
+[LINK→/services/accounting] 
+
+[IMG alt="icon"]
+
+### Accounting
+
+[LINK→https://foreyessolutions.com/services/accounting] Comprehensive accounting services including payroll, accounts payable, financial reporting, and ongoing support that keeps your practice operating efficiently.[LINK→/services/tax-services] 
+
+[IMG alt="icon"]
+
+### Tax Services
+
+Get tax planning, strategy, and filing for both business and personal returns–handled by certified pros who know optometry.[LINK→/services/practice-consulting] 
+
+[IMG alt="icon"]
+
+### Practice Consulting
+
+Increase profitability and improve operational performance with [LINK→https://foreyessolutions.com/services/practice-consulting] expert consulting focused on staffing, workflows, systems, and optical business performance.[LINK→/services/billing-services] 
+
+[IMG alt="icon"]
+
+### Billing Services
+
+Our [LINK→https://foreyessolutions.com/services/billing-services] revenue cycle management and coding audit services help maximize collections, improve cash flow, and ensure your practice receives the revenue it has earned.
+
+[IMG alt="Edge Decorator"]
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+## Remote, Nationwide Assistance
+
+Payments and paychecks do not wait on geography. Bill.com and Gusto run in the cloud, so your approvals and pay runs work the same from any state.
+Our remote team keeps both on schedule and answers questions quickly.
+[BUTTON] Connect With Us
+[IMG alt="Edge Decorator"]
+
+## Smart Reads for ODs
+
+Our blog helps you simplify your numbers and grow smarter, one post at a time.
+
+[IMG alt=""]
+
+## See Further. Move Faster. Grow Smarter.
+
+Unlock the clarity and expert, industry-specific support your eyecare practice needs to accelerate growth and focus on what matters most–your patients.
+[BUTTON] Book a Discovery Call
+[IMG alt=""]
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services
+[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services
+[LINK→/who-we-serve] Who We Serve
+[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+
+Get To Know Us
+[LINK→/about-us] About[LINK→/about-us/our-team] Team
+[LINK→/resources] Resources
+[LINK→/pricing-calculator] Pricing Calculator[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+Contact
+[LINK→https://www.google.com/maps/search/2429+Curbow+Dr+Murfreesboro,+TN+37127?entry=gmail&source=g] 
+2429 Curbow Dr 
+Murfreesboro, TN 37127[LINK→tel:844-505-3937] 844-505-3937[LINK→/cdn-cgi/l/email-protection#5a323f3636351a3c35283f233f292935362f2e3335342974393537] [email protected]
+Hours: Mon-Fri at 8AM-5PM CT
+
+© 2026 ForEyes Solutions[LINK→/privacy-policy] Privacy Policy[LINK→https://www.wisedigitalpartners.com/technology/nest] Powered by

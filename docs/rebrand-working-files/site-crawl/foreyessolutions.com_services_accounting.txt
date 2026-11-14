@@ -1,0 +1,334 @@
+TITLE: Accounting for Optometrists | Virtual & Outsourced Solutions
+META: {'og:image': 'https://foreyessolutions.com//images/open-graph/default.jpg', 'description': 'For Eyes Solutions delivers online accountant support, accounting outsourcing, and tailored accounting services for optometrists. Contact us today.', 'og:title': 'Accounting for Optometrists | Virtual & Outsourced Solutions', 'og:description': 'For Eyes Solutions delivers online accountant support, accounting outsourcing, and tailored accounting services for optometrists. Contact us today.'}
+
+IMAGES:
+- logo | /images/site-logo.svg
+- logo | /images/site-logo.svg
+-  | /images/edges/blue-bottom-inward.svg
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F2f403c197a9d1923a32aa9dd652bb610f75f6781-722x588.png%3Ffm%3Dwebp&w=1920&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fb185d37feed8a44e86dc09ec4f8e5b366f0846b5-1296x1056.png&w=3840&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F5edba5a7d3faeb65f4f0563a9d82bdb8b55199de-722x578.png%3Ffm%3Dwebp&w=1920&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F5dec68c34cc7119ecada011f7a19494e39d5527c-1146x918.png&w=3840&q=75
+- Edge Decorator | /images/edges/blue-bottom.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/5c64a18ef33c9fc433591a3bccc3d96f8c8c3155-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/50dece41f2a2f7ca8b11827473ea601eac2a0355-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/b0ea23d367176a803e3117fc6a041e1146c9e038-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/9617af17f4629d0855fcc37259dc54383c5b6a64-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/ffb1c2a66fc84fcf5bc7bc19f431d2727ae52ecd-30x30.svg
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Feebd6c0d499a9ba03e68293453a85060dde08ca2-722x722.png&w=1920&q=75
+- image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F9933bb6bdb4918f0d36de0f00819dbeb2abd4809-786x1332.png&w=1920&q=75
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/9074f98236fd1699a1eb5cc251645381b7c16ee8-31x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/5d4f96e2b4535482ef193791a2ed6fbca1e8fa38-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/e768022261202c0e93771a7461589cccd20fce35-31x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/b8343d6a60954fe80e959bd6ec041ff8ea366f65-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/d1b6216b7532935d8857ae3fc88094dcaf18647c-30x30.svg
+- icon | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F92720c4ec1cd12d70e67091d0f207f78637d667d-722x628.png&w=1920&q=75
+- icon | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F4b034444bc1c334b1fcfb106ec90ca3f7f0586d7-786x628.png&w=1920&q=75
+-  | /images/testimonial-bg.svg
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F73a2e816a9eb4747d9a31c8eb4bfb51e7490ea75-954x954.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F767aee2ca097ca53f70232dafadb277a170a3515-1063x1063.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fbb5fe74864c9fff63e044d5cb0a1ef8ca32017e3-200x200.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fb712bd2cb1358716213fbab39b09fecab7c02a7e-500x500.webp%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F73a2e816a9eb4747d9a31c8eb4bfb51e7490ea75-954x954.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F767aee2ca097ca53f70232dafadb277a170a3515-1063x1063.jpg%3Ffm%3Dwebp&w=128&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F034627aa6da1f66ec31881536590e6064ab6c079-570x909.png%3Ffm%3Dwebp&w=1200&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fb6511a60ba022410f44c2b979e6591caa1900059-700x751.png&w=1920&q=75
+- Icon | https://cdn.sanity.io/images/8dgizo1e/production/e08f43fed88399a08e0c2647a921faf419f3beec-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/82a70acf32b7ef55d5b8f96736daa62b93292765-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/1761a6f6a6605f51a44babae86fe683ca227ede4-30x30.svg
+- icon | https://cdn.sanity.io/images/8dgizo1e/production/c1b917e5f677fefb1dc6ab5ac36a50b202fa3cec-30x30.svg
+- Edge Decorator | /images/edges/navy-top.svg
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F629dab9592403fbb5b8964f63965987ca27753d3-1504x839.png%3Ffm%3Dwebp&w=3840&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F629dab9592403fbb5b8964f63965987ca27753d3-1504x839.png&w=3840&q=75
+- Edge Decorator | /images/edges/navy-bottom.svg
+-  | /images/edges/footer-top-primary.svg
+-  | /images/edges/footer-bottom.svg
+- logo | /images/site-logo-footer.svg
+
+=====
+Accounting for Optometrists | Virtual & Outsourced Solutions
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services[LINK→/services/payroll] Payroll
+[LINK→/who-we-serve] Who We Serve[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+[LINK→/pricing-calculator] Pricing Calculator
+[LINK→/about-us] About[LINK→/about-us/our-team] Our Team
+[LINK→/resources] Resources[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+[BUTTON] Get Started
+
+[LINK→tel:844-505-3937] [LINK→/] 
+[IMG alt="logo"]
+
+[BUTTON] 
+
+[BUTTON] 
+
+[LINK→tel:844-505-3937] 844-505-3937
+[BUTTON] 
+
+Book a Call
+Send a Message
+
+Let’s Talk Eyecare
+Have a question or ready to learn how we can help your practice?
+
+[IMG alt=""]
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+# Accounting Services for Optometry Practices
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+## Control Over Every Dollar Going Out
+
+Your practice pays frame vendors, lab partners, contact lens suppliers, a landlord, and a team that depends on every paycheck. When those payments run through inboxes and memory, bills slip and cash timing suffers. Our accounting services for optometry practices put payables and payroll accounting on a predictable system, built on the owner's-seat experience of Wade Weisz, OD.
+[BUTTON] Book a Discovery Call
+[IMG alt="Edge Decorator"]
+
+## Where Bookkeeping Ends and Financial Management Begins
+
+Bookkeeping records what happened. Accounting manages how money moves next: which vendors get paid when, how payroll costs show up against revenue, and what the numbers mean for the months ahead. We handle that layer for practices at every stage, from an [LINK→https://foreyessolutions.com/who-we-serve/startups] eyecare startup setting up its first approval workflow to established groups tightening cash flow. If you also want the records side covered, our [LINK→https://foreyessolutions.com/services/bookkeeping] bookkeeping services pair naturally with this work.
+
+[IMG alt="icon"]
+
+### Accounts Payable (AP)
+
+Every vendor bill follows the same path: entered, coded, approved by you, and paid on the date that protects your cash and your supplier relationships. We run that path exclusively through Bill.com, so nothing depends on a paper trail or a forwarded email. Under the accrual method, an expense counts when you become liable for it rather than when you pay it, which is why [LINK→https://www.irs.gov/publications/p538] payable timing matters to your reports. When a vendor might actually be a worker, we flag it, because [LINK→https://www.irs.gov/businesses/small-businesses-self-employed/independent-contractor-self-employed-or-employee] classification rules decide what you owe and report.
+- Approval on your terms: You review and approve in Bill.com. We handle entry, coding, and scheduling.
+- Vendor-term awareness: We track due dates and payment terms with frame, lab, and supply vendors so bills are paid on time and cash is not tied up early.
+- A clear audit trail: Each approval and payment is recorded in one place, so questions about what was paid, and when, have answers.
+- Certified in Bill.com: Our team is certified in the platform, so your practice uses features most offices never turn on.
+
+[IMG alt="icon"]
+
+### Payroll
+
+Payroll is also an accounting question: what does your team really cost, and what is left for you? We run payroll through Gusto and make sure each pay run, deposit, and deduction lands in the right account, so labor cost shows up cleanly in your P&L and your own take-home pay is never a guess. For setup, filings, and benefits detail, see our [LINK→https://foreyessolutions.com/services/payroll] payroll page.
+- Labor cost visibility: Wages, employer taxes, and benefits post to separate categories, so you can see payroll as a share of revenue.
+- Owner pay clarity: We keep W-2 wages and owner draws separate, so your true take-home pay is unmistakable.
+- Gusto-certified support: Our team works inside the platform, so you do not have to train staff on new software.
+- Reports you can use: Payroll summaries feed your monthly financials and tax planning without re-keying.
+
+## Why Accounting Works Better With an Eyecare Specialist
+
+You didn’t become an optometrist or eyecare professional to chase invoices or troubleshoot payroll software. That’s where we come in, with the experience, systems, and support to keep your AP and payroll running smoothly. Here’s what sets our accounting services apart:
+
+[IMG alt="icon"]
+
+### Eyecare Vendor Fluency
+
+We know which payments recur weekly, which arrive quarterly, and which swing with frame and lens orders, so your cash plan reflects how your practice really spends.
+
+[IMG alt="icon"]
+
+### Two Platforms, Two Certifications
+
+Certified in both Bill.com and Gusto, we configure approvals, schedules, and permissions around your practice instead of accepting defaults.
+
+[IMG alt="icon"]
+
+### Approve, Don't Administrate
+
+On payables you review and approve. On payroll you choose how involved to be. Either way, you keep visibility and control without the data entry.
+
+## What to Expect When Working With Us
+
+Our process is designed to remove the stress of accounting without removing your visibility or control. From onboarding to monthly tasks, you’ll always know what’s happening, when, and why.
+[IMG alt="image"]
+
+[IMG alt="image"]
+
+[IMG alt="icon"]
+
+### Discovery Call
+
+We learn about your practice, current systems, and pain points before reviewing how our support and platforms can improve workflows.
+1
+
+[IMG alt="icon"]
+
+### Onboarding
+
+You’ll be introduced to your onboarding specialist, complete a short intake form, and get a tour of your client portal.
+2
+
+[IMG alt="icon"]
+
+### Cleanup
+
+If needed, our experts can organize past transactions and clean vendor and payroll data so you can have an accurate, fresh start.
+3
+
+[IMG alt="icon"]
+
+### Ongoing Monthly Service
+
+Your dedicated account manager ensures all AP and payroll tasks are handled efficiently, helping you stay focused on patient care.
+4
+
+[IMG alt="icon"]
+
+### Annual Financial Review
+
+We’ll wrap the year with a strategic review to ensure our support continues to align with your evolving goals.
+5
+[IMG alt="icon"]
+
+[IMG alt="icon"]
+
+[IMG alt=""]
+
+## Proof in Practice
+
+Optometrists describe what dependable books feel like. Keep the Ryan Corte, OD quote first on this page.
+
+[IMG alt=""]
+
+Ryan Corte, OD
+
+Wade and his team do an outstanding job providing accurate, timely, and reliable bookkeeping services. They’re responsive, detail-oriented, and take the time to explain financials in a way that’s easy to understand. Working with them has given me greater peace of mind and confidence in the financial side of my business. I highly recommend Wade and his team to any business owner looking for a trustworthy and professional bookkeeping partner.
+
+[IMG alt=""]
+
+Nona Kalfayan, OD
+
+I've been working with Wade and his team at ForEyes Solutions for the past two years, and the experience has been nothing short of excellent. From onboarding to goal setting and ongoing support, they've made a huge impact on my business by taking bookkeeping and organization off my plate so I can focus on growth. They truly understand the industry and provide value whether you're just starting out or already established and looking to improve your systems. What sets them apart is their communication — fast, reliable, and always helpful. You never feel left in the dark and are always supported.
+If you're looking for bookkeeping or business consulting, I highly recommend ForEyes Solutions. They're professional, knowledgeable, and genuinely committed to your success. They are absolutely the real deal!
+
+[IMG alt=""]
+
+Brandon Luu, OD
+
+Wade and his team have been rock solid. It's been about 2 years, and they've done an excellent job keeping my books in order. They are always available if I have any questions. Recently, Wade has really elevated his business beyond just bookkeeping. I am excited to be along for the ride. Extremely satisfied client and would definitely recommend his services to other practice owners.
+
+[IMG alt=""]
+
+Cristine Areola, OD
+
+For Eyes has been a great resource for my business as a first-time practice owner. I am very thankful for their expertise and their attentiveness to the small financial details. I don't know what I would do without them!
+
+[IMG alt=""]
+
+Ryan Corte, OD
+
+Wade and his team do an outstanding job providing accurate, timely, and reliable bookkeeping services. They’re responsive, detail-oriented, and take the time to explain financials in a way that’s easy to understand. Working with them has given me greater peace of mind and confidence in the financial side of my business. I highly recommend Wade and his team to any business owner looking for a trustworthy and professional bookkeeping partner.
+
+[IMG alt=""]
+
+Nona Kalfayan, OD
+
+I've been working with Wade and his team at ForEyes Solutions for the past two years, and the experience has been nothing short of excellent. From onboarding to goal setting and ongoing support, they've made a huge impact on my business by taking bookkeeping and organization off my plate so I can focus on growth. They truly understand the industry and provide value whether you're just starting out or already established and looking to improve your systems. What sets them apart is their communication — fast, reliable, and always helpful. You never feel left in the dark and are always supported.
+If you're looking for bookkeeping or business consulting, I highly recommend ForEyes Solutions. They're professional, knowledgeable, and genuinely committed to your success. They are absolutely the real deal!
+
+- 
+[BUTTON] 1
+- 
+[BUTTON] 2
+- 
+[BUTTON] 3
+- 
+[BUTTON] 4
+
+## Payroll FAQs
+
+### What would you need from me to change my payroll over to ForEyes Solutions?
+
+### What would you need from me on an ongoing basis?
+
+### Can’t I handle AP and payroll in-house?
+
+### Do you support multi-location optometry practices?
+
+### Why outsource accounts payable services?
+
+### Can accounting services help improve practice efficiency?[LINK→/resources/faq] More FAQs
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+## Estimate Your Accounting Costs in Minutes
+
+Accounting fees reflect how many vendors you pay, how many people you employ, and how hands-on you want to be. Enter those details in the [LINK→https://foreyessolutions.com/pricing-calculator] pricing calculator for an estimate, then confirm it on a Discovery Call. Every figure shown is an estimate only.[LINK→/pricing-calculator] Calculate Your Price Now
+
+## More Ways We Can Support Your Practice
+
+[LINK→/services/bookkeeping] 
+
+[IMG alt="Icon"]
+
+### Bookkeeping
+
+[LINK→https://foreyessolutions.com/services/bookkeeping] Full-service bookkeeping with customized financial reporting, timely monthly closes, and organized records that support better decision-making.[LINK→/services/tax-services] 
+
+[IMG alt="icon"]
+
+### Tax Services
+
+Get tax planning, strategy, and filing for both business and personal returns–handled by certified pros who know optometry.[LINK→/services/practice-consulting] 
+
+[IMG alt="icon"]
+
+### Practice Consulting
+
+Increase profitability and improve operational performance with [LINK→https://foreyessolutions.com/services/practice-consulting] expert consulting focused on staffing, workflows, systems, and optical business performance.[LINK→/services/billing-services] 
+
+[IMG alt="icon"]
+
+### Billing Services
+
+Our [LINK→https://foreyessolutions.com/services/billing-services] revenue cycle management and coding audit services help maximize collections, improve cash flow, and ensure your practice receives the revenue it has earned.
+
+[IMG alt="Edge Decorator"]
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+## Remote, Nationwide Assistance
+
+Payments and paychecks do not wait on geography. Bill.com and Gusto run in the cloud, so your approvals and pay runs work the same from any state.
+Our remote team keeps both on schedule and answers questions quickly.
+[BUTTON] Connect With Us
+[IMG alt="Edge Decorator"]
+
+## Smart Reads for ODs
+
+Our blog helps you simplify your numbers and grow smarter, one post at a time.
+
+[IMG alt=""]
+
+## See Further. Move Faster. Grow Smarter.
+
+Unlock the clarity and expert, industry-specific support your eyecare practice needs to accelerate growth and focus on what matters most–your patients.
+[BUTTON] Book a Discovery Call
+[IMG alt=""]
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services
+[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services
+[LINK→/who-we-serve] Who We Serve
+[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+
+Get To Know Us
+[LINK→/about-us] About[LINK→/about-us/our-team] Team
+[LINK→/resources] Resources
+[LINK→/pricing-calculator] Pricing Calculator[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+Contact
+[LINK→https://www.google.com/maps/search/2429+Curbow+Dr+Murfreesboro,+TN+37127?entry=gmail&source=g] 
+2429 Curbow Dr 
+Murfreesboro, TN 37127[LINK→tel:844-505-3937] 844-505-3937[LINK→/cdn-cgi/l/email-protection#09616c656566496f667b6c706c7a7a66657c7d6066677a276a6664] [email protected]
+Hours: Mon-Fri at 8AM-5PM CT
+
+© 2026 ForEyes Solutions[LINK→/privacy-policy] Privacy Policy[LINK→https://www.wisedigitalpartners.com/technology/nest] Powered by

@@ -1,0 +1,127 @@
+TITLE: Free Resources for Optometrists | For Eyes Solutions
+META: {'og:image': 'https://foreyessolutions.com//images/open-graph/default.jpg', 'description': 'Download checklists, guides, and tips from our expert team of bookkeepers and accountants to help your optometry practice grow and stay compliant.', 'og:title': 'Free Resources for Optometrists | For Eyes Solutions', 'og:description': 'Download checklists, guides, and tips from our expert team of bookkeepers and accountants to help your optometry practice grow and stay compliant.'}
+
+IMAGES:
+- logo | /images/site-logo.svg
+- logo | /images/site-logo.svg
+-  | /images/edges/blue-bottom-inward.svg
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F3f5c7b32fab38012f455c3b4d33c9877c6a8c410-680x704.png%3Ffm%3Dwebp&w=1920&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Ff7dfed67376d1f4a0aeddfd77bbdf6cab9d346ad-1296x1056.png&w=3840&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F4b652b4fa66168ca4af30562608804653b74a5c8-722x608.png%3Ffm%3Dwebp&w=1920&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F90310ff31e399839e0f0d03f13f20fc37dc18f2f-1146x964.png&w=3840&q=75
+- Edge Decorator | /images/edges/blue-bottom.svg
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fe1fbce8fa987843cd42ad9f941eff73121484bd6-722x722.png%3Ffm%3Dwebp&w=1920&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F525592d5ccc9a3d3fa257c1089c15f41b4676a8b-1192x1120.png&w=3840&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fef4734503f9ff0004659abeaf9002b32474d96fb-722x760.png%3Ffm%3Dwebp&w=1920&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F7f9b6830d28df7c820206cde544b58e58f0c94f0-1192x1255.png&w=3840&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F423a32a274789804c64900e652307cde0c5cabaf-722x722.png%3Ffm%3Dwebp&w=1920&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F1f5b4020d19907e957a5b6d2fd3660807bd565a3-1192x1120.png&w=3840&q=75
+-  | /images/edges/footer-top-primary.svg
+-  | /images/edges/footer-bottom.svg
+- logo | /images/site-logo-footer.svg
+
+=====
+Free Resources for Optometrists | For Eyes Solutions
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services[LINK→/services/payroll] Payroll
+[LINK→/who-we-serve] Who We Serve[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+[LINK→/pricing-calculator] Pricing Calculator
+[LINK→/about-us] About[LINK→/about-us/our-team] Our Team
+[LINK→/resources] Resources[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+[BUTTON] Get Started
+
+[LINK→tel:844-505-3937] [LINK→/] 
+[IMG alt="logo"]
+
+[BUTTON] 
+
+[BUTTON] 
+
+[LINK→tel:844-505-3937] 844-505-3937
+[BUTTON] 
+
+Book a Call
+Send a Message
+
+Let’s Talk Eyecare
+Have a question or ready to learn how we can help your practice?
+
+[IMG alt=""]
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+# Our Resources, Your Clarity
+
+The insights needed to run your practice confidently–all in one place. From actionable advice to practical tools, our resources help eyecare professionals like you save time, make informed decisions, and see their practice clearly.
+[BUTTON] Book a Discovery Call
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+## What You'll Find Here
+
+The insights needed to run your practice confidently–all in one place. From actionable advice to practical tools, our resources help eyecare professionals like you save time, make informed decisions, and see their practice clearly.
+[BUTTON] Book a Discovery Call
+[IMG alt="Edge Decorator"]
+
+## Practice Support at Your Fingertips
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+### Blog
+
+Stay informed with expert articles on bookkeeping for optometrists, accounting strategies, eyecare practice tax tips, operational best practices, and more. Our blog turns complex business topics into advice you can apply immediately.[LINK→/resources/blog] Read Our Blog
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+### FAQs
+
+Get answers to the questions eyecare practice owners ask most. From payroll and billing to consulting and practice solutions, our frequently asked questions help clarify what to expect when working with ForEyes Solutions.[LINK→/resources/faq] Explore FAQs
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+### Pricing Calculator
+
+Start planning with help from transparent pricing tailored to your practice’s size and needs. Our calculator shows the cost of our different services as you mix and match them, so you can better understand the investment needed to free up your time and grow your practice.[LINK→/pricing-calculator] Calculate Your Price Now
+
+[IMG alt=""]
+
+## See Further. Move Faster. Grow Smarter.
+
+Unlock the clarity and expert, industry-specific support your eyecare practice needs to accelerate growth and focus on what matters most–your patients.
+[BUTTON] Book a Discovery Call
+[IMG alt=""]
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services
+[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services
+[LINK→/who-we-serve] Who We Serve
+[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+
+Get To Know Us
+[LINK→/about-us] About[LINK→/about-us/our-team] Team
+[LINK→/resources] Resources
+[LINK→/pricing-calculator] Pricing Calculator[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+Contact
+[LINK→https://www.google.com/maps/search/2429+Curbow+Dr+Murfreesboro,+TN+37127?entry=gmail&source=g] 
+2429 Curbow Dr 
+Murfreesboro, TN 37127[LINK→tel:844-505-3937] 844-505-3937[LINK→/cdn-cgi/l/email-protection#4b232e2727240b2d24392e322e383824273e3f2224253865282426] [email protected]
+Hours: Mon-Fri at 8AM-5PM CT
+
+© 2026 ForEyes Solutions[LINK→/privacy-policy] Privacy Policy[LINK→https://www.wisedigitalpartners.com/technology/nest] Powered by

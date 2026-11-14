@@ -1,0 +1,292 @@
+TITLE: Accounting & Consulting for Multi-Location Optometry Practices
+META: {'og:image': 'https://foreyessolutions.com//images/open-graph/default.jpg', 'description': 'Scale your practice with remote bookkeeping, payroll management, and optometry management consulting from For Eyes Solutions. Contact us today!', 'og:title': 'Accounting & Consulting for Multi-Location Optometry Practices', 'og:description': 'Scale your practice with remote bookkeeping, payroll management, and optometry management consulting from For Eyes Solutions. Contact us today!'}
+
+IMAGES:
+- logo | /images/site-logo.svg
+- logo | /images/site-logo.svg
+-  | /images/edges/blue-bottom-inward.svg
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F77a7b30f763902bfa4cf3c7e9adf5b88c41d8da9-1062x996.png%3Ffm%3Dwebp&w=3840&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F77a7b30f763902bfa4cf3c7e9adf5b88c41d8da9-1062x996.png&w=3840&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F370e62bde2c3ce346b256b80833273640ecbbd92-900x798.png%3Ffm%3Dwebp&w=1920&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F370e62bde2c3ce346b256b80833273640ecbbd92-900x798.png&w=1920&q=75
+- Edge Decorator | /images/edges/blue-bottom-secondary.svg
+-  | https://cdn.sanity.io/images/8dgizo1e/production/e2af8a9a4c2c7cfcb809010e8bf445f549bfeb3d-30x30.svg?fit=max&auto=format
+-  | https://cdn.sanity.io/images/8dgizo1e/production/2fa28a02722f0b1fb2c0f54d117fcf58bac8084f-30x30.svg?fit=max&auto=format
+-  | https://cdn.sanity.io/images/8dgizo1e/production/1761a6f6a6605f51a44babae86fe683ca227ede4-30x30.svg?fit=max&auto=format
+-  | https://cdn.sanity.io/images/8dgizo1e/production/7b603e01b5f618052a14878123e9330d52756720-30x30.svg?fit=max&auto=format
+-  | https://cdn.sanity.io/images/8dgizo1e/production/b0fc0b9ad2ad635f871f185b769daae72ba42868-30x30.svg?fit=max&auto=format
+-  | /images/testimonial-bg.svg
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F73a2e816a9eb4747d9a31c8eb4bfb51e7490ea75-954x954.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F767aee2ca097ca53f70232dafadb277a170a3515-1063x1063.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fbb5fe74864c9fff63e044d5cb0a1ef8ca32017e3-200x200.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fb712bd2cb1358716213fbab39b09fecab7c02a7e-500x500.webp%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F73a2e816a9eb4747d9a31c8eb4bfb51e7490ea75-954x954.jpg%3Ffm%3Dwebp&w=128&q=75
+-  | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F767aee2ca097ca53f70232dafadb277a170a3515-1063x1063.jpg%3Ffm%3Dwebp&w=128&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fd545ea303ec936ec339f8e96f914f241f64caaf8-722x750.png%3Ffm%3Dwebp&w=1920&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F986a34b2990b507e54801c564ac128aff6b842cf-1119x1162.png&w=3840&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fb6995104652f0c05ab82650e24d4854373ee2521-542x542.png%3Ffm%3Dwebp&w=1200&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F3505da78e8c194b20071599a92b62f2581be975d-596x560.png&w=1200&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fcbb2195f980e1360ec8c524074a2c4f52a9ce98f-570x570.png%3Ffm%3Dwebp&w=1200&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F8d52205eeede385f76c4f5a33c491b73294d5e88-596x560.png&w=1200&q=75
+- Edge Decorator | /images/edges/navy-top.svg
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F629dab9592403fbb5b8964f63965987ca27753d3-1504x839.png%3Ffm%3Dwebp&w=3840&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F629dab9592403fbb5b8964f63965987ca27753d3-1504x839.png&w=3840&q=75
+- Edge Decorator | /images/edges/navy-bottom.svg
+-  | /images/edges/footer-top-primary.svg
+-  | /images/edges/footer-bottom.svg
+- logo | /images/site-logo-footer.svg
+
+=====
+Accounting & Consulting for Multi-Location Optometry Practices
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services[LINK→/services/payroll] Payroll
+[LINK→/who-we-serve] Who We Serve[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+[LINK→/pricing-calculator] Pricing Calculator
+[LINK→/about-us] About[LINK→/about-us/our-team] Our Team
+[LINK→/resources] Resources[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+[BUTTON] Get Started
+
+[LINK→tel:844-505-3937] [LINK→/] 
+[IMG alt="logo"]
+
+[BUTTON] 
+
+[BUTTON] 
+
+[LINK→tel:844-505-3937] 844-505-3937
+[BUTTON] 
+
+Book a Call
+Send a Message
+
+Let’s Talk Eyecare
+Have a question or ready to learn how we can help your practice?
+
+[IMG alt=""]
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+# Serving Multi-Location Eyecare Practices
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+## Spend Less Time on Admin, More on Patients
+
+Managing a single eyecare office is challenging, but running multiple locations multiplies the complexity. Payroll, [LINK→https://foreyessolutions.com/services/bookkeeping] bookkeeping, [LINK→https://foreyessolutions.com/services/billing-services] billing, and operational oversight can quickly consume your time and energy, taking your attention away from patient care and strategic growth.
+ForEyes Solutions provides scalable bookkeeping and accounting for multi-location practices, as well as comprehensive practice solutions, giving you actionable insights across every location. With us, you can make confident decisions without getting bogged down in the numbers.
+[BUTTON] Book a Discovery Call
+[IMG alt="Edge Decorator"]
+
+## Common Challenges for Growing Practices
+
+As practices expand, new obstacles emerge. Here are the main challenges we help multi-group eyecare practices overcome.
+
+[IMG alt=""]
+
+Administrative Overload & Precious Time Lost
+
+Adding location often multiplies day-to-day tasks, from payroll and accounts payable to billing follow-ups. We take these time-consuming administrative tasks off your plate, freeing up your staff while ensuring consistency across your eyecare practices.
+
+[IMG alt=""]
+
+Fragmented Financial Across Locations
+
+Different processes, teams, or systems at each of your locations make it difficult to see the full picture. We provide centralized reporting and separate profit and loss statements for each location, giving you a clear view of performance–all without needing to manually consolidate numbers.
+
+[IMG alt=""]
+
+Unclear Profitability & Owner Compensation
+
+Revenue may look strong across locations, but that doesn’t always mean profits (or personal income) are where they should be. Between varying expenses at each clinic, W-2 wages and owner draws, it’s easy to lose track of what you’re actually earning. We break down profitability by location and clarify your true take-home pay, so you know exactly which clinic contributes to the bottom line–and what ends up in your pocket.
+
+[IMG alt=""]
+
+Difficulty Benchmarking Performance
+
+Without standardized metrics, it’s difficult to know which locations are thriving and which need attention. Our systems create consistent, actionable reporting to help you identify trends, compare results, and make data-driven decisions.
+
+[IMG alt=""]
+
+Chaos While Scaling
+
+From inefficiencies to redundant workflows, opening new locations also opens you up to costly mistakes. We implement scalable systems from day one, so growth is smooth, predictable, and profitable.
+
+## Accounting, Advisory & Practice Solutions Services
+
+### Bookkeeping
+
+When bookkeeping for multiple clinics, it’s easy to feel in the dark about performance. Our assistance gives you reliable profit and loss statements for each location, helping focus your resources. No more second-guessing–just decisions backed by clear data.[LINK→/services/bookkeeping] Get Your Books in Order
+
+### Accounting
+
+Managing payroll and payables across several locations can take hours each month–hours that, as a business owner, you don’t have. By teaming up with us for multi-location practice accounting, you get on-time payments for staff and vendors at every location. This means less admin stress and more energy for running each practice.[LINK→/services/accounting] Free Yourself From Admin Burdens
+
+### Tax Services
+
+Continuing to scale your practice shouldn’t come with unpredictable tax bills. Our experts provide proactive planning and strategy year-round, helping you minimize liability and protect cash flow across all locations. Head into tax season confidently, knowing all deductions are maximized and that each location has been set up for success.[LINK→/services/tax-services] Grow Without Tax Surprises
+
+### Practice Consulting
+
+Expanding doesn’t always equal earning more, and with only optometry group financial services, it’s difficult to know why you’re falling short–you need practice consulting assistance for that. With deep OD and practice management experience, ForEyes Solutions pinpoints inefficiencies in systems, staffing, and operations, then delivers strategies that increase profitability and free up time for leadership teams. You’ll finally feel like your growth is paying off.[LINK→/services/practice-consulting] Get a Roadmap to Profitability
+
+### Billing Services
+
+The more eyecare practices you run, the more difficult billing gets–and the easier it is for revenue to slip through the cracks. Our specialists handle claims, denials, and patient billing across all of your locations, resulting in fewer delays and less billing stress.[LINK→/services/billing-services] Stop Chasing Payments
+
+## How We Work With Multi-Location Eyecare Practices
+
+- Discovery call: We’ll learn about your growth plans so we can create a scalable, customized solution.
+- Tailored plan: You’ll get a clear scope of services for each location, as well as an overarching strategy for your group of practices.
+- Onboarding: Your dedicated point of contact will connect financial systems, organize workflows, and standardize reporting for all your offices.
+- Delivery & ongoing support: Expect monthly P&L reports for each location, strategic guidance, and centralized oversight, saving you hours of consolidation and review.
+
+Jump To
+[LINK→/who-we-serve/multi-location-practices#common-challenges-for-growing-practices] Common Challenges for Growing Practices[LINK→/who-we-serve/multi-location-practices#accounting-advisory-practice-solutions-services] Accounting, Advisory & Practice Solutions Services[LINK→/who-we-serve/multi-location-practices#how-we-work-with-multi-location-eyecare-practices] How We Work With Multi-Location Eyecare Practices
+[BUTTON] Book a discovery Call
+
+## Frequently Asked Questions
+
+### Can you help me manage multiple locations without confusion?
+
+### How involved do I need to be?
+
+### Can your services scale as I open more locations?
+
+# Will I receive separate financial reports for each location?
+
+# Can you help identify underperforming locations?
+
+# How do you improve financial visibility across locations?[LINK→/resources/faq] More FAQs
+
+[IMG alt=""]
+
+## Proof in Practice
+
+Optometrists describe what dependable books feel like. Keep the Ryan Corte, OD quote first on this page.
+
+[IMG alt=""]
+
+Ryan Corte, OD
+
+Wade and his team do an outstanding job providing accurate, timely, and reliable bookkeeping services. They’re responsive, detail-oriented, and take the time to explain financials in a way that’s easy to understand. Working with them has given me greater peace of mind and confidence in the financial side of my business. I highly recommend Wade and his team to any business owner looking for a trustworthy and professional bookkeeping partner.
+
+[IMG alt=""]
+
+Nona Kalfayan, OD
+
+I've been working with Wade and his team at ForEyes Solutions for the past two years, and the experience has been nothing short of excellent. From onboarding to goal setting and ongoing support, they've made a huge impact on my business by taking bookkeeping and organization off my plate so I can focus on growth. They truly understand the industry and provide value whether you're just starting out or already established and looking to improve your systems. What sets them apart is their communication — fast, reliable, and always helpful. You never feel left in the dark and are always supported.
+If you're looking for bookkeeping or business consulting, I highly recommend ForEyes Solutions. They're professional, knowledgeable, and genuinely committed to your success. They are absolutely the real deal!
+
+[IMG alt=""]
+
+Brandon Luu, OD
+
+Wade and his team have been rock solid. It's been about 2 years, and they've done an excellent job keeping my books in order. They are always available if I have any questions. Recently, Wade has really elevated his business beyond just bookkeeping. I am excited to be along for the ride. Extremely satisfied client and would definitely recommend his services to other practice owners.
+
+[IMG alt=""]
+
+Cristine Areola, OD
+
+For Eyes has been a great resource for my business as a first-time practice owner. I am very thankful for their expertise and their attentiveness to the small financial details. I don't know what I would do without them!
+
+[IMG alt=""]
+
+Ryan Corte, OD
+
+Wade and his team do an outstanding job providing accurate, timely, and reliable bookkeeping services. They’re responsive, detail-oriented, and take the time to explain financials in a way that’s easy to understand. Working with them has given me greater peace of mind and confidence in the financial side of my business. I highly recommend Wade and his team to any business owner looking for a trustworthy and professional bookkeeping partner.
+
+[IMG alt=""]
+
+Nona Kalfayan, OD
+
+I've been working with Wade and his team at ForEyes Solutions for the past two years, and the experience has been nothing short of excellent. From onboarding to goal setting and ongoing support, they've made a huge impact on my business by taking bookkeeping and organization off my plate so I can focus on growth. They truly understand the industry and provide value whether you're just starting out or already established and looking to improve your systems. What sets them apart is their communication — fast, reliable, and always helpful. You never feel left in the dark and are always supported.
+If you're looking for bookkeeping or business consulting, I highly recommend ForEyes Solutions. They're professional, knowledgeable, and genuinely committed to your success. They are absolutely the real deal!
+
+- 
+[BUTTON] 1
+- 
+[BUTTON] 2
+- 
+[BUTTON] 3
+- 
+[BUTTON] 4
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+## Transparent Pricing, Tailored to You
+
+Not every optometry practice needs the same level of financial support. That's why we've built a simple, interactive pricing calculator to give you a clear picture of what your services will cost, based on practice size, service level, and add-ons. No hidden fees, no surprise invoices–just custom pricing that matches your workflow.[LINK→/pricing-calculator] Calculate Your Price Now
+
+## Other Practices We Support
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+### Optometrists
+
+Running an optometry practice means juggling patient care, staff management, and day-to-day operations. We go beyond traditional bookkeeping for optometrists, offering accurate financials, smarter billing systems, and guidance tailored to the unique challenges you face and opportunities you have. The result? More time for patients and a practice that’s moving forward.[LINK→/who-we-serve/optometrists] Explore Solutions
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+### Startups and Emerging ODs
+
+Getting your first practice up and running? Our hands-on guidance and foundational services will help you build a strong financial footing from day one.[LINK→/who-we-serve/startups] Build on Solid Ground
+
+[IMG alt="Edge Decorator"]
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+## Remote, Nationwide Assistance
+
+Payments and paychecks do not wait on geography. Bill.com and Gusto run in the cloud, so your approvals and pay runs work the same from any state.
+Our remote team keeps both on schedule and answers questions quickly.
+[BUTTON] Connect With Us
+[IMG alt="Edge Decorator"]
+
+## Smart Reads for ODs
+
+Our blog helps you simplify your numbers and grow smarter, one post at a time.
+
+[IMG alt=""]
+
+## See Further. Move Faster. Grow Smarter.
+
+Unlock the clarity and expert, industry-specific support your eyecare practice needs to accelerate growth and focus on what matters most–your patients.
+[BUTTON] Book a Discovery Call
+[IMG alt=""]
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services
+[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services
+[LINK→/who-we-serve] Who We Serve
+[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+
+Get To Know Us
+[LINK→/about-us] About[LINK→/about-us/our-team] Team
+[LINK→/resources] Resources
+[LINK→/pricing-calculator] Pricing Calculator[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+Contact
+[LINK→https://www.google.com/maps/search/2429+Curbow+Dr+Murfreesboro,+TN+37127?entry=gmail&source=g] 
+2429 Curbow Dr 
+Murfreesboro, TN 37127[LINK→tel:844-505-3937] 844-505-3937[LINK→/cdn-cgi/l/email-protection#6a020f0606052a0c05180f130f191905061f1e0305041944090507] [email protected]
+Hours: Mon-Fri at 8AM-5PM CT
+
+© 2026 ForEyes Solutions[LINK→/privacy-policy] Privacy Policy[LINK→https://www.wisedigitalpartners.com/technology/nest] Powered by

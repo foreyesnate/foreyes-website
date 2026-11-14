@@ -1,0 +1,169 @@
+TITLE: Full-Service Accounting, Payroll & Consulting for Optometrists
+META: {'og:image': 'https://foreyessolutions.com//images/open-graph/default.jpg', 'description': "Explore For Eyes Solutions's complete range of accounting services, payroll and bookkeeping services, and optometry management consulting for growing eye care practices.", 'og:title': 'Full-Service Accounting, Payroll & Consulting for Optometrists', 'og:description': "Explore For Eyes Solutions's complete range of accounting services, payroll and bookkeeping services, and optometry management consulting for growing eye care practices."}
+
+IMAGES:
+- logo | /images/site-logo.svg
+- logo | /images/site-logo.svg
+-  | /images/edges/blue-bottom-inward.svg
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F7b837fea34728c040a341409003c8c2f67416e58-972x792.png%3Ffm%3Dwebp&w=2048&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fe7bb3625979abeee948a181367dcf25310fc0cb1-1296x1056.png&w=3840&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fb167650df110168dcc87bd6dd978949e2dc5479d-722x608.png%3Ffm%3Dwebp&w=1920&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F64d453e433f495e7a8455b024ee6e0c2ceded3b7-1146x964.png&w=3840&q=75
+- Edge Decorator | /images/edges/blue-bottom.svg
+- Outsource Your Accounting | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F11f1aa971663a4045b809efbd8fdccc6e14b9119-1192x1120.png%3Ffm%3Dwebp&w=3840&q=75
+- Outsource Your Accounting | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F11f1aa971663a4045b809efbd8fdccc6e14b9119-1192x1120.png&w=3840&q=75
+- Bookkeeping | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fa4f2f88212bb80e3dd57d2025fe65ac68cf94099-1192x1255.png%3Ffm%3Dwebp&w=3840&q=75
+- Bookkeeping | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fa4f2f88212bb80e3dd57d2025fe65ac68cf94099-1192x1255.png&w=3840&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fe60e0a625790fc221457f93594f988289d16d7ea-1192x1120.png%3Ffm%3Dwebp&w=3840&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fe60e0a625790fc221457f93594f988289d16d7ea-1192x1120.png&w=3840&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F9013d69524a5a6322fbffd407c7eeb8b5ee95151-1193x1121.png%3Ffm%3Dwebp&w=3840&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F9013d69524a5a6322fbffd407c7eeb8b5ee95151-1193x1121.png&w=3840&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F2c22ad3cd04eca6be23c76130986eae3dae3da09-1192x1120.png%3Ffm%3Dwebp&w=3840&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F2c22ad3cd04eca6be23c76130986eae3dae3da09-1192x1120.png&w=3840&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fdff7bba555687b3b32fa435bb139cc71334dbe42-1138x416.png%3Ffm%3Dwebp&w=3840&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fdff7bba555687b3b32fa435bb139cc71334dbe42-1138x416.png&w=3840&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Ffbdcdf60906cf1c81b4850acff483d8e415009a2-1258x1349.png%3Ffm%3Dwebp&w=3840&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Ffbdcdf60906cf1c81b4850acff483d8e415009a2-1258x1349.png&w=3840&q=75
+-  | /images/edges/footer-top-primary.svg
+-  | /images/edges/footer-bottom.svg
+- logo | /images/site-logo-footer.svg
+
+=====
+Full-Service Accounting, Payroll & Consulting for Optometrists
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services[LINK→/services/payroll] Payroll
+[LINK→/who-we-serve] Who We Serve[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+[LINK→/pricing-calculator] Pricing Calculator
+[LINK→/about-us] About[LINK→/about-us/our-team] Our Team
+[LINK→/resources] Resources[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+[BUTTON] Get Started
+
+[LINK→tel:844-505-3937] [LINK→/] 
+[IMG alt="logo"]
+
+[BUTTON] 
+
+[BUTTON] 
+
+[LINK→tel:844-505-3937] 844-505-3937
+[BUTTON] 
+
+Book a Call
+Send a Message
+
+Let’s Talk Eyecare
+Have a question or ready to learn how we can help your practice?
+
+[IMG alt=""]
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+# Services for 
+Eyecare Clinics & 
+Optometry 
+Practices
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+Between bookkeeping, accounting, payroll, billing, and practice management, the business side of running an eyecare practice can quickly overwhelm even the most organized owner or OD. That’s where ForEyes Solutions steps in.
+As a Nashville, TN bookkeeping firm serving eyecare practices nationwide, we offer industry-specific solutions that free up your time and allow you to focus on patients. Whether you need optometry bookkeeping and accounting, tax assistance for your eyecare clinic, or practice solutions for your new ophthalmology business, our services can help.
+[BUTTON] Book a Discovery Call
+[IMG alt="Edge Decorator"]
+
+## Our Accounting Solutions
+
+[IMG alt="Outsource Your Accounting"]
+
+[IMG alt="Outsource Your Accounting"]
+
+### Accounting
+
+Routine tasks like payroll and vendor payments can quickly eat into your schedule and distract you from patient care. Our accounting services free you up from the day-to-day while ensuring your team and vendors are always paid accurately and on time. With consistent, reliable processes in place, you won’t have to chase paperwork or worry about errors disrupting operations–you’ll simply know the details have been handled.[LINK→/services/accounting] Outsource Your Accounting
+
+[IMG alt="Bookkeeping"]
+
+[IMG alt="Bookkeeping"]
+
+### Bookkeeping
+
+Disorganized or incomplete books leave many practice owners feeling like they’re flying blind. Our industry-specific bookkeeping services bring clarity to your financials. Each month, you’ll receive easy-to-read profit and loss statements built around a custom chart of accounts. The result? Confidence in your numbers, insight into performance, and the data you need to make more informed decisions.[LINK→/services/bookkeeping] Streamline Your Books
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+### Tax Services
+
+Tax time shouldn’t come with surprise bills. Our tax services for eyecare professionals give you a year-round tax strategy, proactive planning, and compliant filings. Whether it’s your business or personal returns, our certified experts minimize liability while maximizing cash flow. Connect with us for a tax strategy that aligns with your growth goals.[LINK→/services/tax-services] Create a Proactive Tax Plan
+
+## Our Practice Solutions
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+### Consulting
+
+Working hard but not seeing that effort reflected in your bottom line? Our consulting team, led by a practicing OD, dives deep into your operations, evaluating everything from inventory and staffing to financial systems and optical processes. Because we’ve been in your shoes, we can identify inefficiencies, growth opportunities, and create a profitable path forward better than most. It’s like having a de facto COO–without the overhead.[LINK→/services/practice-consulting] Solve Roadblocks
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+### Medical & Vision Billing Services
+
+Insurance billing is one of the biggest time drains in any eyecare office, and mistakes can leave money on the table. Our certified billing specialists handle claims submission, denial management, A/R follow-up, and patient billing with an eyecare-specific focus. By increasing your clean claim rate and reducing days in A/R, we help you collect what you’ve earned, faster. And because we integrate billing with financial reporting, you get a complete picture of your revenue cycle, from first patient visit to final payment, all without managing an in-house biller.[LINK→/services/billing-services] Take Billing Off Your Plate
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+## For Eyecare Pros Like You
+
+We partner with independent optometry and eyecare practices at every stage, from first-time owners building a solid financial foundation to multi-location groups looking for sharper insights and scalable systems.
+If you want a strategic partner who understands the industry, speaks the eyecare language, and helps you run a more profitable business, we’re here for you.[LINK→/who-we-serve] Who We Serve
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+## See What Bookkeeping Costs for a Practice Like Yours
+
+Bookkeeping fees depend on your transaction volume, your number of locations, and how much cleanup your history needs. Use the [LINK→https://foreyessolutions.com/pricing-calculator] pricing calculator to build an estimate in a few minutes, then book a Discovery Call to confirm it. Every figure shown is an estimate only.[LINK→/pricing-calculator] Pricing Calculator
+
+[IMG alt=""]
+
+## See Further. Move Faster. Grow Smarter.
+
+Unlock the clarity and expert, industry-specific support your eyecare practice needs to accelerate growth and focus on what matters most–your patients.
+[BUTTON] Book a Discovery Call
+[IMG alt=""]
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services
+[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services
+[LINK→/who-we-serve] Who We Serve
+[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+
+Get To Know Us
+[LINK→/about-us] About[LINK→/about-us/our-team] Team
+[LINK→/resources] Resources
+[LINK→/pricing-calculator] Pricing Calculator[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+Contact
+[LINK→https://www.google.com/maps/search/2429+Curbow+Dr+Murfreesboro,+TN+37127?entry=gmail&source=g] 
+2429 Curbow Dr 
+Murfreesboro, TN 37127[LINK→tel:844-505-3937] 844-505-3937[LINK→/cdn-cgi/l/email-protection#721a171e1e1d32141d00170b1701011d1e07061b1d1c015c111d1f] [email protected]
+Hours: Mon-Fri at 8AM-5PM CT
+
+© 2026 ForEyes Solutions[LINK→/privacy-policy] Privacy Policy[LINK→https://www.wisedigitalpartners.com/technology/nest] Powered by

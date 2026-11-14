@@ -1,0 +1,159 @@
+TITLE: Serving Optometrists, Startups & Multi-Location Eye Care Practices
+META: {'og:image': 'https://foreyessolutions.com//images/open-graph/default.jpg', 'description': 'For Eyes Solutions supports optometry startups, multi-location practices, and independent optometrists with custom bookkeeping and accounting services.', 'og:title': 'Serving Optometrists, Startups & Multi-Location Eye Care Practices', 'og:description': 'For Eyes Solutions supports optometry startups, multi-location practices, and independent optometrists with custom bookkeeping and accounting services.'}
+
+IMAGES:
+- logo | /images/site-logo.svg
+- logo | /images/site-logo.svg
+-  | /images/edges/blue-bottom-inward.svg
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F0fd46d9c18bf41f99d79c79f53de55c6bde32d73-621x588.png%3Ffm%3Dwebp&w=1920&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fc8d18d19eab3f8469cbaf819eddd99477585e95b-1192x1120.png&w=3840&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fb6995104652f0c05ab82650e24d4854373ee2521-542x542.png%3Ffm%3Dwebp&w=1200&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F3505da78e8c194b20071599a92b62f2581be975d-596x560.png&w=1200&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fd8e73a77449c068bd6601083f75b4aff158f5fea-722x722.png%3Ffm%3Dwebp&w=1920&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F313074b65f0a36afb0afe6413312f413b375b4ee-1192x1120.png&w=3840&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fcbb2195f980e1360ec8c524074a2c4f52a9ce98f-570x570.png%3Ffm%3Dwebp&w=1200&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F8d52205eeede385f76c4f5a33c491b73294d5e88-596x560.png&w=1200&q=75
+- Edge Decorator | /images/edges/blue-top.svg
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F7e57837b87a102ab13c02d2d245866a97460f3da-800x576.png&w=1920&q=75
+- Accounting | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F3d434c251597eed10949990add9d4ba5dea8c49d-800x576.png&w=1920&q=75
+- Tax Services | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fdd162310865f85895853cad56b54bfe66304e112-800x576.png&w=1920&q=75
+- Practice Consulting | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fca01c3e2b8e7674ff8459c7f9e926b13f4bd563e-1192x736.png&w=3840&q=75
+- Insurance Billing | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F40146aff5eeccffde2d2e1f274faa22cfd24089b-1192x736.png&w=3840&q=75
+- mobile-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F6a9b5de9f85f9d47f48c87122cffaa3c75a5629b-722x722.png%3Ffm%3Dwebp&w=1920&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F655faf267780c049af343b7aec98352717a7f7ee-1192x1120.png&w=3840&q=75
+-  | /images/edges/footer-top-primary.svg
+-  | /images/edges/footer-bottom.svg
+- logo | /images/site-logo-footer.svg
+
+=====
+Serving Optometrists, Startups & Multi-Location Eye Care Practices
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services[LINK→/services/payroll] Payroll
+[LINK→/who-we-serve] Who We Serve[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+[LINK→/pricing-calculator] Pricing Calculator
+[LINK→/about-us] About[LINK→/about-us/our-team] Our Team
+[LINK→/resources] Resources[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+[BUTTON] Get Started
+
+[LINK→tel:844-505-3937] [LINK→/] 
+[IMG alt="logo"]
+
+[BUTTON] 
+
+[BUTTON] 
+
+[LINK→tel:844-505-3937] 844-505-3937
+[BUTTON] 
+
+Book a Call
+Send a Message
+
+Let’s Talk Eyecare
+Have a question or ready to learn how we can help your practice?
+
+[IMG alt=""]
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+# Who We Serve
+
+Running an eyecare practice isn’t just about helping patients–it’s about managing a business that runs smoothly behind the scenes. From long days juggling operations to the pressure of making smart growth decisions, it’s easy to feel stretched thin. At ForEyes Solutions, we work with eyecare practices of all sizes, helping you reclaim your time, regain control, and make informed decisions that future-proof your business.
+[BUTTON] Book a Discovery Call
+
+## Here for Your Practice
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+### Optometrists
+
+Running an optometry practice means juggling patient care, staff management, and day-to-day operations. We go beyond traditional bookkeeping for optometrists, offering accurate financials, smarter billing systems, and guidance tailored to the unique challenges you face and opportunities you have. The result? More time for patients and a practice that’s moving forward.[LINK→/who-we-serve/optometrists] Explore Solutions
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+### Multi-Location Practices
+
+Growth brings opportunity–and new complexities. When you’re managing multiple clinics, keeping tabs on performance, staffing, and billing can quickly become overwhelming. Our multi-location financial support and advisory services give you a clear picture of how each location is performing, as well as guidance on overcoming obstacles. With ForEyes Solutions, you’ll have both the tools and the insight to grow without losing control.[LINK→/who-we-serve/multi-location-practices] Get Support
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+### Startups and Emerging ODs
+
+Getting your first practice up and running? Our hands-on guidance and foundational services will help you build a strong financial footing from day one.[LINK→/who-we-serve/startups] Build on Solid Ground
+
+[IMG alt="Edge Decorator"]
+
+## Services With Vision
+
+We don’t just balance books–we see what others miss. From optometry bookkeeping and accounting to tax services and high-level advisory support, every service we offer meets the specific, unique financial demands of running an optometry or eyecare practice. Our core services bring structure, clarity, and insight to every part of your back office.
+[LINK→/services] Explore Our Services
+[LINK→/services/bookkeeping] 
+
+[IMG alt="mobile-image"]
+
+Bookkeeping[LINK→/services/accounting] 
+
+[IMG alt="Accounting"]
+
+Accounting[LINK→/services/tax-services] 
+
+[IMG alt="Tax Services"]
+
+Tax Services
+[LINK→/services/practice-consulting] 
+
+[IMG alt="Practice Consulting"]
+
+Practice Consulting[LINK→/services/billing-services] 
+
+[IMG alt="Insurance Billing"]
+
+Insurance Billing
+
+[IMG alt="mobile-image"]
+
+[IMG alt="desktop-image"]
+
+## Meet the Team
+
+We’re not just number crunchers–we’re industry insiders, strategic thinkers, and trusted advisors who know the ins and outs of running a successful eyecare practice. Our diverse team brings experience from both finance and the frontlines of optometry, giving us a unique perspective on what your business needs to grow. Learn more about the passionate professionals committed to excellence, transparency, and your success.[LINK→/about-us/our-team] Our Team
+
+[IMG alt=""]
+
+## See Further. Move Faster. Grow Smarter.
+
+Unlock the clarity and expert, industry-specific support your eyecare practice needs to accelerate growth and focus on what matters most–your patients.
+[BUTTON] Book a Discovery Call
+[IMG alt=""]
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services
+[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services
+[LINK→/who-we-serve] Who We Serve
+[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+
+Get To Know Us
+[LINK→/about-us] About[LINK→/about-us/our-team] Team
+[LINK→/resources] Resources
+[LINK→/pricing-calculator] Pricing Calculator[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+Contact
+[LINK→https://www.google.com/maps/search/2429+Curbow+Dr+Murfreesboro,+TN+37127?entry=gmail&source=g] 
+2429 Curbow Dr 
+Murfreesboro, TN 37127[LINK→tel:844-505-3937] 844-505-3937[LINK→/cdn-cgi/l/email-protection#cea6aba2a2a18ea8a1bcabb7abbdbda1a2bbbaa7a1a0bde0ada1a3] [email protected]
+Hours: Mon-Fri at 8AM-5PM CT
+
+© 2026 ForEyes Solutions[LINK→/privacy-policy] Privacy Policy[LINK→https://www.wisedigitalpartners.com/technology/nest] Powered by

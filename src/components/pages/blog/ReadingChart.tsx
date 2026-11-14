@@ -50,13 +50,18 @@ export function ReadingChart({ className }: { className?: string }) {
         <div className="relative flex items-center justify-between font-display text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-ink-400">
           <span>Reading chart</span>
           <span className="rounded-full bg-teal-100 px-2.5 py-1 text-teal-800">
-            Line {active + 1} of {lines.length}
+            <span className="motion-reduce:hidden">
+              Line {active + 1} of {lines.length}
+            </span>
+            <span className="hidden motion-reduce:inline">{lines.length} lines</span>
           </span>
         </div>
 
         <ol className="@container relative mt-6 grid gap-[clamp(0.5rem,0.2rem+1.1vw,1.125rem)]">
           {lines.map((line, index) => {
-            const focused = reduce || index === active;
+            // Reduced motion is handled in CSS (motion-reduce:) rather than
+            // here, so the server and client render the same markup.
+            const focused = index === active;
             return (
               <li
                 key={line.text}
@@ -69,15 +74,15 @@ export function ReadingChart({ className }: { className?: string }) {
               >
                 <span
                   className={cn(
-                    "tabular font-display text-[0.75rem] font-semibold transition-colors duration-500",
-                    !reduce && index === active ? "text-navy" : "text-stone-400",
+                    "tabular font-display text-[0.75rem] font-semibold transition-colors duration-500 motion-reduce:text-ink-400!",
+                    focused ? "text-navy" : "text-stone-400",
                   )}
                 >
                   {index + 1}
                 </span>
                 <motion.span
                   className={cn(
-                    "block whitespace-nowrap text-center font-display font-bold leading-none text-ink",
+                    "block whitespace-nowrap text-center font-display font-bold leading-none text-ink motion-reduce:opacity-100! motion-reduce:[filter:none]!",
                     line.size,
                     line.spacing,
                   )}
@@ -94,8 +99,8 @@ export function ReadingChart({ className }: { className?: string }) {
                 </motion.span>
                 <span
                   className={cn(
-                    "h-2.5 w-2.5 justify-self-end rounded-full transition-[background-color,transform] duration-500 ease-(--ease-focus)",
-                    !reduce && index === active ? "scale-100 bg-yellow" : "scale-50 bg-stone-300",
+                    "h-2.5 w-2.5 justify-self-end rounded-full transition-[background-color,transform] duration-500 ease-(--ease-focus) motion-reduce:scale-50! motion-reduce:bg-stone-300!",
+                    focused ? "scale-100 bg-yellow" : "scale-50 bg-stone-300",
                   )}
                 />
               </li>

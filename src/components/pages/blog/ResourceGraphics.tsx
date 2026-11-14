@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, useReducedMotion, type Transition } from "motion/react";
+import { motion, useAnimationControls, useReducedMotion } from "motion/react";
+import { useEffect } from "react";
 import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib/cn";
 import type { ResourceCard } from "./content";
@@ -77,11 +78,22 @@ const switches = [
 /** The calculator in miniature: service switches, a slider and the estimate. */
 function PricingMini() {
   const reduce = useReducedMotion();
-  // The slider drifts between three positions and back, slowly.
-  const travel = ["18%", "64%", "42%", "18%"];
-  const loop: Transition = reduce
-    ? { duration: 0 }
-    : { duration: 11, ease: "easeInOut", repeat: Infinity, times: [0, 0.4, 0.7, 1] };
+  const fill = useAnimationControls();
+  const knob = useAnimationControls();
+  // The slider drifts between three positions and back, slowly. The loop is
+  // started after mount, so the server and the first client render agree and
+  // visitors who ask for reduced motion simply keep the resting position.
+  useEffect(() => {
+    if (reduce) return;
+    const travel = ["18%", "64%", "42%", "18%"];
+    const transition = { duration: 11, ease: "easeInOut", repeat: Infinity, times: [0, 0.4, 0.7, 1] } as const;
+    void fill.start({ width: travel, transition: { ...transition, times: [...transition.times] } });
+    void knob.start({ left: travel, transition: { ...transition, times: [...transition.times] } });
+    return () => {
+      fill.stop();
+      knob.stop();
+    };
+  }, [reduce, fill, knob]);
   return (
     <div className="mx-auto grid w-full max-w-[17rem] grid-cols-[1.25fr_1fr] gap-2.5">
       <div className="rounded-2xl bg-white p-3.5 shadow-soft">
@@ -98,15 +110,13 @@ function PricingMini() {
         <div className="relative mt-4 h-1.5 rounded-full bg-stone-200">
           <motion.span
             className="absolute inset-y-0 left-0 rounded-full bg-navy"
-            initial={false}
-            animate={{ width: reduce ? "42%" : travel }}
-            transition={loop}
+            style={{ width: "18%" }}
+            animate={fill}
           />
           <motion.span
             className="absolute top-1/2 -ml-2 -mt-2 h-4 w-4 rounded-full border-[3px] border-navy bg-white shadow-soft"
-            initial={false}
-            animate={{ left: reduce ? "42%" : travel }}
-            transition={loop}
+            style={{ left: "18%" }}
+            animate={knob}
           />
         </div>
       </div>

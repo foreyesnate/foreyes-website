@@ -1,0 +1,145 @@
+TITLE: Expert Accountants & Consultants for Optometrists
+META: {'og:image': 'https://foreyessolutions.com//images/open-graph/default.jpg', 'description': 'Get to know our experienced bookkeepers, accountants, and optometry consultants who deliver exceptional virtual support for growing eye care practices.', 'og:title': 'Expert Accountants & Consultants for Optometrists', 'og:description': 'Get to know our experienced bookkeepers, accountants, and optometry consultants who deliver exceptional virtual support for growing eye care practices.'}
+
+IMAGES:
+- logo | /images/site-logo.svg
+- logo | /images/site-logo.svg
+- Edge Decorator | /images/edges/blue-bottom.svg
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F28edc7617b07e144eb236649252878358c65b1bc-1000x1000.jpg&w=2048&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F5702a043165ebf202e0c3121fd005c715fc3e968-600x600.jpg&w=1200&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F75cd136a75bb890d247760809c88fadd51eabbed-1024x1024.jpg&w=2048&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F9955087113eaf9b9c1818063f93b082d3060afc4-864x864.jpg&w=1920&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2Fecbaaa083bc4feba002019f533583a901cd6b6f7-512x512.png&w=1080&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F179be9217986cb4b55e4be7d1a7600bc9e2fac3f-1024x1024.jpg&w=2048&q=75
+- desktop-image | /_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F8dgizo1e%2Fproduction%2F05f8085cb886fe86ac9a05bcfb1567dcccc0d055-512x512.png&w=1080&q=75
+-  | /_next/image?url=%2Fimages%2Fteam-placeholder.jpg&w=640&q=75
+-  | /images/edges/footer-top-primary.svg
+-  | /images/edges/footer-bottom.svg
+- logo | /images/site-logo-footer.svg
+
+=====
+Expert Accountants & Consultants for Optometrists
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services[LINK→/services/payroll] Payroll
+[LINK→/who-we-serve] Who We Serve[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+[LINK→/pricing-calculator] Pricing Calculator
+[LINK→/about-us] About[LINK→/about-us/our-team] Our Team
+[LINK→/resources] Resources[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+[BUTTON] Get Started
+
+[LINK→tel:844-505-3937] [LINK→/] 
+[IMG alt="logo"]
+
+[BUTTON] 
+
+[BUTTON] 
+
+[LINK→tel:844-505-3937] 844-505-3937
+[BUTTON] 
+
+Book a Call
+Send a Message
+
+Let’s Talk Eyecare
+Have a question or ready to learn how we can help your practice?
+
+# Your Partners in Practice Growth
+
+The ForEyes Solutions team brings more than numbers to the table. Yes, we’ll keep your books accurate and your reporting crystal-clear, but we’ll also deliver tailored advisory and practice solution services that help you accomplish your goals. With backgrounds in both eyecare and business strategy, our experts can help you streamline operations, make confident decisions, and get set up for long-term success.
+[IMG alt="Edge Decorator"]
+
+[IMG alt="desktop-image"]
+
+Wade Weisz, OD, is the founder and President & CEO of ForEyes Solutions. He brings over 25 years of experience as a practicing OD and multi-location practice owner. After years of struggling to find accounting and advisory support that truly reflected the realities of running a practice, he built ForEyes to give eyecare professionals the accurate financial data and expert guidance they've always deserved.
+A North Dakota native, Wade earned his OD from the Southern California College of Optometry before falling in love with Nashville in 2021. When he's not building the firm, you'll find him catching live music or exploring the city with his wife, Sylvia.
+
+Wade Weisz, OD
+
+CEO & Founder
+
+[IMG alt="desktop-image"]
+
+Nathan Taylor is Co-owner and COO of ForEyes Solutions. After 23 years in broadcast television and video production, he transitioned into operations before joining ForEyes in 2022. An innovator and natural leader, Nathan has played a vital role in the firm's growth, driving business development and leading operations from first client conversation through engagement.
+Raised between California and Arizona and having lived coast to coast, Nathan now calls Nashville home. He enjoys exploring new technologies and getting outdoors with his Labrador Retriever, Otis, who loves to make video meeting appearances as much as he can.
+
+Nathan Taylor
+
+COO & Co-owner
+
+[IMG alt="desktop-image"]
+
+Amanda Bennett is the Director of Practice Performance at ForEyes Solutions, leading the firm's Practice Solutions division across Practice Management & Consulting, Revenue Cycle Management, and Remote Staffing. Before joining ForEyes in January 2025, Amanda helped launch and grow a cold start practice in Georgia, serving as its practice manager for over 16 years.
+Amanda has a genuine passion for the eyecare industry and the owners, ODs, and staff she serves. When she's not sharpening her knowledge in technology and practice operations, you'll find her outside “running to find her sanity,” as she likes to say.
+
+Amanda Bennett
+
+Director of Practice Performance
+
+[IMG alt="desktop-image"]
+
+As Director of Client Accounting Services, Richard oversees all client accounting operations, setting the standards, processes, and quality controls that ensure accuracy and consistency across every client engagement. Since joining ForEyes in March 2022, he has built deep expertise in optometry practice accounting and a strong foundation in business administration, playing a key role in translating financial data into clear, actionable insights that empower practice owners to make confident, informed decisions.
+When he's not working, Richard enjoys spending quality time with his family. Whether it's hiking outdoors, playing sports, or building elaborate train tracks with his boys, he values staying active and making the most of life's simple moments.
+
+Richard Schisler
+
+Director of Client Accounting Services
+
+[IMG alt="desktop-image"]
+
+Esta Steenkamp is Senior Manager of Accounting & Quality Control at ForEyes Solutions. Since joining the firm in December 2021, she has played a key role in overseeing the accuracy and integrity of client financial records while guiding the bookkeeping team through review and process improvement. She brings extensive experience in bookkeeping, payroll, and financial management, with a strong commitment to reliable reporting and compliance.
+When Esta is not crunching the numbers, she is a busy mama of 3 and a wife to her loving husband. She and her family love spending time outdoors, especially if it includes fishing and camping.
+
+Esta Steenkamp
+
+Senior Manager, Accounting & Quality Control
+
+[IMG alt="desktop-image"]
+
+Laura Pittman
+
+Head of RCM
+
+[IMG alt="desktop-image"]
+
+Mae Labongray
+
+Director of Client & Admin Support
+
+[IMG alt=""]
+
+Heather Bank
+
+Director of Sales & Marketing
+
+[IMG alt=""]
+
+## See Further. Move Faster. Grow Smarter.
+
+Unlock the clarity and expert, industry-specific support your eyecare practice needs to accelerate growth and focus on what matters most–your patients.
+[BUTTON] Book a Discovery Call
+[IMG alt=""]
+
+[LINK→/] 
+[IMG alt="logo"]
+
+[LINK→/services] Services
+[LINK→/services/bookkeeping] Bookkeeping[LINK→/services/accounting] Accounting[LINK→/services/tax-services] Tax Services[LINK→/services/practice-consulting] Practice Consulting[LINK→/services/billing-services] Billing Services
+[LINK→/who-we-serve] Who We Serve
+[LINK→/who-we-serve/optometrists] Optometrists[LINK→/who-we-serve/multi-location-practices] Multi Location Practices[LINK→/who-we-serve/startups] Startups
+
+Get To Know Us
+[LINK→/about-us] About[LINK→/about-us/our-team] Team
+[LINK→/resources] Resources
+[LINK→/pricing-calculator] Pricing Calculator[LINK→/resources/blog] Blog[LINK→/resources/faq] FAQs
+
+Contact
+[LINK→https://www.google.com/maps/search/2429+Curbow+Dr+Murfreesboro,+TN+37127?entry=gmail&source=g] 
+2429 Curbow Dr 
+Murfreesboro, TN 37127[LINK→tel:844-505-3937] 844-505-3937[LINK→/cdn-cgi/l/email-protection#7d15181111123d1b120f1804180e0e121108091412130e531e1210] [email protected]
+Hours: Mon-Fri at 8AM-5PM CT
+
+© 2026 ForEyes Solutions[LINK→/privacy-policy] Privacy Policy[LINK→https://www.wisedigitalpartners.com/technology/nest] Powered by
