@@ -289,7 +289,7 @@ export function FaqExplorer({ groups }: { groups: FaqGroup[] }) {
                   key={`${group.id}:${terms.join(" ")}`}
                   items={faqs}
                   defaultOpen={filtering ? (matches <= 3 ? 0 : -1) : index === 0 ? 0 : -1}
-                  className="mt-7 [&>li]:bg-stone"
+                  className="mt-7 [&>li]:bg-stone [&>li:has([aria-expanded=true])]:bg-white"
                 />
               </section>
             );
