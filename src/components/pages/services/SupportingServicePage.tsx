@@ -4,7 +4,7 @@ import { site } from "@/content/site";
 import { Illustration } from "@/components/ui/Art";
 import { Button, TextLink } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
-import { Container, Eyebrow, Section, SectionHeading } from "@/components/ui/Layout";
+import { Container, Section, SectionHeading } from "@/components/ui/Layout";
 import { Reveal } from "@/components/motion/Reveal";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { FaqSection } from "@/components/sections/FaqSection";
@@ -23,7 +23,7 @@ import type {
 
 /**
  * The page template shared by the three supporting services. Deliberately
- * lighter than the flagship pages: one animated graphic, one picture, and a
+ * lighter than the flagship pages: one animated graphic, two pictures, and a
  * band that points back to Bookkeeping and Insurance Billing.
  *
  * `graphic` is the page's own animated picture, shown in the hero.
@@ -46,7 +46,8 @@ export function SupportingServicePage({
         lede={hero.lede}
         note={hero.note}
         crumbs={[{ label: "Services", href: "/services" }, { label: content.label }]}
-        secondaryCta={{ label: "Estimate Your Price", href: site.pricingHref }}
+        // Only where the pricing calculator can price the service.
+        secondaryCta={pricing ? { label: "Estimate Your Price", href: site.pricingHref } : undefined}
         visual={graphic}
       />
 
@@ -140,15 +141,16 @@ export function SupportingServicePage({
           className="bg-dots pointer-events-none absolute inset-y-0 right-0 w-1/2 text-ink/10 [mask-image:linear-gradient(to_left,black,transparent)]"
         />
         <Container size="wide" className="relative">
-          <div className="grid gap-8 lg:grid-cols-2 lg:gap-20">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-20">
             <Reveal>
-              <Eyebrow className="mb-5 text-ink">{flagships.eyebrow}</Eyebrow>
+              <p className="eyebrow mb-5 flex items-center gap-2.5 text-ink">
+                <span aria-hidden="true" className="inline-block h-2 w-2 rounded-full bg-ink ring-[3px] ring-ink/20" />
+                {flagships.eyebrow}
+              </p>
               <h2 id="flagships-tie-title" className="text-title">
                 {flagships.title}
               </h2>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <div className="grid gap-4 text-[1.0625rem] leading-relaxed text-ink/90 sm:text-lg">
+              <div className="mt-6 grid max-w-2xl gap-4 text-[1.0625rem] leading-relaxed text-ink/90 sm:text-lg">
                 {flagships.body.map((text) => (
                   <p key={text}>{text}</p>
                 ))}
@@ -160,6 +162,14 @@ export function SupportingServicePage({
                   </Button>
                 ))}
               </div>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <Illustration
+                name={flagships.art}
+                panel="white"
+                sizes="(min-width: 1024px) 26rem, 92vw"
+                className="mx-auto w-full max-w-[26rem] shadow-lift lg:mr-0"
+              />
             </Reveal>
           </div>
         </Container>
@@ -173,7 +183,7 @@ export function SupportingServicePage({
           rich: item.link ? (
             <>
               <p>{item.answer}</p>
-              <TextLink href={item.link.href} className="mt-4 text-[0.95rem]">
+              <TextLink href={item.link.href} className="mt-1 py-3 text-[0.95rem]">
                 {item.link.label}
               </TextLink>
             </>
@@ -195,13 +205,13 @@ function RoleCard({ card, lead = false }: { card: SupportingRoleCard; lead?: boo
   return (
     <article
       className={cn(
-        "h-full rounded-[2rem] p-7 sm:p-10",
+        "flex h-full flex-col rounded-[2rem] p-7 sm:p-10",
         lead ? "bg-white text-ink shadow-float" : "bg-white/[0.08] text-white ring-1 ring-inset ring-white/15",
       )}
     >
       <p
         className={cn(
-          "eyebrow inline-flex rounded-full px-3.5 py-1.5",
+          "eyebrow inline-flex self-start rounded-full px-3.5 py-1.5",
           lead ? "bg-yellow text-ink" : "bg-white/15 text-white",
         )}
       >
@@ -223,6 +233,17 @@ function RoleCard({ card, lead = false }: { card: SupportingRoleCard; lead?: boo
           </li>
         ))}
       </ul>
+      {card.note ? (
+        <p
+          className={cn(
+            "mt-auto flex items-center gap-3 pt-8 font-display text-[0.975rem] font-semibold",
+            lead ? "text-navy" : "text-white",
+          )}
+        >
+          <Icon name="shield" size={20} className="shrink-0" />
+          {card.note}
+        </p>
+      ) : null}
     </article>
   );
 }
@@ -249,7 +270,7 @@ function AsideCard({ aside }: { aside: SupportingAside }) {
             <span className="block text-[0.925rem] text-ink-500">{aside.role}</span>
           </span>
         </figcaption>
-        <TextLink href={aside.link.href} className="mt-6 text-[0.95rem]">
+        <TextLink href={aside.link.href} className="mt-3 py-3 text-[0.95rem]">
           {aside.link.label}
         </TextLink>
       </figure>

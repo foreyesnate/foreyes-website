@@ -3,6 +3,7 @@ import { site } from "@/content/site";
 import { cta, faqs, hero, meta, path, pricing } from "@/content/services/hub";
 import { PageHero } from "@/components/sections/PageHero";
 import { BetterTogether } from "@/components/sections/BetterTogether";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { PricingTeaser } from "@/components/sections/PricingTeaser";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { CtaBand } from "@/components/sections/CtaBand";
@@ -36,6 +37,9 @@ export default function ServicesPage() {
       <HubFlagships />
 
       <BetterTogether />
+
+      {/* All six quotes: the hub covers both the books and the billing. */}
+      <Testimonials />
 
       <HubSupporting />
 

@@ -8,9 +8,12 @@ import { WatchfulEye } from "@/components/site/Logo";
 export function CtaBand({
   title = "See Further. Move Faster. Grow Smarter.",
   body = "Tell us about your practice. We’ll tell you what your books and billing could look like, and what it would cost.",
+  showPricing = true,
 }: {
   title?: string;
   body?: string;
+  /** Set false on the pricing page, where the button would link to itself. */
+  showPricing?: boolean;
 }) {
   return (
     <section aria-labelledby="cta-title" className="bg-stone px-3 pb-3 sm:px-5 sm:pb-5">
@@ -27,14 +30,16 @@ export function CtaBand({
                 <Button href={site.bookingHref} size="lg" variant="ink">
                   Book a Discovery Call
                 </Button>
-                <Button
-                  href={site.pricingHref}
-                  size="lg"
-                  variant="outline"
-                  className="border-ink/25 bg-transparent hover:bg-white"
-                >
-                  Estimate Your Price
-                </Button>
+                {showPricing ? (
+                  <Button
+                    href={site.pricingHref}
+                    size="lg"
+                    variant="outline"
+                    className="border-ink/25 bg-transparent hover:bg-white"
+                  >
+                    Estimate Your Price
+                  </Button>
+                ) : null}
               </div>
             </Reveal>
             <Reveal delay={0.15} blur={false} className="hidden justify-self-end lg:block">

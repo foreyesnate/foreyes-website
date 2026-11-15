@@ -39,7 +39,7 @@ export const payroll: SupportingServiceContent = {
   },
   handles: {
     eyebrow: "What we handle",
-    title: "From employee setup to year-end forms.",
+    title: "Setup, pay runs, and payroll forms, handled.",
     lede: "Our Payroll service covers employee pay, payroll tax filings, and reporting. Here’s what our team takes on.",
     columns: 4,
     features: [
@@ -143,6 +143,7 @@ export const payroll: SupportingServiceContent = {
       { label: "Get Your Books in Order", href: "/services/bookkeeping" },
       { label: "Stop Chasing Payments", href: "/services/insurance-billing" },
     ],
+    art: "spot-dashboard",
   },
   faqs: {
     title: "Payroll FAQs",

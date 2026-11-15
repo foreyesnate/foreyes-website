@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { aboutHero, whyForEyes } from "@/content/about";
+import { aboutHero } from "@/content/about";
 import { site } from "@/content/site";
 import { PageHero } from "@/components/sections/PageHero";
-import { FeatureGrid } from "@/components/sections/FeatureGrid";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { CtaBand } from "@/components/sections/CtaBand";
 import {
@@ -12,6 +11,7 @@ import {
   AboutStory,
   AboutTeamTeaser,
   AboutVisionValues,
+  AboutWhy,
 } from "@/components/pages/about/AboutSections";
 
 export const metadata: Metadata = {
@@ -39,15 +39,7 @@ export default function AboutPage() {
       <AboutVisionValues />
       <AboutRemote />
       <AboutTeamTeaser />
-      <FeatureGrid
-        id="why-title"
-        tone="white"
-        eyebrow="Why ForEyes"
-        title="Eyecare is all we do."
-        lede="Our clients are optometry, ophthalmology, and optical practices. Nobody else."
-        features={whyForEyes}
-        numbered
-      />
+      <AboutWhy />
       <Testimonials tone="stone" />
       <CtaBand title="Let’s talk eyecare." />
     </>

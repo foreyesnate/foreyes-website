@@ -81,13 +81,16 @@ export function Eyebrow({
 }: {
   children: ReactNode;
   className?: string;
-  tone?: "ink" | "light";
+  /** "ink" on pale surfaces, "light" on navy or ink, "dark" on teal or yellow. */
+  tone?: "ink" | "light" | "dark";
 }) {
   return (
     <p
       className={cn(
         "eyebrow inline-flex items-center gap-2.5",
-        tone === "ink" ? "text-teal-700" : "text-teal-200",
+        tone === "ink" && "text-teal-700",
+        tone === "light" && "text-teal-200",
+        tone === "dark" && "text-ink",
         className,
       )}
     >
@@ -95,9 +98,9 @@ export function Eyebrow({
         aria-hidden="true"
         className={cn(
           "inline-block h-2 w-2 rounded-full ring-[3px]",
-          tone === "ink"
-            ? "bg-teal ring-teal/25"
-            : "bg-yellow ring-yellow/25",
+          tone === "ink" && "bg-teal ring-teal/25",
+          tone === "light" && "bg-yellow ring-yellow/25",
+          tone === "dark" && "bg-ink ring-ink/20",
         )}
       />
       {children}

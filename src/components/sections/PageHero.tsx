@@ -80,9 +80,9 @@ export function PageHero({
       <Container size="wide" className="relative">
         {crumbs?.length ? (
           <nav aria-label="Breadcrumb" className="mb-8">
-            <ol className={cn("flex flex-wrap items-center gap-1.5 font-display text-sm font-medium", dark ? "text-white/70" : "text-ink-500")}>
+            <ol className={cn("flex flex-wrap items-center gap-1.5 font-display text-sm font-medium", dark ? "text-white/75" : tone === "teal" ? "text-ink/80" : "text-ink-500")}>
               <li>
-                <Link href="/" className="transition-colors hover:text-current hover:underline">
+                <Link href="/" className="-my-3 inline-block py-3 transition-colors hover:underline">
                   Home
                 </Link>
               </li>
@@ -90,7 +90,7 @@ export function PageHero({
                 <li key={crumb.label} className="flex items-center gap-1.5">
                   <Icon name="chevronDown" size={13} className="-rotate-90 opacity-60" />
                   {crumb.href ? (
-                    <Link href={crumb.href} className="transition-colors hover:underline">
+                    <Link href={crumb.href} className="-my-3 inline-block py-3 transition-colors hover:underline">
                       {crumb.label}
                     </Link>
                   ) : (
@@ -108,7 +108,7 @@ export function PageHero({
           <div className={cn(visual ? "max-w-2xl" : "max-w-4xl")}>
             {eyebrow ? (
               <Reveal blur={false} y={10}>
-                <Eyebrow tone={dark ? "light" : "ink"} className={cn(tone === "teal" && "text-ink")}>
+                <Eyebrow tone={dark ? "light" : tone === "teal" ? "dark" : "ink"}>
                   {eyebrow}
                 </Eyebrow>
               </Reveal>

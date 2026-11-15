@@ -109,7 +109,7 @@ export function LeadForm({
                 </span>
                 <p className="text-heading mt-5">Got it. Thank you.</p>
                 <p className={cn("mt-3", dark ? "text-white/80" : "text-ink-700")}>
-                  We have your message and will be in touch within one business day.
+                  We have your message and will be in touch soon.
                 </p>
               </div>
             )}

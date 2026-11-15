@@ -58,18 +58,18 @@ export function FaqFocusCard({
               </span>
             </div>
 
-            <ul className="mt-5 grid gap-2.5">
+            <ul className="mt-5 grid min-h-[20.5rem] content-start gap-2.5">
               {items.map((item, i) => {
                 const on = i === active;
                 return (
                   <motion.li
                     key={item.question}
-                    animate={
-                      reduce
-                        ? undefined
-                        : { opacity: on ? 1 : 0.5, filter: on ? "blur(0px)" : "blur(1.6px)" }
-                    }
-                    transition={{ duration: 0.7, ease: EASE }}
+                    // With reduced motion nothing cycles, so every row stays sharp.
+                    animate={{
+                      opacity: on || reduce ? 1 : 0.5,
+                      filter: on || reduce ? "blur(0px)" : "blur(1.6px)",
+                    }}
+                    transition={{ duration: reduce ? 0 : 0.7, ease: EASE }}
                     className={cn(
                       "rounded-[1.25rem] border-2 px-4 py-3.5 transition-colors duration-500 sm:px-5",
                       on ? "border-navy bg-white" : "border-transparent bg-stone",
@@ -92,9 +92,9 @@ export function FaqFocusCard({
                       {on ? (
                         <motion.p
                           key="answer"
-                          initial={reduce ? false : { height: 0, opacity: 0 }}
+                          initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
-                          exit={reduce ? undefined : { height: 0, opacity: 0 }}
+                          exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.55, ease: EASE }}
                           className="overflow-hidden text-[0.9375rem] leading-relaxed text-ink-500"
                         >

@@ -9,8 +9,10 @@ import { site } from "@/content/site";
 export const metadata: Metadata = {
   title: "Page Not Found",
   description:
-    "That page isn’t here. Head to the homepage, see our services, or contact ForEyes Books & Billing.",
+    "That page isn’t here. Go to the homepage, see our bookkeeping and insurance billing services for eyecare practices, or contact ForEyes Books & Billing.",
   robots: { index: false, follow: true },
+  // The layout's canonical points at the homepage; a missing page has none.
+  alternates: {},
 };
 
 const moreLinks = [

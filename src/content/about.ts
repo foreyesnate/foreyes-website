@@ -9,7 +9,7 @@ export const aboutHero = {
   title: "Books and billing from",
   highlight: "the owner’s seat.",
   lede: "We work only with eyecare: optometry, ophthalmology, and optical. Wade Weisz, OD, founded the firm in 2021, after 25+ years as a practicing OD and multi-location practice owner.",
-  note: "Founded by an OD. Remote team. Practices served nationwide.",
+  note: "Founded by an OD. A fully remote team headquartered in Nashville, serving eyecare practices nationwide.",
 };
 
 export const story = {
@@ -119,10 +119,10 @@ export const values: CoreValue[] = [
 ];
 
 export const remote = {
-  eyebrow: "Remote, nationwide",
+  eyebrow: "Fully remote, nationwide",
   title: "Nationwide Reach, Personal Support",
   paragraphs: [
-    "Whether you’re in a rural town or a major metropolis, our remote-first model means we can work with practices across the country.",
+    "We’re a fully remote team headquartered in Nashville, serving eyecare practices nationwide. Whether you’re in a rural town or a major metropolis, we work with you the same way.",
     "Reviewed reports land in your client portal. Bill.com and Gusto run in the cloud, so your approvals and pay runs work the same from any state.",
     "Accurate books and clean claims shouldn’t be tied to a zip code.",
   ],
@@ -143,23 +143,26 @@ export const teamTeaser = {
   cta: "Meet Our Team",
 };
 
+export const why = {
+  eyebrow: "Why ForEyes",
+  title: "Eyecare is all we do.",
+  lede: "Our clients are optometry, ophthalmology, and optical practices. Nobody else.",
+};
+
 // The three reasons as they stand on the current site, with "headaches" and
-// "and more" removed.
-export const whyForEyes: { icon: IconName; title: string; body: string }[] = [
+// "and more" removed. Shown as a list beside the exam lane photo.
+export const whyForEyes: { title: string; body: string }[] = [
   {
-    icon: "eye",
     title: "Built for Eyecare",
     body: "We don’t “also work with eyecare professionals.” We only work with them, and that industry expertise shows.",
   },
   {
-    icon: "users",
     title: "Backed by Your Peers",
     body: "Endorsed by ODs on Finance and trusted by TSO, ALLDocs, and Vision Source practices. Our reputation is hard-earned and referral-built.",
   },
   {
-    icon: "spark",
     title: "Less Work, Smarter Spend",
-    body: "We replace in-house work with systems that save you time, reduce overhead, and grow with your practice.",
+    body: "We replace in-house bookkeeping and billing work with systems that save you time, reduce overhead, and grow with your practice.",
   },
 ];
 
@@ -208,17 +211,14 @@ export const teamPage = {
     lede: "You get named people, and each one has a defined job on your account.",
     roles: [
       {
-        icon: "users" as IconName,
         title: "Your account manager",
         body: "A dedicated account manager knows your books and will meet whenever a number needs explaining.",
       },
       {
-        icon: "shield" as IconName,
         title: "A quality control manager",
         body: "Before any P&L or balance sheet reaches your client portal, a quality control manager reviews it.",
       },
       {
-        icon: "claim" as IconName,
         title: "Your billing team",
         body: "Claims are reviewed before submission, denials are appealed, and A/R is followed up daily.",
       },

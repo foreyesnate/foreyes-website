@@ -75,7 +75,7 @@ export function SupportPayRun({ className }: { className?: string }) {
               </span>
             </div>
 
-            <ol className="mt-5 grid grid-cols-5 gap-1.5 text-center font-display text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-ink-400 sm:gap-2">
+            <ol className="mt-5 grid grid-cols-5 gap-1.5 text-center font-display text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-ink-500 sm:gap-2">
               {weekdays.map((day) => (
                 <li key={day}>{day}</li>
               ))}
@@ -148,10 +148,14 @@ export function SupportPayRun({ className }: { className?: string }) {
                   style={{ transitionDelay: landed ? `${i * 140}ms` : "0ms" }}
                   className={cn(
                     "flex items-center gap-2 rounded-xl px-3 py-2 font-display text-[0.75rem] font-semibold leading-tight transition-colors duration-500",
-                    landed ? "bg-teal-100 text-teal-800" : "bg-stone text-ink-400",
+                    landed ? "bg-teal-100 text-teal-800" : "bg-stone text-ink-500",
                   )}
                 >
-                  <Icon name="check" size={13} strokeWidth={3.2} className="shrink-0" />
+                  {landed ? (
+                    <Icon name="check" size={13} strokeWidth={3.2} className="shrink-0" />
+                  ) : (
+                    <span className="m-[2.5px] h-2 w-2 shrink-0 rounded-full border-2 border-current" />
+                  )}
                   {outcome}
                 </li>
               ))}

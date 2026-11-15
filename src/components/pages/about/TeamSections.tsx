@@ -1,8 +1,12 @@
+import { Fragment } from "react";
 import { teamPage } from "@/content/about";
 import { leads, owners, team, type TeamMember } from "@/content/team";
 import { Counter } from "@/components/motion/Counter";
 import { cn } from "@/lib/cn";
+import { Photo } from "@/components/ui/Art";
+import { TextLink } from "@/components/ui/Button";
 import { Container, Section, SectionHeading } from "@/components/ui/Layout";
+import { SplitFeature } from "@/components/sections/SplitFeature";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { BioDisclosure } from "./BioDisclosure";
 import { TeamPortrait } from "./TeamPortrait";
@@ -116,6 +120,32 @@ export function TeamLeads() {
         </Stagger>
       </Container>
     </Section>
+  );
+}
+
+/** The three roles on every account, beside a month-end review in progress. */
+export function TeamContacts() {
+  const copy = teamPage.contacts;
+  return (
+    <SplitFeature
+      id="contacts-title"
+      tone="ink"
+      eyebrow={copy.eyebrow}
+      title={copy.title}
+      body={<p>{copy.lede}</p>}
+      bullets={copy.roles.map((role) => (
+        <Fragment key={role.title}>
+          <strong className="font-display font-semibold text-white">{role.title}.</strong>{" "}
+          {role.body}
+        </Fragment>
+      ))}
+      footer={
+        <TextLink href="/about-us" tone="light">
+          Read How ForEyes Started
+        </TextLink>
+      }
+      visual={<Photo name="month-end" ratio="4/3" />}
+    />
   );
 }
 

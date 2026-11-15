@@ -19,7 +19,7 @@ export const hero = {
   eyebrow: "Services",
   title: "Your books and your billing,",
   highlight: "handled by one team.",
-  lede: "ForEyes Books & Billing does two things for independent eyecare practices: we keep the books and we work the insurance billing. Clients who want more off their plate add Accounts Payable, Payroll, or Practice Consulting.",
+  lede: "ForEyes Books & Billing does two things for independent eyecare practices: we keep the books and we work the insurance billing. Clients can add Accounts Payable, Payroll, or Practice Consulting on top.",
   note: "Founded by an OD. Eyecare practices only. Your Discovery Call is complimentary.",
   /** Two small cards floated over the hero picture, one per flagship. */
   chips: [
@@ -47,7 +47,7 @@ export const flagships: {
   lede: string;
   items: [HubFlagship, HubFlagship];
 } = {
-  eyebrow: "The two flagships",
+  eyebrow: "Books and billing",
   title: "The two things we do every day.",
   lede: "Books tell you what your practice earned and kept. Billing collects what your practice is owed. Hire us for one, or for both.",
   items: [
@@ -162,7 +162,7 @@ export const faqs: { title: string; lede: string; items: Faq[] } = {
     {
       question: "Can I add Accounts Payable, Payroll, or Practice Consulting later?",
       answer:
-        "Yes. These are add-ons that bookkeeping and billing clients take on when they want more off their plate. Tell your account manager, or bring it up on your Discovery Call.",
+        "Yes. These are add-ons, and bookkeeping and billing clients can take one on at any point. Tell your account manager, or bring it up on your Discovery Call.",
     },
     {
       question: "What do your services cost?",

@@ -10,7 +10,7 @@ import { cn } from "@/lib/cn";
 export function HubHeroVisual() {
   const [books, billing] = hero.chips;
   return (
-    <div className="relative mx-auto max-w-[36rem] py-6 lg:mr-0">
+    <div className="relative mx-auto max-w-[36rem] pb-6 pt-14 lg:mr-0">
       <Illustration name="handshake" panel="teal" priority />
       <HeroChip chip={books} className="left-3 top-0 sm:-left-5" tone="navy" />
       <HeroChip chip={billing} className="bottom-0 right-3 animate-float-slow sm:-right-4" tone="ink" />
@@ -138,17 +138,19 @@ function FlagshipCard({ item, tone }: { item: HubFlagship; tone: "navy" | "teal"
 
       <div
         className={cn(
-          "relative mt-auto flex flex-wrap items-end justify-between gap-x-8 gap-y-6 pt-8",
+          "relative mt-3 rounded-2xl p-4 ring-1 ring-inset sm:p-5",
+          navy ? "bg-white/10 ring-white/15" : "bg-white/35 ring-ink/10",
         )}
       >
-        <div className="max-w-[19rem]">
-          <p className={cn("eyebrow", navy ? "text-teal-200" : "text-ink/75")}>{item.price.label}</p>
-          {item.price.lines.map((line) => (
-            <p key={line} className="mt-1.5 font-display font-semibold leading-snug">
-              {line}
-            </p>
-          ))}
-        </div>
+        <p className={cn("eyebrow", navy ? "text-teal-200" : "text-ink/75")}>{item.price.label}</p>
+        {item.price.lines.map((line) => (
+          <p key={line} className="mt-1.5 font-display font-semibold leading-snug">
+            {line}
+          </p>
+        ))}
+      </div>
+
+      <div className="relative mt-auto pt-8">
         <Link
           href={item.href}
           className={cn(
@@ -185,7 +187,7 @@ export function HubSupporting() {
                 <StaggerItem as="li" key={service.href}>
                   <Link
                     href={service.href}
-                    className="group flex items-start gap-5 rounded-[1.75rem] bg-white p-6 shadow-soft transition-[transform,box-shadow] duration-500 ease-(--ease-focus) hover:-translate-y-1 hover:shadow-lift sm:p-7"
+                    className="group flex flex-col items-start gap-4 rounded-[1.75rem] bg-white p-6 shadow-soft transition-[transform,box-shadow] duration-500 ease-(--ease-focus) hover:-translate-y-1 hover:shadow-lift sm:flex-row sm:gap-5 sm:p-7"
                   >
                     <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-navy-50 text-navy transition-colors duration-300 group-hover:bg-yellow group-hover:text-ink">
                       <Icon name={service.icon} size={24} />
@@ -207,7 +209,7 @@ export function HubSupporting() {
                     <Icon
                       name="arrowRight"
                       size={20}
-                      className="mt-1 shrink-0 text-navy transition-transform duration-300 group-hover:translate-x-1.5"
+                      className="mt-1 hidden shrink-0 text-navy transition-transform duration-300 group-hover:translate-x-1.5 sm:block"
                     />
                   </Link>
                 </StaggerItem>

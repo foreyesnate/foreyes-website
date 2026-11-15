@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { teamPage } from "@/content/about";
 import { PageHero } from "@/components/sections/PageHero";
-import { FeatureGrid } from "@/components/sections/FeatureGrid";
 import { CtaBand } from "@/components/sections/CtaBand";
-import { TextLink } from "@/components/ui/Button";
-import { TeamExperience, TeamLeads, TeamOwners } from "@/components/pages/about/TeamSections";
+import { TeamContacts, TeamExperience, TeamLeads, TeamOwners } from "@/components/pages/about/TeamSections";
 
 export const metadata: Metadata = {
   title: "Our Team",
@@ -14,7 +12,6 @@ export const metadata: Metadata = {
 };
 
 export default function TeamPage() {
-  const { contacts } = teamPage;
   return (
     <>
       {/* Bios open with JavaScript. Without it, show them all. */}
@@ -32,19 +29,7 @@ export default function TeamPage() {
       />
       <TeamOwners />
       <TeamLeads />
-      <FeatureGrid
-        id="contacts-title"
-        tone="ink"
-        eyebrow={contacts.eyebrow}
-        title={contacts.title}
-        lede={contacts.lede}
-        features={contacts.roles}
-        footer={
-          <TextLink href="/about-us" tone="light">
-            Read How ForEyes Started
-          </TextLink>
-        }
-      />
+      <TeamContacts />
       <CtaBand
         title="Put this team on your books and billing."
         body="Tell us about your practice. We’ll tell you what your books and billing could look like, and what it would cost."

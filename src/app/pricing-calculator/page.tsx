@@ -37,7 +37,7 @@ export default function PricingCalculatorPage() {
         lede="What the estimate covers, what it leaves out, and what happens next."
         items={pricingFaqs}
       />
-      <CtaBand title={closingCopy.title} body={closingCopy.body} />
+      <CtaBand title={closingCopy.title} body={closingCopy.body} showPricing={false} />
     </>
   );
 }

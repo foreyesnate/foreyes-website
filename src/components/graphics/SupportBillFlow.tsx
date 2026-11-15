@@ -66,8 +66,8 @@ export function SupportBillFlow({ className }: { className?: string }) {
                 <Icon name="bill" size={22} />
               </span>
               <span className="min-w-0 flex-1">
-                <span className="block truncate font-display font-semibold leading-tight">Lens lab invoice</span>
-                <span className="mt-0.5 block truncate text-[0.8125rem] text-ink-500">Coded to lab fees · Net 30</span>
+                <span className="block font-display font-semibold leading-tight">Lens lab invoice</span>
+                <span className="mt-0.5 block text-[0.8125rem] leading-snug text-ink-500">Coded to lab fees</span>
               </span>
               <span className="text-right">
                 <span className="tabular block font-display font-semibold leading-tight">$1,284.60</span>
@@ -135,7 +135,7 @@ export function SupportBillFlow({ className }: { className?: string }) {
                   <span
                     className={cn(
                       "block font-display text-[0.75rem] font-semibold transition-colors duration-500 sm:text-[0.8125rem]",
-                      i <= stage ? "text-ink" : "text-ink-400",
+                      i <= stage ? "text-ink" : "text-ink-500",
                     )}
                   >
                     {item.name}
@@ -143,7 +143,7 @@ export function SupportBillFlow({ className }: { className?: string }) {
                   <span
                     className={cn(
                       "mt-1 inline-block rounded-full px-2 py-0.5 font-display text-[0.65rem] font-bold uppercase tracking-[0.08em]",
-                      item.who === "You" ? "bg-yellow-100 text-ink" : "text-ink-400",
+                      item.who === "You" ? "bg-yellow-100 text-ink" : "text-ink-500",
                     )}
                   >
                     {item.who}

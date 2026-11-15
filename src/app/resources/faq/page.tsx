@@ -13,7 +13,7 @@ import { FaqExplorer } from "@/components/pages/faq/FaqExplorer";
 import { FaqFocusCard, type QuickAnswer } from "@/components/pages/faq/FaqFocusCard";
 
 export const metadata: Metadata = {
-  title: "FAQs: Bookkeeping & Insurance Billing for Eyecare",
+  title: "Eyecare Bookkeeping & Billing FAQs",
   description:
     "Straight answers for optometry practice owners about bookkeeping, insurance billing, accounts payable, payroll, consulting, pricing, and how we work with you.",
   alternates: { canonical: "/resources/faq" },
@@ -52,7 +52,14 @@ export default function FaqPage() {
         lede="How ForEyes Books & Billing works, what each service covers, what it costs, and what we need from you. Search for a word, or jump to a topic."
         crumbs={[{ label: "Resources", href: "/resources" }, { label: "FAQs" }]}
         secondaryCta={{ label: "Estimate Your Price", href: site.pricingHref }}
-        visual={<FaqFocusCard items={quickAnswers} total={allFaqs.length} topics={faqGroups.length} />}
+        visual={
+          <FaqFocusCard
+            items={quickAnswers}
+            total={allFaqs.length}
+            topics={faqGroups.length}
+            className="max-lg:hidden"
+          />
+        }
       />
 
       <Section tone="white" id="questions" aria-label="Questions and answers">

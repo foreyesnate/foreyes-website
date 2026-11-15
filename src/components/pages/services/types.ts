@@ -24,6 +24,8 @@ export type SupportingRoleCard = {
   label: string;
   title: string;
   items: string[];
+  /** Optional line pinned to the foot of the card. */
+  note?: string;
 };
 
 /** The card beside the process steps: the named tool, or who leads the work. */
@@ -102,6 +104,8 @@ export type SupportingServiceContent = {
     title: string;
     body: string[];
     links: { label: string; href: string }[];
+    /** The picture beside the text. Not the one used in `intro`. */
+    art: IllustrationName;
   };
   faqs: { title: string; items: SupportingFaq[] };
   /** The pricing nudge, or `null` when the service has no published price. */

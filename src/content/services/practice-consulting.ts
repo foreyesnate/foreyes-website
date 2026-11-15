@@ -16,8 +16,8 @@ export const practiceConsulting: SupportingServiceContent = {
   },
   hero: {
     eyebrow: "Practice Consulting for eyecare practices",
-    title: "Guidance from an OD who’s",
-    highlight: "sat where you sit.",
+    title: "Guidance from an OD",
+    highlight: "who’s sat where you sit.",
     lede: "Your practice makes money. Do you know where it goes? Practice Consulting from ForEyes Books & Billing is led by Wade Weisz, OD. We review your operations, staffing, optical, and financials, hand you a prioritized plan, and help you put it to work.",
     note: "Scoped and quoted on your Discovery Call.",
   },
@@ -149,6 +149,7 @@ export const practiceConsulting: SupportingServiceContent = {
       { label: "Get Your Books in Order", href: "/services/bookkeeping" },
       { label: "Stop Chasing Payments", href: "/services/insurance-billing" },
     ],
+    art: "tidy-desk",
   },
   faqs: {
     title: "Practice Consulting FAQs",

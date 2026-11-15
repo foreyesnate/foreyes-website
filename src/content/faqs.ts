@@ -111,14 +111,14 @@ export const faqGroups: FaqGroup[] = [
           "Transaction categorization, account reconciliation, general ledger upkeep, financial reporting, and ongoing account management. Every account is reconciled monthly, and a quality control manager reviews every report before it reaches your client portal.",
       },
       {
-        question: "What is a custom chart of accounts?",
+        question: "What is a Custom Chart of Accounts?",
         answer:
           "A chart of accounts is the list of categories your revenue and expenses are sorted into. Ours is designed for eyecare: it separates medical exam revenue from optical sales, and optical cost of goods from overhead. It’s also structured to calculate EBITDA automatically, which helps with growth planning and practice valuation.",
       },
       {
-        question: "My practice is unique. How can a standardized system work for me?",
+        question: "My practice is different. How can a standardized system work for me?",
         answer:
-          "Our core chart of accounts is built on optometry-specific practices, but nothing we do is one-size-fits-all. Your account manager takes time to understand your practice, from your staffing model to your services and goals. You get the consistency of a proven system, aligned with how your practice actually runs.",
+          "Our Custom Chart of Accounts is built on optometry-specific practices, but nothing we do is one-size-fits-all. Your account manager takes time to understand your practice, from your staffing model to your services and goals. You get the consistency of one system, aligned with how your practice actually runs.",
       },
       {
         question: "How involved do I need to be in the day-to-day financials?",
@@ -279,9 +279,9 @@ export const faqGroups: FaqGroup[] = [
           "Bookkeeping records what happened and keeps your books accurate and current. Practice Consulting takes those books and works out what the numbers mean, what to do about them, and how to plan your next move. The two work best together, and clean books make our consulting sharper.",
       },
       {
-        question: "Do I need Practice Consulting if I already have an accountant or tax preparer?",
+        question: "Do I need Practice Consulting if I already have an accountant?",
         answer:
-          "Often, yes. Tax work looks backward to file correctly, and it is essential. Practice Consulting looks forward, helping you make better operating and growth decisions all year long. We complement your existing support rather than replace it.",
+          "Often, yes. Your accountant looks back at the year that has closed, and that work is essential. Practice Consulting looks forward, helping you make better staffing, operating, and growth decisions all year long. We complement your existing support rather than replace it.",
       },
       {
         question: "Can consulting help increase profitability?",

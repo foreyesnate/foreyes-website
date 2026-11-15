@@ -97,7 +97,7 @@ export function TextLink({
     <Link
       href={href}
       className={cn(
-        "group/link inline-flex items-center gap-1.5 font-display font-semibold underline decoration-yellow decoration-2 underline-offset-[6px] transition-[text-decoration-thickness] hover:decoration-4",
+        "group/link -my-2 inline-flex min-h-11 items-center gap-1.5 font-display font-semibold underline decoration-yellow decoration-2 underline-offset-[6px] transition-[text-decoration-thickness] hover:decoration-4",
         tone === "ink" ? "text-ink" : "text-white",
         className,
       )}

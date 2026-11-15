@@ -36,7 +36,7 @@ export function SplitFeature({
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <Reveal className={cn(flip && "lg:order-2")}>
             {eyebrow ? (
-              <Eyebrow tone={dark ? "light" : "ink"} className={cn("mb-5", tone === "teal" && "text-ink")}>
+              <Eyebrow tone={dark ? "light" : tone === "teal" ? "dark" : "ink"} className="mb-5">
                 {eyebrow}
               </Eyebrow>
             ) : null}

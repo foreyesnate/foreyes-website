@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion, type Variants } from "motion/react";
+import { motion, type Variants } from "motion/react";
 import type { ReactNode } from "react";
 
 // The site's signature move: things come *into focus* instead of just fading
@@ -29,17 +29,15 @@ export function Reveal({
   as = "div",
   once = true,
 }: RevealProps) {
-  const reduce = useReducedMotion();
+  // The starting state must be the same on the server and in the browser, so
+  // it never depends on the visitor's motion setting. <Providers> tells Motion
+  // to skip the movement for anyone who asks for reduced motion.
   const Tag = motion[as];
   return (
     <Tag
       data-reveal=""
       className={className}
-      initial={
-        reduce
-          ? { opacity: 0 }
-          : { opacity: 0, y, filter: blur ? "blur(10px)" : "blur(0px)" }
-      }
+      initial={{ opacity: 0, y, filter: blur ? "blur(10px)" : "blur(0px)" }}
       whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       viewport={{ once, margin: "0px 0px -12% 0px" }}
       transition={{ duration: 0.9, delay, ease: EASE }}
@@ -64,11 +62,6 @@ const itemVariants: Variants = {
     filter: "blur(0px)",
     transition: { duration: 0.85, ease: EASE },
   },
-};
-
-const itemVariantsReduced: Variants = {
-  hidden: { opacity: 0 },
-  shown: { opacity: 1, transition: { duration: 0.4 } },
 };
 
 /** Parent that reveals its <StaggerItem> children one after another. */
@@ -107,14 +100,9 @@ export function StaggerItem({
   className?: string;
   as?: "div" | "li" | "article";
 }) {
-  const reduce = useReducedMotion();
   const Tag = motion[as];
   return (
-    <Tag
-      data-reveal=""
-      className={className}
-      variants={reduce ? itemVariantsReduced : itemVariants}
-    >
+    <Tag data-reveal="" className={className} variants={itemVariants}>
       {children}
     </Tag>
   );

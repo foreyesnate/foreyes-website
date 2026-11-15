@@ -12,13 +12,15 @@ import type { IconName } from "@/components/ui/Icon";
 export const contactMeta = {
   title: "Contact Us and Book a Discovery Call",
   description:
-    "Book a complimentary Discovery Call or send a message to ForEyes Books & Billing. Reach our eyecare-only team by phone or email, Monday to Friday, 8 AM to 5 PM CT.",
+    "Book a complimentary Discovery Call or send a message to ForEyes Books & Billing. Reach our eyecare-only team by phone or email, Monday to Friday, 8 to 5 CT.",
 } as const;
 
 export const contactHero = {
   eyebrow: "Contact",
   title: "Let’s talk",
   highlight: "eyecare.",
+  /** Small label floated over the hero picture. */
+  badge: "Discovery Calls are complimentary",
   lede: "Have a question, or ready to learn how we can help your practice? Book a Discovery Call or send a message. Either way, a person on our team answers.",
 } as const;
 

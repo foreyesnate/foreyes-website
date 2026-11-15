@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { cn } from "@/lib/cn";
 
 const stages = ["Scrubbed", "Submitted", "Paid", "Posted"];
@@ -22,7 +22,6 @@ export function ClaimsPipeline({
   /** "light" sits on a dark panel, "dark" on a pale one. */
   tone?: "light" | "dark";
 }) {
-  const reduce = useReducedMotion();
   const light = tone === "light";
   return (
     <div
@@ -76,12 +75,11 @@ export function ClaimsPipeline({
             ))}
           </ol>
           {/* Travelling claims */}
-          {!reduce &&
-            chips.map((chip) => (
+          {chips.map((chip) => (
               <motion.span
                 key={chip.id}
                 className={cn(
-                  "absolute top-1/2 -ml-5 -mt-[1.05rem] grid h-[2.1rem] w-10 place-items-center rounded-lg font-display text-[0.65rem] font-bold shadow-soft",
+                  "absolute top-1/2 -ml-5 -mt-[1.05rem] grid h-[2.1rem] w-10 place-items-center rounded-lg font-display text-[0.65rem] font-bold shadow-soft motion-reduce:hidden",
                   chip.denied ? "bg-ink text-white" : "bg-yellow text-ink",
                 )}
                 initial={{ left: "12.5%", opacity: 0 }}
@@ -119,8 +117,8 @@ export function ClaimsPipeline({
                 }}
               >
                 {chip.denied ? "CO-16" : "$"}
-              </motion.span>
-            ))}
+            </motion.span>
+          ))}
         </div>
 
         <ol className="mt-1 grid grid-cols-4 text-center font-display text-[0.6875rem] font-semibold text-ink/75 sm:text-xs sm:uppercase sm:tracking-[0.08em]">

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { Fragment, type ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
@@ -30,7 +30,6 @@ export function FocusText({
   /** Animate when scrolled into view instead of on mount. */
   onView?: boolean;
 }) {
-  const reduce = useReducedMotion();
   const label = segments
     .map((s) => (typeof s === "string" ? s : s.text))
     .join(" ")
@@ -52,11 +51,7 @@ export function FocusText({
           <Fragment key={`${si}-${wi}`}>
             <motion.span
               className={cn("inline-block will-change-[filter,transform]", segClass)}
-              initial={
-                reduce
-                  ? { opacity: 0 }
-                  : { opacity: 0, y: "0.25em", filter: "blur(14px)" }
-              }
+              initial={{ opacity: 0, y: "0.25em", filter: "blur(14px)" }}
               {...(onView
                 ? { whileInView: animate, viewport: { once: true } }
                 : { animate })}

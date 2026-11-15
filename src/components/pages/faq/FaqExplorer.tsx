@@ -59,7 +59,7 @@ export function FaqExplorer({ groups }: { groups: FaqGroup[] }) {
         groups.flatMap((group) =>
           group.items.map((item) => [
             item.question,
-            normalise(`${item.question} ${item.answer} ${group.title}`),
+            normalise(`${item.question} ${item.answer}`),
           ]),
         ),
       ),
@@ -152,7 +152,7 @@ export function FaqExplorer({ groups }: { groups: FaqGroup[] }) {
                 autoComplete="off"
                 enterKeyHint="search"
                 aria-describedby={`${inputId}-status`}
-                className="h-14 w-full rounded-full border-2 border-stone-300 bg-white pl-12 pr-14 text-[1.0625rem] text-ink transition-colors placeholder:text-ink-400 focus:border-navy focus:outline-none [&::-webkit-search-cancel-button]:appearance-none"
+                className="h-14 w-full rounded-full border-2 border-stone-300 bg-white pl-12 pr-14 text-[1.0625rem] text-ink transition-colors placeholder:text-ink-400 focus:border-navy [&::-webkit-search-cancel-button]:appearance-none"
               />
               {query ? (
                 <button
@@ -258,7 +258,7 @@ export function FaqExplorer({ groups }: { groups: FaqGroup[] }) {
               rich: item.link ? (
                 <>
                   <p>{item.answer}</p>
-                  <TextLink href={item.link.href} className="mt-5 text-[0.975rem]">
+                  <TextLink href={item.link.href} className="mt-2.5 min-h-11 text-[0.975rem]">
                     {item.link.label}
                   </TextLink>
                 </>

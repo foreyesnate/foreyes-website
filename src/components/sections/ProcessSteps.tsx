@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion, useScroll, useSpring } from "motion/react";
+import { motion, useScroll, useSpring } from "motion/react";
 import { useRef, type ReactNode } from "react";
 import { Container, Section, SectionHeading } from "@/components/ui/Layout";
 import { Reveal } from "@/components/motion/Reveal";
@@ -31,7 +31,6 @@ export function ProcessSteps({
   aside?: ReactNode;
 }) {
   const ref = useRef<HTMLOListElement>(null);
-  const reduce = useReducedMotion();
   const dark = tone === "ink" || tone === "navy";
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 70%", "end 55%"] });
   const progress = useSpring(scrollYProgress, { stiffness: 90, damping: 24 });
@@ -49,7 +48,7 @@ export function ProcessSteps({
 
           <ol ref={ref} className="relative grid gap-5">
             <div aria-hidden="true" className={cn("absolute bottom-8 left-[1.6875rem] top-8 w-1 rounded-full", dark ? "bg-white/12" : "bg-stone-300")}>
-              <motion.div className="h-full w-full origin-top rounded-full bg-yellow" style={reduce ? undefined : { scaleY: progress }} />
+              <motion.div className="h-full w-full origin-top rounded-full bg-yellow" style={{ scaleY: progress }} />
             </div>
             {steps.map((step, i) => (
               <Reveal as="li" key={step.title} delay={0.04 * i} className="relative flex gap-6">

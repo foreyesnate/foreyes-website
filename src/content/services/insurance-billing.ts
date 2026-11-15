@@ -269,7 +269,7 @@ export const kpis: { eyebrow: string; title: string; lede: string; items: Kpi[];
 
 export const comparison = {
   lede: "You ask patients this all day. Here’s the same test for your insurance billing.",
-  labels: { one: "In-house biller", two: "With ForEyes" },
+  labels: { one: "In-house", two: "With ForEyes" },
   rows: [
     {
       topic: "Attention",

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion, useScroll, useSpring, useTransform } from "motion/react";
+import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { useRef } from "react";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { cn } from "@/lib/cn";
@@ -19,7 +19,6 @@ export type JourneyStep = {
  */
 export function JourneyLine({ steps }: { steps: JourneyStep[] }) {
   const ref = useRef<HTMLOListElement>(null);
-  const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start 78%", "end 62%"],
@@ -33,16 +32,16 @@ export function JourneyLine({ steps }: { steps: JourneyStep[] }) {
       <div aria-hidden="true" className="absolute left-7 top-7 bottom-7 w-1 rounded-full bg-white/12 lg:left-[10%] lg:right-[10%] lg:top-7 lg:bottom-auto lg:h-1 lg:w-auto">
         <motion.div
           className="h-full w-full origin-top rounded-full bg-yellow lg:hidden"
-          style={reduce ? undefined : { scaleY: scale }}
+          style={{ scaleY: scale }}
         />
         <motion.div
           className="absolute inset-0 hidden origin-left rounded-full bg-yellow lg:block"
-          style={reduce ? undefined : { scaleX: scale }}
+          style={{ scaleX: scale }}
         />
       </div>
 
       {steps.map((step, index) => (
-        <Stop key={step.title} step={step} index={index} total={steps.length} progress={progress} reduce={Boolean(reduce)} />
+        <Stop key={step.title} step={step} index={index} total={steps.length} progress={progress} />
       ))}
     </ol>
   );
@@ -53,13 +52,11 @@ function Stop({
   index,
   total,
   progress,
-  reduce,
 }: {
   step: JourneyStep;
   index: number;
   total: number;
   progress: ReturnType<typeof useSpring>;
-  reduce: boolean;
 }) {
   const at = total === 1 ? 0 : index / (total - 1);
   const lit = useTransform(progress, [Math.max(0, at - 0.12), at], [0, 1]);
@@ -68,10 +65,10 @@ function Stop({
   return (
     <motion.li
       className="relative flex gap-5 lg:flex-col lg:items-center lg:text-center"
-      style={reduce ? undefined : { opacity }}
+      style={{ opacity }}
     >
       <motion.span
-        style={reduce ? undefined : { scale }}
+        style={{ scale }}
         className={cn(
           "relative z-10 grid h-14 w-14 shrink-0 place-items-center rounded-2xl text-ink shadow-lift",
           step.owner === "billing" ? "bg-teal" : "bg-white",

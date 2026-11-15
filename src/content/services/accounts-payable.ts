@@ -78,6 +78,7 @@ export const accountsPayable: SupportingServiceContent = {
           "Approve it, or hold it",
           "Ask your account manager about anything that looks off",
         ],
+        note: "You keep full approval authority.",
       },
       {
         label: "Our part",
@@ -138,6 +139,7 @@ export const accountsPayable: SupportingServiceContent = {
       { label: "Get Your Books in Order", href: "/services/bookkeeping" },
       { label: "Stop Chasing Payments", href: "/services/insurance-billing" },
     ],
+    art: "spot-reconcile",
   },
   faqs: {
     title: "Accounts Payable FAQs",

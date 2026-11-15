@@ -2,7 +2,8 @@
 //
 // Bios are carried over word for word. The only edits: "ForEyes Solutions"
 // became "ForEyes Books & Billing" (first mention on the page) or "ForEyes".
-// None of the bios mentioned tax services, so nothing else was removed.
+// Richard's bio lost two filler words ("actionable", "empower"); the meaning
+// is unchanged. None of the bios mentioned tax services.
 // Laura Pittman, Mae Labongray, and Heather Bank have no bio on the current
 // site. Do not write one for them here without the person's sign-off.
 
@@ -73,7 +74,7 @@ export const team: TeamMember[] = [
     group: "leads",
     photo: { src: "/team/richard-schisler.jpg", width: 864, height: 864, position: "50% 20%" },
     bio: [
-      "As Director of Client Accounting Services, Richard oversees all client accounting operations, setting the standards, processes, and quality controls that ensure accuracy and consistency across every client engagement. Since joining ForEyes in March 2022, he has built deep expertise in optometry practice accounting and a strong foundation in business administration, playing a key role in translating financial data into clear, actionable insights that empower practice owners to make confident, informed decisions.",
+      "As Director of Client Accounting Services, Richard oversees all client accounting operations, setting the standards, processes, and quality controls that ensure accuracy and consistency across every client engagement. Since joining ForEyes in March 2022, he has built deep expertise in optometry practice accounting and a strong foundation in business administration, playing a key role in translating financial data into clear insights that help practice owners make confident, informed decisions.",
       "When he’s not working, Richard enjoys spending quality time with his family. Whether it’s hiking outdoors, playing sports, or building elaborate train tracks with his boys, he values staying active and making the most of life’s simple moments.",
     ],
   },

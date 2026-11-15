@@ -21,7 +21,7 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 /**
  * The 404 page's picture: an eye chart that starts out of focus and sharpens
  * line by line, largest first, the way a chart does as the right lens drops
- * in. With reduced motion it is simply sharp.
+ * in. With reduced motion it is sharp at once.
  */
 export function EyeChart404({ className }: { className?: string }) {
   const reduce = useReducedMotion();
@@ -46,9 +46,10 @@ export function EyeChart404({ className }: { className?: string }) {
                 <span className="tabular font-display text-[0.6875rem] font-semibold text-ink-400">{row.acuity}</span>
                 <motion.span
                   data-reveal=""
-                  initial={reduce ? false : { filter: `blur(${row.blur}px)`, opacity: 0.55 }}
-                  animate={{ filter: "blur(0px)", opacity: 1 }}
-                  transition={{ duration: 1.5, delay: 0.5 + i * 0.32, ease: EASE }}
+                  initial={{ filter: `blur(${row.blur}px)`, opacity: 0.55 }}
+                  whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={reduce ? { duration: 0 } : { duration: 1.5, delay: 0.5 + i * 0.32, ease: EASE }}
                   className={cn(
                     "block whitespace-nowrap text-center font-display font-bold leading-none text-ink will-change-[filter]",
                     row.size,
@@ -63,9 +64,10 @@ export function EyeChart404({ className }: { className?: string }) {
               </div>
               {"bar" in row ? (
                 <motion.span
-                  initial={reduce ? false : { scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ duration: 0.9, delay: 0.9 + i * 0.32, ease: EASE }}
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true }}
+                  transition={reduce ? { duration: 0 } : { duration: 0.9, delay: 0.9 + i * 0.32, ease: EASE }}
                   className={cn("mx-auto mt-4 block h-1.5 w-[72%] origin-left rounded-full sm:mt-5", row.bar)}
                 />
               ) : null}

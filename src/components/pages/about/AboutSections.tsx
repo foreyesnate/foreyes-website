@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Fragment } from "react";
 import { site } from "@/content/site";
 import {
   founderQuote,
@@ -8,8 +9,11 @@ import {
   timeline,
   values,
   vision,
+  why,
+  whyForEyes,
 } from "@/content/about";
 import { team, type TeamMember } from "@/content/team";
+import { Photo } from "@/components/ui/Art";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { Container, Eyebrow, Section, SectionHeading } from "@/components/ui/Layout";
@@ -336,5 +340,26 @@ export function AboutTeamTeaser() {
         </div>
       </Container>
     </Section>
+  );
+}
+
+/** Why an eyecare-only firm, beside the room our clients work in. */
+export function AboutWhy() {
+  return (
+    <SplitFeature
+      id="why-title"
+      tone="white"
+      flip
+      eyebrow={why.eyebrow}
+      title={why.title}
+      body={<p>{why.lede}</p>}
+      bullets={whyForEyes.map((reason) => (
+        <Fragment key={reason.title}>
+          <strong className="font-display font-semibold text-ink">{reason.title}.</strong>{" "}
+          {reason.body}
+        </Fragment>
+      ))}
+      visual={<Photo name="exam-lane" ratio="4/3" />}
+    />
   );
 }
