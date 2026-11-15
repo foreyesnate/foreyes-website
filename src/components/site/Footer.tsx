@@ -49,11 +49,11 @@ export function Footer() {
             <p className="mt-7 max-w-sm text-lg leading-relaxed text-white/70">
               {site.tagline} Founded by an OD.
             </p>
-            <ul className="mt-8 grid gap-3.5 text-[1.0625rem]">
+            <ul className="mt-6 grid gap-1 text-[1.0625rem]">
               <li>
                 <a
                   href={site.phone.href}
-                  className="group inline-flex items-center gap-3 font-display font-semibold transition-colors hover:text-yellow"
+                  className="group inline-flex min-h-11 items-center gap-3 font-display font-semibold transition-colors hover:text-yellow"
                 >
                   <Icon name="phone" className="text-teal" />
                   {site.phone.display}
@@ -62,21 +62,22 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${site.email}`}
-                  className="inline-flex items-center gap-3 font-display font-semibold transition-colors hover:text-yellow"
+                  className="inline-flex min-h-11 items-center gap-3 font-display font-semibold transition-colors hover:text-yellow"
                 >
                   <Icon name="mail" className="text-teal" />
                   {site.email}
                 </a>
               </li>
-              <li className="inline-flex items-start gap-3 text-white/75">
+              <li className="inline-flex items-start gap-3 py-2 text-white/75">
                 <Icon name="pin" className="mt-0.5 shrink-0 text-teal" />
                 <span>
-                  Fully remote, headquartered in {site.headquarters}.
+                  Fully remote, headquartered in{" "}
+                  <span className="whitespace-nowrap">{site.headquarters}.</span>
                   <br />
                   Serving eyecare practices nationwide.
                 </span>
               </li>
-              <li className="inline-flex items-center gap-3 text-white/75">
+              <li className="inline-flex items-center gap-3 py-2 text-white/75">
                 <Icon name="clock" className="text-teal" />
                 {site.hours}
               </li>
@@ -87,12 +88,12 @@ export function Footer() {
             {columns.map((column) => (
               <div key={column.title}>
                 <h2 className="eyebrow text-teal-200">{column.title}</h2>
-                <ul className="mt-5 grid gap-3">
+                <ul className="mt-3 grid">
                   {column.links.map((link) => (
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-white/80 underline decoration-transparent decoration-2 underline-offset-4 transition-colors hover:text-white hover:decoration-yellow"
+                        className="inline-flex min-h-11 min-w-11 items-center text-white/80 underline decoration-transparent decoration-2 underline-offset-4 transition-colors hover:text-white hover:decoration-yellow"
                       >
                         {link.label}
                       </Link>
@@ -104,13 +105,13 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className="mt-16 flex flex-col gap-4 border-t border-white/10 pt-8 text-sm text-white/55 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-white/55 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {site.name}. Formerly {site.legacyName}.
           </p>
           <ul className="flex gap-6">
             <li>
-              <Link href="/privacy-policy" className="transition-colors hover:text-white">
+              <Link href="/privacy-policy" className="inline-flex min-h-11 items-center transition-colors hover:text-white">
                 Privacy Policy
               </Link>
             </li>

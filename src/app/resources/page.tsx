@@ -15,7 +15,7 @@ import { ResourceGraphic } from "@/components/pages/blog/ResourceGraphics";
 export const metadata: Metadata = {
   title: "Resources for Optometry Practice Owners",
   description:
-    "Articles for eyecare practice owners, straight answers to common questions, and a pricing calculator for bookkeeping, insurance billing, payroll, and bill pay.",
+    "Articles for eyecare practice owners, straight answers to common questions, and a pricing calculator for bookkeeping, billing, accounts payable, and payroll.",
   alternates: { canonical: "/resources" },
 };
 

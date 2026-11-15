@@ -60,7 +60,7 @@ export const flagshipServices: NavLink[] = [
   {
     label: "Insurance Billing",
     href: "/services/insurance-billing",
-    description: "Claims, denials and A/R worked daily by eyecare billers.",
+    description: "Claims, denials, and A/R worked daily by eyecare billers.",
   },
 ];
 
@@ -73,12 +73,12 @@ export const supportingServices: NavLink[] = [
   {
     label: "Payroll",
     href: "/services/payroll",
-    description: "Paychecks, filings and year-end forms, handled.",
+    description: "Paychecks, filings, and year-end forms, handled.",
   },
   {
     label: "Practice Consulting",
     href: "/services/practice-consulting",
-    description: "OD-led advice on staffing, optical and operations.",
+    description: "OD-led advice on staffing, optical, and operations.",
   },
 ];
 

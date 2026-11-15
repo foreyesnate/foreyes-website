@@ -12,7 +12,7 @@ export const optometrists: AudienceContent = {
   path: "/who-we-serve/optometrists",
   label: "Optometrists",
   meta: {
-    title: "Bookkeeping & Insurance Billing for Optometrists",
+    title: "Bookkeeping & Billing for Independent Optometrists",
     description:
       "Bookkeeping and insurance billing for independent optometrists. Reviewed financials by the 10th business day and A/R followed up daily, from an OD-founded team.",
   },

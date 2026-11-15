@@ -38,7 +38,7 @@ export const photos = {
   "books": { src: "/art/photos/books.webp", width: 2000, height: 1328, alt: "A cloth-bound ledger open on an oak desk with a fountain pen, round glasses, and a yellow pencil." },
   "billing-desk": { src: "/art/photos/billing-desk.webp", width: 2000, height: 1328, alt: "A hand ticks off a stack of claim forms at a desk, a phoropter out of focus behind." },
   "dispensary": { src: "/art/photos/dispensary.webp", width: 2000, height: 1131, alt: "An optical dispensary in morning light: a wall of frames, a staff member adjusting a display, a tablet on the counter." },
-  "exam-lane": { src: "/art/photos/exam-lane.webp", width: 2000, height: 1328, alt: "A quiet exam lane with a chair, phoropter and slit lamp, and a tablet showing a chart on the counter." },
+  "exam-lane": { src: "/art/photos/exam-lane.webp", width: 2000, height: 1328, alt: "A quiet exam lane with a chair, phoropter, and slit lamp, and a tablet showing a chart on the counter." },
   "month-end": { src: "/art/photos/month-end.webp", width: 2000, height: 1328, alt: "A bookkeeper at a two-monitor desk reviewing tables and a bar chart, a flagged bank statement beside the keyboard." },
   "trial-lenses": { src: "/art/photos/trial-lenses.webp", width: 2000, height: 1328, alt: "An open case of trial lenses with a curl of receipt paper lying across them." },
 } as const satisfies Record<string, ArtAsset>;

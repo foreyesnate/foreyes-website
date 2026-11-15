@@ -204,7 +204,7 @@ export const startups: AudienceContent = {
       {
         question: "What will this cost a new practice?",
         answer:
-          "Use the pricing calculator to build an estimate in a few minutes, then book a Discovery Call to confirm it. Payroll is from $149 a month for up to 10 employees, and Accounts Payable is from $99 a month for up to 10 bills a month. Insurance Billing is 8% of net receipts for medical plan billing, and 5% of net receipts, plus applicable lab fees, for vision plan billing. Practice Consulting is scoped on the call. Every figure the calculator shows is an estimate only.",
+          "Use the pricing calculator to build an estimate in a few minutes, then book a Discovery Call to confirm it. Bookkeeping starts at $399 a month. Payroll is from $149 a month for up to 10 employees, and Accounts Payable is from $99 a month for up to 10 bills a month. Insurance Billing is 8% of net receipts for medical plan billing, and 5% of net receipts, plus applicable lab fees, for vision plan billing. Practice Consulting is scoped on the call. Every figure the calculator shows is an estimate only.",
       },
     ],
   },

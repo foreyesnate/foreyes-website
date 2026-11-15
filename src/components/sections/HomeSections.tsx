@@ -64,7 +64,7 @@ export function MoreServices({
                   <h3 className="text-subheading mt-5 px-3">{service.label}</h3>
                   <p className="mt-2 px-3 text-ink-500">{service.description}</p>
                   <span className="mt-auto flex items-center gap-1.5 px-3 pb-3 pt-6 font-display text-sm font-semibold text-navy">
-                    Learn more
+                    Learn More
                     <Icon name="arrowRight" size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
                 </Link>
@@ -174,7 +174,7 @@ export function Audiences() {
                     <h3 className="text-heading">{audience.label}</h3>
                     <p className="mt-3 text-ink-500">{audience.description}</p>
                     <span className="mt-auto flex items-center gap-2 pt-6 font-display font-semibold text-navy">
-                      See how we help
+                      See How We Help
                       <Icon name="arrowRight" size={18} className="transition-transform duration-300 group-hover:translate-x-1.5" />
                     </span>
                   </span>
@@ -194,16 +194,18 @@ export function NationwideBand() {
     <section aria-labelledby="nationwide-title" className="bg-stone px-3 pb-20 sm:px-5 sm:pb-28">
       <Reveal blur={false} y={40}>
         <LoopVideo name="dispensary" ratio="auto" className="mx-auto min-h-[30rem] max-w-[88rem] sm:min-h-[34rem]">
-          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/5 sm:bg-gradient-to-r sm:from-ink sm:via-ink/70 sm:to-transparent" />
-          <div className="relative flex h-full min-h-[30rem] flex-col justify-end p-8 text-white sm:min-h-[34rem] sm:max-w-2xl sm:justify-center sm:p-14">
+          {/* Phones: the copy runs nearly the full height, so the scrim stays
+              dark to the top. From sm up it fades out to the right instead. */}
+          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-ink via-ink/85 to-ink/55 sm:bg-gradient-to-r sm:from-ink sm:via-ink/70 sm:to-transparent" />
+          <div className="relative flex h-full min-h-[30rem] flex-col justify-end px-7 pb-20 pt-8 text-white sm:min-h-[34rem] sm:max-w-2xl sm:justify-center sm:p-14">
             <Eyebrow tone="light">Wherever you practice</Eyebrow>
             <h2 id="nationwide-title" className="text-title mt-5">
               Remote, Nationwide Assistance
             </h2>
             <p className="text-lede mt-5 text-white/85">
-              Our fully remote team works with eyecare practices across the
-              country. Location won’t limit the quality or speed of support
-              you receive.
+              We’re a fully remote team headquartered in Nashville, serving
+              eyecare practices nationwide. Location won’t limit the quality
+              or speed of support you receive.
             </p>
             <div className="mt-8">
               <Button href={site.bookingHref} size="lg">
@@ -279,7 +281,7 @@ const tools = [
   {
     title: "Pricing Calculator",
     body: "Get a clear, upfront estimate of what working with us could cost. It takes a few minutes.",
-    cta: "Calculate Your Price",
+    cta: "Estimate Your Price",
     href: "/pricing-calculator",
     art: "spot-dashboard" as IllustrationName,
   },

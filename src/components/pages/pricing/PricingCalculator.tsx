@@ -152,8 +152,9 @@ function SentPanel({ onShown }: { onShown: () => void }) {
           <h3 className="text-heading mt-5">{leadCopy.thanksTitle}</h3>
           <p className="mt-3 max-w-xl text-ink-700">{leadCopy.thanksBody}</p>
         </div>
-        {/* The page's one picture: the call that the estimate leads to. */}
-        <Illustration name="discovery-call" panel="none" sizes="16rem" className="mx-auto w-full max-w-[16rem]" />
+        {/* The page's one picture: the estimate is in, nothing left to do.
+            (The Discovery Call scene leads the contact page.) */}
+        <Illustration name="all-caught-up" panel="none" sizes="14rem" className="mx-auto w-full max-w-[14rem]" />
       </div>
       <BookingCalendar className="mt-5 shadow-soft" />
     </div>

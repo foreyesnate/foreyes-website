@@ -105,7 +105,8 @@ export default function ContactPage() {
             panel="teal"
             priority
             sizes="(min-width: 1024px) 40rem, 92vw"
-            className="mx-auto max-w-[36rem] lg:mr-0"
+            // Extra headroom on phones so the badge clears the figure's head.
+            className="mx-auto max-w-[36rem] max-sm:pt-[4.5rem] lg:mr-0"
           >
             <p className="absolute left-5 top-5 flex items-center gap-2.5 rounded-full bg-white py-2 pl-2 pr-4 font-display text-sm font-semibold text-ink shadow-lift sm:left-7 sm:top-7">
               <span className="grid h-7 w-7 place-items-center rounded-full bg-yellow">

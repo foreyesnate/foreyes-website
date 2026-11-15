@@ -81,7 +81,7 @@ export const servicePitches: Record<PostService, ServicePitch> = {
     points: [
       "Paychecks out on schedule",
       "Payroll tax filings handled",
-      "Year-end W-2s and 1099s",
+      "Year-end forms, such as W-2s",
     ],
     cta: "See How Payroll Works",
   },
@@ -96,7 +96,7 @@ export const servicePitches: Record<PostService, ServicePitch> = {
       "Invoices collected, entered, and categorized",
       "You approve every payment before it goes out",
     ],
-    cta: "See How Bill Pay Works",
+    cta: "See How Accounts Payable Works",
   },
   "practice-consulting": {
     label: "Practice Consulting",
@@ -144,7 +144,7 @@ export const resourceCards: ResourceCard[] = [
     key: "pricing",
     eyebrow: "Estimate",
     title: "Pricing Calculator",
-    body: "See what bookkeeping, insurance billing, payroll, and bill pay would cost for a practice your size. Switch services on and off and the monthly estimate updates as you go.",
+    body: "See what bookkeeping, insurance billing, accounts payable, and payroll would cost for a practice your size. Switch services on and off and the monthly estimate updates as you go.",
     cta: "Estimate Your Price",
     href: "/pricing-calculator",
   },

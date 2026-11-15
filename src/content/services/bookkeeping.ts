@@ -90,7 +90,7 @@ export const included = {
     {
       icon: "spark",
       title: "EBITDA, Calculated for You",
-      body: "Earnings Before Interest, Tax, Depreciation, and Amortization (EBITDA) is the valuation metric buyers and lenders ask about first. Your Custom Chart of Accounts calculates it automatically.",
+      body: "Earnings Before Interest, Taxes, Depreciation, and Amortization (EBITDA) is the valuation metric buyers and lenders ask about first. Your Custom Chart of Accounts calculates it automatically.",
     },
     {
       icon: "bill",

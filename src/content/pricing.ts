@@ -255,10 +255,10 @@ export const includedCopy = {
       "Medical plan billing is 8% of net receipts. Vision plan billing is 5% of net receipts, plus applicable lab fees.",
     items: [
       "Claims reviewed before submission",
-      "Payments posted",
-      "Denials appealed",
+      "Payments posted and denials appealed",
       "A/R followed up daily",
       "Patient billing inquiries handled for you",
+      "Regular coding audits",
       "A monthly report with clean claim rate, denial rate, days in A/R, and overall collection percentage",
     ],
     link: { label: "Stop Chasing Payments", href: "/services/insurance-billing" },

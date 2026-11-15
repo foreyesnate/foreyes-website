@@ -10,7 +10,7 @@ import { site } from "@/content/site";
 export const path = "/services";
 
 export const meta = {
-  title: "Bookkeeping and Insurance Billing Services for Eyecare",
+  title: "Bookkeeping & Insurance Billing Services for Eyecare",
   description:
     "Bookkeeping and Insurance Billing for independent eyecare practices, plus Accounts Payable, Payroll, and Practice Consulting. See what each service covers.",
 };

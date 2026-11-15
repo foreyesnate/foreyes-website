@@ -143,7 +143,7 @@ export const payroll: SupportingServiceContent = {
       { label: "Get Your Books in Order", href: "/services/bookkeeping" },
       { label: "Stop Chasing Payments", href: "/services/insurance-billing" },
     ],
-    art: "spot-dashboard",
+    art: "spot-bookkeeping",
   },
   faqs: {
     title: "Payroll FAQs",
@@ -183,7 +183,7 @@ export const payroll: SupportingServiceContent = {
   },
   pricing: {
     title: "Payroll Starts at $149 a Month",
-    body: "That covers up to 10 employees. Add it to your estimate in the pricing calculator, then book a Discovery Call to confirm it. No hidden fees, no surprise invoices. Every figure shown is an estimate only.",
+    body: "That covers up to 10 employees. Add it to your estimate in the pricing calculator, which also shows the one-time implementation fee, then book a Discovery Call to confirm it. No hidden fees, no surprise invoices. Every figure shown is an estimate only.",
   },
   cta: {
     title: "Hand off the pay run.",

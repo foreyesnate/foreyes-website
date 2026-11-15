@@ -133,9 +133,9 @@ export const aging = {
       },
     },
     buckets: [
-      { label: "0–30", waiting: 41, worked: 66 },
-      { label: "31–60", waiting: 24, worked: 19 },
-      { label: "61–90", waiting: 16, worked: 9 },
+      { label: "0-30", waiting: 41, worked: 66 },
+      { label: "31-60", waiting: 24, worked: 19 },
+      { label: "61-90", waiting: 16, worked: 9 },
       { label: "90+", waiting: 19, worked: 6 },
     ] satisfies AgingBucket[],
     flag: "Watch this bucket",

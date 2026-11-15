@@ -37,7 +37,7 @@ export function AboutTimeZones({
     <div className={cn("relative rounded-[2.5rem] bg-stone p-6 sm:p-9", className)}>
       <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="font-display text-lg font-semibold tracking-[-0.015em]">
-          Our office hours, on your clock
+          Our hours, on your clock
         </p>
         <span className="rounded-full bg-white px-3.5 py-1.5 font-display text-xs font-semibold text-ink-500 shadow-soft">
           Monday to Friday
@@ -104,7 +104,7 @@ export function AboutTimeZones({
 
       <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-3 border-t border-stone-300 pt-6">
         <p className="text-[0.95rem] text-ink-500">
-          <span className="font-semibold text-ink">Office hours:</span> {hours}.
+          <span className="font-semibold text-ink">Hours:</span> {hours}.
         </p>
       </div>
       <ul className="mt-4 flex flex-wrap gap-2" aria-label="Works the same from any state">

@@ -84,13 +84,14 @@ export function Header() {
       </a>
       <div
         className={cn(
-          "pointer-events-auto mx-auto flex max-w-[88rem] items-center gap-4 rounded-full border border-white/70 bg-white/85 pl-5 pr-2.5 backdrop-blur-xl transition-[height,box-shadow,background-color] duration-500 ease-(--ease-focus) sm:pl-7",
+          "pointer-events-auto mx-auto flex max-w-[88rem] items-center gap-4 rounded-full border border-white/70 bg-white/85 pl-5 pr-2.5 lg:max-xl:gap-2 backdrop-blur-xl transition-[height,box-shadow,background-color] duration-500 ease-(--ease-focus) sm:pl-7",
           scrolled ? "h-16 shadow-lift" : "h-[4.5rem] shadow-soft",
         )}
       >
         <Logo
           className={cn(
-            "transition-[height] duration-500 ease-(--ease-focus)",
+            // The ::after pads the tap target to 44px+ without moving the art.
+            "relative transition-[height] duration-500 ease-(--ease-focus) after:absolute after:-inset-y-2 after:inset-x-0 after:content-['']",
             scrolled ? "h-9" : "h-10 sm:h-11",
           )}
         />
@@ -119,10 +120,10 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="ml-auto flex items-center gap-2 lg:ml-3">
+        <div className="ml-auto flex items-center gap-2 lg:ml-1 xl:ml-3">
           <a
             href={site.phone.href}
-            className="hidden items-center gap-2 rounded-full px-3 py-2 font-display text-[0.95rem] font-semibold text-ink transition-colors hover:text-navy xl:flex"
+            className="hidden h-11 items-center gap-2 whitespace-nowrap rounded-full px-3 font-display text-[0.95rem] font-semibold text-ink transition-colors hover:text-navy xl:flex"
           >
             <Icon name="phone" size={17} className="text-teal-700" />
             {site.phone.display}
@@ -178,7 +179,9 @@ function DesktopItem({
 }) {
   const hasMenu = Boolean(group.links?.length || group.featured?.length);
   const itemClass = cn(
-    "relative flex h-11 items-center gap-1 rounded-full px-3.5 font-display text-[0.95rem] font-semibold transition-colors xl:px-4",
+    // Tighter between 1024 and 1120 so the five items, the logo and the CTA
+    // share one line without wrapping.
+    "relative flex h-11 items-center gap-1 whitespace-nowrap rounded-full px-2 font-display text-[0.9rem] font-semibold transition-colors min-[1120px]:px-3.5 min-[1120px]:text-[0.95rem] 2xl:px-4",
     active ? "text-navy" : "text-ink hover:text-navy",
   );
 
@@ -194,7 +197,15 @@ function DesktopItem({
 
   const panelId = `nav-${group.label.toLowerCase().replace(/\s+/g, "-")}`;
   return (
-    <li className="relative" onPointerEnter={onOpen} onPointerLeave={onClose}>
+    <li
+      className="relative"
+      onPointerEnter={onOpen}
+      onPointerLeave={onClose}
+      // Keyboard: tabbing out of the item or its panel closes the panel.
+      onBlur={(event) => {
+        if (open && !event.currentTarget.contains(event.relatedTarget as Node | null)) onClose();
+      }}
+    >
       <button
         type="button"
         className={itemClass}
@@ -221,8 +232,12 @@ function DesktopItem({
             exit={{ opacity: 0, y: 4, scale: 0.99, filter: "blur(4px)" }}
             transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
             className={cn(
-              "absolute left-1/2 top-full z-10 -translate-x-1/2 pt-4",
-              group.featured ? "w-[42rem]" : "w-[22rem]",
+              "absolute top-full z-10 pt-4",
+              // The wide Services panel hangs from the item's left edge so it
+              // stays inside the viewport at 1024; the narrow ones centre.
+              group.featured
+                ? "left-0 w-[42rem] -translate-x-24"
+                : "left-1/2 w-[22rem] -translate-x-1/2",
             )}
           >
             <div className="overflow-hidden rounded-[1.75rem] border border-stone-200 bg-white p-3 shadow-lift">
@@ -311,7 +326,7 @@ function MobileMenu({
                   href={group.href}
                   onClick={onNavigate}
                   aria-current={pathname === group.href ? "page" : undefined}
-                  className="flex items-center justify-between px-2 py-1.5 font-display text-xl font-semibold tracking-[-0.02em]"
+                  className="flex min-h-11 items-center justify-between px-2 py-1.5 font-display text-xl font-semibold tracking-[-0.02em]"
                 >
                   {group.label}
                   <Icon name="arrowRight" size={18} className="text-teal-700" />
@@ -325,7 +340,7 @@ function MobileMenu({
                           onClick={onNavigate}
                           aria-current={pathname === link.href ? "page" : undefined}
                           className={cn(
-                            "block rounded-xl px-2 py-2 text-[1.0625rem] text-ink-500",
+                            "flex min-h-11 items-center rounded-xl px-2 py-2 text-[1.0625rem] text-ink-500",
                             pathname === link.href && "bg-stone text-ink",
                           )}
                         >

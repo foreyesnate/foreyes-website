@@ -179,7 +179,7 @@ export const accountsPayable: SupportingServiceContent = {
   },
   pricing: {
     title: "Accounts Payable Starts at $99 a Month",
-    body: "That covers up to 10 bills a month. Add it to your estimate in the pricing calculator, then book a Discovery Call to confirm it. No hidden fees, no surprise invoices. Every figure shown is an estimate only.",
+    body: "That covers up to 10 bills a month. Add it to your estimate in the pricing calculator, which also shows the one-time implementation fee, then book a Discovery Call to confirm it. No hidden fees, no surprise invoices. Every figure shown is an estimate only.",
   },
   cta: {
     title: "Put your bills on a schedule.",

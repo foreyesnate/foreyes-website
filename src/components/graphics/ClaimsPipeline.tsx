@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import { cn } from "@/lib/cn";
 
-const stages = ["Scrubbed", "Submitted", "Paid", "Posted"];
+const stages = ["Reviewed", "Submitted", "Paid", "Posted"];
 
 // Each claim chip travels the track on its own schedule. The third is denied
 // at the payer, drops back to be appealed, then goes through.
@@ -13,7 +13,7 @@ const chips = [
   { id: "C", delay: 4.2, denied: true },
 ];
 
-/** Claims moving from scrubbed to posted, with one denial being appealed. */
+/** Claims moving from reviewed to posted, with one denial being appealed. */
 export function ClaimsPipeline({
   className,
   tone = "light",
@@ -26,7 +26,7 @@ export function ClaimsPipeline({
   return (
     <div
       role="img"
-      aria-label="Claims moving through four stages: scrubbed, submitted, paid, and posted. A denied claim is appealed and paid."
+      aria-label="Claims moving through four stages: reviewed, submitted, paid, and posted. A denied claim is appealed and paid."
       className={cn(
         "rounded-[1.75rem] p-5 ring-1 ring-inset sm:p-6",
         light ? "bg-ink/10 ring-ink/10" : "bg-white ring-stone-200",
@@ -87,7 +87,9 @@ export function ClaimsPipeline({
                   chip.denied
                     ? {
                         left: ["12.5%", "37.5%", "50%", "37.5%", "37.5%", "62.5%", "87.5%", "87.5%"],
-                        top: ["50%", "50%", "50%", "112%", "112%", "50%", "50%", "50%"],
+                        // The denied claim lifts off the track (into the clear
+                        // band above it) so it never covers the stage labels.
+                        top: ["50%", "50%", "50%", "-14%", "-14%", "50%", "50%", "50%"],
                         opacity: [0, 1, 1, 1, 1, 1, 1, 0],
                         backgroundColor: [
                           "#fcba02",

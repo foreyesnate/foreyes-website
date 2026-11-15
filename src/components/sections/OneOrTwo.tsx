@@ -13,7 +13,7 @@ const defaultRows: Row[] = [
   {
     topic: "Month-end",
     one: "Books get caught up when someone finds a free weekend.",
-    two: "Books close in the first ten business days. Reviewed reports land in your portal.",
+    two: "Books close in the first 10 business days. Reviewed reports land in your portal.",
   },
   {
     topic: "Your P&L",
@@ -61,7 +61,7 @@ export function OneOrTwo({
           <div
             role="group"
             aria-label="Choose a lens"
-            className="mx-auto flex w-fit items-center gap-1 rounded-full bg-stone p-1.5"
+            className="mx-auto grid w-full max-w-[26rem] grid-cols-2 gap-1 rounded-[2.25rem] bg-stone p-1.5 sm:flex sm:w-fit sm:max-w-none sm:items-center sm:rounded-full"
           >
             {(["one", "two"] as const).map((option) => {
               const selected = lens === option;
@@ -72,7 +72,9 @@ export function OneOrTwo({
                   aria-pressed={selected}
                   onClick={() => setLens(option)}
                   className={cn(
-                    "relative flex h-14 items-center gap-2.5 whitespace-nowrap rounded-full pl-2 pr-4 font-display text-[0.9rem] font-semibold transition-colors duration-300 sm:gap-3 sm:pr-6 sm:text-base",
+                    // Phones: two equal halves whose labels may wrap, so the pair never
+                    // runs wider than the screen. From sm up: one line each.
+                    "relative flex min-h-14 items-center gap-2.5 rounded-full pl-2 pr-3 text-left font-display text-[0.9rem] font-semibold leading-tight transition-colors duration-300 sm:gap-3 sm:whitespace-nowrap sm:pr-6 sm:text-base",
                     selected ? "text-white" : "text-ink-500 hover:text-ink",
                   )}
                 >
@@ -85,7 +87,7 @@ export function OneOrTwo({
                   ) : null}
                   <span
                     className={cn(
-                      "relative grid h-10 w-10 place-items-center rounded-full border-2 text-lg font-bold transition-colors",
+                      "relative grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 text-lg font-bold transition-colors",
                       selected ? "border-white/40 bg-white/10" : "border-ink/15 bg-white",
                     )}
                   >

@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { AnimatePresence, motion } from "motion/react";
-import { useEffect, useState } from "react";
+import { AnimatePresence, motion, useInView } from "motion/react";
+import { useEffect, useRef, useState } from "react";
 import { testimonials as allTestimonials, type Testimonial } from "@/content/testimonials";
 import { Icon } from "@/components/ui/Icon";
 import { Container, Section, SectionHeading } from "@/components/ui/Layout";
@@ -57,13 +57,18 @@ export function Testimonials({
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const current = items[index];
+  // The quote only advances while the panel is on screen. Otherwise it would
+  // change (and change height) while the visitor reads something else, and
+  // could be caught mid-change as the section scrolls into view.
+  const panelRef = useRef<HTMLDivElement>(null);
+  const inView = useInView(panelRef, { amount: 0.35 });
 
   useEffect(() => {
-    if (paused || items.length < 2) return;
+    if (paused || !inView || items.length < 2) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const timer = setTimeout(() => setIndex((i) => (i + 1) % items.length), 9000);
     return () => clearTimeout(timer);
-  }, [index, paused, items.length]);
+  }, [index, paused, inView, items.length]);
 
   return (
     <Section tone={tone} aria-labelledby="proof-title">
@@ -88,7 +93,7 @@ export function Testimonials({
                   >
                     <Avatar person={person} size={44} />
                     <span className="font-display font-semibold">{person.name}</span>
-                    {i === index && !paused ? (
+                    {i === index && !paused && inView ? (
                       <motion.span
                         key={`bar-${index}`}
                         aria-hidden="true"
@@ -106,18 +111,21 @@ export function Testimonials({
 
           <Reveal delay={0.1} y={36}>
             <div
+              ref={panelRef}
               onPointerEnter={() => setPaused(true)}
               className="relative flex min-h-[26rem] flex-col rounded-[2.5rem] bg-stone p-8 sm:p-12"
               aria-live="polite"
             >
               <Icon name="quote" size={56} className="text-yellow" />
-              <AnimatePresence mode="wait">
+              {/* popLayout: the next quote comes into focus while the last one
+                  leaves, so the panel is never empty, however fast the
+                  visitor switches between people. */}
+              <AnimatePresence mode="popLayout" initial={false}>
                 <motion.figure
                   key={current.name}
                   initial={{ opacity: 0, y: 14, filter: "blur(8px)" }}
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                  exit={{ opacity: 0, y: -10, filter: "blur(8px)" }}
-                  transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.5, delay: 0.12, ease: [0.22, 1, 0.36, 1] } }}
+                  exit={{ opacity: 0, filter: "blur(8px)", transition: { duration: 0.22, ease: "easeOut" } }}
                   className="mt-6 flex flex-1 flex-col"
                 >
                   <blockquote>

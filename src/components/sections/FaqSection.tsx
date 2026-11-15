@@ -57,7 +57,16 @@ export function FaqSection({
             ) : null}
           </Reveal>
           <Reveal delay={0.1}>
-            <FaqAccordion items={items} />
+            <FaqAccordion
+              items={items}
+              // On a white section the white rows would have no edge, so they
+              // take the stone tint (as on the FAQ page) and open to white.
+              className={
+                tone === "white"
+                  ? "[&>li]:bg-stone [&>li:has([aria-expanded=true])]:bg-white [&>li:not(:has([aria-expanded=true]))_button>span]:bg-white"
+                  : undefined
+              }
+            />
           </Reveal>
         </div>
       </Container>
