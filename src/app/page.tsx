@@ -13,6 +13,7 @@ import {
 } from "@/components/sections/HomeSections";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { BlogTeaser } from "@/components/pages/blog/BlogTeaser";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       <Testimonials />
       <FounderNote />
       <Tools />
+      <BlogTeaser />
       <CtaBand />
     </>
   );
