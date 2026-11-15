@@ -87,7 +87,7 @@ export function Eyebrow({
   return (
     <p
       className={cn(
-        "eyebrow inline-flex items-center gap-2.5",
+        "eyebrow inline-flex items-start gap-2.5",
         tone === "ink" && "text-teal-700",
         tone === "light" && "text-teal-200",
         tone === "dark" && "text-ink",
@@ -97,7 +97,7 @@ export function Eyebrow({
       <span
         aria-hidden="true"
         className={cn(
-          "inline-block h-2 w-2 rounded-full ring-[3px]",
+          "mt-[0.4em] inline-block h-2 w-2 shrink-0 rounded-full ring-[3px]",
           tone === "ink" && "bg-teal ring-teal/25",
           tone === "light" && "bg-yellow ring-yellow/25",
           tone === "dark" && "bg-ink ring-ink/20",

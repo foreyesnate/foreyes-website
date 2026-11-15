@@ -3,10 +3,10 @@
 import {
   motion,
   useInView,
-  useReducedMotion,
   useSpring,
   useTransform,
 } from "motion/react";
+import { useReducedMotion } from "@/components/motion/useReducedMotion";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/cn";
 import type { AgingBucket } from "@/content/services/insurance-billing";

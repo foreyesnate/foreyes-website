@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, useAnimationControls, useReducedMotion } from "motion/react";
+import { motion, useAnimationControls } from "motion/react";
+import { useReducedMotion } from "@/components/motion/useReducedMotion";
 import { useEffect } from "react";
 import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib/cn";

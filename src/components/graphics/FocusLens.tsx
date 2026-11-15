@@ -4,9 +4,9 @@ import {
   motion,
   useMotionTemplate,
   useMotionValue,
-  useReducedMotion,
   useSpring,
 } from "motion/react";
+import { useReducedMotion } from "@/components/motion/useReducedMotion";
 import { useEffect, useRef, type ReactNode } from "react";
 import { cn } from "@/lib/cn";
 

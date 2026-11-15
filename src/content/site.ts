@@ -10,7 +10,7 @@ export const site = {
   url: "https://foreyessolutions.com",
   tagline: "Bookkeeping and insurance billing, built only for eyecare.",
   description:
-    "Bookkeeping and insurance billing for independent optometry and eyecare practices, from a team founded by an OD. Reviewed financials by the 10th business day and claims worked every day.",
+    "Bookkeeping and insurance billing for independent eyecare practices, from a team founded by an OD. Reviewed financials by the 10th business day.",
   phone: { display: "844-505-3937", href: "tel:+18445053937" },
   email: "hello@foreyessolutions.com",
   /** The team is fully remote; Nashville is home base. */

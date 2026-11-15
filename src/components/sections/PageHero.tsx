@@ -104,7 +104,7 @@ export function PageHero({
           </nav>
         ) : null}
 
-        <div className={cn("grid items-center gap-12", visual && "lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-14")}>
+        <div className={cn("grid grid-cols-[minmax(0,1fr)] items-center gap-12", visual && "lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-14")}>
           <div className={cn(visual ? "max-w-2xl" : "max-w-4xl")}>
             {eyebrow ? (
               <Reveal blur={false} y={10}>

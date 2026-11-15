@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
+import { useReducedMotion } from "@/components/motion/useReducedMotion";
 import { cn } from "@/lib/cn";
 
 // A Snellen-style chart whose lines spell the message. Each line is one word

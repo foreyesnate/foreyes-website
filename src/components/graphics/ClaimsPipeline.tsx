@@ -43,7 +43,7 @@ export function ClaimsPipeline({
               <span className="absolute inset-0 animate-pulse-ring rounded-full bg-ink" />
               <span className="relative h-2.5 w-2.5 rounded-full bg-ink" />
             </span>
-            Live queue
+            Example queue
           </span>
         </div>
 

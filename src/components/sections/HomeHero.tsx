@@ -18,7 +18,7 @@ export function HomeHero() {
       </div>
 
       <Container size="wide">
-        <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:gap-10 xl:gap-16">
+        <div className="grid grid-cols-[minmax(0,1fr)] items-center gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:gap-10 xl:gap-16">
           <div className="max-w-2xl">
             <Reveal blur={false} y={10}>
               <Eyebrow>Bookkeeping &amp; insurance billing for eyecare</Eyebrow>
