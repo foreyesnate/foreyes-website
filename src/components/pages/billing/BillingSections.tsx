@@ -1,12 +1,14 @@
 import { site } from "@/content/site";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
+import { Illustration } from "@/components/ui/Art";
+import { LoopVideo } from "@/components/ui/LoopVideo";
 import { Container, Eyebrow, Section, SectionHeading } from "@/components/ui/Layout";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { BillingKpiRings } from "@/components/graphics/BillingKpiRings";
 import { BillingTwoPlans } from "@/components/graphics/BillingTwoPlans";
 import { cn } from "@/lib/cn";
-import { books, eyecare, kpis, pricing, problem } from "@/content/services/insurance-billing";
+import { books, eyecare, handles, kpis, pricing, problem } from "@/content/services/insurance-billing";
 
 /** The owner's problem: three places billing slips in a busy practice. */
 export function BillingProblem() {
@@ -20,6 +22,13 @@ export function BillingProblem() {
               eyebrow={problem.eyebrow}
               title={problem.title}
               lede={problem.lede}
+            />
+            {/* Claims that wait, and the clock running on them. */}
+            <Illustration
+              name="spot-follow-up"
+              panel="teal"
+              className="mt-10 max-w-[25rem]"
+              sizes="(min-width: 640px) 20rem, 78vw"
             />
           </Reveal>
 
@@ -58,6 +67,47 @@ export function BillingProblem() {
             </div>
           </Reveal>
         </div>
+      </Container>
+    </Section>
+  );
+}
+
+/**
+ * What the service covers: the heading beside a clip of claims being checked,
+ * then the four parts of the work as cards.
+ */
+export function BillingHandles() {
+  return (
+    <Section tone="white" id="billing-handles" aria-labelledby="billing-handles-title">
+      <Container size="wide">
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_0.9fr] lg:gap-20">
+          <Reveal>
+            <SectionHeading
+              id="billing-handles-title"
+              eyebrow={handles.eyebrow}
+              title={handles.title}
+              lede={handles.lede}
+            />
+          </Reveal>
+          <Reveal delay={0.12} y={36} blur={false}>
+            <LoopVideo name="billing-desk" ratio="3/2" className="shadow-lift" />
+          </Reveal>
+        </div>
+        <Stagger as="ul" className="mt-12 grid gap-5 md:grid-cols-2 lg:mt-16">
+          {handles.features.map((feature) => (
+            <StaggerItem as="li" key={feature.title}>
+              <div className="group h-full rounded-[1.75rem] bg-stone p-7 transition-[transform,box-shadow,background-color] duration-500 ease-(--ease-focus) hover:-translate-y-1.5 hover:bg-white hover:shadow-lift sm:p-8">
+                {feature.icon ? (
+                  <span className="grid h-14 w-14 place-items-center rounded-2xl bg-white text-navy shadow-soft transition-colors duration-300 group-hover:bg-yellow group-hover:text-ink">
+                    <Icon name={feature.icon} size={26} />
+                  </span>
+                ) : null}
+                <h3 className="text-subheading mt-7">{feature.title}</h3>
+                <p className="mt-3 text-ink-500">{feature.body}</p>
+              </div>
+            </StaggerItem>
+          ))}
+        </Stagger>
       </Container>
     </Section>
   );
@@ -217,31 +267,44 @@ export function BillingBooks() {
   );
 }
 
-/** Billing has no published price list, so the Discovery Call comes first. */
+/** The two published rates, stated plainly, with the way to turn them into a figure. */
 export function BillingPricing() {
   return (
-    <section aria-labelledby="billing-pricing" className="bg-white py-14 sm:py-20">
+    <section id="pricing" aria-labelledby="billing-pricing" className="scroll-mt-28 bg-white py-14 sm:py-20">
       <Container size="wide">
         <Reveal>
-          <div className="relative grid items-center gap-8 overflow-hidden rounded-[2.5rem] bg-navy p-8 text-white sm:p-12 lg:grid-cols-[1fr_auto] lg:gap-14">
+          <div className="relative grid items-center gap-10 overflow-hidden rounded-[2.5rem] bg-navy p-7 text-white sm:p-12 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
             <div aria-hidden="true" className="bg-dots absolute inset-y-0 right-0 w-1/2 text-white/10 [mask-image:linear-gradient(to_left,black,transparent)]" />
             <div className="relative">
               <Eyebrow tone="light" className="mb-4">
                 Pricing
               </Eyebrow>
-              <h2 id="billing-pricing" className="text-heading max-w-2xl">
+              <h2 id="billing-pricing" className="text-heading max-w-xl">
                 {pricing.title}
               </h2>
-              <p className="mt-4 max-w-2xl text-lg text-white/80">{pricing.body}</p>
+              <p className="mt-4 max-w-xl text-lg text-white/80">{pricing.body}</p>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <Button href={site.bookingHref} size="lg">
+                  Book a Discovery Call
+                </Button>
+                <Button href={site.pricingHref} size="lg" variant="light">
+                  {pricing.secondary}
+                </Button>
+              </div>
             </div>
-            <div className="relative flex flex-wrap items-center gap-3 lg:flex-col lg:items-stretch">
-              <Button href={site.bookingHref} size="lg">
-                Book a Discovery Call
-              </Button>
-              <Button href={site.pricingHref} size="lg" variant="light">
-                {pricing.secondary}
-              </Button>
-            </div>
+            <dl className="relative grid gap-4 sm:grid-cols-2">
+              {pricing.rates.map((rate) => (
+                <div key={rate.plan} className="flex flex-col rounded-[1.75rem] bg-white p-6 text-ink shadow-soft sm:p-7">
+                  <dt className="eyebrow text-teal-700">{rate.plan}</dt>
+                  <dd className="mt-5">
+                    <span className="tabular block font-display text-[3.75rem] font-bold leading-none tracking-[-0.04em] sm:text-[4.5rem]">
+                      {rate.rate}
+                    </span>
+                    <span className="mt-3 block text-[1.0625rem] leading-snug text-ink-700">{rate.basis}</span>
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </Reveal>
       </Container>

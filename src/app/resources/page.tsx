@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/content/site";
 import { Button } from "@/components/ui/Button";
+import { Illustration } from "@/components/ui/Art";
 import { Icon } from "@/components/ui/Icon";
 import { Container, Section, SectionHeading } from "@/components/ui/Layout";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -14,7 +15,7 @@ import { ResourceGraphic } from "@/components/pages/blog/ResourceGraphics";
 export const metadata: Metadata = {
   title: "Resources for Optometry Practice Owners",
   description:
-    "Articles for eyecare practice owners, straight answers to common questions, and a pricing calculator for bookkeeping, payroll, and bill pay. All in one place.",
+    "Articles for eyecare practice owners, straight answers to common questions, and a pricing calculator for bookkeeping, insurance billing, payroll, and bill pay.",
   alternates: { canonical: "/resources" },
 };
 
@@ -25,9 +26,17 @@ export default function ResourcesPage() {
         eyebrow="Resources"
         title="Get answers"
         highlight="before you call."
-        lede="Three places to start, all open to anyone: articles written for practice owners, straight answers to the questions ODs ask most, and a calculator that prices our services for a practice your size."
+        lede="Three places to start, all open to anyone. Read articles written for practice owners, get straight answers to the questions ODs ask most, or price our services for a practice your size."
         crumbs={[{ label: "Resources" }]}
         secondaryCta={{ label: "Estimate Your Price", href: site.pricingHref }}
+        visual={
+          <Illustration
+            name="tidy-desk"
+            panel="white"
+            priority
+            className="mx-auto max-w-[36rem] shadow-float lg:mr-0"
+          />
+        }
       />
 
       <Section tone="white" aria-labelledby="resources-title">

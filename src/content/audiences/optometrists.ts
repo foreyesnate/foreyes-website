@@ -3,7 +3,9 @@ import type { AudienceContent } from "./types";
 
 // Copy for /who-we-serve/optometrists. Facts come from the current
 // foreyessolutions.com pages; nothing here sells or promises tax work.
-const voices = ["Ryan Corte, OD", "Nona Kalfayan, OD", "Brandon Luu, OD"];
+// Three clients on the books and one on billing (Patty Haley, Family Eyecare),
+// so the proof covers both halves of the headline.
+const voices = ["Ryan Corte, OD", "Patty Haley", "Nona Kalfayan, OD", "Brandon Luu, OD"];
 
 export const optometrists: AudienceContent = {
   slug: "optometrists",
@@ -28,6 +30,7 @@ export const optometrists: AudienceContent = {
     eyebrow: "The obstacles",
     title: "A few side tasks became a second job.",
     lede: "These are the five we fix most often for optometrists. Our founder, Wade Weisz, OD, spent 25+ years in the owner’s seat, so none of them is new to us.",
+    picture: { name: "optometrist-exam-lane", panel: "navy" },
     items: [
       {
         title: "You’re not sure the books are right.",
@@ -125,7 +128,7 @@ export const optometrists: AudienceContent = {
       },
       {
         title: "A Clear Scope",
-        body: "You receive a clear scope of services based on your needs and priorities. Start with one service or with several.",
+        body: "You receive a scope of services based on your needs and priorities. Start with one service or with several.",
       },
       {
         title: "Onboarding",
@@ -144,11 +147,12 @@ export const optometrists: AudienceContent = {
     ],
     aside:
       "Your job is to review reports and ask questions. Your account manager handles the rest and will meet whenever a number needs explaining.",
+    picture: { name: "step-see-clearly", panel: "teal", fit: "bleed" },
   },
   proof: {
     kind: "testimonials",
     title: "Proof in Practice",
-    lede: "Optometrists on what it is like to have books they can rely on.",
+    lede: "Eyecare practices on books they can rely on and billing that gets worked.",
     items: testimonials.filter((person) => voices.includes(person.name)),
   },
   faqs: {

@@ -10,11 +10,12 @@ import { PageHero } from "@/components/sections/PageHero";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { Icon } from "@/components/ui/Icon";
+import { cn } from "@/lib/cn";
 import { AudienceFounderQuote } from "./AudienceFounderQuote";
 import { AudienceJumpNav } from "./AudienceJumpNav";
 import { AudienceObstacles } from "./AudienceObstacles";
 import { AudienceOthers } from "./AudienceOthers";
+import { AudienceProcessAside } from "./AudienceProcessAside";
 import { AudienceServices } from "./AudienceServices";
 
 const graphics: Record<AudienceContent["hero"]["graphic"], ComponentType<{ className?: string }>> = {
@@ -35,18 +36,31 @@ export function AudiencePage({ content }: { content: AudienceContent }) {
 
   return (
     <>
-      <PageHero
-        tone={hero.tone}
-        eyebrow={hero.eyebrow}
-        title={hero.title}
-        highlight={hero.highlight}
-        lede={hero.lede}
-        // PageHero sets the note in a grey that is too faint on teal.
-        note={hero.tone === "teal" ? <span className="text-ink/85">{hero.note}</span> : hero.note}
-        crumbs={[{ label: "Who We Serve", href: "/who-we-serve" }, { label: content.label }]}
-        secondaryCta={{ label: "Estimate Your Price", href: site.pricingHref }}
-        visual={<Graphic className="mx-auto w-full max-w-[34rem] lg:ml-auto lg:mr-0" />}
-      />
+      {/*
+        PageHero's eyebrow and breadcrumb use greys and teals that are too
+        faint on a teal hero. Until the shared component handles that tone,
+        this wrapper (display: contents) sets them in ink.
+      */}
+      <div
+        className={cn(
+          "contents",
+          hero.tone === "teal" &&
+            "[&_nav[aria-label=Breadcrumb]_ol]:text-ink/80! [&_.max-w-2xl>div>p.eyebrow]:text-ink! [&_.max-w-2xl>div>p.eyebrow>span]:bg-ink! [&_.max-w-2xl>div>p.eyebrow>span]:ring-ink/20!",
+        )}
+      >
+        <PageHero
+          tone={hero.tone}
+          eyebrow={hero.eyebrow}
+          title={hero.title}
+          highlight={hero.highlight}
+          lede={hero.lede}
+          // PageHero sets the note in a grey that is too faint on teal.
+          note={hero.tone === "teal" ? <span className="text-ink/85">{hero.note}</span> : hero.note}
+          crumbs={[{ label: "Who We Serve", href: "/who-we-serve" }, { label: content.label }]}
+          secondaryCta={{ label: "Estimate Your Price", href: site.pricingHref }}
+          visual={<Graphic className="mx-auto w-full max-w-[34rem] lg:ml-auto lg:mr-0" />}
+        />
+      </div>
 
       <AudienceJumpNav
         links={[
@@ -67,14 +81,7 @@ export function AudiencePage({ content }: { content: AudienceContent }) {
         lede={process.lede}
         steps={process.steps}
         tone={process.tone}
-        aside={
-          <p className={dark ? "flex max-w-md gap-4 rounded-[1.75rem] bg-white/[0.07] p-6 text-white/85 ring-1 ring-inset ring-white/10" : "flex max-w-md gap-4 rounded-[1.75rem] bg-white p-6 text-ink-700 shadow-soft"}>
-            <span aria-hidden="true" className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-yellow text-ink">
-              <Icon name="users" size={20} />
-            </span>
-            <span>{process.aside}</span>
-          </p>
-        }
+        aside={<AudienceProcessAside picture={process.picture} note={process.aside} dark={dark} />}
       />
 
       {proof.kind === "testimonials" ? (

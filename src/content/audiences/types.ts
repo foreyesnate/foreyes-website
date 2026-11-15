@@ -1,3 +1,4 @@
+import type { IllustrationName } from "@/content/art";
 import type { Testimonial } from "@/content/testimonials";
 
 /** The five services, keyed by the last segment of their URL. */
@@ -29,6 +30,12 @@ export type AudienceServiceCard = {
   points?: string[];
   /** Link label. Names the outcome in the owner's words. */
   cta: string;
+};
+
+/** A picture from the library (src/content/art.ts) and the tint it sits on. */
+export type AudiencePicture = {
+  name: IllustrationName;
+  panel: "teal" | "navy" | "yellow";
 };
 
 export type AudienceStep = { title: string; body: string; meta?: string };
@@ -78,6 +85,8 @@ export type AudienceContent = {
     eyebrow: string;
     title: string;
     lede: string;
+    /** The scene beside the heading: who this page is for. */
+    picture: AudiencePicture;
     items: AudienceObstacle[];
   };
   services: {
@@ -97,6 +106,11 @@ export type AudienceContent = {
     steps: AudienceStep[];
     /** A short reassurance shown beside the steps. */
     aside: string;
+    /**
+     * The picture that goes with the reassurance. `bleed` is for the process
+     * drawings whose hand enters from the edge; `pad` for free-standing spots.
+     */
+    picture: AudiencePicture & { fit: "bleed" | "pad" };
   };
   proof: AudienceProof;
   faqs: { title: string; lede: string; items: AudienceFaq[] };

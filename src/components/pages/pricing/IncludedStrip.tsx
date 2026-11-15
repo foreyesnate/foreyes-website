@@ -9,6 +9,7 @@ function Panel({
   icon,
   name,
   tag,
+  pricing,
   items,
   link,
   tone,
@@ -16,6 +17,8 @@ function Panel({
   icon: IconName;
   name: string;
   tag: string;
+  /** How this service is priced, in a sentence or two. */
+  pricing: string;
   items: readonly string[];
   link: { label: string; href: string };
   tone: "navy" | "teal";
@@ -51,6 +54,14 @@ function Panel({
           {tag}
         </span>
       </div>
+      <p
+        className={cn(
+          "relative mt-6 rounded-2xl px-5 py-4 font-display text-[1.0625rem] font-semibold leading-snug",
+          navy ? "bg-white/10 text-white" : "bg-white/35 text-ink",
+        )}
+      >
+        {pricing}
+      </p>
       <Stagger as="ul" stagger={0.06} className="relative mt-7 grid gap-3.5">
         {items.map((item) => (
           <StaggerItem as="li" key={item} className={cn("flex gap-3 text-[1.0625rem] leading-snug", navy ? "text-white/90" : "text-ink/90")}>

@@ -85,12 +85,12 @@ export const included = {
     {
       icon: "chart",
       title: "P&L and Balance Sheet, Monthly",
-      body: "Your profit and loss statement (P&L) shows how your practice is performing month to month. Your balance sheet shows what you own and what you owe. You get both, reviewed.",
+      body: "Your profit and loss statement (P&L) shows how exams, optical, and contact lenses performed month to month. Your balance sheet shows what you own and what you owe. You get both, reviewed.",
     },
     {
       icon: "spark",
       title: "EBITDA, Calculated for You",
-      body: "Earnings Before Interest, Tax, Depreciation, and Amortization (EBITDA) is the valuation metric buyers and lenders ask about first. Your chart of accounts calculates it automatically.",
+      body: "Earnings Before Interest, Tax, Depreciation, and Amortization (EBITDA) is the valuation metric buyers and lenders ask about first. Your Custom Chart of Accounts calculates it automatically.",
     },
     {
       icon: "bill",
@@ -214,6 +214,10 @@ export const annual = {
   },
 };
 
+export const proof = {
+  lede: "Optometrists describe what dependable books feel like.",
+};
+
 export const faqs: Faq[] = [
   {
     question: "What are my responsibilities?",
@@ -226,7 +230,7 @@ export const faqs: Faq[] = [
       "We code your daily transactions to your Custom Chart of Accounts, match every account to its statement, keep your general ledger current, and deliver a reviewed P&L and balance sheet to your client portal by the 10th business day.",
   },
   {
-    question: "What is a custom chart of accounts?",
+    question: "What is a Custom Chart of Accounts?",
     answer:
       "A chart of accounts is the list of categories your transactions are sorted into. Most bookkeeping software lumps income into a few broad lines and costs into a handful of buckets. Ours separates medical exam revenue from optical sales, and optical cost of goods from overhead, so you can see which services earn their keep.",
   },

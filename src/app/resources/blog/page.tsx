@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { flagshipServices } from "@/content/site";
 import { getAllPosts, getCategories, toSummary } from "@/lib/blog";
+import { Photo } from "@/components/ui/Art";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { Container, Section, SectionHeading } from "@/components/ui/Layout";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -14,7 +15,7 @@ import { ReadingChart } from "@/components/pages/blog/ReadingChart";
 export const metadata: Metadata = {
   title: "Blog: Smart Reads for ODs",
   description:
-    "Practical articles for independent eyecare practice owners on bookkeeping, insurance billing, A/R, payroll, expense ratios, and cash flow, from ForEyes.",
+    "Articles for independent eyecare practice owners on bookkeeping, insurance billing, A/R, payroll, expense ratios, and cash flow, from ForEyes Books & Billing.",
   alternates: { canonical: "/resources/blog" },
 };
 
@@ -63,36 +64,46 @@ export default function BlogIndexPage() {
             className="bg-dots pointer-events-none absolute right-0 top-0 h-72 w-[28rem] text-white/10 [mask-image:radial-gradient(closest-side,black,transparent)]"
           />
           <Container size="wide" className="relative">
-            <div className="grid items-end gap-x-14 gap-y-10 lg:grid-cols-[1fr_1.25fr]">
+            <div className="grid items-center gap-x-14 gap-y-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
               <Reveal>
-                <SectionHeading
-                  id="blog-services-title"
-                  tone="light"
-                  eyebrow="Rather hand it off?"
-                  title="We do this work every day."
-                  lede="These posts come out of the two jobs we do for eyecare practices every month: keeping the books and working the insurance billing."
+                <Photo
+                  name="trial-lenses"
+                  ratio="4/3"
+                  sizes="(min-width: 1024px) 34rem, 100vw"
+                  className="lg:[aspect-ratio:1/1]!"
                 />
               </Reveal>
-              <Stagger as="ul" className="grid gap-4 sm:grid-cols-2">
-                {flagshipServices.map((service) => (
-                  <StaggerItem as="li" key={service.href}>
-                    <Link
-                      href={service.href}
-                      className="group flex h-full flex-col rounded-[1.75rem] bg-white p-7 text-ink shadow-lift transition-transform duration-500 ease-(--ease-focus) hover:-translate-y-1.5"
-                    >
-                      <span className="grid h-12 w-12 place-items-center rounded-2xl bg-navy-50 text-navy transition-colors duration-300 group-hover:bg-yellow group-hover:text-ink">
-                        <Icon name={flagshipIcons[service.href] ?? "spark"} size={24} />
-                      </span>
-                      <h3 className="text-subheading mt-6">{service.label}</h3>
-                      <p className="mt-2 text-ink-500">{service.description}</p>
-                      <span className="mt-auto inline-flex items-center gap-2 pt-6 font-display font-semibold text-navy">
-                        {flagshipCta[service.href] ?? "Learn More"}
-                        <Icon name="arrowRight" size={18} className="transition-transform duration-300 ease-(--ease-focus) group-hover:translate-x-1.5" />
-                      </span>
-                    </Link>
-                  </StaggerItem>
-                ))}
-              </Stagger>
+              <div>
+                <Reveal>
+                  <SectionHeading
+                    id="blog-services-title"
+                    tone="light"
+                    eyebrow="Rather hand it off?"
+                    title="We do this work every day."
+                    lede="These posts come out of the two jobs we do for eyecare practices every month: keeping the books and working the insurance billing."
+                  />
+                </Reveal>
+                <Stagger as="ul" className="mt-10 grid gap-4 sm:grid-cols-2">
+                  {flagshipServices.map((service) => (
+                    <StaggerItem as="li" key={service.href}>
+                      <Link
+                        href={service.href}
+                        className="group flex h-full flex-col rounded-[1.75rem] bg-white p-7 text-ink shadow-lift transition-transform duration-500 ease-(--ease-focus) hover:-translate-y-1.5"
+                      >
+                        <span className="grid h-12 w-12 place-items-center rounded-2xl bg-navy-50 text-navy transition-colors duration-300 group-hover:bg-yellow group-hover:text-ink">
+                          <Icon name={flagshipIcons[service.href] ?? "spark"} size={24} />
+                        </span>
+                        <h3 className="text-subheading mt-6">{service.label}</h3>
+                        <p className="mt-2 text-ink-500">{service.description}</p>
+                        <span className="mt-auto inline-flex items-center gap-2 pt-6 font-display font-semibold text-navy">
+                          {flagshipCta[service.href] ?? "Learn More"}
+                          <Icon name="arrowRight" size={18} className="transition-transform duration-300 ease-(--ease-focus) group-hover:translate-x-1.5" />
+                        </span>
+                      </Link>
+                    </StaggerItem>
+                  ))}
+                </Stagger>
+              </div>
             </div>
           </Container>
         </div>

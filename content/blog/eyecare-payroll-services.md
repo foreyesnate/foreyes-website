@@ -20,11 +20,11 @@ This guide explains what’s included in payroll services for eye clinics, why a
 
 ## What’s Included in Payroll Services for Eyecare Professionals
 
-The benefits of payroll outsourcing go well beyond cutting checks. The best optometrist payroll services also help with time-consuming tasks such as tax filing and benefits tracking.
+The benefits of payroll outsourcing go well beyond cutting checks. Good optometrist payroll services also help with time-consuming tasks such as tax filing and benefits tracking.
 
 ### Employee and Independent Contractor Wage & Salary Processing
 
-Eyecare practices often rely on a mix of full-time employees, part-time staff, and independent contractors. Errors in payments, benefits, or tax classifications can lead to a loss of trust and costly fines or legal issues. Payroll services ensure that each group is paid correctly, on time, and in compliance with state and federal laws.
+Eyecare practices often rely on a mix of full-time employees, part-time staff, and independent contractors. Errors in payments, benefits, or tax classifications can lead to a loss of trust and costly fines or legal issues. Payroll services see that each group is paid correctly, on time, and in compliance with state and federal laws.
 
 This includes:
 
@@ -35,7 +35,7 @@ This includes:
 - Making sure pay schedules align with practice needs
 - Accurate classifications to avoid IRS penalties, back taxes, and labor disputes.
 
-A dedicated payroll system helps ensure wages and salaries are processed correctly every cycle.
+A dedicated payroll system helps process wages and salaries correctly every cycle.
 
 ### Tax Withholding and Filing
 
@@ -85,7 +85,7 @@ This includes:
 - 1099s for independent contractors
 - Electronic filing for local, state, and federal taxes
 
-Accurate year-end reporting helps eyecare professionals avoid tax penalties and ensures workers also receive their forms on time.
+Accurate year-end reporting helps eyecare professionals avoid tax penalties and gets workers their forms on time.
 
 ## Why Accuracy Is Critical in Eyecare Payroll Services
 
@@ -101,7 +101,7 @@ A reliable payroll service negates these issues through accurate records, automa
 
 ## Why Our Experts Highly Recommend Gusto
 
-Gusto simplifies payroll without sacrificing accuracy or versatility. It stands out as a strong payroll solution for eyecare professionals because it is easy to use, adapts to your business, and automates most payroll tasks.
+Gusto simplifies payroll without sacrificing accuracy or versatility. It is a strong payroll platform for eyecare professionals because it is easy to use, adapts to your business, and automates most payroll tasks.
 
 For example, Gusto offers:
 
@@ -118,4 +118,4 @@ Another key advantage is scalability. When your eyecare practice grows, adds sta
 
 ## ForEyes is Dedicated to Helping Eyecare Professionals Succeed
 
-The eyecare profession is constantly evolving. At ForEyes Books & Billing, we partner with eyecare professionals to deliver the systems, support, and financial clarity you need to run efficiently and grow with confidence. Contact us today to replace in-house headaches with scalable systems that save you time, control costs, and adapt as your practice evolves.
+The eyecare profession is constantly evolving. At ForEyes Books & Billing, we run payroll for eyecare practices on Gusto. Your part is to review time cards and click submit. [Book a Discovery Call](/contact#book) to talk through taking payroll off your desk.

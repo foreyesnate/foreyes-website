@@ -2,10 +2,10 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useId, useState } from "react";
-import { CUSTOM_QUOTE, QUOTED_ON_CALL, calculatorCopy, implementationCopy } from "@/content/pricing";
+import { CUSTOM_QUOTE, QUOTED_ON_CALL, calculatorCopy, implementationCopy, serviceCopy } from "@/content/pricing";
 import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib/cn";
-import { formatMoney, type Estimate } from "@/lib/pricing";
+import { estimateExtras, estimateMode, formatMoney, type Estimate } from "@/lib/pricing";
 
 const DIGITS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -47,13 +47,44 @@ export function RollingNumber({ value, className }: { value: number; className?:
   );
 }
 
-/** What the headline shows: a dollar figure, the custom-quote line, or "quoted". */
-function estimateMode(estimate: Estimate): "figure" | "custom" | "quoted" {
-  if (estimate.customQuote) return "custom";
-  return !estimate.hasPriced && estimate.quotedOnCall.length ? "quoted" : "figure";
+/** Insurance Billing with no amounts entered: the two rates stand in for a number. */
+function RatesFigure({ lg }: { lg: boolean }) {
+  const ib = serviceCopy.insuranceBilling;
+  if (!lg) {
+    return (
+      <span className="block font-display text-[0.9375rem] font-bold leading-tight tracking-[-0.02em] text-yellow min-[420px]:text-[1.0625rem]">
+        {ib.ratesShort}
+      </span>
+    );
+  }
+  const rows = [
+    { rate: ib.medical.rate, name: "Medical plans", note: null },
+    { rate: ib.vision.rate, name: "Vision plans", note: ib.labFees },
+  ];
+  return (
+    <span className="grid gap-3">
+      {rows.map((row) => {
+        const [figure, ...basis] = row.rate.split(" ");
+        return (
+          <span key={row.name} className="flex items-center gap-3.5">
+            <span className="tabular w-[4.25rem] shrink-0 font-display text-[2.75rem] font-bold leading-none tracking-[-0.04em] text-yellow">
+              {figure}
+            </span>
+            <span className="min-w-0 leading-snug">
+              <span className="block font-display text-[1.0625rem] font-semibold">
+                {basis.join(" ")}
+                <span className="font-normal text-white/65">, {row.name.toLowerCase()}</span>
+              </span>
+              {row.note ? <span className="block text-[0.875rem] text-white/75">{row.note}</span> : null}
+            </span>
+          </span>
+        );
+      })}
+    </span>
+  );
 }
 
-/** The headline of the estimate: a rolling figure, a custom-quote line, or "quoted". */
+/** The headline of the estimate: a rolling figure, a custom-quote line, rates, or "quoted". */
 export function EstimateFigure({
   estimate,
   size = "lg",
@@ -92,6 +123,8 @@ export function EstimateFigure({
               </span>
             ) : null}
           </span>
+        ) : mode === "rates" ? (
+          <RatesFigure lg={lg} />
         ) : (
           <span
             className={cn(
@@ -142,7 +175,7 @@ export function EstimateLines({ estimate }: { estimate: Estimate }) {
                         line.kind === "custom" ? "bg-yellow text-ink" : "bg-teal-200 text-ink",
                       )}
                     >
-                      {line.kind === "custom" ? "Custom quote" : "Quoted on your call"}
+                      {line.kind === "custom" ? "Custom quote" : line.kind === "rate" ? line.note : "Quoted on your call"}
                     </span>
                   )}
                 </div>
@@ -172,18 +205,19 @@ export function ImplementationLine({ estimate, className }: { estimate: Estimate
   );
 }
 
-function QuotedExtras({ estimate, className }: { estimate: Estimate; className?: string }) {
-  // "+ Insurance Billing (quoted on your call)" beside a priced figure.
-  if (estimate.customQuote || !estimate.hasPriced || !estimate.quotedOnCall.length) return null;
+/** What belongs with the figure but is not in it: "+ Applicable lab fees (vision plan billing)". */
+export function EstimateExtras({ estimate, className }: { estimate: Estimate; className?: string }) {
+  const extras = estimateExtras(estimate);
+  if (!extras.length) return null;
   return (
     <ul className={cn("grid gap-1", className)}>
-      {estimate.quotedOnCall.map((name) => (
-        <li key={name} className="flex items-baseline gap-2 font-display font-semibold text-white">
+      {extras.map((extra) => (
+        <li key={extra.name} className="flex items-baseline gap-2 font-display font-semibold text-white">
           <span aria-hidden="true" className="text-yellow">
             +
           </span>
           <span>
-            {name} <span className="font-sans font-normal text-white/70">(quoted on your call)</span>
+            {extra.name} <span className="font-sans font-normal text-white/70">({extra.note})</span>
           </span>
         </li>
       ))}
@@ -224,7 +258,7 @@ export function EstimateCard({
         <div className="mt-4">
           <EstimateFigure estimate={estimate} />
         </div>
-        <QuotedExtras estimate={estimate} className="mt-3 text-[0.9375rem]" />
+        <EstimateExtras estimate={estimate} className="mt-3 text-[0.9375rem]" />
         {estimate.customQuote ? (
           <p className="mt-3 text-[0.9375rem] leading-snug text-white/75">{calculatorCopy.customQuoteBody}</p>
         ) : null}
@@ -294,7 +328,8 @@ export function MobileEstimateBar({
     return () => window.removeEventListener("keydown", onKey);
   }, [expanded]);
 
-  const quotedCount = estimate.customQuote || !estimate.hasPriced ? 0 : estimate.quotedOnCall.length;
+  const mode = estimateMode(estimate);
+  const extras = estimateExtras(estimate);
 
   return (
     <AnimatePresence>
@@ -328,6 +363,7 @@ export function MobileEstimateBar({
                       <EstimateLines estimate={estimate} />
                       <ImplementationLine estimate={estimate} className="pt-3" />
                     </div>
+                    <EstimateExtras estimate={estimate} className="mt-4 text-[0.875rem]" />
                     {estimate.customQuote ? (
                       <p className="mt-4 text-[0.875rem] leading-snug text-white/75">{calculatorCopy.customQuoteBody}</p>
                     ) : null}
@@ -356,17 +392,22 @@ export function MobileEstimateBar({
                 </span>
                 <span className="min-w-0">
                   <span className="block font-display text-[0.6875rem] font-semibold uppercase tracking-[0.12em] text-teal-200">
-                    {estimateMode(estimate) === "figure" ? "Monthly estimate" : calculatorCopy.estimateLabel}
+                    {mode === "figure" ? "Monthly estimate" : mode === "rates" ? serviceCopy.insuranceBilling.name : calculatorCopy.estimateLabel}
                     <span className="sr-only">. {expanded ? "Hide" : "Show"} the breakdown.</span>
                   </span>
                   <span className="mt-1 block">
                     <EstimateFigure estimate={estimate} size="sm" suffix={false} />
                   </span>
-                  {quotedCount ? (
+                  {mode === "rates" ? (
                     <span className="mt-1 block text-[0.75rem] leading-tight text-white/75">
-                      {quotedCount === 1
-                        ? `+ ${estimate.quotedOnCall[0]} (quoted on your call)`
-                        : `+ ${quotedCount} services quoted on your call`}
+                      {serviceCopy.insuranceBilling.ratesBasis}
+                      {extras.length ? `, + ${extras.length} more` : ""}
+                    </span>
+                  ) : extras.length ? (
+                    <span className="mt-1 block text-[0.75rem] leading-tight text-white/75">
+                      {extras.length === 1
+                        ? `+ ${extras[0].name} (${extras[0].note})`
+                        : `+ ${extras.length} items outside this number`}
                     </span>
                   ) : null}
                 </span>

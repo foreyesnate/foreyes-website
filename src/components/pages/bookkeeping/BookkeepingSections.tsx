@@ -266,7 +266,7 @@ export function BooksAnnualReview() {
                   </span>
                   {taxReady.label}
                 </h3>
-                <p className="mt-6 font-display text-[clamp(1.625rem,1.3rem+1.4vw,2.375rem)] font-semibold leading-[1.12] tracking-[-0.025em]">
+                <p className="mt-6 text-balance font-display text-[clamp(1.625rem,1.3rem+1.4vw,2.375rem)] font-semibold leading-[1.12] tracking-[-0.025em]">
                   {taxReady.statement.map((sentence) => (
                     <span key={sentence} className="block">
                       {sentence}{" "}

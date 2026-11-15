@@ -46,6 +46,7 @@ export const startups: AudienceContent = {
     eyebrow: "The obstacles",
     title: "The obstacles most new practices run into.",
     lede: "Any of these five can stall growth before your practice even opens. Each is easier to set up right than to clean up later.",
+    picture: { name: "startup-frames-board", panel: "yellow" },
     items: [
       {
         title: "Books that start out generic.",
@@ -163,6 +164,7 @@ export const startups: AudienceContent = {
     ],
     aside:
       "Other than an initial connect and onboarding session, the setup doesn’t need you. You get a ready-to-go foundation while you work on opening the doors.",
+    picture: { name: "step-connect", panel: "teal", fit: "bleed" },
   },
   proof: {
     kind: "testimonials",
@@ -192,7 +194,7 @@ export const startups: AudienceContent = {
       {
         question: "Can you help improve cash flow for a startup practice?",
         answer:
-          "Yes. Accurate monthly reports show where cash is going. Our billing service covers claim submission, payment posting, and denial follow-up, which helps a new practice collect revenue more efficiently and manage expenses better.",
+          "Yes. Accurate monthly reports show where cash is going. On the billing side, we handle claim submission, payment posting, and denial follow-up, and we follow up on unpaid claims daily, so early revenue doesn’t sit in A/R unnoticed.",
       },
       {
         question: "What financial reports will I receive?",
@@ -202,7 +204,7 @@ export const startups: AudienceContent = {
       {
         question: "What will this cost a new practice?",
         answer:
-          "Use the pricing calculator to build an estimate for Bookkeeping, Payroll, and bill pay in a few minutes, then book a Discovery Call to confirm it. Every figure shown is an estimate only. Insurance Billing and Practice Consulting are scoped on the call.",
+          "Use the pricing calculator to build an estimate in a few minutes, then book a Discovery Call to confirm it. Payroll is from $149 a month for up to 10 employees, and Accounts Payable is from $99 a month for up to 10 bills a month. Insurance Billing is 8% of net receipts for medical plan billing, and 5% of net receipts, plus applicable lab fees, for vision plan billing. Practice Consulting is scoped on the call. Every figure the calculator shows is an estimate only.",
       },
     ],
   },

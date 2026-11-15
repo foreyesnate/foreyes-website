@@ -71,8 +71,8 @@ function FaqMini() {
 
 const switches = [
   { label: "Bookkeeping", on: true },
-  { label: "Payroll", on: true },
-  { label: "Bill pay", on: false },
+  { label: "Billing", on: true },
+  { label: "Payroll", on: false },
 ] as const;
 
 /** The calculator in miniature: service switches, a slider and the estimate. */

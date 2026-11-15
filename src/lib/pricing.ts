@@ -44,9 +44,9 @@ export type PricingState = {
   };
   insuranceBilling: {
     on: boolean;
-    /** Lead-summary only. `null` = not answered. */
-    providers: string | null;
-    claims: string | null;
+    /** Estimated monthly net receipts in whole dollars. `null` = not entered. */
+    medicalReceipts: number | null;
+    visionReceipts: number | null;
   };
   accountsPayable: { on: boolean; count: number };
   payroll: { on: boolean; count: number };
@@ -62,7 +62,7 @@ export const initialPricingState: PricingState = {
     holdingCompany: false,
     salesTaxFiling: false,
   },
-  insuranceBilling: { on: false, providers: null, claims: null },
+  insuranceBilling: { on: false, medicalReceipts: null, visionReceipts: null },
   accountsPayable: { on: false, count: pricing.accountsPayable.min },
   payroll: { on: false, count: pricing.payroll.min },
   practiceConsulting: { on: false },
@@ -75,8 +75,8 @@ export type PricingAction =
   | { type: "setAccounts"; id: AccountsOptionId }
   | { type: "setHoldingCompany"; value: boolean }
   | { type: "setSalesTaxFiling"; value: boolean }
-  | { type: "setBillingProviders"; value: string | null }
-  | { type: "setBillingClaims"; value: string | null }
+  | { type: "setMedicalReceipts"; value: number | null }
+  | { type: "setVisionReceipts"; value: number | null }
   | { type: "setAccountsPayableCount"; value: number }
   | { type: "setPayrollCount"; value: number }
   | { type: "reset" };
@@ -84,6 +84,12 @@ export type PricingAction =
 function clampInt(value: number, min: number, max: number): number {
   if (!Number.isFinite(value)) return min;
   return Math.min(max, Math.max(min, Math.round(value)));
+}
+
+/** A typed dollar amount: whole, positive and within the input's limit, or nothing. */
+function receiptsOrNull(value: number | null): number | null {
+  if (value === null || !Number.isFinite(value) || value <= 0) return null;
+  return clampInt(value, 1, pricing.insuranceBilling.maxMonthlyReceipts);
 }
 
 export function pricingReducer(state: PricingState, action: PricingAction): PricingState {
@@ -112,10 +118,10 @@ export function pricingReducer(state: PricingState, action: PricingAction): Pric
       return { ...state, bookkeeping: { ...state.bookkeeping, holdingCompany: action.value } };
     case "setSalesTaxFiling":
       return { ...state, bookkeeping: { ...state.bookkeeping, salesTaxFiling: action.value } };
-    case "setBillingProviders":
-      return { ...state, insuranceBilling: { ...state.insuranceBilling, providers: action.value } };
-    case "setBillingClaims":
-      return { ...state, insuranceBilling: { ...state.insuranceBilling, claims: action.value } };
+    case "setMedicalReceipts":
+      return { ...state, insuranceBilling: { ...state.insuranceBilling, medicalReceipts: receiptsOrNull(action.value) } };
+    case "setVisionReceipts":
+      return { ...state, insuranceBilling: { ...state.insuranceBilling, visionReceipts: receiptsOrNull(action.value) } };
     case "setAccountsPayableCount": {
       const { min, max } = pricing.accountsPayable;
       return { ...state, accountsPayable: { ...state.accountsPayable, count: clampInt(action.value, min, max) } };
@@ -174,6 +180,21 @@ export function payrollMonthly(count: number): number {
   return steppedMonthly(count, pricing.payroll);
 }
 
+/** 0.08 -> "8%". */
+export function percent(rate: number): string {
+  return `${Math.round(rate * 100)}%`;
+}
+
+/** Medical plan billing: a percentage of monthly net receipts, in whole dollars. */
+export function medicalBillingMonthly(receipts: number): number {
+  return Math.round(Math.max(0, receipts) * pricing.insuranceBilling.medicalRate);
+}
+
+/** Vision plan billing: a percentage of monthly net receipts. Lab fees are not in this. */
+export function visionBillingMonthly(receipts: number): number {
+  return Math.round(Math.max(0, receipts) * pricing.insuranceBilling.visionRate);
+}
+
 // ---------------------------------------------------------------------------
 // The estimate
 // ---------------------------------------------------------------------------
@@ -184,11 +205,14 @@ export type EstimateLine = {
   label: string;
   detail?: string;
   /**
-   * `priced` adds `amount` to the total. `quoted` has no published price.
-   * `custom` is a selection the calculator cannot price.
+   * `priced` adds `amount` to the total. `rate` has a published rate but no
+   * amount to apply it to yet (its `note` states the rate). `quoted` has no
+   * published price. `custom` is a selection the calculator cannot price.
    */
-  kind: "priced" | "quoted" | "custom";
+  kind: "priced" | "rate" | "quoted" | "custom";
   amount: number;
+  /** Shown in place of an amount on a `rate` line. */
+  note?: string;
 };
 
 export type Estimate = {
@@ -200,6 +224,10 @@ export type Estimate = {
   customReasons: string[];
   /** Names of switched-on services that have no published price. */
   quotedOnCall: string[];
+  /** Insurance Billing is on with no amounts entered: show its rates, not a number. */
+  billingRatesOnly: boolean;
+  /** A vision amount is in the total, so "plus applicable lab fees" must sit beside it. */
+  labFees: boolean;
   /** Number of services switched on. */
   selected: number;
   /** True when at least one switched-on service has a published price. */
@@ -216,6 +244,8 @@ export function computeEstimate(state: PricingState): Estimate {
   const customReasons: string[] = [];
   const quotedOnCall: string[] = [];
   let hasPriced = false;
+  let billingRatesOnly = false;
+  let labFees = false;
 
   const { bookkeeping, insuranceBilling, accountsPayable, payroll, practiceConsulting } = state;
 
@@ -276,7 +306,7 @@ export function computeEstimate(state: PricingState): Estimate {
       });
     }
 
-    if (bookkeeping.salesTaxFiling) {
+    if (pricing.bookkeeping.salesTaxFiling.offered && bookkeeping.salesTaxFiling) {
       lines.push({
         id: "salesTaxFiling",
         service: "bookkeeping",
@@ -288,14 +318,51 @@ export function computeEstimate(state: PricingState): Estimate {
   }
 
   if (insuranceBilling.on) {
-    quotedOnCall.push(serviceCopy.insuranceBilling.name);
-    lines.push({
-      id: "insuranceBilling",
-      service: "insuranceBilling",
-      label: serviceCopy.insuranceBilling.name,
-      kind: "quoted",
-      amount: 0,
-    });
+    const { medical, vision, labFees: labFeesNote } = serviceCopy.insuranceBilling;
+    const { medicalReceipts, visionReceipts } = insuranceBilling;
+    if (medicalReceipts) {
+      hasPriced = true;
+      lines.push({
+        id: "billingMedical",
+        service: "insuranceBilling",
+        label: medical.name,
+        detail: `${percent(pricing.insuranceBilling.medicalRate)} of ${formatMoney(medicalReceipts)} in net receipts`,
+        kind: "priced",
+        amount: medicalBillingMonthly(medicalReceipts),
+      });
+    } else {
+      lines.push({
+        id: "billingMedical",
+        service: "insuranceBilling",
+        label: medical.name,
+        kind: "rate",
+        amount: 0,
+        note: medical.rate,
+      });
+    }
+    if (visionReceipts) {
+      hasPriced = true;
+      labFees = true;
+      lines.push({
+        id: "billingVision",
+        service: "insuranceBilling",
+        label: vision.name,
+        detail: `${percent(pricing.insuranceBilling.visionRate)} of ${formatMoney(visionReceipts)} in net receipts, ${labFeesNote}`,
+        kind: "priced",
+        amount: visionBillingMonthly(visionReceipts),
+      });
+    } else {
+      lines.push({
+        id: "billingVision",
+        service: "insuranceBilling",
+        label: vision.name,
+        detail: labFeesNote.charAt(0).toUpperCase() + labFeesNote.slice(1),
+        kind: "rate",
+        amount: 0,
+        note: vision.rate,
+      });
+    }
+    billingRatesOnly = !medicalReceipts && !visionReceipts;
   }
 
   if (accountsPayable.on) {
@@ -341,6 +408,8 @@ export function computeEstimate(state: PricingState): Estimate {
     customQuote: customReasons.length > 0,
     customReasons,
     quotedOnCall,
+    billingRatesOnly,
+    labFees,
     selected: SERVICE_ORDER.filter((id) => state[id].on).length,
     hasPriced,
     oneTime: pricing.implementation.oneTime,
@@ -356,15 +425,49 @@ export function formatMoney(amount: number): string {
   return `$${Math.round(amount).toLocaleString("en-US")}`;
 }
 
+/** What the headline shows: a dollar figure, the custom-quote line, rates, or "quoted". */
+export type EstimateMode = "figure" | "custom" | "rates" | "quoted";
+
+export function estimateMode(estimate: Estimate): EstimateMode {
+  if (estimate.customQuote) return "custom";
+  if (estimate.hasPriced) return "figure";
+  if (estimate.billingRatesOnly) return "rates";
+  return estimate.quotedOnCall.length ? "quoted" : "figure";
+}
+
+/** Something that belongs with the estimate but is not in its number. */
+export type EstimateExtra = { name: string; note: string };
+
+/** What sits beside the headline: rates with no amount, lab fees, services quoted on the call. */
+export function estimateExtras(estimate: Estimate): EstimateExtra[] {
+  const mode = estimateMode(estimate);
+  if (mode === "custom" || mode === "quoted") return [];
+  const ib = serviceCopy.insuranceBilling;
+  const extras: EstimateExtra[] = [];
+  if (mode === "figure" && estimate.billingRatesOnly) {
+    extras.push({ name: ib.name, note: `${ib.ratesShort} ${ib.ratesBasis}` });
+  }
+  if (estimate.labFees) extras.push({ name: "Applicable lab fees", note: "vision plan billing" });
+  for (const name of estimate.quotedOnCall) extras.push({ name, note: "quoted on your call" });
+  return extras;
+}
+
 /**
  * The estimate in one line, e.g.
- * "$1,074 per month + Insurance Billing (quoted on your call)".
+ * "$1,074 per month + Applicable lab fees (vision plan billing)".
  */
 export function estimateHeadline(estimate: Estimate): string {
-  if (estimate.customQuote) return CUSTOM_QUOTE;
-  const quoted = estimate.quotedOnCall.map((name) => `${name} (quoted on your call)`);
-  if (!estimate.hasPriced && quoted.length) return quoted.join(" + ");
-  return [`${formatMoney(estimate.monthly)} per month`, ...quoted].join(" + ");
+  const mode = estimateMode(estimate);
+  if (mode === "custom") return CUSTOM_QUOTE;
+  const ib = serviceCopy.insuranceBilling;
+  const extras = estimateExtras(estimate).map((extra) => `${extra.name} (${extra.note})`);
+  if (mode === "quoted") return estimate.quotedOnCall.map((name) => `${name} (quoted on your call)`).join(" + ");
+  if (mode === "rates") {
+    return [`${ib.name}: ${ib.medical.rate} for medical plans, ${ib.vision.rate} for vision plans, ${ib.labFees}`, ...extras].join(
+      " + ",
+    );
+  }
+  return [`${formatMoney(estimate.monthly)} per month`, ...extras].join(" + ");
 }
 
 const yesNo = (value: boolean) => (value ? "Yes" : "No");
@@ -392,17 +495,33 @@ export function buildSummary(state: PricingState): string {
       `  Connected accounts: ${accounts?.label ?? "-"} (${accountsFee === null ? "custom quote" : `+${formatMoney(accountsFee)}/mo`})`,
     );
     out.push(`  MSO or real estate holding company: ${yesNo(bookkeeping.holdingCompany)}`);
-    out.push(
-      `  Sales tax filing: ${bookkeeping.salesTaxFiling ? `Yes (+${formatMoney(pricing.bookkeeping.salesTaxFiling.monthly)}/mo)` : "No"}`,
-    );
+    if (pricing.bookkeeping.salesTaxFiling.offered) {
+      out.push(
+        `  Sales tax filing: ${bookkeeping.salesTaxFiling ? `Yes (+${formatMoney(pricing.bookkeeping.salesTaxFiling.monthly)}/mo)` : "No"}`,
+      );
+    }
   } else {
     out.push("Bookkeeping: No");
   }
 
   if (insuranceBilling.on) {
-    out.push("Insurance Billing: Yes (quoted on Discovery Call)");
-    out.push(`  ${serviceCopy.insuranceBilling.providers.label}: ${insuranceBilling.providers ?? "Not answered"}`);
-    out.push(`  ${serviceCopy.insuranceBilling.claims.label}: ${insuranceBilling.claims ?? "Not answered"}`);
+    const ib = serviceCopy.insuranceBilling;
+    const { medicalReceipts, visionReceipts } = insuranceBilling;
+    out.push("Insurance Billing: Yes");
+    out.push(
+      `  ${ib.medical.label}: ${
+        medicalReceipts
+          ? `${formatMoney(medicalReceipts)} (${percent(pricing.insuranceBilling.medicalRate)} = ${formatMoney(medicalBillingMonthly(medicalReceipts))}/mo)`
+          : `Not entered (${ib.medical.rate})`
+      }`,
+    );
+    out.push(
+      `  ${ib.vision.label}: ${
+        visionReceipts
+          ? `${formatMoney(visionReceipts)} (${percent(pricing.insuranceBilling.visionRate)} = ${formatMoney(visionBillingMonthly(visionReceipts))}/mo, ${ib.labFees})`
+          : `Not entered (${ib.vision.rate}, ${ib.labFees})`
+      }`,
+    );
   } else {
     out.push("Insurance Billing: No");
   }

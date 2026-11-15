@@ -22,7 +22,7 @@ export function AudienceFounderQuote({ proof }: { proof: FounderProof }) {
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.4fr] lg:gap-20">
           <Reveal>
             <SectionHeading id="founder-proof-title" eyebrow={proof.eyebrow} title={proof.title} lede={proof.lede} />
-            <TextLink href="/about-us" className="mt-8">
+            <TextLink href="/about-us" className="mt-6 min-h-11">
               More About Us
             </TextLink>
           </Reveal>

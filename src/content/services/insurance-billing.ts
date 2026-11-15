@@ -1,8 +1,9 @@
 // Copy for /services/insurance-billing. Plain strings only, so wording can be
 // edited without touching layout code. Facts come from the current Billing
 // Services and Accounts Receivable Management pages, the billing FAQs and the
-// A/R blog post on foreyessolutions.com. No billing results, prices or
-// certification names are published, so none appear here.
+// A/R blog post on foreyessolutions.com. The two rates in `pricing` were
+// confirmed by the owner. No billing results or certification names are
+// published, so none appear here.
 import type { Faq } from "@/components/sections/FaqAccordion";
 import type { Feature } from "@/components/sections/FeatureGrid";
 import type { Step } from "@/components/sections/ProcessSteps";
@@ -21,7 +22,7 @@ export const hero = {
   title: "Collect what your practice",
   highlight: "is owed.",
   lede: "ForEyes Books & Billing works your insurance claims from submission to posted payment. Eyecare billing specialists review claims for accuracy before they go out, appeal the denials, and follow up on unpaid A/R every day.",
-  note: "Insurance Billing is quoted on your Discovery Call.",
+  note: "Medical plans: 8% of net receipts. Vision plans: 5% of net receipts, plus applicable lab fees.",
 };
 
 /** Rows in the hero's sample worklist. Each claim steps through `flow`. */
@@ -360,18 +361,28 @@ export const faqs: { title: string; lede: string; items: Faq[] } = {
     {
       question: "What does Insurance Billing cost?",
       answer:
-        "Insurance Billing is quoted on your Discovery Call. Every practice bills differently, so we ask about yours before we name a price. The pricing calculator covers Bookkeeping, Payroll, and bill pay.",
+        "Medical plan billing is 8% of net receipts. Vision plan billing is 5% of net receipts, plus applicable lab fees. Enter your estimated monthly net receipts in the pricing calculator to see a monthly figure. Every figure it shows is an estimate only.",
     },
     {
       question: "Is your team local or remote?",
-      answer: `Remote. We work with eyecare practices across the country, and you can reach us ${site.hours}.`,
+      answer: `We’re a fully remote team headquartered in Nashville, serving eyecare practices nationwide. You can reach us ${site.hours}.`,
     },
   ],
 };
 
+export const proof = {
+  title: "Proof in Practice",
+  lede: "Two eyecare practices on handing their insurance billing to a team that does nothing else.",
+};
+
+/** Confirmed by the owner. Keep the basis wording exactly: "of net receipts". */
 export const pricing = {
-  title: "Insurance Billing is quoted on your Discovery Call.",
-  body: "Every practice bills differently, so we ask about yours before we name a price. If you’d like a number for Bookkeeping, Payroll, or bill pay today, the pricing calculator builds an estimate in a few minutes. Every figure shown is an estimate only.",
+  title: "What Insurance Billing costs.",
+  rates: [
+    { plan: "Medical plan billing", rate: "8%", basis: "of net receipts" },
+    { plan: "Vision plan billing", rate: "5%", basis: "of net receipts, plus applicable lab fees" },
+  ],
+  body: "Enter your estimated monthly net receipts in the pricing calculator to see a monthly figure, then confirm it on your Discovery Call. Every figure the calculator shows is an estimate only.",
   secondary: "Estimate Your Price",
 };
 

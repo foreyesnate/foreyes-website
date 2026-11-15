@@ -31,7 +31,7 @@ export function BillingTwoPlans({
       <figcaption className="flex items-center justify-between gap-3">
         <span className="font-display text-lg font-semibold tracking-[-0.015em]">{title}</span>
         <span className="shrink-0 rounded-full bg-stone-200 px-2.5 py-1 font-display text-[0.6875rem] font-bold uppercase tracking-[0.1em] text-ink-500">
-          Illustration
+          Example
         </span>
       </figcaption>
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
+import { bookkeepingTestimonials } from "@/content/testimonials";
 import {
   chart,
   close,
@@ -11,6 +12,7 @@ import {
   path,
   pricing,
   process,
+  proof,
   reconciliation,
 } from "@/content/services/bookkeeping";
 import { TextLink } from "@/components/ui/Button";
@@ -126,7 +128,7 @@ export default function BookkeepingPage() {
 
       <BooksAnnualReview />
 
-      <Testimonials />
+      <Testimonials items={bookkeepingTestimonials} lede={proof.lede} />
 
       <FaqSection title="Eyecare Bookkeeping FAQs" items={faqs} />
 

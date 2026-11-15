@@ -12,15 +12,15 @@ service: "bookkeeping"
 draft: false
 ---
 
-Running an eyecare practice is rewarding but complex. Between patient care, staff management, and standing out from the competition, tracking the right financial metrics can feel like another full-time job–one you don't have time for. While it's important to understand your numbers, that doesn't mean you have to focus on every single metric. So which ones should have your attention?
+Running an eyecare practice is rewarding but complex. Between patient care, staff management, and standing out from the competition, tracking the right financial metrics can feel like another full-time job, one you don't have time for. While it's important to understand your numbers, that doesn't mean you have to focus on every single metric. So which ones should have your attention?
 
 Here are seven key performance indicators (KPIs) every eyecare business owner should track, and why these ones in particular matter.
 
 ## 1. Cost of Goods Sold (COGS)
 
-COGS represents the direct costs of delivering your services or products to customers. Think frames, lenses, contacts, and the lab expenses for these items. For an eyecare business, ideally, COGS should not exceed 30% of your revenue.
+COGS represents the direct costs of delivering your services or products to patients. Think frames, lenses, contacts, and the lab expenses for these items. For an eyecare business, ideally, COGS should not exceed 30% of your revenue.
 
-Why is COGS an important KPI for financial performance? It helps you identify trends in supplier pricing, discounts, and even product performance. Are certain frames moving slowly? Are lab costs creeping up? By monitoring COGS, you can better optimize inventory, pricing, and vendor relationships to protect your bottom line.
+Why is COGS an important KPI for financial performance? It helps you identify trends in supplier pricing, discounts, and even product performance. Are certain frames moving slowly? Are lab costs creeping up? By monitoring COGS, you can adjust inventory, pricing, and vendor relationships to protect your bottom line.
 
 ## 2. Non-OD Staff Expenses
 
@@ -30,7 +30,7 @@ While your team is the backbone of your practice, salaries, benefits, payroll ta
 - Reward performance appropriately
 - Make data-driven hiring decisions
 
-To ensure staffing levels and compensation structures support growth without destroying profits, many eyecare practices aim to spend less than 25% of revenue on non-OD staff expenses.
+To keep staffing levels and compensation in step with growth without eating into profit, many eyecare practices aim to spend less than 25% of revenue on non-OD staff expenses.
 
 ## 3. Occupancy Costs
 
@@ -44,11 +44,11 @@ The general office category covers everything else that keeps your practice runn
 
 Many eyecare practices spend around 7% or 8% of revenue on general office overhead.
 
-Consistently reviewing how much you're spending and on what can ensure your practice is lean and efficient without compromising quality or the experience you offer to patients.
+Consistently reviewing how much you're spending and on what keeps your practice lean and efficient without compromising quality or the experience you offer to patients.
 
 ## 5. Marketing
 
-Marketing isn't just about spending; it's also about return on investment (ROI). Whether it's social media campaigns, local advertising, or patient referral programs, your marketing KPI measures how efficiently you're attracting new patients.
+Marketing is about return on investment (ROI), not only spend. Whether it's social media campaigns, local advertising, or patient referral programs, your marketing KPI measures how efficiently you're attracting new patients.
 
 Spending no more than 3% of your revenue on marketing is a general benchmark, but it's important to adjust based on whether your efforts are delivering predictable, measured results.
 
@@ -60,12 +60,12 @@ By keeping equipment costs predictable, you free up capital for growth initiativ
 
 ## 7. Practice Net
 
-Your financial KPI metrics aren't complete without your practice net, as it reflects your practice's profitability after all costs have been deducted. A strong practice net (around 30% of revenue) means your independent eyecare business isn't just covering expenses but is also generating sustainable growth.
+Your financial KPI metrics aren't complete without your practice net, as it reflects your practice's profitability after all costs have been deducted. A strong practice net (around 30% of revenue) means your independent eyecare business is covering its expenses and has room left to grow.
 
 Tracking this KPI helps you make strategic investments, plan for long-term stability, and better evaluate any opportunities for expansion.
 
 ## Leave the KPIs to ForEyes
 
-Knowing where your revenue goes, which expenses to manage, and how your practice net reflects your financial health helps you make smarter business decisions. At ForEyes Books & Billing, we don't just track numbers–we provide clarity, insights, and strategies tailored to eyecare practices.
+Knowing where your revenue goes, which expenses to manage, and how your practice net reflects your financial health helps you make smarter business decisions. At ForEyes Books & Billing, we keep the books for eyecare practices and nobody else.
 
-With our industry-specific chart of accounts, advanced bookkeeping, and practice consulting, we take KPIs off your plate so you can focus on patients and growth. Ready for a partner who truly gets the eyecare business? Let's talk!
+Our Custom Chart of Accounts separates medical exam revenue from optical sales, and optical cost of goods from overhead, so the numbers behind these KPIs are already sorted when your reports arrive. Want to see yours? [Book a Discovery Call](/contact#book).

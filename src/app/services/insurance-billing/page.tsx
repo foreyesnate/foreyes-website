@@ -5,18 +5,19 @@ import {
   comparison,
   cta,
   faqs,
-  handles,
   hero,
   meta,
   path,
   process,
+  proof,
   worklist,
 } from "@/content/services/insurance-billing";
+import { billingTestimonials } from "@/content/testimonials";
 import { PageHero } from "@/components/sections/PageHero";
-import { FeatureGrid } from "@/components/sections/FeatureGrid";
 import { SplitFeature } from "@/components/sections/SplitFeature";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { OneOrTwo } from "@/components/sections/OneOrTwo";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { CtaBand } from "@/components/sections/CtaBand";
@@ -28,6 +29,7 @@ import { BillingAgingChart } from "@/components/graphics/BillingAgingChart";
 import {
   BillingBooks,
   BillingEyecare,
+  BillingHandles,
   BillingKpis,
   BillingPricing,
   BillingProblem,
@@ -57,7 +59,7 @@ export default function InsuranceBillingPage() {
         >
           <Reveal delay={0.8} blur={false} y={8}>
             <p className="mt-6 flex items-start gap-2.5 text-[0.975rem] font-medium text-ink/85">
-              <Icon name="calendar" size={18} className="mt-[0.2rem] shrink-0" />
+              <Icon name="bill" size={18} className="mt-[0.2rem] shrink-0" />
               {hero.note}
             </p>
           </Reveal>
@@ -66,15 +68,7 @@ export default function InsuranceBillingPage() {
 
       <BillingProblem />
 
-      <FeatureGrid
-        id="billing-handles"
-        tone="white"
-        columns={2}
-        eyebrow={handles.eyebrow}
-        title={handles.title}
-        lede={handles.lede}
-        features={handles.features}
-      />
+      <BillingHandles />
 
       <SplitFeature
         id="billing-aging"
@@ -110,6 +104,8 @@ export default function InsuranceBillingPage() {
       <OneOrTwo rows={comparison.rows} labels={comparison.labels} lede={comparison.lede} />
 
       <BillingBooks />
+
+      <Testimonials items={billingTestimonials} title={proof.title} lede={proof.lede} />
 
       <FaqSection title={faqs.title} lede={faqs.lede} items={faqs.items} tone="stone" />
 

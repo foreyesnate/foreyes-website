@@ -53,19 +53,14 @@ export type SupportingServiceContent = {
   /** Service name, exactly as it appears in the navigation. */
   label: string;
   meta: { title: string; description: string };
-  /**
-   * Starting monthly price from the pricing calculator, or `null` when the
-   * service has no published price and is quoted on the Discovery Call.
-   */
-  fromPrice: number | null;
   hero: {
     eyebrow: string;
     title: string;
     /** Closing phrase of the headline, set in the accent colour. */
     highlight: string;
     lede: string;
-    /** Shown under the buttons when there is no published price. */
-    note?: string;
+    /** Shown under the buttons: the starting price, or how it is quoted. */
+    note: string;
   };
   /** What it is and who it is for. */
   intro: {
@@ -76,7 +71,7 @@ export type SupportingServiceContent = {
     art: IllustrationName;
     panel: "teal" | "navy" | "yellow";
     /** Small card floated on the corner of the picture. */
-    chip: { label: string; value: string };
+    chip: { icon: IconName; label: string; value: string };
   };
   handles: {
     eyebrow: string;
@@ -109,6 +104,7 @@ export type SupportingServiceContent = {
     links: { label: string; href: string }[];
   };
   faqs: { title: string; items: SupportingFaq[] };
-  pricing: { title: string; body: string };
+  /** The pricing nudge, or `null` when the service has no published price. */
+  pricing: { title: string; body: string } | null;
   cta: { title: string; body: string };
 };

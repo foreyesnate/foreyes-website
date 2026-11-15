@@ -1,5 +1,6 @@
 import { site } from "@/content/site";
 import { hub, type HubRowKey } from "@/content/audiences/hub";
+import { Illustration } from "@/components/ui/Art";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { Container, Eyebrow, Section } from "@/components/ui/Layout";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -18,7 +19,7 @@ export function AudienceRemote() {
     <Section tone="navy" aria-labelledby={remote.id} className="overflow-hidden">
       <div aria-hidden="true" className="bg-dots pointer-events-none absolute inset-0 text-white/[0.07] [mask-image:radial-gradient(60%_70%_at_15%_40%,black,transparent)]" />
       <Container size="wide" className="relative">
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-20">
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:items-center lg:gap-20">
           <Reveal>
             <Eyebrow tone="light" className="mb-5">
               {remote.eyebrow}
@@ -50,20 +51,24 @@ export function AudienceRemote() {
             </dl>
           </Reveal>
 
-          <Stagger as="ul" className="grid gap-4 sm:grid-cols-2">
-            {remote.rows.map((row) => (
-              <StaggerItem as="li" key={row.key}>
-                <div className="h-full rounded-[1.75rem] bg-white/[0.07] p-6 ring-1 ring-inset ring-white/10 sm:p-7">
-                  <span className="grid h-12 w-12 place-items-center rounded-2xl bg-white/10 text-yellow">
-                    <Icon name={rowIcons[row.key]} size={24} />
-                  </span>
-                  <h3 className="text-subheading mt-6">{row.title}</h3>
-                  <p className="mt-2.5 text-white/75">{row.body}</p>
-                </div>
-              </StaggerItem>
-            ))}
-          </Stagger>
+          <Reveal delay={0.1} y={36}>
+            <Illustration name="discovery-call" panel="teal" className="mx-auto w-full max-w-[34rem] lg:ml-auto lg:mr-0" />
+          </Reveal>
         </div>
+
+        <Stagger as="ul" className="mt-14 grid gap-4 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4">
+          {remote.rows.map((row) => (
+            <StaggerItem as="li" key={row.key}>
+              <div className="h-full rounded-[1.75rem] bg-white/[0.07] p-6 ring-1 ring-inset ring-white/10 sm:p-7">
+                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-white/10 text-yellow">
+                  <Icon name={rowIcons[row.key]} size={24} />
+                </span>
+                <h3 className="text-subheading mt-6">{row.title}</h3>
+                <p className="mt-2.5 text-white/75">{row.body}</p>
+              </div>
+            </StaggerItem>
+          ))}
+        </Stagger>
       </Container>
     </Section>
   );

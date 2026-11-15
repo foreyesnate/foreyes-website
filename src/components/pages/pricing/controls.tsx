@@ -249,6 +249,70 @@ export function RangeField({
   );
 }
 
+/**
+ * A dollar amount typed by the visitor. A text input with a numeric keypad
+ * (not `type="number"`, so the value can carry thousands separators and never
+ * changes on scroll). Empty means "not entered".
+ */
+export function MoneyField({
+  label,
+  hint,
+  value,
+  onChange,
+  max,
+  effect,
+  suffix = "a month",
+}: {
+  label: string;
+  hint?: ReactNode;
+  value: number | null;
+  onChange: (next: number | null) => void;
+  max: number;
+  /** Price effect of the current value. */
+  effect?: ReactNode;
+  /** Unit shown after the field. */
+  suffix?: string;
+}) {
+  const id = useId();
+  return (
+    <div>
+      <label htmlFor={id} className="block font-display text-[1.0625rem] font-semibold tracking-[-0.01em]">
+        {label}
+      </label>
+      {hint ? (
+        <p id={`${id}-hint`} className="mt-1 max-w-md text-[0.9375rem] leading-snug text-ink-500">
+          {hint}
+        </p>
+      ) : null}
+      <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2.5">
+        <div className="flex h-14 w-full max-w-[17rem] items-center rounded-2xl border-2 border-stone-300 bg-white transition-[border-color,box-shadow] hover:border-ink/40 focus-within:border-navy focus-within:ring-4 focus-within:ring-navy/15 focus-within:hover:border-navy">
+          <span aria-hidden="true" className="pl-4 font-display text-[1.25rem] font-bold text-ink-500">
+            $
+          </span>
+          <input
+            id={id}
+            type="text"
+            inputMode="numeric"
+            autoComplete="off"
+            placeholder="0"
+            value={value === null ? "" : value.toLocaleString("en-US")}
+            onChange={(event) => {
+              const digits = event.target.value.replace(/\D/g, "");
+              onChange(digits ? Math.min(max, Number(digits)) : null);
+            }}
+            aria-describedby={hint ? `${id}-hint` : undefined}
+            className="tabular h-full min-w-0 flex-1 rounded-2xl bg-transparent pl-1.5 pr-2 font-display text-[1.25rem] font-bold tracking-[-0.01em] text-ink placeholder:font-semibold placeholder:text-ink-400 focus:outline-none"
+          />
+          <span aria-hidden="true" className="shrink-0 pr-4 text-[0.875rem] text-ink-500">
+            {suffix}
+          </span>
+        </div>
+        {effect}
+      </div>
+    </div>
+  );
+}
+
 export type Choice<T extends string> = { value: T; label: string; note?: string };
 
 /** A radio group drawn as pills. Real radios underneath: arrow keys work. */

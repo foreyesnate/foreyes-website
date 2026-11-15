@@ -3,7 +3,7 @@ title: "How Labor Costs Quietly Drain Profit in Eyecare Practices (and How to Fi
 slug: "optometry-labor-costs-eyecare-practice-profit"
 date: "2026-07-30"
 author: "ForEyes Solutions"
-description: "Optometry labor costs quietly erode profit. See how staff scheduling, payroll cost control, and smart outsourcing protect your margin."
+description: "Optometry labor costs quietly erode profit. See how staff scheduling, overtime tracking, payroll cost control, and outsourcing protect your margin."
 category: "Financial Management"
 readingMinutes: 4
 heroImage: "/blog/optometry-labor-costs-eyecare-practice-profit.jpg"
@@ -36,7 +36,7 @@ Make regular check-ins on hours worked and task drift a standing part of your op
 
 This benchmark applies most directly to general, primary care optometry practices: budget roughly one full-time non-OD staff member for every $200,000 in top-line collections. A practice targeting $1 million in revenue, for example, would plan around five non-OD staff.
 
-If your practice includes a significant specialty mix, surgical services, or an optical dispensary with high throughput, your ratio will shift. Ophthalmology practices and multi-specialty groups in particular should build their own staffing benchmarks around their [custom chart of accounts](/services/bookkeeping) rather than relying on a primary-care rule of thumb. But for a general OD practice, the 1-FTE-per-$200K ratio is a solid gut check on whether your staffing levels match your collections.
+If your practice includes a significant specialty mix, surgical services, or an optical dispensary with high throughput, your ratio will shift. Ophthalmology practices and multi-specialty groups in particular should build their own staffing benchmarks around their [Custom Chart of Accounts](/services/bookkeeping) rather than relying on a primary-care rule of thumb. But for a general OD practice, the 1-FTE-per-$200K ratio is a solid gut check on whether your staffing levels match your collections.
 
 ## Consider Outsourcing Bookkeeping, Billing, or Payroll
 
@@ -46,4 +46,4 @@ This shift is a direct lever for expense management that doesn't require cutting
 
 ## Treat Staffing Like a Clinical Outcome
 
-Optometry labor costs won't fix themselves on a spreadsheet once a year. They need the same regular attention you give clinical outcomes. Start by auditing roles, tightening staff scheduling, and tracking overtime before it becomes a pattern. If measuring revenue per team member or evaluating outsourcing feels like more than you can tackle solo, schedule a discovery call and we'll walk through the numbers with you.
+Optometry labor costs won't fix themselves on a spreadsheet once a year. They need the same regular attention you give clinical outcomes. Start by auditing roles, tightening staff scheduling, and tracking overtime before it becomes a pattern. If measuring revenue per team member or evaluating outsourcing feels like more than you can tackle solo, [book a Discovery Call](/contact#book) and we'll walk through the numbers with you.

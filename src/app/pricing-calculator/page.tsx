@@ -10,7 +10,7 @@ import { PricingCalculator } from "@/components/pages/pricing/PricingCalculator"
 export const metadata: Metadata = {
   title: "Pricing Calculator: Estimate Your Monthly Cost",
   description:
-    "Estimate the monthly cost of bookkeeping, accounts payable, and payroll for your eyecare practice. Insurance billing is quoted on your Discovery Call.",
+    "Estimate what bookkeeping, insurance billing, accounts payable, and payroll cost each month for your eyecare practice. Formal quote on a Discovery Call.",
   alternates: { canonical: "/pricing-calculator" },
 };
 

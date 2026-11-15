@@ -1,10 +1,11 @@
 // Pricing calculator: every price, rule, label and line of copy.
 //
-// The numbers were carried over from the calculator on foreyessolutions.com
-// (all of them verified against the live page; see pricing-logic.md in the
-// project notes). Nothing here is a new price. Where the current site gives
-// no price (Insurance Billing, Practice Consulting) the calculator says
-// "Quoted on your Discovery Call" and adds nothing to the number.
+// The Bookkeeping, Accounts Payable and Payroll numbers were carried over
+// from the calculator on foreyessolutions.com (all verified against the live
+// page; see pricing-logic.md in the project notes). The two Insurance Billing
+// rates were confirmed by the owner. Practice Consulting has no published
+// price: the calculator says "Quoted on your Discovery Call" for it and adds
+// nothing to the number.
 //
 // Edit prices and wording here. The maths lives in src/lib/pricing.ts and the
 // layout in src/components/pages/pricing/.
@@ -55,7 +56,7 @@ export const pricing = {
       { upTo: 7_500_000, monthly: 1399, label: "$5M to $7.5M" },
       { upTo: 10_000_000, monthly: 1599, label: "$7.5M to $10M" },
       { upTo: null, monthly: null, label: "Over $10M" },
-    ] satisfies RevenueTier[],
+    ],
     // The first location is in the base price; each further one adds this.
     // The current site prices up to 10 and labels the top stop "10+".
     locations: { min: 1, max: 10, perAdditional: 150 },
@@ -66,18 +67,33 @@ export const pricing = {
       { id: "15-to-20", label: "15 to 20", monthly: 100 },
       { id: "21-or-more", label: "21 or more", monthly: null },
     ] satisfies AccountsOption[],
-    // Sales tax on what the practice sells (optical), not income tax. On the
-    // current site this box sits beside payroll and bill pay. UNCONFIRMED:
-    // whether the firm keeps this add-on, and which service it belongs under.
-    salesTaxFiling: { monthly: 100 },
+    // Sales tax filing on what the practice sells (optical), $100 a month on
+    // the current site. Switched off: the new site sells no tax filing other
+    // than payroll tax filings inside Payroll. Set `offered` to true to bring
+    // the checkbox, its estimate line and its summary line back.
+    salesTaxFiling: { monthly: 100, offered: false as boolean },
   },
-  // Old site: "Bill Pay?" slider, 1 to "75+". 75 is priced; nothing above is.
+  // A percentage of net receipts (the owner's wording; do not define it
+  // further). Vision plan billing also carries "applicable lab fees", which
+  // have no published amount and are never added to the number: the words
+  // appear beside it instead.
+  insuranceBilling: {
+    medicalRate: 0.08,
+    visionRate: 0.05,
+    /** Largest monthly figure the two inputs accept (a typing guard, not a price rule). */
+    maxMonthlyReceipts: 9_999_999,
+  },
+  // Priced per bill paid per month. 75 is priced; nothing above is.
   accountsPayable: { base: 99, included: 10, perAdditional: 6, min: 1, max: 75 } satisfies SteppedRule,
-  // Old site: "Payroll" slider, 1 to "50+". 50 is priced; nothing above is.
+  // Priced per employee paid. 50 is priced; nothing above is.
   payroll: { base: 149, included: 10, perAdditional: 19, min: 1, max: 50 } satisfies SteppedRule,
   // One-time, shown separately, never added to the monthly figure.
   implementation: { oneTime: 500 },
 } as const;
+
+// Checked here rather than inline so each tier keeps its literal type (other
+// modules read the first tier's price as a number, not `number | null`).
+pricing.bookkeeping.revenueTiers satisfies readonly RevenueTier[];
 
 export type AccountsOptionId = (typeof pricing.bookkeeping.accounts)[number]["id"];
 
@@ -87,7 +103,7 @@ export type AccountsOptionId = (typeof pricing.bookkeeping.accounts)[number]["id
 
 export const calculatorCopy = {
   heading: "Start Your Estimate",
-  lede: "Switch on the services you want and set the size of your practice. Bookkeeping, Accounts Payable, and Payroll are priced here. Insurance Billing and Practice Consulting are quoted on your Discovery Call.",
+  lede: "Switch on the services you want and set the size of your practice. Bookkeeping, Insurance Billing, Accounts Payable, and Payroll are priced here. Practice Consulting is quoted on your Discovery Call.",
   supportingHeading: "Already on our books? We can also run your bills and your payroll.",
   estimateLabel: "Your estimate",
   perMonth: "per month",
@@ -132,45 +148,47 @@ export const serviceCopy = {
     name: "Insurance Billing",
     blurb:
       "Claims reviewed before they go out, payments posted, denials appealed, and A/R followed up daily.",
-    note: "Switch this on and we’ll come to your Discovery Call ready to quote it. It adds nothing to the number here.",
-    optional: "Two optional questions. Your answers travel with your estimate so the call starts further along.",
-    // These two questions are NOT pricing inputs. They only go into the lead
-    // summary. The answer bands are placeholders for the firm to adjust.
-    providers: {
-      label: "Providers who bill insurance",
-      options: ["1", "2 to 3", "4 to 6", "7 or more"],
+    /** The pill on the card before any amount is entered. */
+    rates: "Medical 8%, vision 5% of net receipts",
+    /** The same two rates, short enough for the estimate card and the mobile bar. */
+    ratesShort: "8% medical, 5% vision",
+    ratesBasis: "of net receipts",
+    intro:
+      "Enter your estimated monthly net receipts from medical plans and from vision plans, and both join your estimate. Leave them blank and you’ll see the two rates.",
+    medical: {
+      name: "Medical plan billing",
+      rate: "8% of net receipts",
+      label: "Monthly net receipts from medical plans",
+      hint: "Medical plan billing is 8% of net receipts.",
     },
-    claims: {
-      label: "Claims sent in a typical month",
-      options: ["Under 200", "200 to 500", "500 to 1,000", "Over 1,000"],
+    vision: {
+      name: "Vision plan billing",
+      rate: "5% of net receipts",
+      label: "Monthly net receipts from vision plans",
+      hint: "Vision plan billing is 5% of net receipts, plus applicable lab fees.",
     },
-    notSure: "Not sure",
+    labFees: "plus applicable lab fees",
   },
   accountsPayable: {
     name: "Accounts Payable",
     blurb: "Frames, lab, and rent bills approved and paid on time through Bill.com.",
     from: "From $99 a month",
-    // UNCONFIRMED UNIT. The current site's slider is labelled only
-    // "Bill Pay?" (1 to 75+) and never says what it counts. Bills paid per
-    // month is the likely meaning; confirm with the firm before launch.
     count: {
       label: "Bills paid per month",
-      hint: "$99 a month covers the first 10. Each one above 10 adds $6.",
+      hint: "$99 a month covers the first 10 bills. Each bill above 10 adds $6.",
       unit: ["bill a month", "bills a month"],
-      overMax: "More than 75? We’ll quote it on your Discovery Call.",
+      overMax: "More than 75 bills a month? We’ll quote it on your Discovery Call.",
     },
   },
   payroll: {
     name: "Payroll",
     blurb: "Pay runs, payroll tax filings, and year-end forms through Gusto.",
     from: "From $149 a month",
-    // UNCONFIRMED UNIT. The current site's slider is labelled only "Payroll"
-    // (1 to 50+). Employees paid is the likely meaning; confirm with the firm.
     count: {
       label: "Employees paid",
-      hint: "$149 a month covers the first 10. Each one above 10 adds $19.",
+      hint: "$149 a month covers the first 10 employees. Each employee above 10 adds $19.",
       unit: ["employee", "employees"],
-      overMax: "More than 50? We’ll quote it on your Discovery Call.",
+      overMax: "More than 50 employees? We’ll quote it on your Discovery Call.",
     },
   },
   practiceConsulting: {
@@ -205,8 +223,8 @@ export const leadCopy = {
 
 export const heroCopy = {
   eyebrow: "Pricing Calculator",
-  title: "See what it costs",
-  highlight: "for a practice like yours.",
+  title: "See what it costs for",
+  highlight: "a practice like yours.",
   lede: "Get a clear, upfront estimate of what working with ForEyes Books & Billing could cost. Pick your services, set the size of your practice, and the number updates as you go.",
   note: "No hidden fees. No surprise invoices. Your formal quote comes on a Discovery Call.",
 } as const;
@@ -214,23 +232,27 @@ export const heroCopy = {
 export const includedCopy = {
   eyebrow: "What you’re paying for",
   title: "What’s Included at Every Level",
-  lede: "Your revenue band sets the Bookkeeping price. It doesn’t change the work we do each month.",
+  lede: "Your revenue band sets the Bookkeeping price, and your net receipts set the Insurance Billing price. Neither changes the work we do each month.",
   bookkeeping: {
     name: "Bookkeeping",
-    tag: "Priced in the calculator",
+    tag: "From $399 a month",
+    pricing:
+      "Set by your annual revenue, your number of locations, and how many accounts we reconcile.",
     items: [
       "A Custom Chart of Accounts that separates medical exam revenue from optical sales, and optical cost of goods from overhead",
       "Every account reconciled to its statement, every month",
       "A quality control manager’s review of every report before you see it",
       "Reviewed reports in your client portal by the 10th business day",
-      "A dedicated account manager who meets whenever a number needs explaining",
+      "A dedicated account manager, one meeting away when a number needs explaining",
       "An annual review that confirms your books are tax-ready",
     ],
     link: { label: "Get Your Books in Order", href: "/services/bookkeeping" },
   },
   insuranceBilling: {
     name: "Insurance Billing",
-    tag: QUOTED_ON_CALL,
+    tag: "8% medical, 5% vision",
+    pricing:
+      "Medical plan billing is 8% of net receipts. Vision plan billing is 5% of net receipts, plus applicable lab fees.",
     items: [
       "Claims reviewed before submission",
       "Payments posted",
@@ -256,9 +278,9 @@ export const pricingFaqs: Faq[] = [
       "Three things: your annual revenue, your number of locations, and how many bank and credit card accounts we reconcile. The first location and up to eight connected accounts are in the base price. Each additional location adds $150 a month.",
   },
   {
-    question: "Why doesn’t Insurance Billing show a price?",
+    question: "How is Insurance Billing priced?",
     answer:
-      "Insurance Billing is quoted on your Discovery Call, once we’ve learned about your practice. Switch it on in the calculator and it travels with your estimate, so we arrive ready to quote it.",
+      "As a percentage of net receipts. Medical plan billing is 8% of net receipts. Vision plan billing is 5% of net receipts, plus applicable lab fees. Enter your estimated monthly net receipts from each in the calculator and both are added to your estimate. Leave them blank and it shows the two rates.",
   },
   {
     question: "What is the $500 implementation fee?",
@@ -268,17 +290,12 @@ export const pricingFaqs: Faq[] = [
   {
     question: "Are there hidden fees?",
     answer:
-      "No hidden fees and no surprise invoices. The calculator shows your monthly estimate and the one-time $500 implementation fee. Additional onboarding and cleanup fees may apply for bookkeeping clients, depending on your start date, and your formal quote comes on your Discovery Call.",
+      "No hidden fees and no surprise invoices. The calculator shows your monthly estimate and the one-time $500 implementation fee. Two things sit outside the number: applicable lab fees on vision plan billing, and any additional onboarding and cleanup fees for bookkeeping clients, which depend on your start date. We’ll give you a formal quote on your Discovery Call.",
   },
   {
     question: "What does “Contact us for a Custom Quote” mean?",
     answer:
       "The calculator prices Bookkeeping up to $10 million in annual revenue and up to 20 connected accounts. Past either line we quote the work individually. Send us your selections and we’ll take it from there.",
-  },
-  {
-    question: "Is sales tax filing the same as tax preparation?",
-    answer:
-      "No. Sales tax filing covers the sales tax your practice collects, such as on optical sales. We don’t prepare tax returns. We hand your CPA clean, reviewed books.",
   },
   {
     question: "Does the Discovery Call cost anything?",
@@ -300,7 +317,7 @@ export const heroSteps = [
   },
   {
     title: "Set the size of your practice",
-    body: "Annual revenue, locations, and connected accounts. The number updates as you go.",
+    body: "Annual revenue, locations, and your monthly net receipts from medical and vision plans.",
   },
   {
     title: "Send it and book your Discovery Call",

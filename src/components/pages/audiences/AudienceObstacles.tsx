@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { AudienceContent } from "@/content/audiences/types";
+import { Illustration } from "@/components/ui/Art";
 import { Icon } from "@/components/ui/Icon";
 import { Container, Section, SectionHeading } from "@/components/ui/Layout";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -13,9 +14,19 @@ export function AudienceObstacles({ obstacles }: { obstacles: AudienceContent["o
   return (
     <Section tone="white" aria-labelledby={obstacles.id}>
       <Container size="wide">
-        <Reveal>
-          <SectionHeading id={obstacles.id} eyebrow={obstacles.eyebrow} title={obstacles.title} lede={obstacles.lede} />
-        </Reveal>
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:items-end lg:gap-16">
+          <Reveal>
+            <SectionHeading id={obstacles.id} eyebrow={obstacles.eyebrow} title={obstacles.title} lede={obstacles.lede} />
+          </Reveal>
+          <Reveal delay={0.1} y={36}>
+            <Illustration
+              name={obstacles.picture.name}
+              panel={obstacles.picture.panel}
+              sizes="(min-width: 1024px) 26rem, 92vw"
+              className="mx-auto w-full max-w-[26rem] lg:mx-0"
+            />
+          </Reveal>
+        </div>
 
         <Stagger as="ol" className="mt-14 grid gap-4">
           {obstacles.items.map((item, i) => (

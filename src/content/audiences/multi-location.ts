@@ -1,6 +1,6 @@
 import type { AudienceContent } from "./types";
 
-// Copy for /who-we-serve/multi-location-practices. None of the four client
+// Copy for /who-we-serve/multi-location-practices. None of the six client
 // testimonials speaks to running several offices, so this page carries the
 // founder's own words instead (from the current About page).
 export const multiLocation: AudienceContent = {
@@ -26,6 +26,7 @@ export const multiLocation: AudienceContent = {
     eyebrow: "The obstacles",
     title: "What gets harder with every location.",
     lede: "As practices expand, new obstacles emerge. These are the five we help multi-location owners get past.",
+    picture: { name: "multi-location", panel: "navy" },
     items: [
       {
         title: "Financials that live in separate places.",
@@ -142,6 +143,7 @@ export const multiLocation: AudienceContent = {
     ],
     aside:
       "After onboarding, the day-to-day bookkeeping for your practices is off your plate. You review, compare, and decide.",
+    picture: { name: "spot-dashboard", panel: "yellow", fit: "pad" },
   },
   proof: {
     kind: "founder",

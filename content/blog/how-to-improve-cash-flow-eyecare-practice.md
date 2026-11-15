@@ -40,11 +40,11 @@ True renegotiation opportunities have narrowed as prices have risen across the b
 
 ## Use a Rolling Cash Flow Forecast Built on One Metric
 
-Forecasting practice cash flow doesn't have to be complicated. The most actionable approach is to track your average revenue per doctor per full clinic day, then use that number to project income for each upcoming quarter based on how many days each doctor is scheduled to work.
+Forecasting practice cash flow doesn't have to be complicated. The most practical approach is to track your average revenue per doctor per full clinic day, then use that number to project income for each upcoming quarter based on how many days each doctor is scheduled to work.
 
-This single metric cuts through the noise. It grounds your cash flow optimization in real operational data, gives you a quarterly planning tool that's straightforward to update, and helps you spot gaps far enough in advance to act.
+This single metric cuts through the noise. It grounds your cash flow planning in real operational data, gives you a quarterly planning tool that's straightforward to update, and helps you spot gaps far enough in advance to act.
 
-Cash flow optimization in an eyecare practice is largely a discipline problem, not a volume problem. Tighten your revenue cycle, price accurately, turn inventory into cash, collect what you're owed, watch your vendor costs, and forecast with a metric you trust. That's a stronger financial foundation than any amount of additional scheduling can build.
+Cash flow in an eyecare practice is largely a discipline problem, not a volume problem. Tighten your revenue cycle, price accurately, turn inventory into cash, collect what you're owed, watch your vendor costs, and forecast with a metric you trust. That's a stronger financial foundation than any amount of additional scheduling can build.
 
 If you want help identifying where your practice is losing ground, we're glad to start with your fee schedule and go from there.
 

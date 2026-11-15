@@ -97,8 +97,8 @@ export const hub = {
     eyebrow: "Wherever you are",
     title: "Wherever you practice, the work gets done the same way.",
     body: [
-      "Our team is fully remote and works with eyecare practices across the country. Location won’t limit the quality or speed of support you receive.",
-      "Payments and paychecks do not wait on geography.",
+      "We’re a fully remote team headquartered in Nashville, serving eyecare practices nationwide. Location won’t limit the quality or speed of support you receive.",
+      "Payments and paychecks don’t wait on geography.",
     ],
     rows: [
       {

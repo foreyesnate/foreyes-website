@@ -20,6 +20,7 @@ import {
   serviceCopy,
   type AccountsOptionId,
 } from "@/content/pricing";
+import { Illustration } from "@/components/ui/Art";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { Container, Section, SectionHeading } from "@/components/ui/Layout";
 import { Reveal } from "@/components/motion/Reveal";
@@ -34,15 +35,16 @@ import {
   formatMoney,
   initialPricingState,
   locationsAddOn,
+  medicalBillingMonthly,
   payrollMonthly,
+  percent,
   pricingReducer,
+  visionBillingMonthly,
 } from "@/lib/pricing";
-import { CheckRow, ChoiceGroup, PriceTag, RangeField, Switch, type Choice } from "./controls";
-import { EstimateCard, EstimateFigure, MobileEstimateBar } from "./Estimate";
+import { CheckRow, ChoiceGroup, MoneyField, PriceTag, RangeField, Switch, type Choice } from "./controls";
+import { EstimateCard, EstimateExtras, EstimateFigure, MobileEstimateBar } from "./Estimate";
 
 type Step = "build" | "contact" | "sent";
-
-const NOT_SURE = "__not-sure__";
 
 /** One service: a header with a real switch, and controls that open when it is on. */
 function ServiceCard({
@@ -142,12 +144,16 @@ function SentPanel({ onShown }: { onShown: () => void }) {
   }, [onShown]);
   return (
     <div>
-      <div className="rounded-[1.75rem] bg-teal-100 p-7 sm:p-8">
-        <span className="grid h-14 w-14 place-items-center rounded-full bg-yellow text-ink">
-          <Icon name="check" size={28} strokeWidth={2.6} />
-        </span>
-        <h3 className="text-heading mt-5">{leadCopy.thanksTitle}</h3>
-        <p className="mt-3 max-w-xl text-ink-700">{leadCopy.thanksBody}</p>
+      <div className="grid items-center gap-x-8 gap-y-6 rounded-[1.75rem] bg-teal-100 p-7 sm:grid-cols-[minmax(0,1fr)_minmax(0,16rem)] sm:p-8">
+        <div>
+          <span className="grid h-14 w-14 place-items-center rounded-full bg-yellow text-ink">
+            <Icon name="check" size={28} strokeWidth={2.6} />
+          </span>
+          <h3 className="text-heading mt-5">{leadCopy.thanksTitle}</h3>
+          <p className="mt-3 max-w-xl text-ink-700">{leadCopy.thanksBody}</p>
+        </div>
+        {/* The page's one picture: the call that the estimate leads to. */}
+        <Illustration name="discovery-call" panel="none" sizes="16rem" className="mx-auto w-full max-w-[16rem]" />
       </div>
       <BookingCalendar className="mt-5 shadow-soft" />
     </div>
@@ -189,7 +195,12 @@ export function PricingCalculator() {
     if (previousStep.current === step) return;
     const from = previousStep.current;
     previousStep.current = step;
-    if (step === "sent") return;
+    if (step === "sent") {
+      // The thank-you is much shorter than the form it replaces. Bring it to
+      // the top so it is not left above the viewport. (LeadForm announces it.)
+      gridRef.current?.scrollIntoView({ block: "start", behavior: "instant" });
+      return;
+    }
     const target = step === "contact" ? formHeadingRef.current : from === "contact" ? controlsRef.current : null;
     if (!target) return;
     // A whole view has been swapped, so jump there rather than glide.
@@ -223,10 +234,15 @@ export function PricingCalculator() {
     label: option.label,
     note: option.monthly === null ? "Custom quote" : option.monthly === 0 ? "Included" : `+${formatMoney(option.monthly)}/mo`,
   }));
-  const optionalChoices = (options: readonly string[]): Choice<string>[] => [
-    ...options.map((option) => ({ value: option, label: option })),
-    { value: NOT_SURE, label: ib.notSure },
-  ];
+
+  const { medicalReceipts, visionReceipts } = insuranceBilling;
+  const medicalPrice = medicalReceipts ? medicalBillingMonthly(medicalReceipts) : null;
+  const visionPrice = visionReceipts ? visionBillingMonthly(visionReceipts) : null;
+  const billingMonthly = (medicalPrice ?? 0) + (visionPrice ?? 0);
+  const billingStatus =
+    insuranceBilling.on && (medicalPrice !== null || visionPrice !== null)
+      ? `${formatMoney(billingMonthly)} a month${visionPrice !== null ? " + lab fees" : ""}`
+      : ib.rates;
 
   const apMonthly = accountsPayableMonthly(accountsPayable.count);
   const payrollPrice = payrollMonthly(payroll.count);
@@ -320,13 +336,15 @@ export function PricingCalculator() {
                       onChange={(id) => dispatch({ type: "setAccounts", id })}
                     />
                     <div className="grid gap-3">
-                      <CheckRow
-                        label={bk.salesTaxFiling.label}
-                        hint={bk.salesTaxFiling.hint}
-                        checked={bookkeeping.salesTaxFiling}
-                        onChange={(value) => dispatch({ type: "setSalesTaxFiling", value })}
-                        tag={<PriceTag>+{formatMoney(pricing.bookkeeping.salesTaxFiling.monthly)}/mo</PriceTag>}
-                      />
+                      {pricing.bookkeeping.salesTaxFiling.offered ? (
+                        <CheckRow
+                          label={bk.salesTaxFiling.label}
+                          hint={bk.salesTaxFiling.hint}
+                          checked={bookkeeping.salesTaxFiling}
+                          onChange={(value) => dispatch({ type: "setSalesTaxFiling", value })}
+                          tag={<PriceTag>+{formatMoney(pricing.bookkeeping.salesTaxFiling.monthly)}/mo</PriceTag>}
+                        />
+                      ) : null}
                       <CheckRow
                         label={bk.holdingCompany.label}
                         hint={bk.holdingCompany.hint}
@@ -342,22 +360,39 @@ export function PricingCalculator() {
                     blurb={ib.blurb}
                     on={insuranceBilling.on}
                     onToggle={(on) => dispatch({ type: "toggle", service: "insuranceBilling", on })}
-                    status={QUOTED_ON_CALL}
-                    statusTone="teal"
+                    status={billingStatus}
                   >
-                    <QuotedNote>{ib.note}</QuotedNote>
-                    <p className="-mb-2 text-[0.9375rem] text-ink-500">{ib.optional}</p>
-                    <ChoiceGroup
-                      legend={ib.providers.label}
-                      options={optionalChoices(ib.providers.options)}
-                      value={insuranceBilling.providers ?? NOT_SURE}
-                      onChange={(value) => dispatch({ type: "setBillingProviders", value: value === NOT_SURE ? null : value })}
+                    <p className="-mb-1 max-w-xl text-ink-500">{ib.intro}</p>
+                    <MoneyField
+                      label={ib.medical.label}
+                      hint={ib.medical.hint}
+                      value={medicalReceipts}
+                      max={pricing.insuranceBilling.maxMonthlyReceipts}
+                      onChange={(value) => dispatch({ type: "setMedicalReceipts", value })}
+                      effect={
+                        <PriceTag tone={medicalPrice === null ? "muted" : "navy"}>
+                          {medicalPrice === null
+                            ? ib.medical.rate
+                            : `${percent(pricing.insuranceBilling.medicalRate)} = ${formatMoney(medicalPrice)}/mo`}
+                        </PriceTag>
+                      }
                     />
-                    <ChoiceGroup
-                      legend={ib.claims.label}
-                      options={optionalChoices(ib.claims.options)}
-                      value={insuranceBilling.claims ?? NOT_SURE}
-                      onChange={(value) => dispatch({ type: "setBillingClaims", value: value === NOT_SURE ? null : value })}
+                    <MoneyField
+                      label={ib.vision.label}
+                      hint={ib.vision.hint}
+                      value={visionReceipts}
+                      max={pricing.insuranceBilling.maxMonthlyReceipts}
+                      onChange={(value) => dispatch({ type: "setVisionReceipts", value })}
+                      effect={
+                        <>
+                          <PriceTag tone={visionPrice === null ? "muted" : "navy"}>
+                            {visionPrice === null
+                              ? ib.vision.rate
+                              : `${percent(pricing.insuranceBilling.visionRate)} = ${formatMoney(visionPrice)}/mo`}
+                          </PriceTag>
+                          <span className="text-[0.875rem] font-medium text-ink-700">{ib.labFees}</span>
+                        </>
+                      }
                     />
                   </ServiceCard>
                 </div>
@@ -483,11 +518,7 @@ export function PricingCalculator() {
                       <div className="mt-1.5">
                         <EstimateFigure estimate={estimate} size="sm" />
                       </div>
-                      {estimate.hasPriced && !estimate.customQuote && estimate.quotedOnCall.length ? (
-                        <p className="mt-1 text-[0.8125rem] text-white/75">
-                          + {estimate.quotedOnCall.join(", ")} (quoted on your call)
-                        </p>
-                      ) : null}
+                      <EstimateExtras estimate={estimate} className="mt-2 text-[0.8125rem]" />
                     </div>
 
                     <details className="group mt-6 rounded-[1.5rem] bg-white">
