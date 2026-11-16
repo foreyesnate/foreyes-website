@@ -8,7 +8,7 @@ export const blogCopy = {
   eyebrow: "The ForEyes blog",
   title: "Smart Reads for ODs",
   lede: "Our blog helps you simplify your numbers and grow smarter, one post at a time.",
-  indexHref: "/resources/blog",
+  indexHref: "/blog",
 } as const;
 
 /** How each category is drawn: its icon and the tint of its generated cover. */
@@ -130,7 +130,7 @@ export const resourceCards: ResourceCard[] = [
     title: "Blog",
     body: "Articles for practice owners on reading a P&L, healthy expense ratios, aging A/R, payroll, and cash flow. Each one turns a business topic into something you can use this month.",
     cta: "Read Our Blog",
-    href: "/resources/blog",
+    href: "/blog",
   },
   {
     key: "faq",
@@ -138,7 +138,7 @@ export const resourceCards: ResourceCard[] = [
     title: "FAQs",
     body: "Straight answers to the questions eyecare practice owners ask most, from bookkeeping and billing to payroll and consulting, so you know what to expect before your Discovery Call.",
     cta: "Explore FAQs",
-    href: "/resources/faq",
+    href: "/faq",
   },
   {
     key: "pricing",

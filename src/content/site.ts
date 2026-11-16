@@ -133,12 +133,12 @@ export const mainNav: NavGroup[] = [
     links: [
       {
         label: "Blog",
-        href: "/resources/blog",
+        href: "/blog",
         description: "Smart reads for ODs.",
       },
       {
         label: "FAQs",
-        href: "/resources/faq",
+        href: "/faq",
         description: "Straight answers before you book a call.",
       },
     ],

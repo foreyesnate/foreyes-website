@@ -31,7 +31,7 @@ export function FaqSection({
   lede,
   items,
   tone = "stone",
-  moreHref = "/resources/faq",
+  moreHref = "/faq",
   jsonLd = true,
 }: {
   id?: string;

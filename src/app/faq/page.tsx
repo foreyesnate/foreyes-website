@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Eyecare Bookkeeping & Billing FAQs",
   description:
     "Straight answers for optometry practice owners about bookkeeping, insurance billing, accounts payable, payroll, consulting, pricing, and how we work with you.",
-  alternates: { canonical: "/resources/faq" },
+  alternates: { canonical: "/faq" },
 };
 
 // Short forms of four answers from the list below, for the hero card.

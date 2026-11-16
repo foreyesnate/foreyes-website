@@ -1,4 +1,4 @@
-// Every question on /resources/faq, grouped by topic.
+// Every question on /faq, grouped by topic.
 //
 // Source: the FAQ page on foreyessolutions.com plus the FAQ blocks at the
 // bottom of each service and audience page. Good answers are kept close to
@@ -25,7 +25,7 @@ export type FaqEntry = {
 };
 
 export type FaqGroup = {
-  /** Anchor on the page: /resources/faq#bookkeeping */
+  /** Anchor on the page: /faq#bookkeeping */
   id: string;
   title: string;
   /** Short label for the topic pills. */

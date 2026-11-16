@@ -227,7 +227,7 @@ export default function ContactPage() {
               <div className="flex flex-wrap items-center gap-x-7 gap-y-1">
                 <p className="text-ink-500">{reassurance.aside}</p>
                 <TextLink href={site.pricingHref} className="min-h-11">Estimate Your Price</TextLink>
-                <TextLink href="/resources/faq" className="min-h-11">Read the FAQs</TextLink>
+                <TextLink href="/faq" className="min-h-11">Read the FAQs</TextLink>
               </div>
             </div>
           </Reveal>

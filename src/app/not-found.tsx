@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const moreLinks = [
   { label: "Contact Us", href: "/contact" },
   { label: "Pricing Calculator", href: site.pricingHref },
-  { label: "FAQs", href: "/resources/faq" },
+  { label: "FAQs", href: "/faq" },
 ];
 
 export default function NotFound() {

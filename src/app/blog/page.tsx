@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Blog: Smart Reads for ODs",
   description:
     "Articles for independent eyecare practice owners on bookkeeping, insurance billing, A/R, payroll, expense ratios, and cash flow, from ForEyes Books & Billing.",
-  alternates: { canonical: "/resources/blog" },
+  alternates: { canonical: "/blog" },
 };
 
 const flagshipIcons: Record<string, IconName> = {

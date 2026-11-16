@@ -20,9 +20,9 @@ const pages: { path: string; priority: number }[] = [
   { path: "/about-us/our-team", priority: 0.6 },
   { path: "/contact", priority: 0.8 },
   { path: "/resources", priority: 0.5 },
-  { path: "/resources/blog", priority: 0.6 },
-  { path: "/resources/faq", priority: 0.6 },
-  { path: "/privacy-policy", priority: 0.2 },
+  { path: "/blog", priority: 0.6 },
+  { path: "/faq", priority: 0.6 },
+  { path: "/privacy", priority: 0.2 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

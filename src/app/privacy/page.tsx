@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "The ForEyes Books & Billing privacy policy: what personal information this website collects, how it is used and shared, cookies, and your right to deletion.",
-  alternates: { canonical: "/privacy-policy" },
+  alternates: { canonical: "/privacy" },
 };
 
 function Block({ block }: { block: PrivacyBlock }) {

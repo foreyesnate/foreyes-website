@@ -27,8 +27,8 @@ const columns = [
     title: "Resources",
     links: [
       { label: "Pricing Calculator", href: "/pricing-calculator" },
-      { label: "Blog", href: "/resources/blog" },
-      { label: "FAQs", href: "/resources/faq" },
+      { label: "Blog", href: "/blog" },
+      { label: "FAQs", href: "/faq" },
     ],
   },
 ];
@@ -111,7 +111,7 @@ export function Footer() {
           </p>
           <ul className="flex gap-6">
             <li>
-              <Link href="/privacy-policy" className="inline-flex min-h-11 items-center transition-colors hover:text-white">
+              <Link href="/privacy" className="inline-flex min-h-11 items-center transition-colors hover:text-white">
                 Privacy Policy
               </Link>
             </li>

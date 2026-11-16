@@ -300,7 +300,7 @@ const tools = [
     title: "Frequently Asked Questions",
     body: "From onboarding to ongoing support, straight answers before you book a call.",
     cta: "Get Answers",
-    href: "/resources/faq",
+    href: "/faq",
     art: "all-caught-up" as IllustrationName,
   },
 ];

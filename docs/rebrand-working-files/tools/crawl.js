@@ -54,7 +54,7 @@ const BASE = 'http://localhost:3220';
   }
   // legacy redirects
   const ctx = await browser.newContext();
-  for (const old of ['/services/billing-services', '/services/accounts-receivable-management', '/services/accounting', '/services/accounting/accounts-payable', '/services/practice-consulting/financial-consulting', '/services/tax-services', '/services/tax-services/tax-planning', '/services/tax-services/tax-advisory', '/blog/quarterly-taxes-optometrists', '/book-a-call', '/about']) {
+  for (const old of ['/services/billing-services', '/services/accounts-receivable-management', '/services/accounting', '/services/accounting/accounts-payable', '/services/practice-consulting/financial-consulting', '/services/tax-services', '/services/tax-services/tax-planning', '/services/tax-services/tax-advisory', '/blog/quarterly-taxes-optometrists', '/book-a-call', '/about', '/privacy-policy', '/blog/privacy-policy', '/resources/blog', '/resources/faq']) {
     const r = await ctx.request.get(BASE + old, { maxRedirects: 5 });
     if (r.status() !== 200) problems.push(`REDIRECT ${old} -> ${r.status()} ${r.url()}`);
   }
