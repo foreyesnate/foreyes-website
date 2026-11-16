@@ -45,6 +45,10 @@ export function LoopVideo({
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     setAllowed(!reduce);
     if (reduce) return;
+    // Phones get the lighter encode where the clip has one. Nothing has been
+    // fetched yet (preload="none"), so this only changes what play() loads.
+    const small = "small" in clip ? clip.small : undefined;
+    if (small && window.matchMedia("(max-width: 640px)").matches) video.src = small;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !userPaused.current) {
@@ -57,7 +61,7 @@ export function LoopVideo({
     );
     observer.observe(video);
     return () => observer.disconnect();
-  }, []);
+  }, [clip]);
 
   const toggle = () => {
     const video = ref.current;

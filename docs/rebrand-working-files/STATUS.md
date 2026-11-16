@@ -1,6 +1,6 @@
 # Rebrand build: status
 
-Updated 2026-11-15. Everything here is committed and pushed.
+Updated 2026-11-16. Everything here is committed and pushed.
 
 ## Done
 
@@ -20,21 +20,32 @@ Updated 2026-11-15. Everything here is committed and pushed.
   no console or hydration errors (normal and reduced motion), no overflow at
   390px, and all legacy redirects resolving.
 
-## Paused part-way (finish later)
+## Final reviews (finished 2026-11-16)
 
-Both were stopped at the owner's request; any edits they had already made are
-committed. `tools/final-review-workflow.js` holds their full instructions.
+1. **Cross-site visual sweep.** All 21 routes viewed at 1440 and 390, key
+   templates at 768 and 1024. Fixed: side columns that stuck with their bottoms
+   cut off on short screens (`ui/StickyColumn.tsx`), footer and audience
+   layouts at tablet widths, a stone gutter above the call-to-action band, and
+   pictures repeated across pages. Unused pictures: `spot-billing`,
+   `step-bill`.
+2. **Accessibility and performance audit.** Fixed: text contrast (155 measured
+   failures down to 17, all inside decorative graphics), focus rings that
+   follow the surface colour (534 weak or missing down to 0), headings
+   invisible without JavaScript, the About timeline under reduced motion, the
+   mobile menu focus trap, broken `aria-controls`, overflow at 320px, and
+   lead-form error handling. Hero entrance is now CSS (`motion/Appear.tsx`),
+   so throttled-mobile LCP on the production build is about 2.3-2.5s (was
+   3.8-4.8s). Image `sizes` tightened; phones get a 720p homepage clip.
 
-1. **Cross-site visual sweep** (stopped near the end). Remaining: confirm the
-   look is consistent across pages at 360/390/768/1024/1280/1440, check the
-   header navigation between 1024 and 1280, de-duplicate pictures used on
-   several pages, check the pricing calculator's pinned mobile bar, and the
-   homepage testimonial panel that can look empty mid-transition.
-2. **Accessibility and performance audit** (stopped early). Remaining:
-   measured colour contrast, accessible names, keyboard order and focus,
-   reduced-motion and no-JavaScript checks, zoom to 200%, largest-contentful-
-   paint and layout-shift measurements, image sizes versus rendered size,
-   oversized files in `public/`, and form robustness.
+Left open by the audit:
+
+- Looping illustrations and the ticker stop under reduced motion but have no
+  on-page pause control (WCAG 2.2.2). Adding one is a design decision.
+- Two decorative "eye chart" graphics (blog index, FAQ) keep deliberately
+  defocused text below 3:1 contrast.
+- Motion (52 KB gzipped) ships on every page through the header.
+- The 404 page gets no font preloads, so it shifts slightly (CLS 0.065).
+- `books.mp4` (675 KB) was not re-encoded.
 
 ## Waiting on the owner
 

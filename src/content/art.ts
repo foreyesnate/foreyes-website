@@ -51,6 +51,9 @@ export type PhotoName = keyof typeof photos;
 export const videos = {
   dispensary: {
     src: "/art/video/dispensary.mp4",
+    // 720px-wide encode (about 0.5 MB instead of 1.1 MB) played on phones,
+    // where the clip sits under a dark scrim and is at most 430px wide.
+    small: "/art/video/dispensary-720.mp4",
     poster: "/art/video/dispensary-poster.jpg",
     width: 1280,
     height: 724,

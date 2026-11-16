@@ -52,7 +52,7 @@ export function ProcessSteps({
               <motion.div className="h-full w-full origin-top rounded-full bg-yellow" style={{ scaleY: progress }} />
             </div>
             {steps.map((step, i) => (
-              <Reveal as="li" key={step.title} delay={0.04 * i} className="relative flex gap-6">
+              <Reveal as="li" key={step.title} delay={0.04 * i} className="relative flex gap-4 min-[360px]:gap-6">
                 <span
                   className={cn(
                     "tabular relative z-10 grid h-[3.625rem] w-[3.625rem] shrink-0 place-items-center rounded-2xl font-display text-xl font-bold shadow-soft",
@@ -65,7 +65,8 @@ export function ProcessSteps({
                   {step.meta ? (
                     <p className={cn("eyebrow mb-2", dark ? "text-teal-200" : "text-teal-700")}>{step.meta}</p>
                   ) : null}
-                  <h3 className="text-subheading hyphens-auto">{step.title}</h3>
+                  {/* A size down under 360px so a long first word ("Implementation") fits the card. */}
+                  <h3 className="text-subheading hyphens-auto max-[359px]:text-[1.125rem]">{step.title}</h3>
                   <div className={cn("mt-2.5", dark ? "text-white/75" : "text-ink-500")}>{step.body}</div>
                 </div>
               </Reveal>

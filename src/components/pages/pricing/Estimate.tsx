@@ -269,7 +269,7 @@ export function EstimateCard({
         tabIndex={0}
         role="group"
         aria-label="Estimate breakdown"
-        className="relative -mr-3 mt-5 min-h-0 flex-1 overflow-y-auto border-t border-white/10 pr-3 [mask-image:linear-gradient(to_bottom,black_calc(100%-1rem),transparent)] [scrollbar-color:rgb(255_255_255/0.3)_transparent] [scrollbar-width:thin]"
+        className="relative -mr-3 mt-5 min-h-0 flex-1 overflow-y-auto border-t border-white/10 pr-3 focus-visible:outline-offset-[-3px] [mask-image:linear-gradient(to_bottom,black_calc(100%-1rem),transparent)] [scrollbar-color:rgb(255_255_255/0.3)_transparent] [scrollbar-width:thin]"
       >
         <div className="pb-3">
           <EstimateLines estimate={estimate} />

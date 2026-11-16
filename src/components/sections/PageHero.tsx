@@ -64,7 +64,9 @@ export function PageHero({
           className={cn(
             "absolute -right-[20%] -top-[45%] h-[70rem] w-[70rem] rounded-full",
             light && "bg-[radial-gradient(closest-side,var(--color-teal-100),transparent)]",
-            tone === "navy" && "bg-[radial-gradient(closest-side,rgb(81_160_173/0.45),transparent)]",
+            // Below lg the glow's centre lands behind the breadcrumb and eyebrow, where
+            // at full strength it lightens the navy enough to cost small text its 4.5:1.
+            tone === "navy" && "bg-[radial-gradient(closest-side,rgb(81_160_173/0.45),transparent)] max-lg:opacity-60",
             tone === "ink" && "bg-[radial-gradient(closest-side,rgb(65_93_158/0.55),transparent)]",
             tone === "teal" && "bg-[radial-gradient(closest-side,rgb(255_255_255/0.3),transparent)]",
           )}
