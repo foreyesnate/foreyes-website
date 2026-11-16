@@ -71,6 +71,9 @@ export function PriceTag({
     <span
       className={cn(
         "tabular inline-flex h-8 shrink-0 items-center whitespace-nowrap rounded-full px-3 font-display text-[0.8125rem] font-semibold",
+        // On the narrowest phones a long tag ("Medical 8%, vision 5% of net
+        // receipts") wraps inside its pill instead of widening the page.
+        "max-[359px]:h-auto max-[359px]:min-h-8 max-[359px]:shrink max-[359px]:whitespace-normal max-[359px]:py-1 max-[359px]:leading-tight",
         tone === "navy" && "bg-navy-50 text-navy-700",
         tone === "teal" && "bg-teal-100 text-teal-800",
         tone === "yellow" && "bg-yellow-100 text-ink",
@@ -349,7 +352,7 @@ export function ChoiceGroup<T extends string>({
               />
               <span
                 className={cn(
-                  "flex min-h-12 items-center gap-2 rounded-full border-2 py-2 pl-3 pr-4 font-display text-[0.9375rem] font-semibold transition-colors duration-200 peer-focus-visible:outline-[3px] peer-focus-visible:outline-offset-[3px] peer-focus-visible:outline-yellow",
+                  "flex min-h-12 items-center gap-2 rounded-full border-2 py-2 pl-3 pr-4 font-display text-[0.9375rem] font-semibold transition-colors duration-200 peer-focus-visible:outline-[3px] peer-focus-visible:outline-offset-[3px] peer-focus-visible:outline-ink",
                   selected
                     ? "border-navy bg-navy text-white"
                     : "border-stone-300 bg-white text-ink hover:border-ink/50",

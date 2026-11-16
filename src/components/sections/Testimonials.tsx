@@ -76,7 +76,12 @@ export function Testimonials({
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.4fr] lg:gap-20">
           <Reveal>
             <SectionHeading id="proof-title" eyebrow="Client voices" title={title} lede={lede} />
-            <ul className="mt-10 grid gap-2" aria-label="Choose a testimonial">
+            <ul
+              className="mt-10 grid gap-2"
+              aria-label="Choose a testimonial"
+              // Keyboard visitors stop the rotation by tabbing in, as hover does.
+              onFocus={() => setPaused(true)}
+            >
               {items.map((person, i) => (
                 <li key={person.name}>
                   <button
@@ -114,7 +119,8 @@ export function Testimonials({
               ref={panelRef}
               onPointerEnter={() => setPaused(true)}
               className="relative flex min-h-[26rem] flex-col rounded-[2.5rem] bg-stone p-8 sm:p-12"
-              aria-live="polite"
+              // Announce a quote the visitor chose, never the timed rotation.
+              aria-live={paused ? "polite" : "off"}
             >
               <Icon name="quote" size={56} className="text-yellow" />
               {/* popLayout: the next quote comes into focus while the last one

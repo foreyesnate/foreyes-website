@@ -43,7 +43,7 @@ export function Footer() {
         className="bg-dots pointer-events-none absolute inset-0 text-white/[0.06] [mask-image:linear-gradient(to_bottom,black,transparent_70%)]"
       />
       <Container size="wide" className="relative pb-10 pt-20 sm:pt-24">
-        <div className="grid gap-14 lg:grid-cols-[1.15fr_2fr] lg:gap-20">
+        <div className="grid gap-14 xl:grid-cols-[1.15fr_2fr] xl:gap-20">
           <div>
             <Logo tone="light" className="h-14 w-fit" />
             <p className="mt-7 max-w-sm text-lg leading-relaxed text-white/70">

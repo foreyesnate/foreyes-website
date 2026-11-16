@@ -16,6 +16,7 @@ import { team, type TeamMember } from "@/content/team";
 import { Photo } from "@/components/ui/Art";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
+import { StickyColumn } from "@/components/ui/StickyColumn";
 import { Container, Eyebrow, Section, SectionHeading } from "@/components/ui/Layout";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { SplitFeature } from "@/components/sections/SplitFeature";
@@ -119,14 +120,16 @@ export function AboutStory() {
     <Section tone="white" aria-labelledby="story-title">
       <Container size="wide">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-20">
-          <Reveal className="lg:sticky lg:top-32 lg:self-start">
-            <SectionHeading id="story-title" eyebrow={story.eyebrow} title={story.title} />
-            <div className="text-lede mt-7 grid max-w-xl gap-5 text-ink-500">
-              {story.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
-          </Reveal>
+          <StickyColumn>
+            <Reveal>
+              <SectionHeading id="story-title" eyebrow={story.eyebrow} title={story.title} />
+              <div className="text-lede mt-7 grid max-w-xl gap-5 text-ink-500">
+                {story.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            </Reveal>
+          </StickyColumn>
           <Reveal delay={0.1} y={36} blur={false}>
             <AboutTimeline stops={timeline} />
           </Reveal>
@@ -218,34 +221,36 @@ export function AboutVisionValues() {
     <Section tone="stone" aria-labelledby="values-title">
       <Container size="wide">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-          <Reveal className="lg:sticky lg:top-32 lg:self-start">
-            <div className="relative overflow-hidden rounded-[2.5rem] bg-teal p-8 text-ink sm:p-11">
-              <div
-                aria-hidden="true"
-                className="bg-dots absolute inset-0 text-ink/[0.08] [mask-image:radial-gradient(80%_70%_at_100%_0%,black,transparent)]"
-              />
-              <div className="relative">
-                <h2 id="vision-title" className="eyebrow inline-flex items-center gap-2.5 !leading-normal">
-                  <span aria-hidden="true" className="inline-block h-2 w-2 rounded-full bg-yellow ring-[3px] ring-yellow/30" />
-                  {vision.heading}
-                </h2>
-                <p className="mt-6 font-display text-[clamp(1.625rem,1.2rem+1.6vw,2.5rem)] font-semibold leading-[1.12] tracking-[-0.03em]">
-                  {vision.statement}
-                </p>
-                <p className="mt-9 font-display text-sm font-semibold text-ink/75">{vision.proofLabel}</p>
-                <ul className="mt-4 grid gap-3">
-                  {vision.proof.map((item) => (
-                    <li key={item} className="flex items-center gap-3 font-medium">
-                      <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-ink text-white">
-                        <Icon name="check" size={14} strokeWidth={3} />
-                      </span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+          <StickyColumn>
+            <Reveal>
+              <div className="relative overflow-hidden rounded-[2.5rem] bg-teal p-8 text-ink sm:p-11">
+                <div
+                  aria-hidden="true"
+                  className="bg-dots absolute inset-0 text-ink/[0.08] [mask-image:radial-gradient(80%_70%_at_100%_0%,black,transparent)]"
+                />
+                <div className="relative">
+                  <h2 id="vision-title" className="eyebrow inline-flex items-center gap-2.5 !leading-normal">
+                    <span aria-hidden="true" className="inline-block h-2 w-2 rounded-full bg-yellow ring-[3px] ring-yellow/30" />
+                    {vision.heading}
+                  </h2>
+                  <p className="mt-6 font-display text-[clamp(1.625rem,1.2rem+1.6vw,2.5rem)] font-semibold leading-[1.12] tracking-[-0.03em]">
+                    {vision.statement}
+                  </p>
+                  <p className="mt-9 font-display text-sm font-semibold text-ink">{vision.proofLabel}</p>
+                  <ul className="mt-4 grid gap-3">
+                    {vision.proof.map((item) => (
+                      <li key={item} className="flex items-center gap-3 font-medium">
+                        <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-ink text-white">
+                          <Icon name="check" size={14} strokeWidth={3} />
+                        </span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-          </Reveal>
+            </Reveal>
+          </StickyColumn>
 
           <div>
             <Reveal>

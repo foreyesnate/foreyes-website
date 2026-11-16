@@ -12,7 +12,7 @@ const base =
 const variants: Record<Variant, string> = {
   // Yellow is the accent: one primary action per view.
   primary:
-    "bg-yellow text-ink shadow-[0_1px_0_rgb(255_255_255/0.5)_inset,0_10px_24px_-10px_rgb(252_186_2/0.9)] hover:bg-yellow-200 hover:-translate-y-0.5 focus-visible:outline-ink",
+    "bg-yellow text-ink shadow-[0_1px_0_rgb(255_255_255/0.5)_inset,0_10px_24px_-10px_rgb(252_186_2/0.9)] hover:bg-yellow-200 hover:-translate-y-0.5",
   ink: "bg-ink text-white hover:bg-navy hover:-translate-y-0.5",
   outline:
     "border-2 border-ink/15 bg-white/60 text-ink hover:border-ink hover:bg-white",

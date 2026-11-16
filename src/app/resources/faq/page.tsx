@@ -76,7 +76,7 @@ export default function FaqPage() {
                 aria-hidden="true"
                 className="bg-dots pointer-events-none absolute right-0 top-0 h-72 w-[28rem] text-white/10 [mask-image:radial-gradient(closest-side,black,transparent)]"
               />
-              <div className="relative grid items-center gap-x-14 gap-y-10 p-6 sm:p-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:p-14">
+              <div className="relative grid grid-cols-[minmax(0,1fr)] items-center gap-x-14 gap-y-10 p-6 sm:p-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:p-14">
                 <div>
                   <Eyebrow tone="light">Still have a question?</Eyebrow>
                   <h2 id="still-title" className="text-title mt-5">
@@ -87,10 +87,17 @@ export default function FaqPage() {
                     reach the team {site.hours}.
                   </p>
                   <div className="mt-9 flex flex-wrap items-center gap-3">
-                    <Button href="/contact#message" size="lg">
+                    {/* Under 360px the buttons fill the card and drop the arrow, so the label is never cut off. */}
+                    <Button href="/contact#message" size="lg" className="max-[359px]:w-full max-[359px]:px-5 max-[359px]:[&>svg]:hidden">
                       Send a Message
                     </Button>
-                    <Button href={site.bookingHref} size="lg" variant="light" arrow>
+                    <Button
+                      href={site.bookingHref}
+                      size="lg"
+                      variant="light"
+                      arrow
+                      className="max-[359px]:w-full max-[359px]:px-5 max-[359px]:[&>svg]:hidden"
+                    >
                       Book a Discovery Call
                     </Button>
                   </div>
@@ -115,7 +122,7 @@ export default function FaqPage() {
                 <Illustration
                   name="team-desk"
                   panel="teal"
-                  sizes="(min-width: 1024px) 34rem, 92vw"
+                  sizes="(min-width: 1024px) 28rem, (min-width: 640px) 73vw, 66vw"
                   className="rounded-[2rem] sm:p-8"
                 />
               </div>

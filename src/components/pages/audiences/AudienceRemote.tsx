@@ -28,25 +28,26 @@ export function AudienceRemote() {
               {remote.title}
             </h2>
             <p className="text-lede mt-6 max-w-xl text-white/80">{remote.body[0]}</p>
-            <p className="mt-5 max-w-xl font-display text-xl font-semibold tracking-[-0.015em] text-yellow">{remote.body[1]}</p>
+            <p className="mt-5 max-w-xl font-display text-xl font-bold tracking-[-0.015em] text-yellow">{remote.body[1]}</p>
             <dl className="mt-9 grid gap-4 border-t border-white/15 pt-7 sm:grid-cols-2">
-              <div className="flex items-start gap-3">
-                <Icon name="phone" size={20} className="mt-1 shrink-0 text-teal-200" />
-                <div>
-                  <dt className="text-sm text-white/65">Call us</dt>
-                  <dd>
-                    <a href={site.phone.href} className="inline-flex min-h-11 items-center font-display text-lg font-semibold underline decoration-yellow decoration-2 underline-offset-[6px] hover:decoration-4">
-                      {site.phone.display}
-                    </a>
-                  </dd>
-                </div>
+              {/* A <dl> group may only hold <dt> and <dd>, so each icon sits inside its <dt>. */}
+              <div className="relative pl-8">
+                <dt className="text-sm text-white/65">
+                  <Icon name="phone" size={20} className="absolute left-0 top-1 text-teal-200" />
+                  Call us
+                </dt>
+                <dd>
+                  <a href={site.phone.href} className="inline-flex min-h-11 items-center font-display text-lg font-semibold underline decoration-yellow decoration-2 underline-offset-[6px] hover:decoration-4">
+                    {site.phone.display}
+                  </a>
+                </dd>
               </div>
-              <div className="flex items-start gap-3">
-                <Icon name="clock" size={20} className="mt-1 shrink-0 text-teal-200" />
-                <div>
-                  <dt className="text-sm text-white/65">Hours</dt>
-                  <dd className="flex min-h-11 items-center font-display text-lg font-semibold leading-snug">{site.hours}</dd>
-                </div>
+              <div className="relative pl-8">
+                <dt className="text-sm text-white/65">
+                  <Icon name="clock" size={20} className="absolute left-0 top-1 text-teal-200" />
+                  Hours
+                </dt>
+                <dd className="flex min-h-11 items-center font-display text-lg font-semibold leading-snug">{site.hours}</dd>
               </div>
             </dl>
           </Reveal>

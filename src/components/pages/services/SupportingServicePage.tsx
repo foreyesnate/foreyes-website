@@ -167,8 +167,13 @@ export function SupportingServicePage({
               <Illustration
                 name={flagships.art}
                 panel="white"
-                sizes="(min-width: 1024px) 26rem, 92vw"
-                className="mx-auto w-full max-w-[26rem] shadow-lift lg:mr-0"
+                sizes="(min-width: 640px) 21rem, 19rem"
+                // The process drawings have a hand reaching in from the right:
+                // no right padding, so the sleeve meets the edge of the card.
+                className={cn(
+                  "mx-auto w-full max-w-[26rem] shadow-lift lg:mr-0",
+                  flagships.art.startsWith("step-") && "pr-0 sm:pr-0",
+                )}
               />
             </Reveal>
           </div>
@@ -212,7 +217,7 @@ function RoleCard({ card, lead = false }: { card: SupportingRoleCard; lead?: boo
       <p
         className={cn(
           "eyebrow inline-flex self-start rounded-full px-3.5 py-1.5",
-          lead ? "bg-yellow text-ink" : "bg-white/15 text-white",
+          lead ? "bg-yellow text-ink" : "bg-ink/30 text-white",
         )}
       >
         {card.label}

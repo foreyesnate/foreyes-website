@@ -22,7 +22,7 @@ export function AudienceObstacles({ obstacles }: { obstacles: AudienceContent["o
             <Illustration
               name={obstacles.picture.name}
               panel={obstacles.picture.panel}
-              sizes="(min-width: 1024px) 26rem, 92vw"
+              sizes="(min-width: 640px) 21rem, 19rem"
               className="mx-auto w-full max-w-[26rem] lg:mx-0"
             />
           </Reveal>
@@ -35,7 +35,7 @@ export function AudienceObstacles({ obstacles }: { obstacles: AudienceContent["o
               key={item.title}
               className="grid gap-6 rounded-[1.75rem] bg-stone p-6 sm:p-8 lg:grid-cols-[3rem_minmax(0,1.05fr)_minmax(0,1fr)] lg:items-start lg:gap-8"
             >
-              <span aria-hidden="true" className="tabular font-display text-2xl font-bold tracking-[-0.03em] text-navy-300 lg:pt-5">
+              <span aria-hidden="true" className="tabular font-display text-2xl font-bold tracking-[-0.03em] text-navy-400 lg:pt-5">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div className="lg:py-5">

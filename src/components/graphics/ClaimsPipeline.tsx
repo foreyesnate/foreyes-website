@@ -35,7 +35,7 @@ export function ClaimsPipeline({
     >
       <div aria-hidden="true">
         <div className="flex items-center justify-between">
-          <p className={cn("font-display text-sm font-semibold", light ? "text-ink/75" : "text-ink-500")}>
+          <p className={cn("font-display text-sm font-semibold", light ? "text-ink" : "text-ink-500")}>
             Claims, worked daily
           </p>
           <span className="flex items-center gap-2 font-display text-xs font-bold text-ink">
@@ -123,12 +123,12 @@ export function ClaimsPipeline({
           ))}
         </div>
 
-        <ol className="mt-1 grid grid-cols-4 text-center font-display text-[0.6875rem] font-semibold text-ink/75 sm:text-xs sm:uppercase sm:tracking-[0.08em]">
+        <ol className="mt-1 grid grid-cols-4 text-center font-display text-[0.6875rem] font-semibold text-ink sm:text-xs sm:uppercase sm:tracking-[0.08em]">
           {stages.map((stage) => (
             <li key={stage}>{stage}</li>
           ))}
         </ol>
-        <p className="mt-7 text-center font-display text-xs font-semibold text-ink/70">
+        <p className="mt-7 text-center font-display text-xs font-semibold text-ink">
           Denied at the payer? Appealed and resubmitted.
         </p>
         <ul className="mt-6 grid grid-cols-2 gap-2 border-t border-ink/10 pt-5 sm:grid-cols-4">
@@ -141,7 +141,7 @@ export function ClaimsPipeline({
             </li>
           ))}
         </ul>
-        <p className="mt-3 text-center text-xs text-ink/70">Reported to you every month.</p>
+        <p className="mt-3 text-center text-xs text-ink">Reported to you every month.</p>
       </div>
     </div>
   );

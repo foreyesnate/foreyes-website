@@ -149,7 +149,7 @@ export const practiceConsulting: SupportingServiceContent = {
       { label: "Get Your Books in Order", href: "/services/bookkeeping" },
       { label: "Stop Chasing Payments", href: "/services/insurance-billing" },
     ],
-    art: "tidy-desk",
+    art: "step-cleanup",
   },
   faqs: {
     title: "Practice Consulting FAQs",

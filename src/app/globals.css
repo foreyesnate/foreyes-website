@@ -47,7 +47,8 @@
   --color-ink-700: #2d2b4e;
   /* Secondary text: 7:1 on stone, 7.6:1 on white. */
   --color-ink-500: #55536f;
-  --color-ink-400: #72708c;
+  /* Tertiary text and small labels: 4.8:1 on stone, 5.3:1 on white. */
+  --color-ink-400: #6b6985;
 
   --font-display: var(--font-parkinsans), "Avenir Next", "Segoe UI", sans-serif;
   --font-sans: var(--font-figtree), "Segoe UI", system-ui, sans-serif;
@@ -135,6 +136,9 @@
     font-size: 1.0625rem;
     line-height: 1.6;
     font-feature-settings: "ss01";
+    /* A word or address longer than its column breaks rather than pushing
+       the page sideways (narrow phones, 200% zoom). */
+    overflow-wrap: break-word;
   }
 
   h1,
@@ -157,16 +161,13 @@
     color: var(--color-ink);
   }
 
+  /* The keyboard focus ring. Its colour comes from the surface the element
+     sits on (see "Focus ring colour" below): ink on light surfaces, yellow on
+     dark ones, so it always stands 3:1 or better against what is behind it. */
   :focus-visible {
-    outline: 3px solid var(--color-yellow);
+    outline: 3px solid var(--focus-ring, var(--color-ink));
     outline-offset: 3px;
     border-radius: 6px;
-  }
-
-  /* On yellow surfaces the yellow ring disappears; switch to ink. */
-  .on-yellow :focus-visible,
-  .bg-yellow:focus-visible {
-    outline-color: var(--color-ink);
   }
 }
 
@@ -326,6 +327,59 @@
   }
 }
 
+/* Focus ring colour. A yellow ring is clear on ink and navy but nearly
+   invisible on stone, white and teal (under 2:1); an ink ring is the reverse.
+   So each surface tells its contents which one to use. The rule targets the
+   surface's children, not the surface itself, because an element's ring is
+   drawn outside it, on whatever its parent is: a dark button on a pale page
+   gets the ink ring, a yellow button on a navy band gets the yellow one.
+   Translucent tints (bg-white/10 and the like) are not listed and simply
+   inherit from the surface under them. */
+:is(.bg-ink, .bg-ink-700, .bg-ink-800, .bg-navy, .bg-navy-600, .bg-navy-700, .bg-navy-800, .bg-teal-700, .bg-teal-800) > * {
+  --focus-ring: var(--color-yellow);
+}
+:is(.bg-white, .bg-stone, .bg-stone-200, .bg-stone-300, .bg-teal, .bg-teal-50, .bg-teal-100, .bg-teal-200, .bg-teal-300, .bg-yellow, .bg-yellow-50, .bg-yellow-100, .bg-yellow-200, .bg-navy-50, .bg-navy-100, .bg-navy-200, .bg-navy-300) > * {
+  --focus-ring: var(--color-ink);
+}
+
+/* Contrast on navy. Navy is a mid-tone: pure white on it is only 6.4:1, so
+   the dimmed whites and pale teal that read well on ink fall under 4.5:1
+   here, and further still on the translucent cards we lay over navy. Any
+   muted text class sitting on a navy surface is lifted to a passing value,
+   so components do not each have to remember. */
+.bg-navy :is(.text-white\/50, .text-white\/55, .text-white\/60, .text-white\/65, .text-white\/70, .text-white\/75, .text-white\/80, .text-white\/85) {
+  color: rgb(255 255 255 / 0.92);
+}
+.bg-navy :is(.text-teal-200, .text-navy-200) {
+  color: var(--color-teal-50);
+}
+
+/* Hero entrances. CSS rather than script, so the first screen starts coming
+   into focus on first paint and never depends on JavaScript having loaded.
+   Only a "from" keyframe: when it ends the element is simply itself again. */
+@keyframes focus-word {
+  from {
+    opacity: 0;
+    transform: translateY(0.25em);
+    filter: blur(14px);
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(var(--appear-y, 24px));
+    filter: blur(var(--appear-blur, 10px));
+  }
+}
+.focus-word {
+  animation: focus-word 1s var(--ease-focus) var(--focus-delay, 0s) backwards;
+}
+.appear {
+  /* Keeps layered children (floating cards, dotted textures) stacked inside. */
+  isolation: isolate;
+  animation: appear 0.9s var(--ease-focus) var(--appear-delay, 0s) backwards;
+}
+
 /* Anyone who asks for less motion gets a still, fully legible page. */
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -337,5 +391,10 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+  /* Entrances are skipped outright, so nothing waits out a delay unseen. */
+  .focus-word,
+  .appear {
+    animation: none !important;
   }
 }

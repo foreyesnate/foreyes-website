@@ -271,7 +271,7 @@ export function PricingCalculator() {
             {/* ---------------------------------------------------------- */}
             <div ref={controlsRef} tabIndex={-1} hidden={step !== "build"} className="outline-none">
               <Reveal y={16} blur={false}>
-                <div className="grid gap-5">
+                <div className="grid grid-cols-[minmax(0,1fr)] gap-5">
                   <ServiceCard
                     icon="ledger"
                     name={bk.name}
@@ -474,7 +474,7 @@ export function PricingCalculator() {
               </Reveal>
 
               <Reveal y={16} blur={false}>
-                <div className="mt-10 grid gap-5 rounded-[1.75rem] border-2 border-dashed border-stone-400 p-6 sm:grid-cols-[auto_1fr] sm:gap-8 sm:p-7">
+                <div className="mt-10 grid gap-5 rounded-[1.75rem] border-2 border-dashed border-stone-400 p-6 sm:grid-cols-[auto_1fr] sm:gap-8 sm:p-7 lg:grid-cols-1 lg:gap-5 xl:grid-cols-[auto_1fr] xl:gap-8">
                   <div>
                     <p className="eyebrow text-teal-700">{implementationCopy.eyebrow}</p>
                     <h3 className="mt-2 text-[1.3125rem] leading-tight">{implementationCopy.title}</h3>
@@ -483,7 +483,7 @@ export function PricingCalculator() {
                     </p>
                     <p className="mt-2 text-[0.875rem] text-ink-500">{implementationCopy.notIncluded}</p>
                   </div>
-                  <p className="text-ink-500 sm:border-l-2 sm:border-stone-200 sm:pl-8">{implementationCopy.body}</p>
+                  <p className="text-ink-500 sm:border-l-2 sm:border-stone-200 sm:pl-8 lg:border-l-0 lg:pl-0 xl:border-l-2 xl:pl-8">{implementationCopy.body}</p>
                 </div>
               </Reveal>
             </div>

@@ -10,6 +10,13 @@ type FormName = "Contact" | "Pricing Form";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
+// Declared once, outside the component: React only calls a ref again when it
+// is a new function, so this runs when the confirmation appears and not on
+// every later re-render.
+const focusOnMount = (node: HTMLDivElement | null) => {
+  node?.focus();
+};
+
 /**
  * The site's one lead form. It posts to Netlify Forms (see
  * public/__forms.html, which registers the fields), the same service the
@@ -41,6 +48,8 @@ export function LeadForm({
   const id = useId();
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
+  // True while the error is "no way to reach you", so both fields are marked.
+  const [needContact, setNeedContact] = useState(false);
   const dark = tone === "dark";
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
@@ -50,10 +59,12 @@ export function LeadForm({
     const email = String(data.get("email") ?? "").trim();
     const phone = String(data.get("phone") ?? "").trim();
     if (!email && !phone) {
+      setNeedContact(true);
       setError("Please enter a phone number or an email address so we can reach you.");
       form.querySelector<HTMLInputElement>('[name="email"]')?.focus();
       return;
     }
+    setNeedContact(false);
     setError(null);
     setStatus("sending");
 
@@ -98,6 +109,11 @@ export function LeadForm({
           <motion.div
             key="sent"
             role="status"
+            // The form (and the button that had focus) is gone, so focus moves
+            // to the confirmation: it is read out, and Tab carries on from here.
+            tabIndex={-1}
+            ref={focusOnMount}
+            className="focus:outline-none"
             initial={{ opacity: 0, y: 12, filter: "blur(8px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
@@ -154,7 +170,8 @@ export function LeadForm({
                   type="email"
                   autoComplete="email"
                   inputMode="email"
-                  aria-describedby={error ? `${id}-error` : `${id}-hint`}
+                  aria-describedby={needContact ? `${id}-error` : `${id}-hint`}
+                  aria-invalid={needContact || undefined}
                   className={field}
                 />
               </div>
@@ -168,14 +185,24 @@ export function LeadForm({
                   type="tel"
                   autoComplete="tel"
                   inputMode="tel"
-                  aria-describedby={error ? `${id}-error` : `${id}-hint`}
+                  aria-describedby={needContact ? `${id}-error` : `${id}-hint`}
+                  aria-invalid={needContact || undefined}
                   className={field}
                 />
               </div>
             </div>
-            <p id={`${id}-hint`} className={cn("-mt-2 text-sm", dark ? "text-white/60" : "text-ink-500")}>
-              An email address or a phone number is enough. Either works.
-            </p>
+            {/* The "how do we reach you" error sits right under the two fields it
+                is about, where focus has just been sent, so it is on screen on
+                a phone too. */}
+            {needContact && error ? (
+              <p id={`${id}-error`} role="alert" className={cn("-mt-1 rounded-2xl px-4 py-3 font-medium", dark ? "bg-white text-ink" : "bg-yellow-100 text-ink")}>
+                {error}
+              </p>
+            ) : (
+              <p id={`${id}-hint`} className={cn("-mt-2 text-sm", dark ? "text-white/60" : "text-ink-500")}>
+                An email address or a phone number is enough. Either works.
+              </p>
+            )}
             {interestOptions?.length ? (
               <div>
                 <label htmlFor={`${id}-interest`} className={label}>
@@ -200,15 +227,15 @@ export function LeadForm({
               </label>
               <textarea id={`${id}-message`} name="message" rows={4} className={cn(field, "h-auto py-3.5 leading-relaxed")} />
             </div>
-            {error ? (
-              <p id={`${id}-error`} role="alert" className={cn("rounded-2xl px-4 py-3 font-medium", dark ? "bg-white text-ink" : "bg-yellow-100 text-ink")}>
+            {error && !needContact ? (
+              <p role="alert" className={cn("rounded-2xl px-4 py-3 font-medium", dark ? "bg-white text-ink" : "bg-yellow-100 text-ink")}>
                 {error}
               </p>
             ) : null}
             <button
               type="submit"
               disabled={status === "sending"}
-              className="group/btn inline-flex h-14 items-center justify-center gap-2 rounded-full bg-yellow px-8 font-display text-[1.0625rem] font-semibold text-ink transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-yellow-200 focus-visible:outline-ink disabled:cursor-wait disabled:opacity-70 sm:w-fit"
+              className="group/btn inline-flex h-14 items-center justify-center gap-2 rounded-full bg-yellow px-8 font-display text-[1.0625rem] font-semibold text-ink transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-yellow-200 disabled:cursor-wait disabled:opacity-70 sm:w-fit"
             >
               {status === "sending" ? "Sending…" : submitLabel}
               <Icon name="arrowRight" size={18} className="transition-transform duration-300 group-hover/btn:translate-x-1" />

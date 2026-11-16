@@ -147,7 +147,7 @@ function PortalPicture() {
       name="heading-home"
       panel="teal"
       className="mx-auto max-w-[36rem]"
-      sizes="(min-width: 1024px) 31rem, 86vw"
+      sizes="(min-width: 640px) 31rem, 78vw"
     >
       <div
         role="img"

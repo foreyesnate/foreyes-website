@@ -24,7 +24,7 @@ const coverTone = {
 export function PostCover({
   post,
   className,
-  sizes = "(min-width: 1024px) 28rem, (min-width: 640px) 50vw, 100vw",
+  sizes = "(min-width: 1280px) 28rem, (min-width: 1024px) 30vw, (min-width: 640px) 46vw, 92vw",
   preload = false,
   describe = false,
   zoom = true,
@@ -163,7 +163,7 @@ export function PostCard({
         <Heading className="text-subheading text-balance">
           <Link
             href={post.href}
-            className="rounded-sm after:absolute after:inset-0 after:rounded-[1.75rem] focus-visible:outline-none focus-visible:after:outline-[3px] focus-visible:after:outline-offset-[-3px] focus-visible:after:outline-yellow focus-visible:after:outline-solid"
+            className="rounded-sm after:absolute after:inset-0 after:rounded-[1.75rem] focus-visible:outline-none focus-visible:after:outline-[3px] focus-visible:after:outline-offset-[-3px] focus-visible:after:outline-ink focus-visible:after:outline-solid"
           >
             {post.title}
           </Link>

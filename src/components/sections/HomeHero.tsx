@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { Container, Eyebrow } from "@/components/ui/Layout";
 import { FocusText } from "@/components/motion/FocusText";
-import { Reveal } from "@/components/motion/Reveal";
+import { Appear } from "@/components/motion/Appear";
 import { FocusLens } from "@/components/graphics/FocusLens";
 import { LedgerPanel } from "@/components/graphics/LedgerPanel";
 
@@ -20,9 +20,9 @@ export function HomeHero() {
       <Container size="wide">
         <div className="grid grid-cols-[minmax(0,1fr)] items-center gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] lg:gap-10 xl:gap-16">
           <div className="max-w-2xl">
-            <Reveal blur={false} y={10}>
+            <Appear blur={false} y={10}>
               <Eyebrow>Bookkeeping &amp; insurance billing for eyecare</Eyebrow>
-            </Reveal>
+            </Appear>
             <FocusText
               className="text-display mt-6"
               delay={0.15}
@@ -35,23 +35,25 @@ export function HomeHero() {
                 },
               ]}
             />
-            <Reveal delay={0.75} className="mt-7 max-w-xl">
+            {/* The largest text on the first screen: it follows the headline closely
+                so the page is readable (and its LCP recorded) sooner. */}
+            <Appear delay={0.4} className="mt-7 max-w-xl">
               <p className="text-lede text-ink-500">
                 You became an optometrist to care for patients, not to spend
                 late nights reconciling receipts and chasing claims. We keep
                 the books and work the insurance billing for independent
                 eyecare practices, and nothing else.
               </p>
-            </Reveal>
-            <Reveal delay={0.9} className="mt-9 flex flex-wrap items-center gap-3">
+            </Appear>
+            <Appear delay={0.55} className="mt-9 flex flex-wrap items-center gap-3">
               <Button href={site.bookingHref} size="lg">
                 Book a Discovery Call
               </Button>
               <Button href={site.pricingHref} size="lg" variant="outline">
                 Estimate Your Price
               </Button>
-            </Reveal>
-            <Reveal delay={1.05} blur={false} y={8}>
+            </Appear>
+            <Appear delay={0.7} blur={false} y={8}>
               <ul className="mt-9 flex flex-wrap gap-x-7 gap-y-3 text-[0.975rem] text-ink-700">
                 {[
                   "Founded by an OD",
@@ -66,10 +68,10 @@ export function HomeHero() {
                   </li>
                 ))}
               </ul>
-            </Reveal>
+            </Appear>
           </div>
 
-          <Reveal delay={0.35} y={36} blur={false} className="relative">
+          <Appear delay={0.35} y={36} blur={false} className="relative">
             <div className="relative rounded-[2.5rem] border border-white/80 bg-white/45 p-3 shadow-float backdrop-blur-sm sm:p-5">
               <FocusLens
                 label="A sample month for an eyecare practice. Under the lens, an unsorted bank feed and a list of open claims become a reviewed profit and loss statement and claims that are paid, appealed, and followed up."
@@ -77,10 +79,10 @@ export function HomeHero() {
                 sharp={<LedgerPanel state="after" />}
               />
             </div>
-            <p className="mt-4 text-center text-sm text-ink-400 lg:text-right">
+            <p className="mt-4 text-center text-sm text-ink-500 lg:text-right">
               Sample figures for illustration. Move the lens.
             </p>
-          </Reveal>
+          </Appear>
         </div>
       </Container>
     </section>

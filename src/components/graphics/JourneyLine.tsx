@@ -21,7 +21,8 @@ export function JourneyLine({ steps }: { steps: JourneyStep[] }) {
   const ref = useRef<HTMLOListElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 78%", "end 62%"],
+    // Every stop is lit by the time the row sits in the middle of the screen.
+    offset: ["start 78%", "end 75%"],
   });
   const progress = useSpring(scrollYProgress, { stiffness: 80, damping: 22 });
   const scale = useTransform(progress, [0, 1], [0, 1]);
@@ -61,9 +62,13 @@ function Stop({
   const at = total === 1 ? 0 : index / (total - 1);
   const lit = useTransform(progress, [Math.max(0, at - 0.12), at], [0, 1]);
   const scale = useTransform(lit, [0, 1], [0.86, 1]);
-  const opacity = useTransform(lit, [0, 1], [0.45, 1]);
+  // Not dimmer than 0.68: below that the body text of a stop that is waiting
+  // its turn drops under 4.5:1 on the ink background.
+  const opacity = useTransform(lit, [0, 1], [0.68, 1]);
   return (
     <motion.li
+      // data-reveal: shown at full strength when JavaScript is off (see layout).
+      data-reveal=""
       className="relative flex gap-5 lg:flex-col lg:items-center lg:text-center"
       style={{ opacity }}
     >

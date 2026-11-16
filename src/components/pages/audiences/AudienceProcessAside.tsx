@@ -25,7 +25,7 @@ export function AudienceProcessAside({
   return (
     <div
       className={cn(
-        "grid max-w-md overflow-hidden rounded-[1.75rem] sm:max-w-xl sm:grid-cols-[13rem_minmax(0,1fr)]",
+        "grid max-w-md overflow-hidden rounded-[1.75rem] sm:max-w-xl sm:grid-cols-[13rem_minmax(0,1fr)] lg:grid-cols-[9.5rem_minmax(0,1fr)] xl:grid-cols-[13rem_minmax(0,1fr)]",
         dark ? "bg-white/[0.07] text-white/85 ring-1 ring-inset ring-white/10" : "bg-white text-ink-700 shadow-soft",
       )}
     >
@@ -33,11 +33,11 @@ export function AudienceProcessAside({
         <Illustration
           name={picture.name}
           panel="none"
-          sizes="(min-width: 640px) 13rem, 92vw"
+          sizes="(min-width: 640px) 13rem, 22rem"
           className="w-full"
         />
       </div>
-      <p className="flex items-center p-6 sm:p-7">{note}</p>
+      <p className="flex items-center p-6 sm:p-7 lg:p-5 xl:p-7">{note}</p>
     </div>
   );
 }

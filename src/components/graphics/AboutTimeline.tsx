@@ -28,7 +28,7 @@ export function AboutTimeline({ stops, className }: { stops: TimelineStop[]; cla
         <div aria-hidden="true" className="absolute bottom-6 left-[2.0625rem] top-6 w-1 rounded-full bg-stone-300">
           <motion.div
             className="h-full w-full origin-top rounded-full bg-teal"
-            style={reduce ? undefined : { scaleY: progress }}
+            style={reduce ? { scaleY: 1 } : { scaleY: progress }}
           />
         </div>
         {stops.map((stop, index) => (
@@ -67,7 +67,7 @@ function Stop({
   return (
     <li className="relative flex gap-5 sm:gap-6">
       <motion.span
-        style={reduce ? undefined : { scale }}
+        style={reduce ? { scale: 1 } : { scale }}
         className={cn(
           "tabular relative z-10 grid h-[4.375rem] w-[4.375rem] shrink-0 place-items-center rounded-[1.35rem] font-display font-bold shadow-soft",
           last ? "bg-yellow text-[0.95rem] text-ink" : "bg-ink text-[1.0625rem] text-white",
@@ -75,7 +75,13 @@ function Stop({
       >
         {stop.when}
       </motion.span>
-      <motion.div style={reduce ? undefined : { opacity, filter }} className="pt-1.5">
+      {/* Reduced motion gets the finished state spelled out: leaving `style`
+          undefined would keep the dim, blurred values the server rendered. */}
+      <motion.div
+        data-reveal=""
+        style={reduce ? { opacity: 1, filter: "blur(0px)" } : { opacity, filter }}
+        className="pt-1.5"
+      >
         <h3 className="text-subheading">{stop.title}</h3>
         <p className="mt-2 text-ink-500">{stop.body}</p>
       </motion.div>

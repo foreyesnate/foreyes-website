@@ -61,6 +61,8 @@ function LeadCard({ member }: { member: TeamMember }) {
         member={member}
         decorative
         zoomOnHover
+        // A 6.5rem thumbnail beside the name on phones, a full card from sm up.
+        sizes="(min-width: 1024px) 22rem, (min-width: 640px) 45vw, 6.5rem"
         className="aspect-[4/5] w-full sm:mx-auto sm:max-w-[22rem]"
       />
       <div className="sm:px-2 sm:pt-6">
@@ -92,9 +94,10 @@ export function TeamOwners() {
           <SectionHeading id="owners-title" eyebrow={copy.eyebrow} title={copy.title} lede={copy.lede} />
         </Reveal>
         <Stagger as="ul" className="mt-14 grid gap-5 xl:grid-cols-2" stagger={0.14}>
-          {owners.map((member, i) => (
+          {owners.map((member) => (
             <StaggerItem as="li" key={member.slug} className="h-full">
-              <OwnerCard member={member} preload={i === 0} />
+              {/* No preload: the portrait starts below the first screen at every size. */}
+              <OwnerCard member={member} preload={false} />
             </StaggerItem>
           ))}
         </Stagger>

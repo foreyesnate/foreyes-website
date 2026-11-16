@@ -75,7 +75,15 @@ export function Header() {
   };
 
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4">
+    <header
+      className="pointer-events-none fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4"
+      // Keyboard: tabbing past the last link of the open mobile menu closes it,
+      // so focus never lands on page content hidden underneath.
+      onBlur={(event) => {
+        const next = event.relatedTarget as Node | null;
+        if (mobileOpen && next && !event.currentTarget.contains(next)) setMobileOpen(false);
+      }}
+    >
       <a
         href="#main"
         className="pointer-events-auto absolute left-4 top-4 z-[60] -translate-y-24 rounded-full bg-ink px-5 py-3 font-display font-semibold text-white transition-transform focus:translate-y-0"
@@ -137,7 +145,7 @@ export function Header() {
             type="button"
             className="grid h-12 w-12 place-items-center rounded-full bg-ink text-white transition-colors hover:bg-navy lg:hidden"
             aria-expanded={mobileOpen}
-            aria-controls="mobile-menu"
+            aria-controls={mobileOpen ? "mobile-menu" : undefined}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             onClick={() => setMobileOpen((value) => !value)}
           >
@@ -210,7 +218,7 @@ function DesktopItem({
         type="button"
         className={itemClass}
         aria-expanded={open}
-        aria-controls={panelId}
+        aria-controls={open ? panelId : undefined}
         onClick={onToggle}
       >
         {group.label}

@@ -2,6 +2,7 @@ import { site } from "@/content/site";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { Illustration } from "@/components/ui/Art";
+import { StickyColumn } from "@/components/ui/StickyColumn";
 import { LoopVideo } from "@/components/ui/LoopVideo";
 import { Container, Eyebrow, Section, SectionHeading } from "@/components/ui/Layout";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -16,21 +17,23 @@ export function BillingProblem() {
     <Section tone="stone" aria-labelledby="billing-problem">
       <Container size="wide">
         <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
-          <Reveal className="lg:sticky lg:top-32 lg:self-start">
-            <SectionHeading
-              id="billing-problem"
-              eyebrow={problem.eyebrow}
-              title={problem.title}
-              lede={problem.lede}
-            />
-            {/* Claims that wait, and the clock running on them. */}
-            <Illustration
-              name="spot-follow-up"
-              panel="teal"
-              className="mt-10 max-w-[25rem]"
-              sizes="(min-width: 640px) 20rem, 78vw"
-            />
-          </Reveal>
+          <StickyColumn>
+            <Reveal>
+              <SectionHeading
+                id="billing-problem"
+                eyebrow={problem.eyebrow}
+                title={problem.title}
+                lede={problem.lede}
+              />
+              {/* Claims that wait, and the clock running on them. */}
+              <Illustration
+                name="spot-follow-up"
+                panel="teal"
+                className="mt-10 max-w-[25rem]"
+                sizes="(min-width: 640px) 20rem, 19rem"
+              />
+            </Reveal>
+          </StickyColumn>
 
           <Reveal delay={0.1} y={36} blur={false}>
             <div className="rounded-[2.5rem] bg-white p-3 shadow-soft sm:p-4">

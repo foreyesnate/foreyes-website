@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { videos, type VideoName } from "@/content/art";
 import { cn } from "@/lib/cn";
@@ -9,6 +10,10 @@ import { cn } from "@/lib/cn";
  * on screen, never autoplays for visitors who prefer reduced motion (they get
  * the poster frame), and always offers a pause button.
  *
+ * The poster is an ordinary lazy image under the (transparent until it plays)
+ * video rather than the video's `poster` attribute: a `poster` downloads with
+ * the page however far down the clip sits, and cannot be resized per screen.
+ *
  * `children` are layered on top (headline, gradient, floating card).
  */
 export function LoopVideo({
@@ -17,6 +22,7 @@ export function LoopVideo({
   className,
   children,
   rounded = true,
+  sizes = "(min-width: 1024px) 37rem, 100vw",
 }: {
   name: VideoName;
   /** CSS aspect-ratio, e.g. "16/9". Defaults to the clip's own. */
@@ -24,6 +30,8 @@ export function LoopVideo({
   className?: string;
   children?: ReactNode;
   rounded?: boolean;
+  /** How wide the clip is shown, for picking the poster file. */
+  sizes?: string;
 }) {
   const clip = videos[name];
   const ref = useRef<HTMLVideoElement>(null);
@@ -68,10 +76,10 @@ export function LoopVideo({
       className={cn("relative isolate overflow-hidden bg-ink", rounded && "rounded-[2.5rem]", className)}
       style={{ aspectRatio: ratio ?? `${clip.width}/${clip.height}` }}
     >
+      <Image src={clip.poster} alt="" fill sizes={sizes} className="object-cover" />
       <video
         ref={ref}
         className="absolute inset-0 h-full w-full object-cover"
-        poster={clip.poster}
         muted
         loop
         playsInline
@@ -88,7 +96,9 @@ export function LoopVideo({
           type="button"
           onClick={toggle}
           aria-label={playing ? "Pause background video" : "Play background video"}
-          className="absolute bottom-4 right-4 z-10 grid h-11 w-11 place-items-center rounded-full bg-ink/55 text-white backdrop-blur transition-colors hover:bg-ink"
+          // Over a photo no single ring colour is safe, so focus turns the button
+          // solid and puts the yellow ring on a dark band of its own.
+          className="absolute bottom-4 right-4 z-10 grid h-11 w-11 place-items-center rounded-full bg-ink/55 text-white backdrop-blur transition-colors hover:bg-ink focus-visible:bg-ink focus-visible:ring-[7px] focus-visible:ring-ink"
         >
           {playing ? (
             <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">

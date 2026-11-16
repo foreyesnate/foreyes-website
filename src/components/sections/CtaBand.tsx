@@ -16,7 +16,7 @@ export function CtaBand({
   showPricing?: boolean;
 }) {
   return (
-    <section aria-labelledby="cta-title" className="bg-stone px-3 pb-3 sm:px-5 sm:pb-5">
+    <section aria-labelledby="cta-title" className="bg-stone p-3 sm:p-5">
       <div className="on-yellow relative overflow-hidden rounded-[2.5rem] bg-yellow text-ink">
         <div aria-hidden="true" className="bg-dots absolute inset-0 text-ink/[0.07] [mask-image:linear-gradient(to_right,transparent,black_70%)]" />
         <Container size="wide" className="relative py-16 sm:py-24">

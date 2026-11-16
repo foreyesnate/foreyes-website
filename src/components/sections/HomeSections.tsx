@@ -16,7 +16,16 @@ const serviceArt: Record<string, IllustrationName> = {
   "/services/practice-consulting": "spot-consulting",
 };
 
-function Spot({ name, className }: { name: IllustrationName; className?: string }) {
+function Spot({
+  name,
+  className,
+  sizes,
+}: {
+  name: IllustrationName;
+  className?: string;
+  /** The width the drawing is shown at. Lengths only (no vw), so small files stay on offer. */
+  sizes: string;
+}) {
   const art = illustrations[name];
   return (
     <Image
@@ -24,7 +33,7 @@ function Spot({ name, className }: { name: IllustrationName; className?: string 
       width={art.width}
       height={art.height}
       alt=""
-      sizes="(min-width: 640px) 14rem, 60vw"
+      sizes={sizes}
       className={className}
     />
   );
@@ -58,6 +67,7 @@ export function MoreServices({
                   <span className="grid aspect-[4/3] place-items-center overflow-hidden rounded-[1.35rem] bg-navy-50 p-5 transition-colors duration-500 group-hover:bg-teal-100">
                     <Spot
                       name={serviceArt[service.href]}
+                      sizes="(min-width: 640px) 12rem, 15rem"
                       className="max-h-full w-auto transition-transform duration-700 ease-(--ease-focus) group-hover:scale-[1.06]"
                     />
                   </span>
@@ -167,13 +177,14 @@ export function Audiences() {
                     <span aria-hidden="true" className="bg-dots absolute inset-0 text-ink/[0.07] [mask-image:radial-gradient(closest-side,transparent_45%,black)]" />
                     <Spot
                       name={look.art}
+                      sizes="(min-width: 640px) 14rem, 15rem"
                       className="relative max-h-full w-auto transition-transform duration-700 ease-(--ease-focus) group-hover:scale-[1.05]"
                     />
                   </span>
-                  <span className="flex flex-1 flex-col p-5 pt-6">
-                    <h3 className="text-heading">{audience.label}</h3>
+                  <span className="flex flex-1 flex-col p-5 pt-6 md:max-lg:p-3 md:max-lg:pt-5">
+                    <h3 className="text-heading md:max-lg:text-[1.375rem]">{audience.label}</h3>
                     <p className="mt-3 text-ink-500">{audience.description}</p>
-                    <span className="mt-auto flex items-center gap-2 pt-6 font-display font-semibold text-navy">
+                    <span className="mt-auto flex items-center gap-2 pt-6 font-display font-semibold text-navy md:max-lg:text-[0.9375rem]">
                       See How We Help
                       <Icon name="arrowRight" size={18} className="transition-transform duration-300 group-hover:translate-x-1.5" />
                     </span>
@@ -193,7 +204,7 @@ export function NationwideBand() {
   return (
     <section aria-labelledby="nationwide-title" className="bg-stone px-3 pb-20 sm:px-5 sm:pb-28">
       <Reveal blur={false} y={40}>
-        <LoopVideo name="dispensary" ratio="auto" className="mx-auto min-h-[30rem] max-w-[88rem] sm:min-h-[34rem]">
+        <LoopVideo name="dispensary" ratio="auto" sizes="(min-width: 1440px) 88rem, 100vw" className="mx-auto min-h-[30rem] max-w-[88rem] sm:min-h-[34rem]">
           {/* Phones: the copy runs nearly the full height, so the scrim stays
               dark to the top. From sm up it fades out to the right instead. */}
           <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-ink via-ink/85 to-ink/55 sm:bg-gradient-to-r sm:from-ink sm:via-ink/70 sm:to-transparent" />
@@ -301,27 +312,29 @@ export function Tools() {
         <Reveal>
           <SectionHeading id="tools-title" size="heading" eyebrow="Before you call" title="Tools That Take the Guesswork Out" />
         </Reveal>
-        <Stagger as="ul" className="mt-10 grid gap-5 md:grid-cols-2">
+        <Stagger as="ul" className="mt-10 grid grid-cols-[minmax(0,1fr)] gap-5 md:grid-cols-2">
           {tools.map((tool) => (
             <StaggerItem as="li" key={tool.href}>
               <Link
                 href={tool.href}
-                className="group flex h-full items-start gap-6 rounded-[2.5rem] border-2 border-stone-200 bg-stone p-7 transition-[border-color,background-color,transform] duration-500 ease-(--ease-focus) hover:-translate-y-1 hover:border-navy hover:bg-white sm:p-9"
+                // Under 360px the picture and padding step down so the words keep a readable column.
+                className="group flex h-full items-start gap-4 rounded-[2.5rem] border-2 border-stone-200 bg-stone p-5 min-[360px]:gap-6 min-[360px]:p-7 transition-[border-color,background-color,transform] duration-500 ease-(--ease-focus) hover:-translate-y-1 hover:border-navy hover:bg-white sm:p-9"
               >
-                <span className="grid h-28 w-28 shrink-0 place-items-center rounded-3xl bg-white p-3 shadow-soft sm:h-36 sm:w-36">
+                <span className="grid h-20 w-20 shrink-0 place-items-center rounded-3xl bg-white p-3 shadow-soft min-[360px]:h-28 min-[360px]:w-28 sm:h-36 sm:w-36">
                   <Spot
                     name={tool.art}
+                    sizes="7.5rem"
                     className="max-h-full w-auto transition-transform duration-700 ease-(--ease-focus) group-hover:scale-[1.07]"
                   />
                 </span>
-                <span>
+                <div className="min-w-0">
                   <h3 className="text-subheading">{tool.title}</h3>
                   <p className="mt-2 text-ink-500">{tool.body}</p>
                   <span className="mt-5 inline-flex items-center gap-2 font-display font-semibold text-navy">
                     {tool.cta}
                     <Icon name="arrowRight" size={18} className="transition-transform duration-300 group-hover:translate-x-1.5" />
                   </span>
-                </span>
+                </div>
               </Link>
             </StaggerItem>
           ))}

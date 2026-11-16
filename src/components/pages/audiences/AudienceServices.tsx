@@ -80,7 +80,7 @@ export function AudienceServices({ services }: { services: AudienceContent["serv
           </Reveal>
         </div>
 
-        <Stagger as="ul" className="mt-6 grid gap-5 md:grid-cols-3">
+        <Stagger as="ul" className="mt-6 grid gap-5 lg:grid-cols-3">
           {services.supporting.map((card) => {
             const service = serviceInfo(card.service);
             return (

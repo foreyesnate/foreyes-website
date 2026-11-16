@@ -37,7 +37,9 @@ export function Illustration({
   priority = false,
   className,
   imageClassName,
-  sizes = "(min-width: 1024px) 38rem, 92vw",
+  // The drawing sits inside the panel's padding, so it is narrower than its
+  // column: about 31rem beside text on a desktop, 78% of a phone's width.
+  sizes = "(min-width: 1024px) 31rem, (min-width: 640px) 70vw, 78vw",
   children,
 }: {
   name: IllustrationName;

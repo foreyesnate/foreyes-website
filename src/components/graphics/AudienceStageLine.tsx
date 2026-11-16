@@ -76,6 +76,8 @@ export function AudienceStageLine({
           {stages.map((stage, i) => (
             <motion.li
               key={stage.href}
+              // data-reveal: shown when JavaScript is off (see layout).
+              data-reveal=""
               initial={{ opacity: 0, y: 16 }}
               animate={go ? { opacity: 1, y: 0 } : undefined}
               transition={{ delay: reduce ? 0 : 0.8 + i * 0.4, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}

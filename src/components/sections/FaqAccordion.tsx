@@ -48,9 +48,11 @@ export function FaqAccordion({
                 id={buttonId}
                 type="button"
                 aria-expanded={isOpen}
-                aria-controls={panelId}
+                aria-controls={isOpen ? panelId : undefined}
                 onClick={() => setOpen(isOpen ? -1 : i)}
-                className="flex w-full items-center justify-between gap-6 px-6 py-5 text-left font-display text-[1.125rem] font-semibold leading-snug tracking-[-0.015em] sm:px-7 sm:text-[1.1875rem]"
+                // The card clips its overflow, which would hide the usual outside ring,
+                // so the focus ring is drawn just inside the button instead.
+                className="flex w-full items-center justify-between gap-6 rounded-[1.375rem] px-6 py-5 text-left font-display text-[1.125rem] font-semibold leading-snug tracking-[-0.015em] focus-visible:-outline-offset-4 sm:px-7 sm:text-[1.1875rem]"
               >
                 {item.question}
                 <span

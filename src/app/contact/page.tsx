@@ -76,14 +76,15 @@ function DirectLine({
   children: ReactNode;
 }) {
   return (
-    <div className="flex items-start gap-4">
-      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/10 text-yellow ring-1 ring-inset ring-white/15">
-        <Icon name={icon} size={20} />
-      </span>
-      <div className="min-w-0">
-        <dt className="text-[0.875rem] text-white/65">{label}</dt>
-        <dd className="mt-0.5 font-display text-[1rem] font-semibold leading-snug">{children}</dd>
-      </div>
+    // A <dl> group may only hold <dt> and <dd>, so the icon sits inside the <dt>.
+    <div className="relative min-h-11 min-w-0 pl-[3.75rem]">
+      <dt className="text-[0.875rem] text-white/65">
+        <span className="absolute left-0 top-0 grid h-11 w-11 place-items-center rounded-xl bg-white/10 text-yellow ring-1 ring-inset ring-white/15">
+          <Icon name={icon} size={20} />
+        </span>
+        {label}
+      </dt>
+      <dd className="mt-0.5 font-display text-[1rem] font-semibold leading-snug">{children}</dd>
     </div>
   );
 }
@@ -104,7 +105,7 @@ export default function ContactPage() {
             name="discovery-call"
             panel="teal"
             priority
-            sizes="(min-width: 1024px) 40rem, 92vw"
+            sizes="(min-width: 1024px) 31rem, (min-width: 640px) 60vw, 78vw"
             // Extra headroom on phones so the badge clears the figure's head.
             className="mx-auto max-w-[36rem] max-sm:pt-[4.5rem] lg:mr-0"
           >
@@ -189,10 +190,12 @@ export default function ContactPage() {
         steps={callSteps.steps.map((step) => ({ ...step }))}
         aside={
           <Illustration
-            name="handshake"
+            name="lens-over-claims"
             panel="teal"
-            sizes="(min-width: 1024px) 30rem, 92vw"
-            className="max-w-lg"
+            sizes="(min-width: 1024px) 27rem, (min-width: 640px) 53vw, 78vw"
+            // The sleeve leaves the drawing at the bottom right corner, so the
+            // picture sits flush with that corner of the panel.
+            className="max-w-lg pb-0 pr-0 sm:pb-0 sm:pr-0"
           />
         }
       />

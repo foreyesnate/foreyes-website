@@ -4,6 +4,7 @@ import { motion, useScroll, useSpring } from "motion/react";
 import { useRef, type ReactNode } from "react";
 import { Container, Section, SectionHeading } from "@/components/ui/Layout";
 import { Reveal } from "@/components/motion/Reveal";
+import { StickyColumn } from "@/components/ui/StickyColumn";
 import { cn } from "@/lib/cn";
 
 export type Step = { title: string; body: ReactNode; meta?: string };
@@ -38,15 +39,15 @@ export function ProcessSteps({
   return (
     <Section tone={tone} aria-labelledby={id}>
       <Container size="wide">
-        <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
-          <div className="lg:sticky lg:top-32 lg:self-start">
+        <div className="grid grid-cols-[minmax(0,1fr)] gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+          <StickyColumn>
             <Reveal>
               <SectionHeading id={id} eyebrow={eyebrow} title={title} lede={lede} tone={dark ? "light" : "ink"} />
             </Reveal>
             {aside ? <Reveal delay={0.15} className="mt-10">{aside}</Reveal> : null}
-          </div>
+          </StickyColumn>
 
-          <ol ref={ref} className="relative grid gap-5">
+          <ol ref={ref} className="relative grid grid-cols-[minmax(0,1fr)] gap-5">
             <div aria-hidden="true" className={cn("absolute bottom-8 left-[1.6875rem] top-8 w-1 rounded-full", dark ? "bg-white/12" : "bg-stone-300")}>
               <motion.div className="h-full w-full origin-top rounded-full bg-yellow" style={{ scaleY: progress }} />
             </div>
@@ -60,11 +61,11 @@ export function ProcessSteps({
                 >
                   {i + 1}
                 </span>
-                <div className={cn("flex-1 rounded-[1.75rem] p-6 sm:p-7", dark ? "bg-white/[0.07] ring-1 ring-inset ring-white/10" : tone === "stone" ? "bg-white shadow-soft" : "bg-stone")}>
+                <div className={cn("min-w-0 flex-1 rounded-[1.75rem] p-6 sm:p-7", dark ? "bg-white/[0.07] ring-1 ring-inset ring-white/10" : tone === "stone" ? "bg-white shadow-soft" : "bg-stone")}>
                   {step.meta ? (
                     <p className={cn("eyebrow mb-2", dark ? "text-teal-200" : "text-teal-700")}>{step.meta}</p>
                   ) : null}
-                  <h3 className="text-subheading">{step.title}</h3>
+                  <h3 className="text-subheading hyphens-auto">{step.title}</h3>
                   <div className={cn("mt-2.5", dark ? "text-white/75" : "text-ink-500")}>{step.body}</div>
                 </div>
               </Reveal>

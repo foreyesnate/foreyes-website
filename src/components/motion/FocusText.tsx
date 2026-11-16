@@ -1,7 +1,4 @@
-"use client";
-
-import { motion } from "motion/react";
-import { Fragment, type ReactNode } from "react";
+import { Fragment, type CSSProperties, type ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
 type Segment = string | { text: string; className?: string };
@@ -10,6 +7,10 @@ type Segment = string | { text: string; className?: string };
  * Headline that resolves word by word from a soft blur, the way a line on an
  * eye chart sharpens when the right lens drops in. Pass plain strings, or
  * objects to style a phrase (e.g. the highlighted words).
+ *
+ * The animation is plain CSS (`.focus-word` in globals.css), so the headline
+ * starts sharpening on first paint instead of waiting for JavaScript, and it
+ * is readable with JavaScript off. Reduced motion shows it at once.
  *
  * The full sentence is exposed to assistive tech once via aria-label; the
  * animated words are hidden from it.
@@ -20,15 +21,12 @@ export function FocusText({
   delay = 0,
   as: Tag = "h1",
   stagger = 0.07,
-  onView = false,
 }: {
   segments: Segment[];
   className?: string;
   delay?: number;
   as?: "h1" | "h2" | "p";
   stagger?: number;
-  /** Animate when scrolled into view instead of on mount. */
-  onView?: boolean;
 }) {
   const label = segments
     .map((s) => (typeof s === "string" ? s : s.text))
@@ -46,23 +44,14 @@ export function FocusText({
       .filter(Boolean)
       .forEach((word, wi) => {
         const i = index++;
-        const animate = { opacity: 1, y: 0, filter: "blur(0px)" };
         words.push(
           <Fragment key={`${si}-${wi}`}>
-            <motion.span
-              className={cn("inline-block will-change-[filter,transform]", segClass)}
-              initial={{ opacity: 0, y: "0.25em", filter: "blur(14px)" }}
-              {...(onView
-                ? { whileInView: animate, viewport: { once: true } }
-                : { animate })}
-              transition={{
-                duration: 1,
-                delay: delay + i * stagger,
-                ease: [0.22, 1, 0.36, 1],
-              }}
+            <span
+              className={cn("focus-word inline-block", segClass)}
+              style={{ "--focus-delay": `${(delay + i * stagger).toFixed(2)}s` } as CSSProperties}
             >
               {word}
-            </motion.span>{" "}
+            </span>{" "}
           </Fragment>,
         );
       });

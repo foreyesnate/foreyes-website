@@ -103,7 +103,10 @@ export function AudienceHubCards({
                                 className={cn(
                                   "inline-flex h-11 items-center gap-2 rounded-full px-4 font-display text-sm font-semibold transition-colors duration-300",
                                   flagship && (teal ? "bg-ink text-white hover:bg-navy-800" : "bg-white text-ink hover:bg-yellow"),
-                                  !flagship && (teal ? "bg-ink/10 text-ink hover:bg-ink/20" : "bg-white/10 text-white hover:bg-white/20"),
+                                  !flagship && teal && "bg-white/30 text-ink hover:bg-white/50",
+                                  // White text on a pale pill over navy falls to 4.3:1, so navy darkens the pill instead.
+                                  !flagship && audience.tone === "navy" && "bg-ink/25 text-white hover:bg-ink/45",
+                                  !flagship && audience.tone === "ink" && "bg-white/10 text-white hover:bg-white/20",
                                 )}
                               >
                                 <Icon name={service.icon} size={17} />

@@ -30,6 +30,7 @@ export function CloseCalendar({ className }: { className?: string }) {
             Monthly close, business days
           </p>
           <motion.span
+            data-reveal=""
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -45,6 +46,7 @@ export function CloseCalendar({ className }: { className?: string }) {
             return (
               <motion.li
                 key={day}
+                data-reveal=""
                 initial={{ opacity: 0.35, scale: 0.92 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -60,6 +62,7 @@ export function CloseCalendar({ className }: { className?: string }) {
               >
                 <span className="tabular">{day}</span>
                 <motion.span
+                  data-reveal=""
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
@@ -81,7 +84,7 @@ export function CloseCalendar({ className }: { className?: string }) {
         </ol>
         <ul className="mt-4 grid grid-cols-4 gap-1 text-center font-display text-[0.6875rem] font-semibold text-white/65 sm:gap-2 sm:text-xs sm:uppercase sm:tracking-[0.08em]">
           {phases.map((phase) => (
-            <li key={phase.label} className={cn(phase.label === "Deliver" && "text-yellow")}>
+            <li key={phase.label} className={cn(phase.label === "Deliver" && "text-white underline decoration-yellow decoration-2 underline-offset-4")}>
               {phase.label}
             </li>
           ))}

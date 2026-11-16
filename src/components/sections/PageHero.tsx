@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { Container, Eyebrow } from "@/components/ui/Layout";
 import { FocusText } from "@/components/motion/FocusText";
-import { Reveal } from "@/components/motion/Reveal";
+import { Appear } from "@/components/motion/Appear";
 import { cn } from "@/lib/cn";
 
 export type Crumb = { label: string; href?: string };
@@ -107,11 +107,11 @@ export function PageHero({
         <div className={cn("grid grid-cols-[minmax(0,1fr)] items-center gap-12", visual && "lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-14")}>
           <div className={cn(visual ? "max-w-2xl" : "max-w-4xl")}>
             {eyebrow ? (
-              <Reveal blur={false} y={10}>
+              <Appear blur={false} y={10}>
                 <Eyebrow tone={dark ? "light" : tone === "teal" ? "dark" : "ink"}>
                   {eyebrow}
                 </Eyebrow>
-              </Reveal>
+              </Appear>
             ) : null}
             <FocusText
               className={cn("text-title mt-5", !visual && "sm:text-display")}
@@ -133,14 +133,14 @@ export function PageHero({
               ]}
             />
             {lede ? (
-              <Reveal delay={0.5} className="mt-7 max-w-2xl">
+              <Appear delay={0.35} className="mt-7 max-w-2xl">
                 <div className={cn("text-lede", dark ? "text-white/80" : light ? "text-ink-500" : "text-ink/85")}>
                   {lede}
                 </div>
-              </Reveal>
+              </Appear>
             ) : null}
             {primaryCta || secondaryCta ? (
-              <Reveal delay={0.65} className="mt-9 flex flex-wrap items-center gap-3">
+              <Appear delay={0.5} className="mt-9 flex flex-wrap items-center gap-3">
                 {primaryCta ? (
                   <Button href={primaryCta.href} size="lg" variant={tone === "teal" ? "ink" : "primary"}>
                     {primaryCta.label}
@@ -156,19 +156,19 @@ export function PageHero({
                     {secondaryCta.label}
                   </Button>
                 ) : null}
-              </Reveal>
+              </Appear>
             ) : null}
             {note ? (
-              <Reveal delay={0.8} blur={false} y={8}>
+              <Appear delay={0.65} blur={false} y={8}>
                 <p className={cn("mt-6 text-[0.95rem]", dark ? "text-white/65" : "text-ink-500")}>{note}</p>
-              </Reveal>
+              </Appear>
             ) : null}
             {children}
           </div>
           {visual ? (
-            <Reveal delay={0.3} y={36} blur={false} className="relative">
+            <Appear delay={0.3} y={36} blur={false} className="relative">
               {visual}
-            </Reveal>
+            </Appear>
           ) : null}
         </div>
       </Container>
