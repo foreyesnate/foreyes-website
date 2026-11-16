@@ -113,9 +113,9 @@ export const servicePitches: Record<PostService, ServicePitch> = {
   },
 };
 
-/** The three cards at the top of the Resources hub. */
+/** The four cards at the top of the Resources hub. */
 export type ResourceCard = {
-  key: "blog" | "faq" | "pricing";
+  key: "blog" | "faq" | "pricing" | "billing";
   eyebrow: string;
   title: string;
   body: string;
@@ -147,5 +147,13 @@ export const resourceCards: ResourceCard[] = [
     body: "See what bookkeeping, insurance billing, accounts payable, and payroll would cost for a practice your size. Switch services on and off and the monthly estimate updates as you go.",
     cta: "Estimate Your Price",
     href: "/pricing-calculator",
+  },
+  {
+    key: "billing",
+    eyebrow: "Calculate",
+    title: "Billing Calculator",
+    body: "Enter four numbers from your own reports and see an estimate of the insurance revenue lost each year to denied claims nobody followed up. Nothing is sent unless you choose.",
+    cta: "Run Your Numbers",
+    href: "/billing-calculator",
   },
 ];

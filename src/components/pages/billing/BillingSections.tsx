@@ -10,6 +10,7 @@ import { BillingKpiRings } from "@/components/graphics/BillingKpiRings";
 import { BillingTwoPlans } from "@/components/graphics/BillingTwoPlans";
 import { cn } from "@/lib/cn";
 import { books, eyecare, handles, kpis, pricing, problem } from "@/content/services/insurance-billing";
+import { calloutCopy, path as calculatorPath } from "@/content/billing-calculator";
 
 /** The owner's problem: three places billing slips in a busy practice. */
 export function BillingProblem() {
@@ -72,6 +73,40 @@ export function BillingProblem() {
         </div>
       </Container>
     </Section>
+  );
+}
+
+/**
+ * A compact pointer to the free Billing Calculator. It follows the problem
+ * section and shares its stone background, so it reads as that section's
+ * closing line: "revenue slips in three places; here is how to size it".
+ */
+export function BillingCalculatorCallout() {
+  return (
+    <section aria-labelledby="billing-calculator-callout" className="-mt-8 bg-stone pb-14 sm:-mt-12 sm:pb-20">
+      <Container size="wide">
+        <Reveal y={16}>
+          {/* Phones: words, then the button. Tablets: the icon beside the
+              words, with the button under the words (not under the icon).
+              Desktop: all three in a row. */}
+          <div className="grid grid-cols-[minmax(0,1fr)] items-center gap-x-8 gap-y-5 rounded-[1.75rem] border-2 border-dashed border-stone-400 p-6 sm:grid-cols-[auto_minmax(0,1fr)] sm:p-7 lg:grid-cols-[auto_minmax(0,1fr)_auto]">
+            <span aria-hidden="true" className="hidden h-14 w-14 shrink-0 place-items-center rounded-2xl bg-navy text-white sm:grid">
+              <Icon name="chart" size={26} />
+            </span>
+            <div className="min-w-0">
+              <p className="eyebrow text-teal-700">{calloutCopy.eyebrow}</p>
+              <h2 id="billing-calculator-callout" className="text-subheading mt-2">
+                {calloutCopy.title}
+              </h2>
+              <p className="mt-2 max-w-2xl text-ink-500">{calloutCopy.body}</p>
+            </div>
+            <Button href={calculatorPath} variant="ink" className="justify-self-start sm:col-start-2 lg:col-start-3">
+              {calloutCopy.cta}
+            </Button>
+          </div>
+        </Reveal>
+      </Container>
+    </section>
   );
 }
 

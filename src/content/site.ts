@@ -143,6 +143,11 @@ export const mainNav: NavGroup[] = [
         href: "/faq",
         description: "Straight answers before you book a call.",
       },
+      {
+        label: "Billing Calculator",
+        href: "/billing-calculator",
+        description: "Estimate what unworked denials cost you.",
+      },
     ],
   },
 ];

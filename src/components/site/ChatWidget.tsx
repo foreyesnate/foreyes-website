@@ -4,10 +4,10 @@ import Script from "next/script";
 import { useEffect } from "react";
 import { site } from "@/content/site";
 
-// The chat bubble sits in the bottom-right corner, which is also where the
-// pricing calculator pins its estimate bar on phones. These rules let the page
-// lift or hide the bubble through two CSS variables (set in globals.css) so it
-// never covers the bar's button. If the vendor renames its classes the rules
+// The chat bubble sits in the bottom-right corner, which is also where the two
+// calculators pin their result bar on phones (src/components/ui/PinnedBar.tsx).
+// These rules let the page lift or hide the bubble through two CSS variables
+// (set in globals.css) so it never covers the bar's button. If the vendor renames its classes the rules
 // simply stop applying and the bubble returns to its default corner.
 const OFFSET_RULES = `
 :host([data-active="false"]) .lc_text-widget,

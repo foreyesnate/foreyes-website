@@ -1,9 +1,9 @@
 "use client";
 
 import { AnimatePresence, motion } from "motion/react";
-import { useEffect, useId, useState } from "react";
 import { CUSTOM_QUOTE, QUOTED_ON_CALL, calculatorCopy, implementationCopy, serviceCopy } from "@/content/pricing";
 import { Icon } from "@/components/ui/Icon";
+import { PinnedBar } from "@/components/ui/PinnedBar";
 import { cn } from "@/lib/cn";
 import { estimateExtras, estimateMode, formatMoney, type Estimate } from "@/lib/pricing";
 
@@ -315,123 +315,59 @@ export function MobileEstimateBar({
   visible: boolean;
   onGetStarted: () => void;
 }) {
-  const [open, setOpen] = useState(false);
-  const panelId = useId();
-  const expanded = open && visible;
-
-  useEffect(() => {
-    if (!expanded) return;
-    const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpen(false);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [expanded]);
-
-  // Tell the chat bubble to move out of the way while this bar is on screen
-  // (see ChatWidget.tsx and the --chat-* variables in globals.css).
-  useEffect(() => {
-    if (!visible) return;
-    const root = document.documentElement;
-    root.setAttribute("data-estimate-bar", expanded ? "open" : "bar");
-    return () => root.removeAttribute("data-estimate-bar");
-  }, [visible, expanded]);
-
   const mode = estimateMode(estimate);
   const extras = estimateExtras(estimate);
 
   return (
-    <AnimatePresence>
-      {visible ? (
-        <motion.div
-          key="bar"
-          initial={{ y: "130%" }}
-          animate={{ y: 0 }}
-          exit={{ y: "130%" }}
-          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed inset-x-3 bottom-3 z-40 lg:hidden"
+    <PinnedBar
+      visible={visible}
+      label="Your estimate"
+      panel={
+        <>
+          <p className="eyebrow text-teal-200">Your selections</p>
+          <div className="mt-2">
+            <EstimateLines estimate={estimate} />
+            <ImplementationLine estimate={estimate} className="pt-3" />
+          </div>
+          <EstimateExtras estimate={estimate} className="mt-4 text-[0.875rem]" />
+          {estimate.customQuote ? (
+            <p className="mt-4 text-[0.875rem] leading-snug text-white/75">{calculatorCopy.customQuoteBody}</p>
+          ) : null}
+          <p className="mt-4 text-[0.8125rem] leading-snug text-white/65">{calculatorCopy.disclaimer}</p>
+        </>
+      }
+      summary={(expanded) => (
+        <>
+          <span className="block font-display text-[0.6875rem] font-semibold uppercase tracking-[0.12em] text-teal-200">
+            {mode === "figure" ? "Monthly estimate" : mode === "rates" ? serviceCopy.insuranceBilling.name : calculatorCopy.estimateLabel}
+            <span className="sr-only">. {expanded ? "Hide" : "Show"} the breakdown.</span>
+          </span>
+          <span className="mt-1 block">
+            <EstimateFigure estimate={estimate} size="sm" suffix={false} />
+          </span>
+          {mode === "rates" ? (
+            <span className="mt-1 block text-[0.75rem] leading-tight text-white/75">
+              {serviceCopy.insuranceBilling.ratesBasis}
+              {extras.length ? `, + ${extras.length} more` : ""}
+            </span>
+          ) : extras.length ? (
+            <span className="mt-1 block text-[0.75rem] leading-tight text-white/75">
+              {extras.length === 1
+                ? `+ ${extras[0].name} (${extras[0].note})`
+                : `+ ${extras.length} items outside this number`}
+            </span>
+          ) : null}
+        </>
+      )}
+      action={
+        <button
+          type="button"
+          onClick={onGetStarted}
+          className="inline-flex h-14 shrink-0 items-center justify-center rounded-full bg-yellow px-5 font-display text-[0.9375rem] font-semibold text-ink active:scale-[0.97]"
         >
-          <section
-            aria-label="Your estimate"
-            className="overflow-hidden rounded-[1.75rem] bg-ink text-white shadow-float ring-1 ring-white/10"
-          >
-            <AnimatePresence initial={false}>
-              {expanded ? (
-                <motion.div
-                  id={panelId}
-                  key="panel"
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                  className="overflow-hidden"
-                >
-                  <div className="max-h-[58dvh] overflow-y-auto px-5 pb-2 pt-5">
-                    <p className="eyebrow text-teal-200">Your selections</p>
-                    <div className="mt-2">
-                      <EstimateLines estimate={estimate} />
-                      <ImplementationLine estimate={estimate} className="pt-3" />
-                    </div>
-                    <EstimateExtras estimate={estimate} className="mt-4 text-[0.875rem]" />
-                    {estimate.customQuote ? (
-                      <p className="mt-4 text-[0.875rem] leading-snug text-white/75">{calculatorCopy.customQuoteBody}</p>
-                    ) : null}
-                    <p className="mt-4 text-[0.8125rem] leading-snug text-white/65">{calculatorCopy.disclaimer}</p>
-                  </div>
-                </motion.div>
-              ) : null}
-            </AnimatePresence>
-
-            <div className={cn("flex items-center gap-2 p-2 pl-2.5", expanded && "border-t border-white/10")}>
-              <button
-                type="button"
-                aria-expanded={expanded}
-                aria-controls={panelId}
-                onClick={() => setOpen((value) => !value)}
-                className="flex min-h-14 min-w-0 flex-1 items-center gap-3 rounded-[1.25rem] px-2.5 py-1.5 text-left transition-colors hover:bg-white/5"
-              >
-                <span
-                  aria-hidden="true"
-                  className={cn(
-                    "grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/10 transition-transform duration-300",
-                    expanded ? "rotate-0" : "rotate-180",
-                  )}
-                >
-                  <Icon name="chevronDown" size={18} strokeWidth={2.4} />
-                </span>
-                <span className="min-w-0">
-                  <span className="block font-display text-[0.6875rem] font-semibold uppercase tracking-[0.12em] text-teal-200">
-                    {mode === "figure" ? "Monthly estimate" : mode === "rates" ? serviceCopy.insuranceBilling.name : calculatorCopy.estimateLabel}
-                    <span className="sr-only">. {expanded ? "Hide" : "Show"} the breakdown.</span>
-                  </span>
-                  <span className="mt-1 block">
-                    <EstimateFigure estimate={estimate} size="sm" suffix={false} />
-                  </span>
-                  {mode === "rates" ? (
-                    <span className="mt-1 block text-[0.75rem] leading-tight text-white/75">
-                      {serviceCopy.insuranceBilling.ratesBasis}
-                      {extras.length ? `, + ${extras.length} more` : ""}
-                    </span>
-                  ) : extras.length ? (
-                    <span className="mt-1 block text-[0.75rem] leading-tight text-white/75">
-                      {extras.length === 1
-                        ? `+ ${extras[0].name} (${extras[0].note})`
-                        : `+ ${extras.length} items outside this number`}
-                    </span>
-                  ) : null}
-                </span>
-              </button>
-              <button
-                type="button"
-                onClick={onGetStarted}
-                className="inline-flex h-14 shrink-0 items-center justify-center rounded-full bg-yellow px-5 font-display text-[0.9375rem] font-semibold text-ink active:scale-[0.97]"
-              >
-                {calculatorCopy.getStarted}
-              </button>
-            </div>
-          </section>
-        </motion.div>
-      ) : null}
-    </AnimatePresence>
+          {calculatorCopy.getStarted}
+        </button>
+      }
+    />
   );
 }

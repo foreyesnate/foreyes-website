@@ -28,6 +28,7 @@ import { BillingClaimQueue } from "@/components/graphics/BillingClaimQueue";
 import { BillingAgingChart } from "@/components/graphics/BillingAgingChart";
 import {
   BillingBooks,
+  BillingCalculatorCallout,
   BillingEyecare,
   BillingHandles,
   BillingKpis,
@@ -67,6 +68,8 @@ export default function InsuranceBillingPage() {
       </div>
 
       <BillingProblem />
+
+      <BillingCalculatorCallout />
 
       <BillingHandles />
 

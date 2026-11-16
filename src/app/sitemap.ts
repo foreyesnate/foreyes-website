@@ -16,6 +16,7 @@ const pages: { path: string; priority: number }[] = [
   { path: "/who-we-serve/startups", priority: 0.7 },
   { path: "/who-we-serve/multi-location-practices", priority: 0.7 },
   { path: "/pricing-calculator", priority: 0.8 },
+  { path: "/billing-calculator", priority: 0.7 },
   { path: "/about-us", priority: 0.6 },
   { path: "/about-us/our-team", priority: 0.6 },
   { path: "/contact", priority: 0.8 },

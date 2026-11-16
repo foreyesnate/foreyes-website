@@ -6,7 +6,7 @@ import { site } from "@/content/site";
 import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib/cn";
 
-type FormName = "Contact" | "Pricing Form";
+type FormName = "Contact" | "Pricing Form" | "Billing Calculator";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -23,14 +23,15 @@ const focusOnMount = (node: HTMLDivElement | null) => {
  * current site uses, so leads keep arriving where they do today.
  *
  * - `formName` picks which Netlify form receives the submission.
- * - `details` is sent along silently (the pricing calculator passes its
- *   summary here).
+ * - `details` is sent along silently (each calculator passes its summary
+ *   here), in the field named by `detailsField`.
  * - `interestOptions` adds a "What can we help with?" select.
  * - `success` replaces the default thank-you (e.g. to show the scheduler).
  */
 export function LeadForm({
   formName = "Contact",
   details,
+  detailsField = "pricing_calculator_details",
   interestOptions,
   submitLabel = "Send Message",
   success,
@@ -39,6 +40,8 @@ export function LeadForm({
 }: {
   formName?: FormName;
   details?: string;
+  /** Field name for `details`. Must match the form's entry in public/__forms.html. */
+  detailsField?: "pricing_calculator_details" | "billing_calculator_details";
   interestOptions?: string[];
   submitLabel?: string;
   success?: ReactNode;
@@ -72,7 +75,7 @@ export function LeadForm({
     data.forEach((value, key) => body.append(key, String(value)));
     body.set("form-name", formName);
     body.set("page", window.location.pathname);
-    if (details) body.set("pricing_calculator_details", details);
+    if (details) body.set(detailsField, details);
 
     try {
       const response = await fetch("/__forms.html", {

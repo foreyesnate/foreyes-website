@@ -57,6 +57,9 @@ public/team/             Team photos.
 
 - **Change a phone number, address or the booking link:** `src/content/site.ts`.
 - **Change a price in the calculator:** `src/content/pricing.ts`.
+- **Change the billing calculator:** its numbers (starting values, slider
+  ranges, the two assumptions) live in `src/lib/billing-calculator.ts` and its
+  words in `src/content/billing-calculator.ts`.
 - **Add a blog post:** add a Markdown file to `content/blog/` with the same
   front matter as the others. `draft: true` keeps it off the site.
 - **Add a testimonial or team member:** `src/content/testimonials.ts`,

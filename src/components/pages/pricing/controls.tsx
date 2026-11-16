@@ -1,12 +1,13 @@
 "use client";
 
-import { useId, type ReactNode } from "react";
+import { useId, useRef, type ReactNode } from "react";
 import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib/cn";
 
-// Form controls for the pricing calculator. Every one is a native element
-// (button, range, radio, checkbox) dressed in the brand, so keyboards and
-// screen readers get the behaviour they already know.
+// Form controls for the pricing calculator, shared with the billing
+// calculator. Every one is a native element (button, range, radio, checkbox)
+// dressed in the brand, so keyboards and screen readers get the behaviour they
+// already know.
 
 /** A real on/off switch. The word in the track means colour is never the only signal. */
 export function Switch({
@@ -106,6 +107,82 @@ function railPosition(fraction: number) {
 }
 
 /**
+ * The slider itself: a drawn rail with the native range input laid over it.
+ * Used by <RangeField>, and on its own where a slider sits under another
+ * control (the billing calculator pairs it with a typed dollar amount).
+ */
+export function RangeTrack({
+  id,
+  min,
+  max,
+  step = 1,
+  value,
+  onChange,
+  valueText,
+  describedBy,
+  label,
+  ticks = false,
+}: {
+  id?: string;
+  min: number;
+  max: number;
+  step?: number;
+  /** Shown position. Values outside min..max rest at the nearest end. */
+  value: number;
+  onChange: (next: number) => void;
+  /** The value as read out by a screen reader. */
+  valueText: string;
+  describedBy?: string;
+  /** Accessible name, when no <label> points at `id`. */
+  label?: string;
+  /** Draw a dot at every stop (for short scales). */
+  ticks?: boolean;
+}) {
+  const shown = Math.min(max, Math.max(min, value));
+  const fraction = max === min ? 0 : (shown - min) / (max - min);
+  const stops = Math.round((max - min) / step);
+  return (
+    <div className="relative h-11 min-w-0 flex-1">
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-1/2 h-2.5 -translate-y-1/2 overflow-hidden rounded-full bg-stone-300"
+      >
+        <div className="h-full rounded-full bg-navy" style={{ width: railPosition(fraction) }} />
+      </div>
+      {ticks
+        ? Array.from({ length: stops + 1 }, (_, i) => (
+            <span
+              key={i}
+              aria-hidden="true"
+              className={cn(
+                "absolute top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full",
+                i / stops <= fraction ? "bg-white/70" : "bg-ink/30",
+              )}
+              style={{ left: railPosition(i / stops) }}
+            />
+          ))
+        : null}
+      <input
+        id={id}
+        type="range"
+        min={min}
+        max={max}
+        step={step}
+        value={shown}
+        onChange={(event) => onChange(Number(event.target.value))}
+        aria-label={label}
+        aria-valuetext={valueText}
+        aria-describedby={describedBy}
+        className={rangeClass}
+      />
+    </div>
+  );
+}
+
+const stepButton =
+  "grid h-11 w-11 shrink-0 place-items-center rounded-full border-2 border-ink/15 bg-white text-ink transition-colors hover:border-ink disabled:cursor-not-allowed disabled:opacity-35 disabled:hover:border-ink/15";
+
+/**
  * A labelled slider: native `<input type="range">` with a visible value,
  * min and max labels, `aria-valuetext`, and optional minus / plus buttons
  * for fine steps on a phone.
@@ -115,6 +192,7 @@ export function RangeField({
   hint,
   min,
   max,
+  step = 1,
   value,
   onChange,
   display,
@@ -131,6 +209,8 @@ export function RangeField({
   hint?: ReactNode;
   min: number;
   max: number;
+  /** Distance between stops. The slider and the stepper buttons both use it. */
+  step?: number;
   value: number;
   onChange: (next: number) => void;
   /** The value as shown beside the label, e.g. "3 locations". */
@@ -149,11 +229,6 @@ export function RangeField({
   footnote?: ReactNode;
 }) {
   const id = useId();
-  const fraction = max === min ? 0 : (value - min) / (max - min);
-  const stops = max - min;
-
-  const stepButton =
-    "grid h-11 w-11 shrink-0 place-items-center rounded-full border-2 border-ink/15 bg-white text-ink transition-colors hover:border-ink disabled:cursor-not-allowed disabled:opacity-35 disabled:hover:border-ink/15";
 
   return (
     <div>
@@ -169,8 +244,11 @@ export function RangeField({
           ) : null}
         </div>
         <div className="flex items-center gap-2.5">
+          {/* <output> is a live region by default, so a screen reader would
+              read every step twice: once from the slider, once from here. */}
           <output
             htmlFor={id}
+            aria-live="off"
             className="tabular font-display text-[1.375rem] font-bold leading-none tracking-[-0.02em]"
           >
             {display}
@@ -184,51 +262,29 @@ export function RangeField({
           <button
             type="button"
             className={stepButton}
-            onClick={() => onChange(value - 1)}
+            onClick={() => onChange(Math.max(min, value - step))}
             disabled={value <= min}
             aria-label={`Decrease ${stepperNoun}`}
           >
             <Icon name="minus" size={18} strokeWidth={2.6} />
           </button>
         ) : null}
-        <div className="relative h-11 min-w-0 flex-1">
-          <div
-            aria-hidden="true"
-            className="absolute inset-x-0 top-1/2 h-2.5 -translate-y-1/2 overflow-hidden rounded-full bg-stone-300"
-          >
-            <div className="h-full rounded-full bg-navy" style={{ width: railPosition(fraction) }} />
-          </div>
-          {ticks
-            ? Array.from({ length: stops + 1 }, (_, i) => (
-                <span
-                  key={i}
-                  aria-hidden="true"
-                  className={cn(
-                    "absolute top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full",
-                    i / stops <= fraction ? "bg-white/70" : "bg-ink/30",
-                  )}
-                  style={{ left: railPosition(i / stops) }}
-                />
-              ))
-            : null}
-          <input
-            id={id}
-            type="range"
-            min={min}
-            max={max}
-            step={1}
-            value={value}
-            onChange={(event) => onChange(Number(event.target.value))}
-            aria-valuetext={valueText}
-            aria-describedby={hint ? `${id}-hint` : undefined}
-            className={rangeClass}
-          />
-        </div>
+        <RangeTrack
+          id={id}
+          min={min}
+          max={max}
+          step={step}
+          value={value}
+          onChange={onChange}
+          valueText={valueText}
+          describedBy={hint ? `${id}-hint` : undefined}
+          ticks={ticks}
+        />
         {stepper ? (
           <button
             type="button"
             className={stepButton}
-            onClick={() => onChange(value + 1)}
+            onClick={() => onChange(Math.min(max, value + step))}
             disabled={value >= max}
             aria-label={`Increase ${stepperNoun}`}
           >
@@ -237,26 +293,99 @@ export function RangeField({
         ) : null}
       </div>
 
-      <div
-        aria-hidden="true"
-        className={cn(
-          "tabular mt-1 flex justify-between font-display text-[0.8125rem] font-semibold text-ink-500",
-          stepper && "px-14",
-        )}
-      >
-        <span>{minLabel}</span>
-        <span>{maxLabel}</span>
-      </div>
+      <RangeEnds minLabel={minLabel} maxLabel={maxLabel} inset={stepper} />
       {footnote ? <p className="mt-2 text-[0.875rem] text-ink-500">{footnote}</p> : null}
     </div>
   );
 }
 
+/** The two small labels under a slider's ends. */
+export function RangeEnds({ minLabel, maxLabel, inset = false }: { minLabel: string; maxLabel: string; inset?: boolean }) {
+  return (
+    <div
+      aria-hidden="true"
+      className={cn(
+        "tabular mt-1 flex justify-between font-display text-[0.8125rem] font-semibold text-ink-500",
+        inset && "px-14",
+      )}
+    >
+      <span>{minLabel}</span>
+      <span>{maxLabel}</span>
+    </div>
+  );
+}
+
 /**
- * A dollar amount typed by the visitor. A text input with a numeric keypad
+ * The bordered "$ 12,000 a month" box. A text input with a numeric keypad
  * (not `type="number"`, so the value can carry thousands separators and never
  * changes on scroll). Empty means "not entered".
  */
+export function MoneyInput({
+  id,
+  value,
+  onChange,
+  max,
+  suffix,
+  describedBy,
+  className,
+}: {
+  id: string;
+  value: number | null;
+  onChange: (next: number | null) => void;
+  max: number;
+  /** Unit shown after the field. */
+  suffix?: string;
+  describedBy?: string;
+  className?: string;
+}) {
+  // Whole dollars only. Set once a decimal point is typed or pasted, so the
+  // cents that follow are dropped instead of being read as more dollars
+  // ("61,234.56" is $61,234, not $6,123,456).
+  const pastPoint = useRef(false);
+  const shown = value === null ? "" : value.toLocaleString("en-US");
+  return (
+    <div
+      className={cn(
+        "flex h-14 w-full max-w-[17rem] items-center rounded-2xl border-2 border-stone-300 bg-white transition-[border-color,box-shadow] hover:border-ink/40 focus-within:border-navy focus-within:ring-4 focus-within:ring-navy/15 focus-within:hover:border-navy",
+        className,
+      )}
+    >
+      <span aria-hidden="true" className="pl-4 font-display text-[1.25rem] font-bold text-ink-500">
+        $
+      </span>
+      <input
+        id={id}
+        type="text"
+        inputMode="numeric"
+        autoComplete="off"
+        placeholder="0"
+        value={shown}
+        onChange={(event) => {
+          const raw = event.target.value;
+          const point = raw.indexOf(".");
+          if (point >= 0) pastPoint.current = true;
+          // A digit added after the point is a cent: leave the amount alone.
+          else if (pastPoint.current && raw.length > shown.length && raw.startsWith(shown)) return;
+          else pastPoint.current = false;
+          const digits = (point >= 0 ? raw.slice(0, point) : raw).replace(/\D/g, "");
+          onChange(digits ? Math.min(max, Number(digits)) : null);
+        }}
+        onBlur={() => {
+          pastPoint.current = false;
+        }}
+        aria-describedby={describedBy}
+        className="tabular h-full min-w-0 flex-1 rounded-2xl bg-transparent pl-1.5 pr-2 font-display text-[1.25rem] font-bold tracking-[-0.01em] text-ink placeholder:font-semibold placeholder:text-ink-400 focus:outline-none"
+      />
+      {suffix ? (
+        <span aria-hidden="true" className="shrink-0 pr-4 text-[0.875rem] text-ink-500">
+          {suffix}
+        </span>
+      ) : null}
+    </div>
+  );
+}
+
+/** A dollar amount typed by the visitor: a label, a hint and a <MoneyInput>. */
 export function MoneyField({
   label,
   hint,
@@ -288,28 +417,14 @@ export function MoneyField({
         </p>
       ) : null}
       <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2.5">
-        <div className="flex h-14 w-full max-w-[17rem] items-center rounded-2xl border-2 border-stone-300 bg-white transition-[border-color,box-shadow] hover:border-ink/40 focus-within:border-navy focus-within:ring-4 focus-within:ring-navy/15 focus-within:hover:border-navy">
-          <span aria-hidden="true" className="pl-4 font-display text-[1.25rem] font-bold text-ink-500">
-            $
-          </span>
-          <input
-            id={id}
-            type="text"
-            inputMode="numeric"
-            autoComplete="off"
-            placeholder="0"
-            value={value === null ? "" : value.toLocaleString("en-US")}
-            onChange={(event) => {
-              const digits = event.target.value.replace(/\D/g, "");
-              onChange(digits ? Math.min(max, Number(digits)) : null);
-            }}
-            aria-describedby={hint ? `${id}-hint` : undefined}
-            className="tabular h-full min-w-0 flex-1 rounded-2xl bg-transparent pl-1.5 pr-2 font-display text-[1.25rem] font-bold tracking-[-0.01em] text-ink placeholder:font-semibold placeholder:text-ink-400 focus:outline-none"
-          />
-          <span aria-hidden="true" className="shrink-0 pr-4 text-[0.875rem] text-ink-500">
-            {suffix}
-          </span>
-        </div>
+        <MoneyInput
+          id={id}
+          value={value}
+          onChange={onChange}
+          max={max}
+          suffix={suffix}
+          describedBy={hint ? `${id}-hint` : undefined}
+        />
         {effect}
       </div>
     </div>

@@ -7,7 +7,7 @@ import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib/cn";
 import type { ResourceCard } from "./content";
 
-// Small coded pictures for the three cards on the Resources hub. Each is a
+// Small coded pictures for the four cards on the Resources hub. Each is a
 // miniature of the thing the card leads to. They are decorative (the card's
 // heading and text say everything), so the whole graphic is aria-hidden.
 // Only the pricing slider moves on its own; the others respond to hover.
@@ -135,6 +135,44 @@ function PricingMini() {
   );
 }
 
+const claims = [
+  { status: "Paid", denied: false },
+  { status: "Denied", denied: true },
+  { status: "Paid", denied: false },
+] as const;
+
+/** The billing calculator in miniature: a short claim list with one denial, and the yearly figure. */
+function BillingMini() {
+  return (
+    <div className="mx-auto grid w-full max-w-[17rem] grid-cols-[1.25fr_1fr] gap-2.5">
+      <ul className="grid gap-2 rounded-2xl bg-white p-3 shadow-soft">
+        {claims.map((claim, index) => (
+          <li
+            key={index}
+            className={cn(
+              "flex items-center justify-between gap-2 rounded-xl px-2.5 py-2 transition-transform duration-500 ease-(--ease-focus)",
+              claim.denied ? "bg-navy text-white group-hover:translate-x-1" : "bg-stone",
+            )}
+          >
+            <span className={cn("block h-2 w-8 rounded-full", claim.denied ? "bg-white/50" : "bg-stone-300")} />
+            <span className="font-display text-[0.6875rem] font-semibold leading-none">{claim.status}</span>
+          </li>
+        ))}
+      </ul>
+      <div className="flex flex-col justify-between rounded-2xl bg-ink p-3.5 text-white shadow-lift transition-transform duration-500 ease-(--ease-focus) group-hover:-translate-y-1">
+        <span className="whitespace-nowrap font-display text-[0.6875rem] font-semibold uppercase tracking-[0.1em] text-teal-200">Each year</span>
+        <span className="mt-3 flex items-center gap-1 font-display text-xl font-bold leading-none text-yellow">
+          $
+          <span className="block h-3 w-3 rounded-full bg-yellow" />
+          <span className="block h-3 w-3 rounded-full bg-yellow" />
+          <span className="block h-3 w-3 rounded-full bg-yellow" />
+        </span>
+        <span className="mt-2 text-[0.75rem] text-white/75">Unworked</span>
+      </div>
+    </div>
+  );
+}
+
 export function ResourceGraphic({ kind }: { kind: ResourceCard["key"] }) {
   return (
     <div
@@ -145,11 +183,12 @@ export function ResourceGraphic({ kind }: { kind: ResourceCard["key"] }) {
         kind === "blog" && "bg-navy-100",
         kind === "faq" && "bg-teal-100",
         kind === "pricing" && "bg-yellow-100",
+        kind === "billing" && "bg-navy-200",
       )}
     >
       <div className="bg-dots absolute inset-0 text-ink/[0.07] [mask-image:radial-gradient(closest-side,transparent_35%,black)]" />
       <div className="relative grid h-full w-full items-center">
-        {kind === "blog" ? <BlogMini /> : kind === "faq" ? <FaqMini /> : <PricingMini />}
+        {kind === "blog" ? <BlogMini /> : kind === "faq" ? <FaqMini /> : kind === "pricing" ? <PricingMini /> : <BillingMini />}
       </div>
     </div>
   );

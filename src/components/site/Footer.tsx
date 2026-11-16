@@ -27,6 +27,7 @@ const columns = [
     title: "Resources",
     links: [
       { label: "Pricing Calculator", href: "/pricing-calculator" },
+      { label: "Billing Calculator", href: "/billing-calculator" },
       { label: "Blog", href: "/blog" },
       { label: "FAQs", href: "/faq" },
     ],

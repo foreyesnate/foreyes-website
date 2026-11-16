@@ -26,7 +26,7 @@ export default function ResourcesPage() {
         eyebrow="Resources"
         title="Get answers"
         highlight="before you call."
-        lede="Three places to start, all open to anyone. Read articles written for practice owners, get straight answers to the questions ODs ask most, or price our services for a practice your size."
+        lede="Four places to start, all open to anyone. Read articles written for practice owners, get straight answers to the questions ODs ask most, price our services for a practice your size, or estimate what unworked denials cost you."
         crumbs={[{ label: "Resources" }]}
         secondaryCta={{ label: "Estimate Your Price", href: site.pricingHref }}
         visual={
@@ -49,13 +49,10 @@ export default function ResourcesPage() {
               lede="Pick the one that fits the question you have today."
             />
           </Reveal>
-          <Stagger as="ul" className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {resourceCards.map((card, index) => (
-              <StaggerItem
-                as="li"
-                key={card.key}
-                className={index === resourceCards.length - 1 ? "md:max-lg:col-span-2" : undefined}
-              >
+          {/* Four cards: two by two on tablets and laptops, four across once each card's picture has room. */}
+          <Stagger as="ul" className="mt-14 grid gap-5 md:grid-cols-2 min-[87.5rem]:grid-cols-4">
+            {resourceCards.map((card) => (
+              <StaggerItem as="li" key={card.key}>
                 <Link
                   href={card.href}
                   className="group flex h-full flex-col rounded-[2.5rem] bg-stone p-3 transition-[transform,box-shadow,background-color] duration-500 ease-(--ease-focus) hover:-translate-y-1.5 hover:bg-white hover:shadow-lift"
@@ -63,7 +60,7 @@ export default function ResourcesPage() {
                   <ResourceGraphic kind={card.key} />
                   <span className="flex flex-1 flex-col px-5 pb-6 pt-7 sm:px-6">
                     <span className="eyebrow text-teal-700">{card.eyebrow}</span>
-                    <h3 className="text-heading mt-3">{card.title}</h3>
+                    <h3 className="text-heading mt-3 min-[87.5rem]:text-[1.75rem]">{card.title}</h3>
                     <p className="mt-4 text-ink-500">{card.body}</p>
                     <span className="mt-auto inline-flex items-center gap-2 pt-7 font-display font-semibold text-ink underline decoration-yellow decoration-2 underline-offset-[6px] group-hover:decoration-4">
                       {card.cta}

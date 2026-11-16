@@ -399,9 +399,10 @@
   }
 }
 
-/* Chat bubble vs. the pricing calculator's pinned estimate bar (phones and
-   tablets): lift the bubble above the bar, and hide it while the bar's
-   breakdown is open. Read inside the widget by ChatWidget.tsx. */
+/* Chat bubble vs. a calculator's pinned result bar (phones and tablets; set
+   by PinnedBar.tsx on the pricing and billing calculators): lift the bubble
+   above the bar, and hide it while the bar's breakdown is open. Read inside
+   the widget by ChatWidget.tsx. */
 @media (max-width: 1023.98px) {
   html[data-estimate-bar] {
     --chat-lift: 6.5rem;

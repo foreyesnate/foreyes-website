@@ -297,6 +297,13 @@ const tools = [
     art: "spot-dashboard" as IllustrationName,
   },
   {
+    title: "Billing Calculator",
+    body: "Enter four numbers and see an estimate of what denied claims nobody followed up cost you each year.",
+    cta: "Run Your Numbers",
+    href: "/billing-calculator",
+    art: "spot-billing" as IllustrationName,
+  },
+  {
     title: "Frequently Asked Questions",
     body: "From onboarding to ongoing support, straight answers before you book a call.",
     cta: "Get Answers",
@@ -312,25 +319,26 @@ export function Tools() {
         <Reveal>
           <SectionHeading id="tools-title" size="heading" eyebrow="Before you call" title="Tools That Take the Guesswork Out" />
         </Reveal>
-        <Stagger as="ul" className="mt-10 grid grid-cols-[minmax(0,1fr)] gap-5 md:grid-cols-2">
+        {/* Phones: upright cards, so the words get the full width. Tablets:
+            one column of sideways cards. Desktop: three upright cards. */}
+        <Stagger as="ul" className="mt-10 grid grid-cols-[minmax(0,1fr)] gap-5 lg:grid-cols-3">
           {tools.map((tool) => (
             <StaggerItem as="li" key={tool.href}>
               <Link
                 href={tool.href}
-                // Under 360px the picture and padding step down so the words keep a readable column.
-                className="group flex h-full items-start gap-4 rounded-[2.5rem] border-2 border-stone-200 bg-stone p-5 min-[360px]:gap-6 min-[360px]:p-7 transition-[border-color,background-color,transform] duration-500 ease-(--ease-focus) hover:-translate-y-1 hover:border-navy hover:bg-white sm:p-9"
+                className="group flex h-full flex-col items-start gap-5 rounded-[2.5rem] border-2 border-stone-200 bg-stone p-6 min-[360px]:p-7 transition-[border-color,background-color,transform] duration-500 ease-(--ease-focus) hover:-translate-y-1 hover:border-navy hover:bg-white sm:flex-row sm:gap-6 sm:p-9 lg:flex-col lg:p-7 xl:p-9"
               >
-                <span className="grid h-20 w-20 shrink-0 place-items-center rounded-3xl bg-white p-3 shadow-soft min-[360px]:h-28 min-[360px]:w-28 sm:h-36 sm:w-36">
+                <span className="grid h-24 w-24 shrink-0 place-items-center rounded-3xl bg-white p-3 shadow-soft sm:h-36 sm:w-36">
                   <Spot
                     name={tool.art}
                     sizes="7.5rem"
                     className="max-h-full w-auto transition-transform duration-700 ease-(--ease-focus) group-hover:scale-[1.07]"
                   />
                 </span>
-                <div className="min-w-0">
+                <div className="flex min-w-0 flex-col lg:flex-1">
                   <h3 className="text-subheading">{tool.title}</h3>
                   <p className="mt-2 text-ink-500">{tool.body}</p>
-                  <span className="mt-5 inline-flex items-center gap-2 font-display font-semibold text-navy">
+                  <span className="mt-5 inline-flex items-center gap-2 font-display font-semibold text-navy lg:mt-auto lg:pt-5">
                     {tool.cta}
                     <Icon name="arrowRight" size={18} className="transition-transform duration-300 group-hover:translate-x-1.5" />
                   </span>
