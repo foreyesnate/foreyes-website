@@ -107,7 +107,7 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-white/55 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} {site.name}. Formerly {site.legacyName}.
+            © {year} {site.name}, a trade name of {site.legalName}.
           </p>
           <ul className="flex gap-6">
             <li>

@@ -1,6 +1,6 @@
 # ForEyes Books & Billing website
 
-The marketing site for ForEyes Books & Billing (formerly ForEyes Solutions):
+The marketing site for ForEyes Books & Billing (a trade name of For Eyes Solutions, LLC):
 bookkeeping and insurance billing for eyecare practices.
 
 Built with Next.js 16 (App Router), React 19, Tailwind CSS 4 and

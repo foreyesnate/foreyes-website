@@ -4,6 +4,8 @@
 export const site = {
   name: "ForEyes Books & Billing",
   shortName: "ForEyes",
+  /** The registered company. "ForEyes Books & Billing" is its trade name. */
+  legalName: "For Eyes Solutions, LLC",
   legacyName: "ForEyes Solutions",
   // The production domain is not decided yet; change it here and every
   // canonical URL, sitemap entry and social card follows.

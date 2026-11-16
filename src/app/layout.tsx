@@ -29,6 +29,7 @@ const organization = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: site.name,
+  legalName: site.legalName,
   alternateName: site.legacyName,
   url: site.url,
   description: site.description,

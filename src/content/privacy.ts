@@ -1,7 +1,7 @@
 // The privacy policy, carried over in full and verbatim from
 // foreyessolutions.com/privacy-policy (as published, "Last updated: January,
 // 2026"). The only change is the company name: "ForEyes Books & Billing
-// (formerly ForEyes Solutions)" on first mention and "ForEyes Books & Billing"
+// (a trade name of For Eyes Solutions, LLC)" on first mention and "ForEyes Books & Billing"
 // after. Nothing has been added, removed, or reworded. Any change to this text
 // is a legal change: get it reviewed before editing.
 
@@ -33,7 +33,7 @@ export const privacyPolicy: {
       blocks: [
         {
           type: "paragraph",
-          text: "Protecting your private information is our priority. This Statement of Privacy applies to http://foreyessolutions.com, and ForEyes Books & Billing (formerly ForEyes Solutions) and governs data collection and usage. For the purposes of this Privacy Policy, unless otherwise noted, all references to ForEyes Books & Billing include http://foreyessolutions.com. The ForEyes Books & Billing website is a general informational site. By using the ForEyes Books & Billing website, you consent to the data practices described in this statement.",
+          text: "Protecting your private information is our priority. This Statement of Privacy applies to http://foreyessolutions.com, and ForEyes Books & Billing (a trade name of For Eyes Solutions, LLC) and governs data collection and usage. For the purposes of this Privacy Policy, unless otherwise noted, all references to ForEyes Books & Billing include http://foreyessolutions.com. The ForEyes Books & Billing website is a general informational site. By using the ForEyes Books & Billing website, you consent to the data practices described in this statement.",
         },
       ],
     },
