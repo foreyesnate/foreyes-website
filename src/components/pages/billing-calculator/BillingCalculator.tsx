@@ -164,7 +164,11 @@ export function BillingCalculator() {
         // overlap. The recap is only ever shown clear of the card.
         setRecapShown(leaving && !!recap && recap.getBoundingClientRect().top >= cardBox.bottom);
       },
-      { rootMargin: `-${STICKY_LINE}px 0px 0px 0px`, threshold: [0, 0.3, 0.6] },
+      // The root is cut off under the header and stretched far below the
+      // screen, so the ratio is simply "how much of the card is still under
+      // the header line". A jump straight past the card (a restored scroll
+      // position, a skip by keyboard) then still counts as a change.
+      { rootMargin: `-${STICKY_LINE}px 0px 100000px 0px`, threshold: [0, 0.3, 0.6] },
     );
     observer.observe(card);
     return () => observer.disconnect();

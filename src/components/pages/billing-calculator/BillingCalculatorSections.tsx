@@ -317,7 +317,13 @@ export function BillingReadNext() {
         <Reveal>
           <article className="group relative grid overflow-hidden rounded-[2.5rem] bg-stone transition-[transform,box-shadow,background-color] duration-500 ease-(--ease-focus) hover:-translate-y-1 hover:shadow-lift has-[a:focus-visible]:-translate-y-1 has-[a:focus-visible]:shadow-lift md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
             {post ? (
-              <PostCover post={post} className="aspect-[16/10] md:aspect-auto md:min-h-[17rem]" sizes="(min-width: 768px) 32rem, 100vw" />
+              <PostCover
+                post={post}
+                // On tablets the picture is a tall strip. The crop leans left
+                // so it keeps the person's face rather than the wall behind her.
+                className="aspect-[16/10] md:aspect-auto md:min-h-[17rem] [&_img]:object-[26%_center]"
+                sizes="(min-width: 768px) 32rem, 100vw"
+              />
             ) : null}
             <div className="flex flex-col justify-center p-7 sm:p-10">
               <div className="flex flex-wrap items-center gap-2.5">
