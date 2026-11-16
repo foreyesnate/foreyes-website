@@ -4,6 +4,7 @@ import { figtree, parkinsans } from "@/lib/fonts";
 import { site } from "@/content/site";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { ChatWidget } from "@/components/site/ChatWidget";
 import { Providers } from "@/components/motion/Providers";
 
 export const metadata: Metadata = {
@@ -77,6 +78,8 @@ export default function RootLayout({
           </main>
           <Footer />
         </Providers>
+        {/* Chat bubble. Loaded once the page is idle so it never slows the first view. */}
+        <ChatWidget />
       </body>
     </html>
   );

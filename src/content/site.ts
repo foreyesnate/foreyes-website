@@ -7,6 +7,8 @@ export const site = {
   /** The registered company. "ForEyes Books & Billing" is its trade name. */
   legalName: "For Eyes Solutions, LLC",
   legacyName: "ForEyes Solutions",
+  /** The chat bubble in the corner of every page (LeadConnector widget id). */
+  chatWidgetId: "668833d489e46bb2664502d9",
   // The production domain is not decided yet; change it here and every
   // canonical URL, sitemap entry and social card follows.
   url: "https://foreyessolutions.com",

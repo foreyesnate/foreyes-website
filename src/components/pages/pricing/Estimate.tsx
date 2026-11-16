@@ -328,6 +328,15 @@ export function MobileEstimateBar({
     return () => window.removeEventListener("keydown", onKey);
   }, [expanded]);
 
+  // Tell the chat bubble to move out of the way while this bar is on screen
+  // (see ChatWidget.tsx and the --chat-* variables in globals.css).
+  useEffect(() => {
+    if (!visible) return;
+    const root = document.documentElement;
+    root.setAttribute("data-estimate-bar", expanded ? "open" : "bar");
+    return () => root.removeAttribute("data-estimate-bar");
+  }, [visible, expanded]);
+
   const mode = estimateMode(estimate);
   const extras = estimateExtras(estimate);
 
