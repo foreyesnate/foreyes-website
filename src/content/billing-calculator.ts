@@ -95,6 +95,9 @@ export const calculatorCopy = {
   exampleTag: "Examples",
   perMonth: "a month",
   privacy: "Your numbers stay in your browser unless you choose to send them.",
+  /** Shown in place of the calculator when the visitor has JavaScript turned off. */
+  noScript:
+    "The calculator needs JavaScript, and it is turned off in your browser. Turn it on and reload this page to enter your numbers. You can also bring your numbers to a Discovery Call.",
   assumptions: {
     title: "Our assumptions",
     /** Shown on the closed panel, with the two current values filled in. */

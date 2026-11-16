@@ -30,7 +30,7 @@ export const billingCalculatorConfig = {
     /** Insurance payments collected in a typical month, in dollars. */
     monthlyCollections: { default: 60_000, min: 5_000, max: 500_000, step: 1_000, typedMin: 0, typedMax: 2_000_000 },
     /** Share of claims denied or rejected the first time they are sent, in percent. */
-    denialRate: { default: 10, min: 0, max: 40, step: 1 },
+    denialRate: { default: 8, min: 0, max: 40, step: 1 },
     /** Share of those denied claims that nobody follows up, in percent. */
     unworkedShare: { default: 50, min: 0, max: 100, step: 5 },
     /** Insurance A/R more than 90 days old, in dollars. */
@@ -39,11 +39,11 @@ export const billingCalculatorConfig = {
   /** ForEyes' starting assumptions. The visitor can change both. */
   assumptions: {
     /** Share of followed-up denials that end up paid, in percent. */
-    recoveryRate: { default: 60, min: 30, max: 90, step: 5 },
+    recoveryRate: { default: 55, min: 30, max: 90, step: 5 },
     /** Share of 90+ day A/R that can still be collected, in percent. */
-    agedCollectible: { default: 40, min: 10, max: 80, step: 5 },
+    agedCollectible: { default: 30, min: 10, max: 80, step: 5 },
   },
-  /** How the results are rounded for display ("about $23,200"). */
+  /** How the results are rounded for display ("about $16,800"). */
   rounding: { yearly: 100, monthly: 10, backlog: 100 },
 } as const satisfies {
   inputs: { monthlyCollections: MoneyRule; denialRate: RangeRule; unworkedShare: RangeRule; agedAR: MoneyRule };
@@ -208,7 +208,7 @@ export function displayBillingEstimate(values: BillingValues, estimate: BillingE
   };
 }
 
-/** "about $23,200", "less than $100" or "$0", for sentences and the summary. */
+/** "about $16,800", "less than $100" or "$0", for sentences and the summary. */
 export function amountText(amount: DisplayAmount): string {
   if (amount.kind === "zero") return formatMoney(0);
   if (amount.kind === "small") return `less than ${formatMoney(amount.under)}`;

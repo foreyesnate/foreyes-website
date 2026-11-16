@@ -41,7 +41,7 @@ function figureSize(amount: DisplayAmount, lg: boolean): string {
   return length > 9 ? "text-[2.375rem]" : length > 7 ? "text-[2.875rem]" : "text-[3.25rem] xl:text-[3.75rem]";
 }
 
-/** "about $23,200" as a rolling figure, or "less than $100" when it rounds to nothing. */
+/** "about $16,800" as a rolling figure, or "less than $100" when it rounds to nothing. */
 function Figure({ amount, className }: { amount: Exclude<DisplayAmount, { kind: "zero" }>; className?: string }) {
   return <RollingNumber value={amount.kind === "small" ? amount.under : amount.value} className={className} />;
 }
@@ -292,7 +292,7 @@ export function ResultBar({
               />
             </span>
           )}
-          {/* Read after the figure: "Lost each year, about $23,200. Show the breakdown." */}
+          {/* Read after the figure: "Lost each year, about $16,800. Show the breakdown." */}
           <span className="sr-only">. {expanded ? "Hide" : "Show"} the breakdown.</span>
         </>
       )}

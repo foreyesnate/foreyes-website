@@ -33,12 +33,6 @@ const { inputs, assumptions } = billingCalculatorConfig;
 /** Where a sticky column rests under the header (top-32), as in <StickyColumn>. */
 const STICKY_LINE = 128;
 
-// Shown only when JavaScript is off, in place of the calculator. Kept here
-// rather than in the content file because it is the one line a visitor with
-// scripts on never sees; move it there if the wording needs an owner.
-const noScriptNote =
-  "The calculator needs JavaScript, and it is turned off in your browser. Turn it on and reload this page to enter your numbers. You can also bring your numbers to a Discovery Call.";
-
 /** A value that only updates once it has stopped changing for `delay` ms. */
 function useSettled<T>(value: T, delay: number): T {
   const [settled, setSettled] = useState(value);
@@ -225,7 +219,7 @@ export function BillingCalculator() {
         <noscript>
           <style>{`[data-billing-calculator]{display:none!important}`}</style>
           <div className="mt-10 max-w-2xl rounded-[1.75rem] border-2 border-navy bg-white p-6 sm:p-8">
-            <p className="text-ink-700">{noScriptNote}</p>
+            <p className="text-ink-700">{calculatorCopy.noScript}</p>
             <a
               href={site.bookingHref}
               className="mt-5 inline-flex min-h-12 items-center rounded-full bg-yellow px-6 font-display font-semibold text-ink"

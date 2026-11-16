@@ -47,6 +47,37 @@ Left open by the audit:
 - The 404 page gets no font preloads, so it shifts slightly (CLS 0.065).
 - `books.mp4` (675 KB) was not re-encoded.
 
+## Added after the reviews (2026-11-16)
+
+- Footer names the legal entity ("a trade name of For Eyes Solutions, LLC");
+  the privacy policy's first mention matches.
+- Shorter URLs: `/privacy`, `/blog`, `/faq` (old addresses redirect).
+- LeadConnector chat widget on every page (`chatWidgetId` in
+  `src/content/site.ts`); it lifts above the calculators' pinned bar on phones.
+- Supplied `favicon.ico`; phone home-screen icon redrawn to match.
+- **Billing Calculator** at `/billing-calculator`, linked from the Resources
+  menu, footer, homepage tools, Resources page and Insurance Billing page.
+  Numbers and maths: `src/lib/billing-calculator.ts`. Words:
+  `src/content/billing-calculator.ts`.
+  - Visitor enters: monthly insurance collections, first-pass denial rate,
+    share of denials nobody follows up, insurance A/R over 90 days.
+  - Two adjustable assumptions: share of followed-up denials that get paid
+    (starts at 55%), share of 90+ day A/R still collectible (starts at 30%).
+  - Yearly loss = claim value x denied x not followed up x paid on follow-up
+    x 12, where claim value = collections / share of claim value paid today.
+    One-time backlog = aged A/R x collectible share. The two are never summed.
+  - Example starting values: $60,000, 8%, 50%, $25,000, giving about $16,800
+    a year and a $7,500 backlog.
+  - Needs sign-off from whoever runs billing: the starting values, the two
+    assumptions, and three general statements in the copy (a denial can start
+    before the claim is sent; a claim may never be paid after a filing
+    deadline; claims over 90 days are harder to collect).
+  - The research behind the starting values came from search summaries only;
+    the source pages could not be opened from the build environment. No
+    optometry-specific figures were found for any of the four percentages.
+  - The form ("Billing Calculator" in Netlify Forms) sends the visitor's
+    numbers to ForEyes. It does not email the visitor a copy.
+
 ## Waiting on the owner
 
 See the decision checklist in the session summary (prices carried over from
